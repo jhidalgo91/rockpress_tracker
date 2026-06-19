@@ -1,0 +1,335 @@
+=== ROCKPRESS DEBUG — 20260619_225011 — batch_03 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,538  output: 3,839
+Safety: (none)
+
+============================================================
+PROMPT (10,108 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 3/3 (28 artículos).
+
+FECHA HOY: 19 de junio de 2026
+VENTANA: 18/06/2026 — 19 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Red hard n heavy
+──────────────────────────────────────────────────
+• [2026-06-19] Ya llega la nueva edición del Barcelona Rock Fest
+  URL: https://redhardnheavy.com/nueva-edicion-barcelona-rock-fest/?utm_source=rss&utm_medium=rss&utm_campaign=nueva-edicion-barcelona-rock-fest
+  Resumen: A solo 10 minutos del centro de Barcelona, en el Parc de Can Zam de Santa Coloma de Gramenet, Barcelona Rock Fest celebra su edición de 2026 en un entorno accesible, verde y lleno 
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-19] The Flying Rebollos lanza videoclip “Me acuerdo del Li”
+  URL: https://www.thesoundoftheembryo.es/the-flying-rebollos-lanza-videoclip-me-acuerdo-del-li/
+• [2026-06-19] Los Krakos Makakos actuarán en el Irrintzi Fest 2026
+  URL: https://www.thesoundoftheembryo.es/los-krakos-makakos-actuaran-en-el-irrintzi-fest-2026/
+• [2026-06-19] Nuevas bandas se suman al Inkestas Rock Festibal 2026
+  URL: https://www.thesoundoftheembryo.es/nuevas-bandas-se-suman-al-inkestas-rock-festibal-2026/
+• [2026-06-19] Lumpen estrena single “A Deshoras”
+  URL: https://www.thesoundoftheembryo.es/lumpen-estrena-single-a-deshoras/
+• [2026-06-19] Sujeto K lanzan versión en directo de “Larrigui”
+  URL: https://www.thesoundoftheembryo.es/sujeto-k-lanzan-version-en-directo-de-larrigui/
+• [2026-06-19] Primeras fechas de la próxima gira de Sôber
+  URL: https://www.thesoundoftheembryo.es/primeras-fechas-de-la-proxima-gira-de-sober/
+• [2026-06-19] Entrevista a Xtasy
+  URL: https://www.thesoundoftheembryo.es/entrevista-a-los-navarros-xtasy/
+• [2026-06-19] Reportaje de Carmelita Dinamita en Iruña 28-05-2026
+  URL: https://www.thesoundoftheembryo.es/reportaje-de-carmelita-dinamita-en-iruna-28-05-2026/
+• [2026-06-19] Reportaje de Mandrágora Negra en Irun 23-05-2026
+  URL: https://www.thesoundoftheembryo.es/reportaje-de-mandragora-negra-en-irun-23-05-2026/
+• [2026-06-19] Reportaje de Legacy Of The Seas en Irun 23-05-2026
+  URL: https://www.thesoundoftheembryo.es/reportaje-de-legacy-of-the-seas-en-irun-23-05-2026/
+• [2026-06-19] Reportaje de Def Con Dos en Gasteiz 24-04-2026
+  URL: https://www.thesoundoftheembryo.es/reportaje-def-con-dos-gasteiz/
+• [2026-06-19] Reportaje de Bourbon Kings en Gasteiz 24-04-2026
+  URL: https://www.thesoundoftheembryo.es/reportaje-bourbon-kings-gasteiz/
+• [2026-06-19] Crónica de Cobra en Arrasate 22-01-2026
+  URL: https://www.thesoundoftheembryo.es/cronica-cobra-arrasate/
+• [2026-06-19] Videos de The Stripp en Karibe Zaharra, Legazpi 02-06-2026
+  URL: https://www.thesoundoftheembryo.es/video-de-the-stripp-en-karibe-zaharra-legazpi-02-06-2026/
+• [2026-06-19] Video de Cobra en Arrasate 22-01-2026
+  URL: https://www.thesoundoftheembryo.es/cobra-arrasate/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-19] Sturat "La Rage" Dixon, sobre la existencia de dos bandas con el nombre de Venom: "Es como lo que pasa con Judas Priest y KK's Priest"
+  URL: https://mariskalrock.com/actualidad/sturat-la-rage-dixon-sobre-la-existencia-de-dos-bandas-con-el-nombre-de-venom-es-como-lo-que-pasa-con-judas-priest-y-kks-priest/
+  Resumen: Después de ocho largos años, Venom ha roto su silencio discográfico a través de 'Into Oblivion', su último disco, con el que continúan canalizando su black y thrash metal. Esta nue
+• [2026-06-19] Wednesday 13 lanza "Look What The Bats Dragged In" como primer adelanto de su próximo álbum en directo: “Marca el ritmo de todo el disco”
+  URL: https://mariskalrock.com/noticias-breves/wednesday-13-lanza-look-what-the-bats-dragged-in-como-primer-adelanto-de-su-proximo-album-en-directo-marca-el-ritmo-de-todo-el-disco/
+  Resumen: Tras anunciar el lanzamiento de 'Un-Alive from Pol'and'Rock 2025', su próximo disco en directo, que verá la luz el 25 de septiembre, Wednesday 13 ha estrenado la versión en vivo de
+• [2026-06-19] The Flying Rebollos estrena "Me acuerdo del Li", segundo adelanto de "Nada va a volver a ser igual", su próximo disco, dedicado a “un viejo amigo”
+  URL: https://mariskalrock.com/noticias-breves/the-flying-rebollos-estrena-me-acuerdo-del-li-segundo-adelanto-de-nada-va-a-volver-a-ser-igual-su-proximo-disco-dedicado-a-un-viejo-amigo/
+  Resumen: Tras su ansiado regreso con "Iosune y Ernesto", The Flying Rebollos continúan sumergiéndose con ímpetu en este nuevo episodio de su carrera. "Me acuerdo del Li" es su nuevo single,
+• [2026-06-19] Rachel Bolan da un nuevo portazo a una reunión de Skid Row con Sebastian Bach: “No va a pasar”
+  URL: https://mariskalrock.com/actualidad/rachel-bolan-da-un-nuevo-portazo-a-una-reunion-de-skid-row-con-sebastian-bach-no-va-a-pasar/
+  Resumen: La ilusión por volver a vivir aquellos tiempos en los que Skid Row estaba entre las bandas que parecía que se iban a pegar por los puestos más destacados de los carteles en todo el
+• [2026-06-19] Omnia Transit medirá sus fuerzas con Medina Azahara en un concierto en Badajoz, enmarcado en la gira de despedida de la banda andaluza
+  URL: https://mariskalrock.com/noticias-breves/omnia-transit-medira-sus-fuerzas-con-medina-azahara-en-un-concierto-en-badajoz-enmarcado-en-la-gira-de-despedida-de-la-banda-andaluza/
+  Resumen: Omnia Transit se está preparando para marcar un nuevo hito en su carrera a través de una cita muy especial en la que derrochará su potente directo. El conjunto pacense será el enca
+• [2026-06-19] Nudozurdo celebrará el 15º aniversario de "Tara Motor Hembra" interpretando el disco al completo en un concierto en Barcelona
+  URL: https://mariskalrock.com/noticias-breves/nudozurdo-celebrara-el-15o-aniversario-de-tara-motor-hembra-interpretando-el-disco-al-completo-en-un-concierto-en-barcelona/
+  Resumen: 'Tara Motor Hembra' (2011) es uno de esos discos que, a pesar del paso del tiempo, continúa gozando de un lugar más que digno en la escena de la música alternativa española. Nudozu
+• [2026-06-19] La tasa de suicidios en Estados Unidos bajó tras aflorar el vídeo de Jon Bon Jovi salvando a una mujer
+  URL: https://mariskalrock.com/actualidad/la-tasa-de-suicidios-en-estados-unidos-bajo-tras-aflorar-el-video-de-jon-bon-jovi-salvando-a-una-mujer/
+  Resumen: La influencia de Jon Bon Jovi en el mundo de la música está más que demostrada y documentada desde que se publicara el primer disco de su banda, Bon Jovi, pero lo que ha sido más i
+• [2026-06-19] Sale a la luz un vídeo de Kutxi Romero (Marea) cantando y tocando una vieja canción de Extremoduro en la terraza de un bar
+  URL: https://mariskalrock.com/actualidad/sale-a-la-luz-un-video-de-kutxi-romero-marea-cantando-y-tocando-una-vieja-cancion-de-extremoduro-en-la-terraza-de-un-bar/
+  Resumen: Kutxi Romero, la voz de Marea, interpretando con su guitarra una canción de Extremoduro es la estampa que pudieron encontrarse los parroquianos y visitantes puntuales en la terraza
+• [2026-06-19] Cochè Vil Band pone fecha a "Be Gone", su próximo single, con el que continuará desarrollando su rock progresivo de tintes setenteros
+  URL: https://mariskalrock.com/noticias-breves/coche-vil-band-pone-fecha-a-be-gone-su-proximo-single-con-el-que-continuara-desarrollando-su-rock-progresivo-de-tintes-setenteros/
+  Resumen: Cochè Vil Band continúa avanzando en su carrera mientras prepara nuevas canciones que darán continuidad al capítulo que cerró con 'Chaos' (2024). La agrupación ya se está preparand
+• [2026-06-19] A Bon Jovi “no le gustaba” “Living On a Prayer”, pero la grabó ante la súplica de Desmond Child: “La sigue cantando”
+  URL: https://mariskalrock.com/actualidad/a-bon-jovi-no-le-gustaba-living-on-a-prayer-pero-la-grabo-ante-la-suplica-de-desmond-child-la-sigue-cantando/
+  Resumen: El compositor estadounidense Desmond Child es uno de esos nombres que sorprenden al comprobar la cantidad de grandes clásicos que figuran entre sus créditos. Uno de ellos es "Livin
+• [2026-06-19] Sôber anuncia las primeras fechas de "Anandamida Tour", la gira con la que presentará su próximo disco
+  URL: https://mariskalrock.com/actualidad/sober-anuncia-las-primeras-fechas-de-anandamida-tour-la-gira-con-la-que-presentara-su-proximo-disco/
+  Resumen: El rock y metal de vanguardia, tan visionario como característico, de Sôber marcará un nuevo capítulo con su próximo disco, del que recientemente lanzaron "Indestructible" como pri
+• [2026-06-19] Sonic Panda une fuerzas con Oblique en "Silence Is In Vogue", primer adelanto de "Neomelodrama" publicado en formato EP con versiones alternativas
+  URL: https://mariskalrock.com/actualidad/sonic-panda-une-fuerzas-con-oblique-en-silence-is-in-vogue-primer-adelanto-de-neomelodrama-publicado-en-formato-ep-con-versiones-alternativas/
+  Resumen: Los apasionados de la escena industrial, la new wave o el synth-pop saciarán sus inquietudes musicales gracias a Sonic Panda. La banda ha emergido con fuerza ofreciendo una coctele
+
+============================================================
+RESPUESTA (10,225 chars):
+============================================================
+[
+  {
+    "title": "Ya llega la nueva edición del Barcelona Rock Fest",
+    "url": "https://redhardnheavy.com/nueva-edicion-barcelona-rock-fest/?utm_source=rss&utm_medium=rss&utm_campaign=nueva-edicion-barcelona-rock-fest",
+    "date": "2026-06-19",
+    "medio": "Red hard n heavy",
+    "excerpt": "A solo 10 minutos del centro de Barcelona, en el Parc de Can Zam de Santa Coloma de Gramenet, Barcelona Rock Fest celebra su edición de 2026 en un entorno accesible, verde y lleno",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "The Flying Rebollos lanza videoclip “Me acuerdo del Li”",
+    "url": "https://www.thesoundoftheembryo.es/the-flying-rebollos-lanza-videoclip-me-acuerdo-del-li/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "The Flying Rebollos lanza videoclip “Me acuerdo del Li”",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Los Krakos Makakos actuarán en el Irrintzi Fest 2026",
+    "url": "https://www.thesoundoftheembryo.es/los-krakos-makakos-actuaran-en-el-irrintzi-fest-2026/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Los Krakos Makakos actuarán en el Irrintzi Fest 2026",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Nuevas bandas se suman al Inkestas Rock Festibal 2026",
+    "url": "https://www.thesoundoftheembryo.es/nuevas-bandas-se-suman-al-inkestas-rock-festibal-2026/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Nuevas bandas se suman al Inkestas Rock Festibal 2026",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Lumpen estrena single “A Deshoras”",
+    "url": "https://www.thesoundoftheembryo.es/lumpen-estrena-single-a-deshoras/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Lumpen estrena single “A Deshoras”",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Sujeto K lanzan versión en directo de “Larrigui”",
+    "url": "https://www.thesoundoftheembryo.es/sujeto-k-lanzan-version-en-directo-de-larrigui/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Sujeto K lanzan versión en directo de “Larrigui”",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Primeras fechas de la próxima gira de Sôber",
+    "url": "https://www.thesoundoftheembryo.es/primeras-fechas-de-la-proxima-gira-de-sober/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Primeras fechas de la próxima gira de Sôber",
+    "rel": 5,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Entrevista a Xtasy",
+    "url": "https://www.thesoundoftheembryo.es/entrevista-a-los-navarros-xtasy/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Entrevista a Xtasy",
+    "rel": 4,
+    "categoria": "Entrevista"
+  },
+  {
+    "title": "Reportaje de Carmelita Dinamita en Iruña 28-05-2026",
+    "url": "https://www.thesoundoftheembryo.es/reportaje-de-carmelita-dinamita-en-iruna-28-05-2026/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Reportaje de Carmelita Dinamita en Iruña 28-05-2026",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Reportaje de Mandrágora Negra en Irun 23-05-2026",
+    "url": "https://www.thesoundoftheembryo.es/reportaje-de-mandragora-negra-en-irun-23-05-2026/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Reportaje de Mandrágora Negra en Irun 23-05-2026",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Reportaje de Legacy Of The Seas en Irun 23-05-2026",
+    "url": "https://www.thesoundoftheembryo.es/reportaje-de-legacy-of-the-seas-en-irun-23-05-2026/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Reportaje de Legacy Of The Seas en Irun 23-05-2026",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Reportaje de Def Con Dos en Gasteiz 24-04-2026",
+    "url": "https://www.thesoundoftheembryo.es/reportaje-def-con-dos-gasteiz/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Reportaje de Def Con Dos en Gasteiz 24-04-2026",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Reportaje de Bourbon Kings en Gasteiz 24-04-2026",
+    "url": "https://www.thesoundoftheembryo.es/reportaje-bourbon-kings-gasteiz/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Reportaje de Bourbon Kings en Gasteiz 24-04-2026",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Crónica de Cobra en Arrasate 22-01-2026",
+    "url": "https://www.thesoundoftheembryo.es/cronica-cobra-arrasate/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Crónica de Cobra en Arrasate 22-01-2026",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Videos de The Stripp en Karibe Zaharra, Legazpi 02-06-2026",
+    "url": "https://www.thesoundoftheembryo.es/video-de-the-stripp-en-karibe-zaharra-legazpi-02-06-2026/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Videos de The Stripp en Karibe Zaharra, Legazpi 02-06-2026",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Video de Cobra en Arrasate 22-01-2026",
+    "url": "https://www.thesoundoftheembryo.es/cobra-arrasate/",
+    "date": "2026-06-19",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Video de Cobra en Arrasate 22-01-2026",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "The Flying Rebollos estrena \"Me acuerdo del Li\", segundo adelanto de \"Nada va a volver a ser igual\", su próximo disco, dedicado a “un viejo amigo”",
+    "url": "https://mariskalrock.com/noticias-breves/the-flying-rebollos-estrena-me-acuerdo-del-li-segundo-adelanto-de-nada-va-a-volver-a-ser-igual-su-proximo-disco-dedicado-a-un-viejo-amigo/",
+    "date": "2026-06-19",
+    "medio": "Mariskalrock",
+    "excerpt": "Tras su ansiado regreso con \"Iosune y Ernesto\", The Flying Rebollos continúan sumergiéndose con ímpetu en este nuevo episodio de su carrera. \"Me acuerdo del Li\" es su nuevo single",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Omnia Transit medirá sus fuerzas con Medina Azahara en un concierto en Badajoz, enmarcado en la gira de despedida de la banda andaluza",
+    "url": "https://mariskalrock.com/noticias-breves/omnia-transit-medira-sus-fuerzas-con-medina-azahara-en-un-concierto-en-badajoz-enmarcado-en-la-gira-de-despedida-de-la-banda-andaluza/",
+    "date": "2026-06-19",
+    "medio": "Mariskalrock",
+    "excerpt": "Omnia Transit se está preparando para marcar un nuevo hito en su carrera a través de una cita muy especial en la que derrochará su potente directo. El conjunto pacense será el encargado de abrir para Medina Azahara",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Nudozurdo celebrará el 15º aniversario de \"Tara Motor Hembra\" interpretando el disco al completo en un concierto en Barcelona",
+    "url": "https://mariskalrock.com/noticias-breves/nudozurdo-celebrara-el-15o-aniversario-de-tara-motor-hembra-interpretando-el-disco-al-completo-en-un-concierto-en-barcelona/",
+    "date": "2026-06-19",
+    "medio": "Mariskalrock",
+    "excerpt": "'Tara Motor Hembra' (2011) es uno de esos discos que, a pesar del paso del tiempo, continúa gozando de un lugar más que digno en la escena de la música alternativa española. Nudozurdo lo celebrará en Barcelona",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Sale a la luz un vídeo de Kutxi Romero (Marea) cantando y tocando una vieja canción de Extremoduro en la terraza de un bar",
+    "url": "https://mariskalrock.com/actualidad/sale-a-la-luz-un-video-de-kutxi-romero-marea-cantando-y-tocando-una-vieja-cancion-de-extremoduro-en-la-terraza-de-un-bar/",
+    "date": "2026-06-19",
+    "medio": "Mariskalrock",
+    "excerpt": "Kutxi Romero, la voz de Marea, interpretando con su guitarra una canción de Extremoduro es la estampa que pudieron encontrarse los parroquianos y visitantes puntuales en la terraza de un bar",
+    "rel": 5,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Cochè Vil Band pone fecha a \"Be Gone\", su próximo single, con el que continuará desarrollando su rock progresivo de tintes setenteros",
+    "url": "https://mariskalrock.com/noticias-breves/coche-vil-band-pone-fecha-a-be-gone-su-proximo-single-con-el-que-continuara-desarrollando-su-rock-progresivo-de-tintes-setenteros/",
+    "date": "2026-06-19",
+    "medio": "Mariskalrock",
+    "excerpt": "Cochè Vil Band continúa avanzando en su carrera mientras prepara nuevas canciones que darán continuidad al capítulo que cerró con 'Chaos' (2024). La agrupación ya se está preparando para lanzar 'Be Gone'",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Sôber anuncia las primeras fechas de \"Anandamida Tour\", la gira con la que presentará su próximo disco",
+    "url": "https://mariskalrock.com/actualidad/sober-anuncia-las-primeras-fechas-de-anandamida-tour-la-gira-con-la-que-presentara-su-proximo-disco/",
+    "date": "2026-06-19",
+    "medio": "Mariskalrock",
+    "excerpt": "El rock y metal de vanguardia, tan visionario como característico, de Sôber marcará un nuevo capítulo con su próximo disco, del que recientemente lanzaron \"Indestructible\" como primer adelanto y ahora anuncian gira",
+    "rel": 5,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Sonic Panda une fuerzas con Oblique en \"Silence Is In Vogue\", primer adelanto de \"Neomelodrama\" publicado en formato EP con versiones alternativas",
+    "url": "https://mariskalrock.com/actualidad/sonic-panda-une-fuerzas-con-oblique-en-silence-is-in-vogue-primer-adelanto-de-neomelodrama-publicado-en-formato-ep-con-versiones-alternativas/",
+    "date": "2026-06-19",
+    "medio": "Mariskalrock",
+    "excerpt": "Los apasionados de la escena industrial, la new wave o el synth-pop saciarán sus inquietudes musicales gracias a Sonic Panda. La banda ha emergido con fuerza ofreciendo una coctelera de sonidos junto a Oblique",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  }
+]

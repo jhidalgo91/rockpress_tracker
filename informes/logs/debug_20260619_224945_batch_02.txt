@@ -1,0 +1,311 @@
+=== ROCKPRESS DEBUG — 20260619_224945 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,546  output: 3,082
+Safety: (none)
+
+============================================================
+PROMPT (10,325 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/3 (30 artículos).
+
+FECHA HOY: 19 de junio de 2026
+VENTANA: 18/06/2026 — 19 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Rock Circus
+──────────────────────────────────────────────────
+• [2026-06-19] Rebrote tocarán el 4 de julio en las Fiestas de Errepelega
+  URL: https://rockcircus.net/rebrote-tocaran-el-4-de-julio-en-las-fiestas-de-errepelega/
+  Resumen: Rebrote tocarán el 4 de julio en las Fiestas de Errepelega. El concierto será en la Plaza Martínez de las Rivas. Y además, también actuarán Ready Aim Fire y Mozkor Alaiak.
+• [2026-06-19] Avulsed revela los primeros detalles de su nuevo disco, ‘Nordic Embryogenesis’
+  URL: https://rockcircus.net/avulsed-revela-los-primeros-detalles-de-su-nuevo-disco-nordic-embryogenesis/
+  Resumen: Avulsed revela los primeros detalles de su nuevo disco, ‘Nordic Embryogenesis’. Así lo presenta la banda: La legendaria banda española de Death Metal AVULSED desvela los primeros d
+• [2026-06-19] La Gripe Y Tú y Benito Kamelas actuarán en Castro Urdiales el 24 de junio
+  URL: https://rockcircus.net/la-gripe-y-tu-y-benito-kamelas-actuaran-en-castro-urdiales-el-24-de-junio/
+  Resumen: La Gripe Y Tú y Benito Kamelas actuarán gratis en Castro Urdiales en el marco del Rock In Castro. El concierto será el 24 de junio, en el Parque Amestoy. La Gripe Y Tú a partir de 
+• [2026-06-19] Soziedad Alkoholika confirmados para el ZarROCKaztelu de Carcastillo
+  URL: https://rockcircus.net/soziedad-alkoholika-confirmados-para-el-zarrockaztelu-de-carcastillo/
+  Resumen: Soziedad Alkoholika confirmados para el ZarROCKaztelu de Carcastillo, Navarra. El concierto será el próximo 10 octubre. Entrada gratuita.
+• [2026-06-19] Porretas, Sinkope o Eskorzo en el Festival La Raya Rock 2026
+  URL: https://rockcircus.net/porretas-sinkope-o-eskorzo-en-el-festival-la-raya-rock-2026/
+  Resumen: Los próximos 7 y 8 de agosto tendrá lugar el Festival La Raya Rock 2026. Tendrá lugar en San Vicente de Alcántara, Badajoz, y será gratuito. Estos son los grupos que participaran: 
+• [2026-06-19] Sínkope actuarán en Alcorcón el 19 de junio
+  URL: https://rockcircus.net/sinkope-actuaran-en-alcorcon-el-19-de-junio/
+  Resumen: Sínkope actuarán gratis en Alcorcón el 19 de junio. Se trata del concierto que tuvieron que aplazar el pasado mes de mayo por condiciones climatologicas adversas. En esta ocasión s
+• [2026-06-19] Sinkope o Bihotza en el Festival Sierra Norte Rock 2026
+  URL: https://rockcircus.net/sinkope-o-bihotza-en-el-festival-sierra-norte-rock-2026/
+  Resumen: El sábado 20 de junio tendrá lugar el Festival Sierra Norte Rock. Se celebrará en Galve de Sorbe, Guadalajara. Y en el mismo estarán los siguientes artistas: Sinkope Bihotza Laura 
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-19] HOLYSTONE presenta su nuevo single “Procession”, un adelanto feroz y ritualista de su próximo álbum
+  URL: https://tntradiorock.com/holystone-presenta-su-nuevo-single-procession-un-adelanto-feroz-y-ritualista-de-su-proximo-album/
+  Resumen: El trío australiano de heavy alternativo Holystone presenta su nuevo single “Procession”, un adelanto feroz y ritualista de su próximo álbum “Accepting Omega”, que verá […] Conteni
+• [2026-06-19] PLAINDRIFTER publican su nuevo álbum “Gestalt”, su viaje más expansivo y progresivo hasta la fecha
+  URL: https://tntradiorock.com/plaindrifter-publican-su-nuevo-album-gestalt-su-viaje-mas-expansivo-y-progresivo-hasta-la-fecha/
+  Resumen: El trío alemán de progressive stoner metal Plaindrifter lanza hoy su esperado segundo álbum “Gestalt”, que marca también su debut con Ripple Music. Impulsados por […] Contenido de 
+• [2026-06-19] AXEMASTER publican su nuevo álbum “Of Beasts And Plagues”, su regreso más poderoso al heavy metal clásico
+  URL: https://tntradiorock.com/axemaster-publican-su-nuevo-album-of-beasts-and-plagues-su-regreso-mas-poderoso-al-heavy-metal-clasico/
+  Resumen: Los veteranos del heavy metal estadounidense Axemaster lanzan hoy su esperado nuevo álbum “Of Beasts And Plagues” a través de Cosmic Fire Records, marcando un […] Contenido de TNT 
+• [2026-06-19] FINSTERFORST presenta "Obduktion", segundo adelanto de su nuevo álbum "Still"
+  URL: https://tntradiorock.com/finsterforst-presenta-obduktion-segundo-adelanto-de-su-nuevo-album-still/
+  Resumen: Tras más de dos décadas explorando y expandiendo los límites del metal extremo, FINSTERFORST continúa desvelando detalles de su próximo trabajo discográfico con el estreno […] Cont
+• [2026-06-19] A GOLPES DE ROCK 361 19/06/2026 ESPECIAL 7º ANIVERSARIO
+  URL: https://tntradiorock.com/a-golpes-de-rock-361-19-06-2026-especial-7o-aniversario/
+  Resumen: Hoy celebramos nuestro séptimo aniversario con el ya tradicional programa de versiones. 33 bandas emergentes versionaran temas de Bandas y solistas conocidos de todos los […] Conte
+• [2026-06-19] EXCALIBUR regresan con el single “Mi Condena”, un golpe de puro Heavy Metal español
+  URL: https://tntradiorock.com/excalibur-regresan-con-el-single-mi-condena-un-golpe-de-puro-heavy-metal-espanol/
+  Resumen: La veterana banda española de heavy metal y hard rock Excalibur vuelve a escena con su nuevo y poderoso single “Mi Condena”, un tema cargado […] Contenido de TNT Radio Rock
+• [2026-06-19] Del underground sueco al escaparate internacional: el ascenso de SARCATOR
+  URL: https://tntradiorock.com/sarcator/
+  Resumen: A veces las noticias más importantes no llegan acompañadas de un nuevo single o de un videoclip. En ocasiones, basta una firma para anticipar que […] Contenido de TNT Radio Rock
+• [2026-06-19] TEMPLE OF THE ABSURD presenta "Prayer", un emotivo homenaje a quienes ya no están
+  URL: https://tntradiorock.com/temple-of-the-absurd-presenta-prayer-un-emotivo-homenaje-a-quienes-ya-no-estan/
+  Resumen: Tras anunciar su inesperado regreso a comienzos de este año, TEMPLE OF THE ABSURD presenta "Prayer", el primer adelanto de su próximo álbum de estudio, […] Contenido de TNT Radio R
+• [2026-06-19] GIN LADY publican hoy “Toads & Diamonds Volume One: Live In Spain”, su primer álbum en directo
+  URL: https://tntradiorock.com/gin-lady-publican-hoy-toads-diamonds-volume-one-live-in-spain-su-primer-album-en-directo/
+  Resumen: La banda sueca de classic rock Gin Lady lanza hoy su primer álbum en directo, “Toads & Diamonds Volume One: Live In Spain”, disponible ya […] Contenido de TNT Radio Rock
+• [2026-06-19] SAMAEL entran en una nueva era con su single “Hail To The Sun”
+  URL: https://tntradiorock.com/samael-entran-en-una-nueva-era-con-su-single-hail-to-the-sun/
+  Resumen: Los iconos suizos del metal extremo Samael, una de las fuerzas más influyentes del industrial y el black metal desde finales de los ochenta, presentan […] Contenido de TNT Radio Ro
+
+──────────────────────────────────────────────────
+MEDIO: Trueno Metálico
+──────────────────────────────────────────────────
+• [2026-06-12] MIS 5 RECOMENDACIONES SEMANALES (MAYO/JUNIO 2026) - PRIMERA PARTE
+  URL: https://trueno-metalico.blogspot.com/2026/06/mis-5-recomendaciones-semanales.html
+• [2026-06-19] SAD EYES (V 5EN5E5 - 2025) - ANÁLISIS / CRÍTICA / RESEÑA
+  URL: https://trueno-metalico.blogspot.com/2026/05/sad-eyes-v-5en5e5-2025-analisis-critica.html
+
+──────────────────────────────────────────────────
+MEDIO: Reino de Sueños
+──────────────────────────────────────────────────
+• [2026-06-19] RABIA PEREZ : Presenta “VALLE DE SOMBRAS”, una descarga de Death Metal Emocional y Sinfónico
+  URL: https://reinodesuenos.com/rabia-perez-presenta-valle-de-sombras-una-descarga-de-death-metal-emocional-y-sinfonico
+• [2026-06-19] GRAHAM BONNET BAND Anuncia su gira con 2 fechas en España
+  URL: https://reinodesuenos.com/graham-bonnet-band-anuncia-su-gira-con-2-fechas-en-espana
+• [2026-06-19] COTARD presentan su nuevo ep «Laberinto» en directo.
+  URL: https://reinodesuenos.com/cotard-presentan-su-nuevo-ep-laberinto-en-directo
+• [2026-06-19] TABÜ : Celebra 20 años de carreara con un concierto especial en RAZZMATAZZ 2
+  URL: https://reinodesuenos.com/tabu-celebra-20-anos-de-carreara-con-un-concierto-especial-en-razzmatazz-2
+• [2026-06-19] LEIZE: Publica su nuevo single «Caos»
+  URL: https://reinodesuenos.com/leize-publica-su-nuevo-single-caos
+• [2026-06-19] REINO DE SUEÑOS- Programa 260 (25/10/2022) José luis Cerro ( Asociación ASPEM)
+  URL: https://reinodesuenos.com/reino-de-suenos-programa-260-25-10-2022-jose-luis-cerro-asociacion-aspem
+• [2026-06-19] REINO DE SUEÑOS- Programa 259 (05/09/2022) BLAST OPEN
+  URL: https://reinodesuenos.com/reino-de-suenos-programa-259-05-09-2022-blast-open
+• [2026-06-19] FINAL STRIKE, nuevo single «Raised by Wolves»
+  URL: https://reinodesuenos.com/final-strike-nuevo-single-raised-by-wolves
+• [2026-06-19] SARATOGA: Inicia la gira de su último álbum «En Estado Puro» en Latinoamérica y confirma nuevas fechas.
+  URL: https://reinodesuenos.com/saratoga-inicia-la-gira-de-su-ultimo-album-en-estado-puro-en-latinoamerica-y-confirma-nuevas-fechas
+• [2026-06-19] BELLA BESTIA vuelve a los escenarios
+  URL: https://reinodesuenos.com/bella-bestia-vuelve-a-los-escenarios
+• [2026-06-19] El nuevo trabajo de MANDRÁGORA NEGRA “GUERRERO INMORTAL”2026
+  URL: https://reinodesuenos.com/el-nuevo-trabajo-de-mandragora-negra-guerrero-inmortal2026
+
+============================================================
+RESPUESTA (8,550 chars):
+============================================================
+[
+  {
+    "title": "Rebrote tocarán el 4 de julio en las Fiestas de Errepelega",
+    "url": "https://rockcircus.net/rebrote-tocaran-el-4-de-julio-en-las-fiestas-de-errepelega/",
+    "date": "2026-06-19",
+    "medio": "Rock Circus",
+    "excerpt": "Rebrote tocarán el 4 de julio en las Fiestas de Errepelega. El concierto será en la Plaza Martínez de las Rivas. Y además, también actuarán Ready Aim Fire y Mozkor Alaiak.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Avulsed revela los primeros detalles de su nuevo disco, ‘Nordic Embryogenesis’",
+    "url": "https://rockcircus.net/avulsed-revela-los-primeros-detalles-de-su-nuevo-disco-nordic-embryogenesis/",
+    "date": "2026-06-19",
+    "medio": "Rock Circus",
+    "excerpt": "La legendaria banda española de Death Metal AVULSED desvela los primeros detalles de su nuevo disco, ‘Nordic Embryogenesis’.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "La Gripe Y Tú y Benito Kamelas actuarán en Castro Urdiales el 24 de junio",
+    "url": "https://rockcircus.net/la-gripe-y-tu-y-benito-kamelas-actuaran-en-castro-urdiales-el-24-de-junio/",
+    "date": "2026-06-19",
+    "medio": "Rock Circus",
+    "excerpt": "La Gripe Y Tú y Benito Kamelas actuarán gratis en Castro Urdiales en el marco del Rock In Castro. El concierto será el 24 de junio, en el Parque Amestoy.",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Soziedad Alkoholika confirmados para el ZarROCKaztelu de Carcastillo",
+    "url": "https://rockcircus.net/soziedad-alkoholika-confirmados-para-el-zarrockaztelu-de-carcastillo/",
+    "date": "2026-06-19",
+    "medio": "Rock Circus",
+    "excerpt": "Soziedad Alkoholika confirmados para el ZarROCKaztelu de Carcastillo, Navarra. El concierto será el próximo 10 octubre. Entrada gratuita.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Porretas, Sinkope o Eskorzo en el Festival La Raya Rock 2026",
+    "url": "https://rockcircus.net/porretas-sinkope-o-eskorzo-en-el-festival-la-raya-rock-2026/",
+    "date": "2026-06-19",
+    "medio": "Rock Circus",
+    "excerpt": "Los próximos 7 y 8 de agosto tendrá lugar el Festival La Raya Rock 2026. Tendrá lugar en San Vicente de Alcántara, Badajoz, y será gratuito con Porretas, Sínkope o Eskorzo.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Sínkope actuarán en Alcorcón el 19 de junio",
+    "url": "https://rockcircus.net/sinkope-actuaran-en-alcorcon-el-19-de-junio/",
+    "date": "2026-06-19",
+    "medio": "Rock Circus",
+    "excerpt": "Sínkope actuarán gratis en Alcorcón el 19 de junio. Se trata del concierto que tuvieron que aplazar el pasado mes de mayo por condiciones climatologicas adversas.",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Sinkope o Bihotza en el Festival Sierra Norte Rock 2026",
+    "url": "https://rockcircus.net/sinkope-o-bihotza-en-el-festival-sierra-norte-rock-2026/",
+    "date": "2026-06-19",
+    "medio": "Rock Circus",
+    "excerpt": "El sábado 20 de junio tendrá lugar el Festival Sierra Norte Rock. Se celebrará en Galve de Sorbe, Guadalajara, con la participación de Sínkope y Bihotza.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "A GOLPES DE ROCK 361 19/06/2026 ESPECIAL 7º ANIVERSARIO",
+    "url": "https://tntradiorock.com/a-golpes-de-rock-361-19-06-2026-especial-7o-aniversario/",
+    "date": "2026-06-19",
+    "medio": "TNT Radio Rock",
+    "excerpt": "Hoy celebramos nuestro séptimo aniversario con el ya tradicional programa de versiones. 33 bandas emergentes versionaran temas de Bandas y solistas conocidos.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "EXCALIBUR regresan con el single “Mi Condena”, un golpe de puro Heavy Metal español",
+    "url": "https://tntradiorock.com/excalibur-regresan-con-el-single-mi-condena-un-golpe-de-puro-heavy-metal-espanol/",
+    "date": "2026-06-19",
+    "medio": "TNT Radio Rock",
+    "excerpt": "La veterana banda española de heavy metal y hard rock Excalibur vuelve a escena con su nuevo y poderoso single “Mi Condena”.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "GIN LADY publican hoy “Toads & Diamonds Volume One: Live In Spain”, su primer álbum en directo",
+    "url": "https://tntradiorock.com/gin-lady-publican-hoy-toads-diamonds-volume-one-live-in-spain-su-primer-album-en-directo/",
+    "date": "2026-06-19",
+    "medio": "TNT Radio Rock",
+    "excerpt": "La banda sueca de classic rock Gin Lady lanza hoy su primer álbum en directo, “Toads & Diamonds Volume One: Live In Spain”.",
+    "rel": 2,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "SAD EYES (V 5EN5E5 - 2025) - ANÁLISIS / CRÍTICA / RESEÑA",
+    "url": "https://trueno-metalico.blogspot.com/2026/05/sad-eyes-v-5en5e5-2025-analisis-critica.html",
+    "date": "2026-06-19",
+    "medio": "Trueno Metálico",
+    "excerpt": "Análisis y crítica del trabajo de la banda española de metal extremo Sad Eyes.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "RABIA PEREZ : Presenta “VALLE DE SOMBRAS”, una descarga de Death Metal Emocional y Sinfónico",
+    "url": "https://reinodesuenos.com/rabia-perez-presenta-valle-de-sombras-una-descarga-de-death-metal-emocional-y-sinfonico",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "La banda madrileña Rabia Perez presenta su nuevo single y videoclip 'Valle de Sombras', una potente propuesta de metal moderno.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "GRAHAM BONNET BAND Anuncia su gira con 2 fechas en España",
+    "url": "https://reinodesuenos.com/graham-bonnet-band-anuncia-su-gira-con-2-fechas-en-espana",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "El legendario vocalista Graham Bonnet anuncia una nueva gira europea que incluirá dos paradas exclusivas en España.",
+    "rel": 2,
+    "categoria": "Gira"
+  },
+  {
+    "title": "COTARD presentan su nuevo ep «Laberinto» en directo.",
+    "url": "https://reinodesuenos.com/cotard-presentan-su-nuevo-ep-laberinto-en-directo",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "La banda de rock Cotard presenta en directo los temas de su nuevo trabajo discográfico en formato EP titulado 'Laberinto'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "TABÜ : Celebra 20 años de carreara con un concierto especial en RAZZMATAZZ 2",
+    "url": "https://reinodesuenos.com/tabu-celebra-20-anos-de-carreara-con-un-concierto-especial-en-razzmatazz-2",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "La banda de hard rock Tabü celebrará su vigésimo aniversario con un show muy especial en la sala Razzmatazz 2 de Barcelona.",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "LEIZE: Publica su nuevo single «Caos»",
+    "url": "https://reinodesuenos.com/leize-publica-su-nuevo-single-caos",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "La mítica banda de rock Leize estrena su nuevo single digital bajo el título de 'Caos', un adelanto de sus próximos planes de estudio.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "SARATOGA: Inicia la gira de su último álbum «En Estado Puro» en Latinoamérica y confirma nuevas fechas.",
+    "url": "https://reinodesuenos.com/saratoga-inicia-la-gira-de-su-ultimo-album-en-estado-puro-en-latinoamerica-y-confirma-nuevas-fechas",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "Saratoga arranca su periplo internacional presentando su directo 'En Estado Puro' y confirma nuevas fechas de conciertos.",
+    "rel": 5,
+    "categoria": "Gira"
+  },
+  {
+    "title": "BELLA BESTIA vuelve a los escenarios",
+    "url": "https://reinodesuenos.com/bella-bestia-vuelve-a-los-escenarios",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "La mítica formación de glam/heavy metal madrileña Bella Bestia anuncia su regreso oficial a los escenarios con nueva formación.",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "El nuevo trabajo de MANDRÁGORA NEGRA “GUERRERO INMORTAL”2026",
+    "url": "https://reinodesuenos.com/el-nuevo-trabajo-de-mandragora-negra-guerrero-inmortal2026",
+    "date": "2026-06-19",
+    "medio": "Reino de Sueños",
+    "excerpt": "Mandrágora Negra presenta los detalles de su nuevo lanzamiento discográfico titulado 'Guerrero Inmortal' para este año 2026.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  }
+]

@@ -1,0 +1,332 @@
+=== ROCKPRESS DEBUG — 20260619_224922 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,150  output: 3,172
+Safety: (none)
+
+============================================================
+PROMPT (8,428 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/3 (30 artículos).
+
+FECHA HOY: 19 de junio de 2026
+VENTANA: 18/06/2026 — 19 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-19] Diario de un Metalhead 844 listo ya en modo podcast.
+  URL: https://www.diariodeunmetalhead.com/2026/06/este-jueves-non-stop-metal-en-diario-de.html
+• [2026-06-19] Entrevista a Juan Ríos, vocalista de Balsa de Piedra.
+  URL: https://www.diariodeunmetalhead.com/2026/06/entrevista-juan-rios-vocalista-de-balsa.html
+• [2026-06-19] IV MADALENROCK: el 18 de julio en Errentería (Guipúzcoa) con entrada libre. Falta un mes.
+  URL: https://www.diariodeunmetalhead.com/2026/06/iv-madalenrock-el-18-de-julio-en.html
+• [2026-06-19] MOONLIGHT HAZE: Interstellar Madness (Scarlet Records, 2026) Italia.
+  URL: https://www.diariodeunmetalhead.com/2026/06/moonlight-haze-interstellar-madness.html
+• [2026-06-19] CIRCE: Siglo 31 (The Fish Factory. 2026).
+  URL: https://www.diariodeunmetalhead.com/2026/06/circe-siglo-31-fish-factory-2026.html
+• [2026-06-19] El "Hard Rock" de ARMANDO DE CASTRO, ahora en vinilo.
+  URL: https://www.diariodeunmetalhead.com/2026/06/el-hard-rock-de-armando-de-castro-ahora.html
+• [2026-06-19] NURCRY: IV (Demons Records, 2026).
+  URL: https://www.diariodeunmetalhead.com/2026/06/nurcry-iv-demons-records-2026.html
+• [2026-06-19] CAN MERCADER FESTIVAL 2026: dos días y gratis.
+  URL: https://www.diariodeunmetalhead.com/2026/06/can-mercader-festival-2026-dos-dias-y.html
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-19] Noticias: Adrian Vandenberg+ Behemoth + Bloodstain
+  URL: https://diosesdelmetal.org/noticias-adrian-vandenberg-behemoth-bloodstain/
+  Resumen: 50º aniversario de Adrian Vandenberg – Single de Behemoth – Bloodstain estrena tema. Por Rockberto. Adrian Vandenberg ha anunciado que con motivo de su 50º aniversario sobre los es
+• [2026-06-19] Tercera jornada del Z! Live, sábado 13 de junio
+  URL: https://diosesdelmetal.org/tercera-jornada-del-z-live-sabado-13-de-junio/
+  Resumen: Jornada entre luces y sombras Crónica de Sikanda Fotos de Fran Cea y Javier Bragado cedidas para todos los medios sin fotógrafo Y llegó el tercer día del festival, con el cuerpo má
+• [2026-06-19] Rockfemérides 19 junio
+  URL: https://diosesdelmetal.org/rockfemerides-19-junio/
+  Resumen: Hoy cumplen años Ann Wilson, cantante y compositora principal de Heart; Luke Morley, guitarrista de Thunder; Simon Wright, batería de bandas como AC / DC y Dio; un día como hoy Que
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-19] Revisando Clásicos. Uzzhuaïa - m/t
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/revisando-clasicos-uzzhuaia-mt.html
+• [2026-06-18] Humo Sapiens presentan "Ingravidez", su nuevo single con la colaboración de La Fuga
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/humo-sapiens-presentan-ingravidez-su.html
+• [2026-06-17] Kike M lanza "Huella" a dúo con Kutxi Romero
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/kike-m-lanza-huella-duo-con-kutxi-romero.html
+• [2026-06-16] "Me levantaré otra vez" es el nuevo single de Boikot
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/me-levantare-otra-vez-es-el-nuevo.html
+• [2026-06-15] Sôber lanza "Indestructible" como single de adelanto de su próximo disco
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/sober-lanza-indestructible-como-single.html
+• [2026-06-14] A Tiro publica "Tu corazón", tercer adelanto de su próximo album
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/a-tiro-publica-tu-corazon-tercer.html
+• [2026-06-13] Chico Infierno publica el EP "El gran circo de las ilusiones"
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/chico-infierno-publica-el-ep-el-gran.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-19] Virgi Energy, bajista de Ratpenades, publica su tercer single en solitario
+  URL: https://elsuavecitofn.blogspot.com/2026/06/virgi-energy-bajista-de-ratpenades.html
+• [2026-06-19] LOTURA presentan el videoclip de "Barkamena" | Nuevas fechas en directo
+  URL: https://elsuavecitofn.blogspot.com/2026/06/lotura-presentan-el-videoclip-de.html
+• [2026-06-19] SUJETO K: Saca a la luz "Larrigui", el tercer single de su álbum "XX Aniversario, En Directo" (10/07)
+  URL: https://elsuavecitofn.blogspot.com/2026/06/sujeto-k-saca-la-luz-larrigui-el-tercer.html
+• [2026-06-19] HURACÁN ROMÁNTICA estrenan videoclip de "Carnaval"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/huracan-romantica-estrenan-videoclip-de.html
+• [2026-06-19] El fin del viaje: MARKFEEL con Jorge [SÔBER] y Germán [SKUNK DF] - Oppenheimer
+  URL: https://elsuavecitofn.blogspot.com/2026/06/el-fin-del-viaje-markfeel-con-jorge.html
+• [2026-06-19] Nuevo vídeo de Physycal "Never Close"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/nuevo-video-de-physycal-never-close.html
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-06-19] Nuevos temas de Rēptile, Sôber, Against the Waves, Lotura y Doble Esfera
+  URL: https://keeptheflame.es/noticias/videos/10328-reptile-sober-atw-lotura-doble.html
+  Resumen: http://www.youtube.com/watch?v=kAgbkGWXZ1I ¡Por fin es viernes y el cuerpo pide nueva músic ! Por suerte, nuestras bandas no descansan y nos dejan una buena ráfaga de estrenos para
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-19] KABIEFEST – JORNADA 1
+  URL: https://www.nochederock.com/kabiefest-jornada-1/
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-19] BEAST IN BLACK – SAVAGED – TEMPLE OF THE ABSURD
+  URL: https://www.rafabasa.com/2026/06/19/beast-in-black-savaged-temple-of-the-absurd/
+  Resumen: Fechas de BEAST IN BLACK. SAVAGED en Madrid. Single de la banda de Sabina Classen TEMPLE OF THE ABSURD. La entrada BEAST IN BLACK – SAVAGED – TEMPLE OF THE ABSURD se publicó primer
+• [2026-06-19] BEHEMOTH – DARK FUNERAL – EXCALIBUR
+  URL: https://www.rafabasa.com/2026/06/19/behemoth-dark-funeral-excalibur/
+  Resumen: Nuevo vídeo de BEHEMOTH. Directo de DARK FUNERAL. EXCALIBUR estrenan single. La entrada BEHEMOTH – DARK FUNERAL – EXCALIBUR se publicó primero en WWW.RAFABASA.COM - Noticias en esp
+• [2026-06-19] SNÁGORA – Adrian Vandenberg – YONAKA
+  URL: https://www.rafabasa.com/2026/06/19/snagora-adrian-vandenberg-yonaka/
+  Resumen: SNAGORA estrenan vídeo. Aniversario de Adrian Vandenberg con documental, biografía y nuevo disco. YONAKA teloneros de THE PRETTY RECKLESS. La entrada SNÁGORA – Adrian Vandenberg – 
+• [2026-06-19] HOY, Viernes 19 de junio FIESTA LEYENDAS DEL ROCK en VALENCIA, con ABONOS y CAMISETAS. El 27 en GRANADA
+  URL: https://www.rafabasa.com/2026/06/19/hoy-viernes-19-de-junio-fiesta-leyendas-del-rock-en-valencia-con-abonos-y-camisetas-el-27-en-granada/
+  Resumen: La entrada HOY, Viernes 19 de junio FIESTA LEYENDAS DEL ROCK en VALENCIA, con ABONOS y CAMISETAS. El 27 en GRANADA se publicó primero en WWW.RAFABASA.COM - Noticias en español sobr
+
+============================================================
+RESPUESTA (8,312 chars):
+============================================================
+[
+  {
+    "title": "Entrevista a Juan Ríos, vocalista de Balsa de Piedra",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/entrevista-juan-rios-vocalista-de-balsa.html",
+    "date": "2026-06-19",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Entrevista a Juan Ríos, vocalista de la banda de doom metal Balsa de Piedra.",
+    "rel": 3,
+    "categoria": "Entrevista"
+  },
+  {
+    "title": "IV MADALENROCK: el 18 de julio en Errentería (Guipúzcoa) con entrada libre",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/iv-madalenrock-el-18-de-julio-en.html",
+    "date": "2026-06-19",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "El festival gratuito Madalenrock anuncia su cuarta edición en Errentería para el próximo 18 de julio.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "CIRCE: Siglo 31 (The Fish Factory. 2026)",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/circe-siglo-31-fish-factory-2026.html",
+    "date": "2026-06-19",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Reseña del nuevo trabajo de la banda española Circe, editado por el sello The Fish Factory.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "El \"Hard Rock\" de ARMANDO DE CASTRO, ahora en vinilo",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/el-hard-rock-de-armando-de-castro-ahora.html",
+    "date": "2026-06-19",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "El legendario guitarrista de Barón Rojo, Armando de Castro, ve editado su trabajo en formato vinilo.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "NURCRY: IV (Demons Records, 2026)",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/nurcry-iv-demons-records-2026.html",
+    "date": "2026-06-19",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Análisis del nuevo lanzamiento de la banda madrileña Nurcry a través de Demons Records.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "CAN MERCADER FESTIVAL 2026: dos días y gratis",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/can-mercader-festival-2026-dos-dias-y.html",
+    "date": "2026-06-19",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Detalles de la nueva edición del Can Mercader Festival, que se celebrará de forma gratuita durante dos jornadas.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Tercera jornada del Z! Live, sábado 13 de junio",
+    "url": "https://diosesdelmetal.org/tercera-jornada-del-z-live-sabado-13-de-junio/",
+    "date": "2026-06-19",
+    "medio": "Dioses del Metal",
+    "excerpt": "Crónica detallada de la tercera jornada del festival zamorano Z! Live Rock Fest.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Revisando Clásicos. Uzzhuaïa - m/t",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/revisando-clasicos-uzzhuaia-mt.html",
+    "date": "2026-06-19",
+    "medio": "El Clavijero Rock",
+    "excerpt": "Un repaso al disco homónimo de la mítica banda valenciana de hard rock Uzzhuaïa.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Humo Sapiens presentan \"Ingravidez\", su nuevo single con la colaboración de La Fuga",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/humo-sapiens-presentan-ingravidez-su.html",
+    "date": "2026-06-18",
+    "medio": "El Clavijero Rock",
+    "excerpt": "La banda Humo Sapiens estrena su nuevo sencillo 'Ingravidez' contando con la colaboración especial de La Fuga.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Virgi Energy, bajista de Ratpenades, publica su tercer single en solitario",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/virgi-energy-bajista-de-ratpenades.html",
+    "date": "2026-06-19",
+    "medio": "El Suavecito",
+    "excerpt": "La bajista de la banda catalana Ratpenades presenta su nuevo tema en solitario.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "LOTURA presentan el videoclip de \"Barkamena\" | Nuevas fechas en directo",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/lotura-presentan-el-videoclip-de.html",
+    "date": "2026-06-19",
+    "medio": "El Suavecito",
+    "excerpt": "La banda de metal alternativo Lotura estrena videoclip y anuncia nuevas fechas de conciertos en el estado.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "SUJETO K: Saca a la luz \"Larrigui\", el tercer single de su álbum \"XX Aniversario, En Directo\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/sujeto-k-saca-la-luz-larrigui-el-tercer.html",
+    "date": "2026-06-19",
+    "medio": "El Suavecito",
+    "excerpt": "Sujeto K adelanta un nuevo tema en directo perteneciente a su disco de vigésimo aniversario.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "HURACÁN ROMÁNTICA estrenan videoclip de \"Carnaval\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/huracan-romantica-estrenan-videoclip-de.html",
+    "date": "2026-06-19",
+    "medio": "El Suavecito",
+    "excerpt": "La banda valenciana Huracán Romántica presenta el videoclip oficial para su canción 'Carnaval'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "El fin del viaje: MARKFEEL con Jorge [SÔBER] y Germán [SKUNK DF] - Oppenheimer",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/el-fin-del-viaje-markfeel-con-jorge.html",
+    "date": "2026-06-19",
+    "medio": "El Suavecito",
+    "excerpt": "Markfeel presenta su nuevo proyecto con colaboraciones de miembros destacados de Sôber y Skunk D.F.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Nuevo vídeo de Physycal \"Never Close\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/nuevo-video-de-physycal-never-close.html",
+    "date": "2026-06-19",
+    "medio": "El Suavecito",
+    "excerpt": "La formación de hard rock Physycal estrena el videoclip de su tema 'Never Close'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Nuevos temas de Rēptile, Sôber, Against the Waves, Lotura y Doble Esfera",
+    "url": "https://keeptheflame.es/noticias/videos/10328-reptile-sober-atw-lotura-doble.html",
+    "date": "2026-06-19",
+    "medio": "Keep The Flame",
+    "excerpt": "Recopilación de los últimos estrenos en vídeo de destacadas bandas de la escena rock y metal nacional.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "KABIEFEST – JORNADA 1",
+    "url": "https://www.nochederock.com/kabiefest-jornada-1/",
+    "date": "2026-06-19",
+    "medio": "Noche de Rock",
+    "excerpt": "Crónica y detalles de la primera jornada del festival Kabiefest celebrado en Santurtzi.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "BEAST IN BLACK – SAVAGED – TEMPLE OF THE ABSURD",
+    "url": "https://www.rafabasa.com/2026/06/19/beast-in-black-savaged-temple-of-the-absurd/",
+    "date": "2026-06-19",
+    "medio": "Rafa Basa",
+    "excerpt": "Fechas de Beast In Black en España y concierto confirmado de la banda nacional Savaged en Madrid.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "BEHEMOTH – DARK FUNERAL – EXCALIBUR",
+    "url": "https://www.rafabasa.com/2026/06/19/behemoth-dark-funeral-excalibur/",
+    "date": "2026-06-19",
+    "medio": "Rafa Basa",
+    "excerpt": "La mítica banda de heavy metal española Excalibur estrena su nuevo single.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "SNÁGORA – Adrian Vandenberg – YONAKA",
+    "url": "https://www.rafabasa.com/2026/06/19/snagora-adrian-vandenberg-yonaka/",
+    "date": "2026-06-19",
+    "medio": "Rafa Basa",
+    "excerpt": "La banda de metal española Snágora estrena su nuevo videoclip oficial.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "HOY, Viernes 19 de junio FIESTA LEYENDAS DEL ROCK en VALENCIA, con ABONOS y CAMISETAS. El 27 en GRANADA",
+    "url": "https://www.rafabasa.com/2026/06/19/hoy-viernes-19-de-junio-fiesta-leyendas-del-rock-en-valencia-con-abonos-y-camisetas-el-27-en-granada/",
+    "date": "2026-06-19",
+    "medio": "Rafa Basa",
+    "excerpt": "Fiestas oficiales de presentación del festival Leyendas del Rock en Valencia y Granada con sorteo de abonos.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  }
+]
