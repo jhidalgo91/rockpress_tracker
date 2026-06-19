@@ -496,14 +496,49 @@ def _call_gemini_raw(prompt: str, max_output_tokens: int, debug_label: str = "ge
     """
     Llamada base a Gemini. Devuelve (response_text, finish_reason).
     Guarda debug log completo en informes/logs/.
+
+    NOTA — gemini-3.5-flash es un modelo "thinking": razona en voz alta antes de
+    responder, consumiendo todos los tokens de salida en chain-of-thought y nunca
+    llegando al JSON real.  Solución:
+      • Lotes de clasificación → response_mime_type="application/json" fuerza salida
+        JSON pura sin ningún razonamiento previo.
+      • Informe final → sin mime type (texto Markdown), pero con max_output_tokens alto.
     """
     genai.configure(api_key=GEMINI_API_KEY)
+
+    is_batch = debug_label.startswith("batch_")
+
+    # ── Configuración base ────────────────────────────────────────────────────
+    gen_config_kwargs: dict = {
+        "temperature": 0.1,
+        "max_output_tokens": max_output_tokens,
+    }
+
+    # Para clasificación por lotes: forzar JSON puro y sistema sin thinking
+    if is_batch:
+        try:
+            gen_config_kwargs["response_mime_type"] = "application/json"
+        except Exception:
+            pass  # SDK más antiguo: simplemente no lo añadimos
+
+    try:
+        gen_config = genai.types.GenerationConfig(**gen_config_kwargs)
+    except TypeError:
+        # Si response_mime_type no está soportado en este SDK, quitarlo
+        gen_config_kwargs.pop("response_mime_type", None)
+        gen_config = genai.types.GenerationConfig(**gen_config_kwargs)
+
+    # System instruction: evitar razonamiento en la respuesta (sobre todo en lotes JSON)
+    system_instr = (
+        "Eres un sistema de clasificación de noticias de rock. "
+        "Responde ÚNICAMENTE con JSON válido. "
+        "NUNCA incluyas razonamiento, explicaciones ni texto fuera del JSON."
+    ) if is_batch else None
+
     model = genai.GenerativeModel(
         model_name=GEMINI_MODEL,
-        generation_config=genai.types.GenerationConfig(
-            temperature=0.1,
-            max_output_tokens=max_output_tokens,
-        ),
+        generation_config=gen_config,
+        system_instruction=system_instr,
     )
 
     log.info(f"  [{debug_label}] Enviando {len(prompt):,} chars a {GEMINI_MODEL} (max_tokens={max_output_tokens})…")
@@ -622,7 +657,7 @@ ARTICULOS:
 
     log.info(f"Lote {batch_num}/{total_batches}: clasificando {len(articles_with_medio)} artículos…")
     try:
-        text, finish_reason = _call_gemini_raw(prompt, max_output_tokens=4096, debug_label=f"batch_{batch_num:02d}")
+        text, finish_reason = _call_gemini_raw(prompt, max_output_tokens=8192, debug_label=f"batch_{batch_num:02d}")
 
         if not text.strip():
             log.warning(f"  Lote {batch_num}: respuesta vacía (finish_reason={finish_reason})")
