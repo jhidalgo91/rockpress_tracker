@@ -489,120 +489,329 @@ def date_to_spanish(dt: datetime) -> str:
     return raw
 
 
-def build_prompt(
-    article_list_text: str,
-    total_nuevos: int,
-    total_vistos: int,
-    medios_sin_articulos: list[str],
-    today_str: str,
-    desde_str: str,
-) -> str:
-
-    medios_sin = ", ".join(medios_sin_articulos) if medios_sin_articulos else "ninguno"
-
-    return f"""Eres un periodista musical especializado en rock nacional español.
-
-FECHA DE HOY: {today_str}
-VENTANA DE NOTICIAS: {desde_str} → {today_str}
-ARTÍCULOS NUEVOS DISPONIBLES: {total_nuevos}
-ARTÍCULOS YA REPORTADOS (excluidos): {total_vistos}
-MEDIOS SIN ARTÍCULOS NUEVOS: {medios_sin}
-
-TAREA:
-Analiza la lista de artículos y genera el informe diario de rock nacional español.
-
-CRITERIOS DE SELECCIÓN (incluir solo si cumple al menos uno):
-✅ Bandas o artistas de rock/metal ESPAÑOLES (discos, giras, entrevistas, noticias)
-✅ Festivales o conciertos celebrados o anunciados EN ESPAÑA
-✅ Lanzamientos de álbumes/EPs/singles de artistas ESPAÑOLES
-✅ Noticias de salas, promotoras, sellos discográficos ESPAÑOLES
-✅ Artistas internacionales con conciertos confirmados en España (relevancia media)
-
-CRITERIOS DE EXCLUSIÓN:
-❌ Noticias puramente internacionales sin conexión con España
-❌ Noticias de fecha fuera de la ventana {desde_str}–{today_str}
-
-RELEVANCIA (1–5 estrellas):
-⭐⭐⭐⭐⭐ Banda española top-tier, disco nuevo, festival nacional de primer nivel
-⭐⭐⭐⭐   Artista/evento español destacado, entrevista relevante
-⭐⭐⭐     Festival regional, lanzamiento de banda emergente, concierto en España
-⭐⭐       Internacional con conexión España secundaria
-⭐         Mención menor, noticia de baja relevancia
-
-FORMATO OBLIGATORIO DE SALIDA:
-
-# INFORME DIARIO – ROCK NACIONAL
-Fecha: {today_str}
-
----
-
-## 📰 Titulares Relevantes
-
----
-
-### 🔴 ALTA RELEVANCIA
-
-**N. TITULAR** — MEDIO
-Resumen: [2-3 frases descriptivas]
-Enlace: [URL completa]
-Categoría: [Lanzamiento / Festival en España / Concierto / Entrevista / Gira / Bandas españolas]
-Relevancia: ⭐⭐⭐⭐⭐ — [justificación en una frase]
-
----
-
-### 🟠 MEDIA-ALTA RELEVANCIA
-
-[mismo formato]
-
----
-
-### 🟡 MEDIA RELEVANCIA
-
-[mismo formato]
-
----
-
-## 📊 Resumen General
-
-- **Total de noticias con conexión rock nacional:** X
-- **Artículos excluidos por ya reportados:** {total_vistos}
-- **Medios con actividad nueva:** [lista]
-- **Tendencias detectadas:** [2-3 frases sobre temas recurrentes]
-
----
-
-## 🗂️ Fuentes consultadas
-
-| Medio | Estado | Noticias nuevas |
-|---|---|---|
-[una fila por cada medio procesado]
-
----
-
-*Informe generado automáticamente por RockPress Tracker · {today_str}*
-
-═══════════════════════════════════════════════
-LISTA DE ARTÍCULOS A ANALIZAR:
-═══════════════════════════════════════════════
-{article_list_text}
-"""
+BATCH_SIZE = 30  # artículos por llamada de clasificación a Gemini
 
 
-def call_gemini(prompt: str) -> str:
+def _call_gemini_raw(prompt: str, max_output_tokens: int, debug_label: str = "gemini") -> tuple[str, str]:
+    """
+    Llamada base a Gemini. Devuelve (response_text, finish_reason).
+    Guarda debug log completo en informes/logs/.
+    """
     genai.configure(api_key=GEMINI_API_KEY)
     model = genai.GenerativeModel(
         model_name=GEMINI_MODEL,
         generation_config=genai.types.GenerationConfig(
             temperature=0.1,
-            max_output_tokens=8192,
+            max_output_tokens=max_output_tokens,
         ),
     )
-    log.info(f"Enviando {len(prompt):,} chars a Gemini ({GEMINI_MODEL})…")
+
+    log.info(f"  [{debug_label}] Enviando {len(prompt):,} chars a {GEMINI_MODEL} (max_tokens={max_output_tokens})…")
     response = model.generate_content(prompt)
-    if not response.text:
-        raise RuntimeError("Gemini devolvió respuesta vacía")
-    log.info(f"Respuesta: {len(response.text):,} chars")
-    return response.text
+
+    # ── Metadata ────────────────────────────────────────────────────────────
+    candidate    = response.candidates[0] if response.candidates else None
+    finish_reason = str(candidate.finish_reason) if candidate else "UNKNOWN"
+    usage         = response.usage_metadata
+    input_tokens  = getattr(usage, "prompt_token_count",     0) if usage else 0
+    output_tokens = getattr(usage, "candidates_token_count", 0) if usage else 0
+
+    safety_str = ""
+    if candidate and hasattr(candidate, "safety_ratings"):
+        safety_str = " | ".join(
+            f"{getattr(sr.category,'name',sr.category)}:{getattr(sr.probability,'name',sr.probability)}"
+            for sr in candidate.safety_ratings
+        )
+
+    log.info(f"  [{debug_label}] finish_reason={finish_reason}  tokens in={input_tokens:,} out={output_tokens:,}")
+    if finish_reason not in ("FinishReason.STOP", "STOP", "1"):
+        log.warning(f"  [{debug_label}] ⚠️  finish_reason inesperado: {finish_reason}")
+
+    # ── Debug log ────────────────────────────────────────────────────────────
+    response_text = response.text if response.text else ""
+    try:
+        ts_label = datetime.now().strftime("%Y%m%d_%H%M%S")
+        logs_dir  = OUTPUT_DIR / "logs"
+        logs_dir.mkdir(parents=True, exist_ok=True)
+        safe_label = re.sub(r"[^\w\-]", "_", debug_label)
+        debug_path = logs_dir / f"debug_{ts_label}_{safe_label}.txt"
+        debug_path.write_text(
+            f"=== ROCKPRESS DEBUG — {ts_label} — {debug_label} ===\n"
+            f"Modelo: {GEMINI_MODEL}\n"
+            f"max_output_tokens: {max_output_tokens}\n"
+            f"finish_reason: {finish_reason}\n"
+            f"Tokens → input: {input_tokens:,}  output: {output_tokens:,}\n"
+            f"Safety: {safety_str or '(none)'}\n"
+            f"\n{'='*60}\nPROMPT ({len(prompt):,} chars):\n{'='*60}\n"
+            f"{prompt}\n"
+            f"\n{'='*60}\nRESPUESTA ({len(response_text):,} chars):\n{'='*60}\n"
+            f"{response_text}\n",
+            encoding="utf-8",
+        )
+        log.info(f"  [{debug_label}] Debug log → {debug_path.name}")
+    except Exception as e:
+        log.warning(f"  [{debug_label}] Error guardando debug log: {e}")
+
+    return response_text, finish_reason
+
+
+def _articles_to_text(articles_with_medio: list[tuple[str, dict]]) -> str:
+    """Formatea lista de (medio, article) como texto legible para el prompt."""
+    by_medio: dict[str, list[dict]] = {}
+    for medio, art in articles_with_medio:
+        by_medio.setdefault(medio, []).append(art)
+
+    lines: list[str] = []
+    for medio, arts in by_medio.items():
+        lines.append(f"\n{'─'*50}")
+        lines.append(f"MEDIO: {medio}")
+        lines.append(f"{'─'*50}")
+        for a in arts:
+            lines.append(f"• [{a['date']}] {a['title']}")
+            lines.append(f"  URL: {a['url']}")
+            if a.get("excerpt"):
+                lines.append(f"  Resumen: {a['excerpt']}")
+    return "\n".join(lines)
+
+
+def classify_batch(
+    articles_with_medio: list[tuple[str, dict]],
+    batch_num: int,
+    total_batches: int,
+    today_str: str,
+    desde_str: str,
+) -> list[dict]:
+    """
+    Clasifica un lote de artículos contra los criterios de rock nacional español.
+    Gemini devuelve JSON puro — respuesta pequeña y fiable (sin riesgo de truncado).
+    """
+    articles_text = _articles_to_text(articles_with_medio)
+
+    prompt = f"""Eres un filtro de noticias de rock nacional español.
+Analiza el lote {batch_num}/{total_batches} ({len(articles_with_medio)} artículos).
+
+FECHA HOY: {today_str}
+VENTANA: {desde_str} — {today_str}
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}}]
+
+ARTICULOS:
+{articles_text}"""
+
+    log.info(f"Lote {batch_num}/{total_batches}: clasificando {len(articles_with_medio)} artículos…")
+    try:
+        text, finish_reason = _call_gemini_raw(prompt, max_output_tokens=4096, debug_label=f"batch_{batch_num:02d}")
+
+        if not text.strip():
+            log.warning(f"  Lote {batch_num}: respuesta vacía (finish_reason={finish_reason})")
+            return []
+
+        # Limpiar posible envoltorio ```json ... ``` que Gemini a veces añade
+        json_text = text.strip()
+        if "```" in json_text:
+            m = re.search(r"```(?:json)?\s*([\s\S]*?)```", json_text)
+            if m:
+                json_text = m.group(1).strip()
+        if not json_text.startswith("["):
+            m = re.search(r"\[[\s\S]*\]", json_text)
+            if m:
+                json_text = m.group(0)
+
+        relevant = json.loads(json_text)
+        if not isinstance(relevant, list):
+            log.warning(f"  Lote {batch_num}: respuesta no es lista JSON")
+            return []
+
+        log.info(f"  Lote {batch_num}: {len(relevant)} relevantes de {len(articles_with_medio)}")
+        return relevant
+
+    except json.JSONDecodeError as e:
+        log.warning(f"  Lote {batch_num}: JSON inválido ({e})")
+        return []
+    except Exception as e:
+        log.warning(f"  Lote {batch_num}: error ({type(e).__name__}: {e})")
+        return []
+
+
+def generate_final_report(
+    relevant: list[dict],
+    total_vistos: int,
+    medios_con_actividad: list[str],
+    medios_sin_articulos: list[str],
+    today_str: str,
+    desde_str: str,
+) -> str:
+    """
+    Genera el informe final Markdown solo con los artículos ya clasificados como relevantes.
+    Al ser pocos artículos (~10-20), el prompt es pequeño y la respuesta no se trunca.
+    """
+    if not relevant:
+        return (
+            f"# INFORME DIARIO – ROCK NACIONAL\nFecha: {today_str}\n\n"
+            f"No se han encontrado noticias de rock nacional español "
+            f"en los artículos de los últimos {DATE_WINDOW} días.\n"
+        )
+
+    # Ordenar por relevancia desc
+    relevant_sorted = sorted(relevant, key=lambda x: x.get("rel", 0), reverse=True)
+    medios_act = ", ".join(medios_con_actividad) if medios_con_actividad else "ninguno"
+    medios_sin = ", ".join(medios_sin_articulos) if medios_sin_articulos else "ninguno"
+
+    articles_text = "\n\n".join(
+        f"{i+1}. [{a.get('date','?')}] {a.get('title','?')}\n"
+        f"   Medio: {a.get('medio','?')} | Relevancia: {a.get('rel','?')}/5 | Cat: {a.get('categoria','?')}\n"
+        f"   URL: {a.get('url','?')}\n"
+        f"   Resumen: {a.get('excerpt') or '(sin extracto)'}"
+        for i, a in enumerate(relevant_sorted)
+    )
+
+    prompt = f"""Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: {today_str}
+VENTANA: {desde_str} — {today_str}
+
+Tienes {len(relevant)} articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: {today_str}
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: {len(relevant)}
+- Articulos excluidos (ya reportados): {total_vistos}
+- Medios con actividad nueva: {medios_act}
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · {today_str}*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los {len(relevant)} articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: {medios_act}
+  Y estos sin noticias relevantes: {medios_sin}
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+{articles_text}"""
+
+    log.info(f"Generando informe final con {len(relevant)} artículos…")
+    text, finish_reason = _call_gemini_raw(prompt, max_output_tokens=16384, debug_label="informe_final")
+
+    if not text:
+        raise RuntimeError(f"Gemini no devolvió informe (finish_reason={finish_reason})")
+    if finish_reason not in ("FinishReason.STOP", "STOP", "1"):
+        log.warning(f"⚠️  Informe puede estar incompleto: finish_reason={finish_reason}")
+
+    return text
+
+
+def classify_and_report(
+    collected: dict[str, list[dict]],
+    seen_urls: dict[str, str],
+    total_vistos: int,
+    medios_sin: list[str],
+    medios_con_actividad: list[str],
+    today_str: str,
+    desde_str: str,
+) -> str:
+    """
+    Orquesta la clasificación en lotes y la generación del informe:
+    1. Divide artículos nuevos en lotes de BATCH_SIZE
+    2. classify_batch() por lote → JSON con artículos relevantes
+    3. generate_final_report() con todos los relevantes acumulados
+    """
+    # Flatten artículos nuevos con su medio
+    all_new: list[tuple[str, dict]] = [
+        (medio, art)
+        for medio, arts in collected.items()
+        for art in arts
+        if art["url"] not in seen_urls
+    ]
+
+    if not all_new:
+        return (
+            f"# INFORME DIARIO – ROCK NACIONAL\nFecha: {today_str}\n\n"
+            "No se han encontrado artículos nuevos.\n"
+        )
+
+    batches       = [all_new[i:i+BATCH_SIZE] for i in range(0, len(all_new), BATCH_SIZE)]
+    total_batches = len(batches)
+    log.info(f"Clasificando {len(all_new)} artículos en {total_batches} lote(s) de máx. {BATCH_SIZE}")
+
+    all_relevant: list[dict] = []
+    for i, batch in enumerate(batches, start=1):
+        relevant = classify_batch(batch, i, total_batches, today_str, desde_str)
+        all_relevant.extend(relevant)
+        if i < total_batches:
+            time.sleep(1.5)  # pausa entre llamadas para no saturar la API
+
+    log.info(f"Total relevantes tras clasificación: {len(all_relevant)} de {len(all_new)}")
+
+    return generate_final_report(
+        all_relevant, total_vistos, medios_con_actividad, medios_sin, today_str, desde_str
+    )
 
 # ===========================================================================
 # MÓDULO 7: EMAIL (Resend)
@@ -671,9 +880,12 @@ def send_email(subject: str, html_content: str, text_content: str) -> bool:
     try:
         import resend
         resend.api_key = RESEND_API_KEY
-        params: resend.Emails.SendParams = {
-            "from_": EMAIL_FROM,
-            "to":    EMAIL_TO,
+        # Usamos dict plano con "from" como string key (válido en Python aunque sea keyword).
+        # Evita el problema de compatibilidad entre versiones del SDK
+        # donde unos usan "from_" y otros mapean directamente "from".
+        params = {
+            "from":    EMAIL_FROM,
+            "to":      EMAIL_TO,
             "subject": subject,
             "html":    html_content,
             "text":    text_content,
@@ -749,19 +961,19 @@ def main() -> None:
             f"(todos los artículos de los últimos {DATE_WINDOW} días ya fueron reportados).\n"
         )
     else:
-        medios_sin = [m for m, arts in collected.items() if not arts]
-        prompt = build_prompt(
-            article_list_text,
-            total_nuevos,
-            total_vistos,
-            medios_sin,
-            today_str,
-            desde_str,
-        )
-        log.info(f"Prompt: {len(prompt):,} chars — {total_nuevos} artículos nuevos para clasificar")
+        medios_sin         = [m for m, arts in collected.items() if not arts]
+        medios_con_actividad = [
+            m for m, arts in collected.items()
+            if any(a["url"] not in seen_urls for a in arts)
+        ]
+        log.info(f"Clasificando {total_nuevos} artículos nuevos en lotes de {BATCH_SIZE}…")
 
         try:
-            report = call_gemini(prompt)
+            report = classify_and_report(
+                collected, seen_urls, total_vistos,
+                medios_sin, medios_con_actividad,
+                today_str, desde_str,
+            )
         except Exception as e:
             log.error(f"Error con Gemini: {e}")
             sys.exit(1)

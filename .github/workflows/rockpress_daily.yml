@@ -72,12 +72,16 @@ jobs:
             git commit -m "📰 Informe RockPress $(date +'%Y-%m-%d') [skip ci]" &&
             git push
           )
+          echo "Ficheros commiteados:"
+          git show --stat HEAD 2>/dev/null || echo "(sin cambios)"
 
       # 6. Artefacto descargable (útil para revisar sin entrar al repo)
-      - name: 📎 Subir informe como artefacto
+      - name: 📎 Subir informe y logs como artefacto
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: informe-${{ github.run_id }}
-          path: informes/informe_*.md
+          path: |
+            informes/informe_*.md
+            informes/logs/debug_*.txt
           retention-days: 30
