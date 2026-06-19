@@ -15,7 +15,7 @@ on:
       gemini_model:
         description: 'Modelo Gemini a usar'
         required: false
-        default: 'gemini-1.5-flash'
+        default: 'gemini-3.5-flash'
       send_email:
         description: 'Enviar informe por email (true/false)'
         required: false
@@ -56,7 +56,7 @@ jobs:
           RESEND_API_KEY:    ${{ secrets.RESEND_API_KEY }}
           EMAIL_FROM:        ${{ vars.EMAIL_FROM || 'RockPress Tracker <onboarding@resend.dev>' }}
           EMAIL_TO:          ${{ vars.EMAIL_TO }}
-          GEMINI_MODEL:      ${{ inputs.gemini_model || 'gemini-1.5-flash' }}
+          GEMINI_MODEL:      ${{ inputs.gemini_model || 'gemini-3.5-flash' }}
           DATE_WINDOW_DAYS:  ${{ inputs.date_window_days || '3' }}
           SEND_EMAIL:        ${{ inputs.send_email || 'true' }}
         run: python rockpress_tracker.py

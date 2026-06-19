@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """
 RockPress Tracker – Informe Diario de Rock Nacional
-Fetcha medios de rock español, usa Gemini para generar el informe,
-mantiene memoria de artículos ya reportados y envía el informe por email (Resend).
+Arquitectura optimizada:
+  - Python extrae artículos estructurados (título + URL + fecha) con BeautifulSoup
+  - Gemini recibe una lista compacta (~20K chars) en lugar de texto HTML bruto
+  - Memoria persistente en seen_articles.json para evitar repetir noticias
+  - Envío de informe por email via Resend
 """
 
 import os
@@ -13,6 +16,7 @@ import time
 import logging
 from datetime import datetime, timedelta
 from pathlib import Path
+from urllib.parse import urlparse
 
 import requests
 from bs4 import BeautifulSoup
@@ -28,39 +32,36 @@ logging.basicConfig(
 )
 log = logging.getLogger("rockpress")
 
-# API Keys y configuración (desde variables de entorno / GitHub Secrets)
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL   = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+GEMINI_MODEL   = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")   # ← modelos válidos: gemini-3.5-flash, gemini-2.0-flash, gemini-1.5-flash
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 EMAIL_FROM     = os.environ.get("EMAIL_FROM", "RockPress Tracker <onboarding@resend.dev>")
 EMAIL_TO       = [e.strip() for e in os.environ.get("EMAIL_TO", "").split(",") if e.strip()]
 
 DATE_WINDOW         = int(os.environ.get("DATE_WINDOW_DAYS", "3"))
-SEEN_RETENTION_DAYS = 30   # Días que se mantienen las URLs en memoria
-SEND_EMAIL          = os.environ.get("SEND_EMAIL", "true").lower() == "true"
+SEEN_RETENTION_DAYS = 30
+SEND_EMAIL_FLAG     = os.environ.get("SEND_EMAIL", "true").lower() == "true"
 
-# Rutas
-SCRIPT_DIR  = Path(__file__).parent
-BBDD_FILE   = SCRIPT_DIR / "bbddMedios.md"
-OUTPUT_DIR  = SCRIPT_DIR / "informes"
-SEEN_FILE   = OUTPUT_DIR / "seen_articles.json"
+SCRIPT_DIR = Path(__file__).parent
+BBDD_FILE  = SCRIPT_DIR / "bbddMedios.md"
+OUTPUT_DIR = SCRIPT_DIR / "informes"
+SEEN_FILE  = OUTPUT_DIR / "seen_articles.json"
 
-FETCH_TIMEOUT  = 15
-FETCH_DELAY    = 0.8
-MAX_CHARS_SITE = 20000
+FETCH_TIMEOUT = 15
+FETCH_DELAY   = 0.6
+MAX_EXCERPT   = 180   # chars del extracto de cada artículo
 
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
     ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept":          "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "es-ES,es;q=0.9,en;q=0.8",
     "Accept-Encoding": "gzip, deflate, br",
 }
 
-# Sitios WordPress con soporte confirmado de archive pages /YYYY/MM/DD/
+# Sitios WordPress con archive pages /YYYY/MM/DD/ confirmadas
 WP_ARCHIVE_SITES = {
     "Metalcry":       "https://metalcry.com",
     "Ballesterock":   "https://ballesterockmusic.com",
@@ -75,7 +76,6 @@ WP_ARCHIVE_SITES = {
 # ===========================================================================
 
 def load_media(path: Path) -> list[dict]:
-    """Parsea bbddMedios.md. Devuelve lista de {nombre, url, rss}."""
     media = []
     if not path.exists():
         log.error(f"No se encuentra {path}")
@@ -88,17 +88,12 @@ def load_media(path: Path) -> list[dict]:
             continue
         if "Medio" in line and "Web" in line:
             continue
-
-        parts = [p.strip() for p in line.split("|")]
-        parts = [p for p in parts if p]
-
+        parts = [p.strip() for p in line.split("|") if p.strip()]
         if not parts:
             continue
-
         nombre = parts[0]
         url    = parts[1] if len(parts) > 1 else ""
         rss    = parts[2] if len(parts) > 2 else ""
-
         if url.startswith("http"):
             media.append({"nombre": nombre, "url": url.rstrip("/"), "rss": rss})
 
@@ -106,11 +101,10 @@ def load_media(path: Path) -> list[dict]:
     return media
 
 # ===========================================================================
-# MÓDULO 2: FETCH Y PARSING
+# MÓDULO 2: FETCH
 # ===========================================================================
 
 def fetch_html(url: str) -> tuple[str | None, str]:
-    """Descarga una URL. Devuelve (html, url_final) o (None, '')."""
     try:
         r = requests.get(url, headers=HEADERS, timeout=FETCH_TIMEOUT, allow_redirects=True)
         if r.status_code == 200:
@@ -118,198 +112,424 @@ def fetch_html(url: str) -> tuple[str | None, str]:
         log.warning(f"  HTTP {r.status_code} → {url}")
         return None, ""
     except requests.exceptions.RequestException as e:
-        log.warning(f"  Error {type(e).__name__}: {url}")
+        log.warning(f"  {type(e).__name__}: {url}")
         return None, ""
 
 
-def html_to_clean_text(html: str, max_chars: int = MAX_CHARS_SITE) -> str:
-    """Convierte HTML a texto limpio, sin scripts/nav/footer."""
-    soup = BeautifulSoup(html, "html.parser")
-    for tag in soup(["script", "style", "nav", "footer", "header",
-                     "aside", "form", "noscript", "iframe", "svg",
-                     "button", "figure"]):
-        tag.decompose()
-
-    text = soup.get_text(separator="\n", strip=True)
-    text = re.sub(r"\n{3,}", "\n\n", text)
-    lines = [l for l in text.splitlines() if len(l.strip()) > 3]
-    return "\n".join(lines)[:max_chars]
-
-
 def is_archive_page(final_url: str, target_date: datetime) -> bool:
-    """Verifica que la URL final contiene la fecha (evita redirecciones a home)."""
     return target_date.strftime("%Y/%m/%d") in final_url
 
+# ===========================================================================
+# MÓDULO 3A: EXTRACCIÓN DESDE RSS
+# ===========================================================================
 
-def collect_content(media: list[dict]) -> dict[str, str]:
+def fetch_rss(rss_url: str, window_start: datetime, window_end: datetime) -> list[dict]:
     """
-    Recopila contenido de cada medio para los últimos DATE_WINDOW días.
-    Estrategia 1: WordPress archive pages /YYYY/MM/DD/
-    Estrategia 2: Homepage (fallback)
+    Descarga y parsea un feed RSS/Atom.
+    requests descomprime gzip automáticamente → no hay problema con feeds comprimidos.
+    Devuelve lista de {title, url, date, excerpt} filtrada por ventana de fechas.
     """
-    dates = [datetime.now() - timedelta(days=i) for i in range(DATE_WINDOW)]
-    collected: dict[str, str] = {}
+    import feedparser  # noqa: PLC0415
+
+    try:
+        # Descargamos el feed con nuestros headers (incluye Accept-Encoding: gzip)
+        # requests descomprime automáticamente → r.content es el XML limpio
+        r = requests.get(rss_url, headers=HEADERS, timeout=FETCH_TIMEOUT, allow_redirects=True)
+        if r.status_code != 200:
+            log.warning(f"  RSS HTTP {r.status_code} → {rss_url}")
+            return []
+
+        # feedparser acepta bytes directamente
+        feed = feedparser.parse(r.content)
+
+        if feed.bozo and not feed.entries:
+            log.warning(f"  RSS malformado: {rss_url}")
+            return []
+
+        articles: list[dict] = []
+
+        for entry in feed.entries:
+            # Título
+            title = _clean(entry.get("title", ""))
+            if len(title) < 5:
+                continue
+
+            # URL
+            url = entry.get("link", "")
+            if not url or not url.startswith("http"):
+                continue
+
+            # Fecha — feedparser normaliza a struct_time
+            date_str = ""
+            for date_field in ("published_parsed", "updated_parsed", "created_parsed"):
+                parsed = getattr(entry, date_field, None)
+                if parsed:
+                    try:
+                        dt = datetime(*parsed[:6])
+                        date_str = dt.strftime("%Y-%m-%d")
+                        break
+                    except (ValueError, TypeError):
+                        continue
+
+            # Filtrar por ventana de fechas (si tenemos fecha)
+            if date_str and not date_in_window(date_str, window_start, window_end):
+                continue
+
+            # Extracto: content > summary
+            excerpt = ""
+            if hasattr(entry, "content") and entry.content:
+                raw = entry.content[0].get("value", "")
+            else:
+                raw = entry.get("summary", "")
+            if raw:
+                excerpt = _clean(BeautifulSoup(raw, "html.parser").get_text())[:MAX_EXCERPT]
+
+            articles.append({
+                "title":   title[:220],
+                "url":     url,
+                "date":    date_str or window_end.strftime("%Y-%m-%d"),
+                "excerpt": excerpt,
+            })
+
+        return articles
+
+    except Exception as e:
+        log.warning(f"  Error RSS ({type(e).__name__}): {rss_url}")
+        return []
+
+
+# ===========================================================================
+# MÓDULO 3B: EXTRACCIÓN ESTRUCTURADA DESDE HTML
+# ===========================================================================
+
+def _clean(text: str) -> str:
+    """Limpia y normaliza texto."""
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def extract_articles(html: str, fallback_date: str) -> list[dict]:
+    """
+    Extrae artículos de una página HTML.
+    Devuelve lista de {title, url, date, excerpt}.
+    Python hace el trabajo pesado aquí — Gemini solo clasifica.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    articles: list[dict] = []
+    seen_urls: set[str] = set()
+
+    # ---- Patrón 1: tags <article> (WordPress estándar) ----
+    for art in soup.find_all("article"):
+        # Título: buscar en h1/h2/h3 dentro del article
+        title_tag = art.find(["h1", "h2", "h3"])
+        if not title_tag:
+            continue
+        title = _clean(title_tag.get_text())
+        if len(title) < 5:
+            continue
+
+        # URL: preferir el enlace del título
+        a = title_tag.find("a", href=True) or art.find("a", href=True)
+        if not a:
+            continue
+        url = a.get("href", "")
+        if not url.startswith("http") or url in seen_urls:
+            continue
+        # Excluir URLs de categorías/tags/página (sin slug de artículo real)
+        path = urlparse(url).path.strip("/")
+        if not path or path.count("/") < 1:
+            continue
+        seen_urls.add(url)
+
+        # Fecha: tag <time> con datetime o texto
+        date = fallback_date
+        time_tag = art.find("time")
+        if time_tag:
+            dt = time_tag.get("datetime", "")
+            date = dt[:10] if len(dt) >= 10 else fallback_date
+
+        # Extracto: primer <p> con texto real
+        excerpt = ""
+        for p in art.find_all("p"):
+            t = _clean(p.get_text())
+            if len(t) > 30:
+                excerpt = t[:MAX_EXCERPT]
+                break
+
+        articles.append({
+            "title":   title[:220],
+            "url":     url,
+            "date":    date,
+            "excerpt": excerpt,
+        })
+
+    # ---- Patrón 2: h2/h3 con enlaces (blogs, webs sin <article>) ----
+    if len(articles) < 3:
+        for h in soup.find_all(["h2", "h3"]):
+            a = h.find("a", href=True)
+            if not a:
+                continue
+            url = a.get("href", "")
+            if not url.startswith("http") or url in seen_urls:
+                continue
+            path = urlparse(url).path.strip("/")
+            if not path or len(path) < 5:
+                continue
+            # Evitar enlaces de menú (texto muy corto o genérico)
+            title = _clean(h.get_text())
+            if len(title) < 8 or title.lower() in (
+                "inicio", "home", "noticias", "blog", "contacto", "artículos"
+            ):
+                continue
+            seen_urls.add(url)
+            articles.append({
+                "title":   title[:220],
+                "url":     url,
+                "date":    fallback_date,
+                "excerpt": "",
+            })
+
+    return articles
+
+
+def date_in_window(date_str: str, window_start: datetime, window_end: datetime) -> bool:
+    """Comprueba si una fecha (YYYY-MM-DD) está dentro de la ventana."""
+    try:
+        d = datetime.strptime(date_str[:10], "%Y-%m-%d")
+        return window_start <= d <= window_end
+    except ValueError:
+        return True  # Si no podemos parsear, lo incluimos (Gemini filtrará)
+
+# ===========================================================================
+# MÓDULO 4: RECOPILACIÓN DE ARTÍCULOS
+# ===========================================================================
+
+def collect_articles(media: list[dict]) -> dict[str, list[dict]]:
+    """
+    Para cada medio, intenta obtener artículos usando 3 estrategias en cascada:
+      1. WordPress archive pages /YYYY/MM/DD/ (para sitios WP confirmados)
+      2. RSS feed               (requests descomprime gzip → funciona en todos los feeds)
+      3. Homepage HTML          (fallback final)
+    Devuelve dict {nombre_medio: [artículos en ventana de fechas]}.
+    """
+    today        = datetime.now()
+    window_end   = today
+    window_start = today - timedelta(days=DATE_WINDOW)
+    dates        = [today - timedelta(days=i) for i in range(DATE_WINDOW)]
+    collected: dict[str, list[dict]] = {}
 
     for m in media:
         nombre   = m["nombre"]
         url_base = m["url"]
-        textos   = []
+        rss_url  = m.get("rss", "")
+        all_articles: list[dict] = []
+        strategy_used = ""
 
         log.info(f"→ {nombre}")
 
-        # Estrategia 1: WordPress archive pages
+        # ── ESTRATEGIA 1: WordPress archive pages (/YYYY/MM/DD/) ──────────────
         if nombre in WP_ARCHIVE_SITES:
             wp_base = WP_ARCHIVE_SITES[nombre]
             for d in dates:
                 archive_url = f"{wp_base}/{d.strftime('%Y/%m/%d')}/"
                 html, final_url = fetch_html(archive_url)
                 time.sleep(FETCH_DELAY)
-
                 if html and is_archive_page(final_url, d):
-                    texto = html_to_clean_text(html)
-                    if texto:
-                        textos.append(f"[ARCHIVE {d.strftime('%d/%m/%Y')}]\n{texto}")
-                        log.info(f"  ✅ archive {d.strftime('%d/%m/%Y')}: {len(texto):,} chars")
+                    arts = extract_articles(html, d.strftime("%Y-%m-%d"))
+                    if arts:
+                        all_articles.extend(arts)
+                        if not strategy_used:
+                            strategy_used = "WP archive"
+                        log.info(f"  ✅ archive {d.strftime('%d/%m')}: {len(arts)} artículos")
+                    else:
+                        log.info(f"  ⚠️  archive {d.strftime('%d/%m')}: página vacía")
                 else:
-                    log.info(f"  ⚠️  archive {d.strftime('%d/%m/%Y')}: no disponible")
+                    log.info(f"  ⚠️  archive {d.strftime('%d/%m')}: no disponible (404/redirect)")
 
-        # Estrategia 2: Homepage
-        if not textos:
+        # ── ESTRATEGIA 2: RSS feed ─────────────────────────────────────────────
+        # requests descomprime gzip automáticamente — aquí sí funciona lo que
+        # fallaba con web_fetch en el rastreo manual
+        if not all_articles and rss_url.startswith("http"):
+            log.info(f"  → Probando RSS: {rss_url}")
+            arts = fetch_rss(rss_url, window_start, window_end)
+            if arts:
+                all_articles.extend(arts)
+                strategy_used = "RSS"
+                log.info(f"  ✅ RSS: {len(arts)} artículos en ventana")
+            else:
+                log.info(f"  ⚠️  RSS: sin artículos en ventana o feed inaccesible")
+            time.sleep(FETCH_DELAY)
+
+        # ── ESTRATEGIA 3: Homepage HTML ────────────────────────────────────────
+        if not all_articles:
             html, _ = fetch_html(url_base)
             time.sleep(FETCH_DELAY)
             if html:
-                texto = html_to_clean_text(html, max_chars=25000)
-                if texto:
-                    textos.append(f"[HOMEPAGE]\n{texto}")
-                    log.info(f"  ✅ homepage: {len(texto):,} chars")
+                arts = extract_articles(html, today.strftime("%Y-%m-%d"))
+                if arts:
+                    all_articles.extend(arts)
+                    strategy_used = "homepage"
+                    log.info(f"  ✅ homepage: {len(arts)} artículos extraídos")
                 else:
-                    log.info(f"  ⚠️  homepage vacía")
+                    log.info(f"  ⚠️  homepage: sin artículos detectados")
             else:
-                log.info(f"  ❌ sin acceso")
+                log.info(f"  ❌ sin acceso por ninguna vía")
 
-        collected[nombre] = "\n\n---\n\n".join(textos) if textos else ""
+        # ── Deduplicar por URL ─────────────────────────────────────────────────
+        seen_u: set[str] = set()
+        unique: list[dict] = []
+        for a in all_articles:
+            if a["url"] not in seen_u:
+                seen_u.add(a["url"])
+                unique.append(a)
 
-    activos = sum(1 for v in collected.values() if v)
-    log.info(f"Medios con contenido: {activos}/{len(media)}")
+        # ── Filtrar por ventana de fechas ──────────────────────────────────────
+        # Para artículos con fecha parseada, aplicar filtro estricto.
+        # Para homepage (fecha=hoy por defecto), incluir todos y dejar a Gemini filtrar.
+        if strategy_used in ("WP archive", "RSS"):
+            in_window = [a for a in unique if date_in_window(a["date"], window_start, window_end)]
+        else:
+            in_window = unique  # homepage: Gemini filtra por fecha
+
+        collected[nombre] = in_window
+        if in_window:
+            log.info(f"  → {len(in_window)} artículo(s) vía {strategy_used}")
+
+    total_arts = sum(len(v) for v in collected.values())
+    medios_con = sum(1 for v in collected.values() if v)
+    log.info(f"Total artículos recopilados: {total_arts} de {medios_con}/{len(media)} medios")
     return collected
 
 # ===========================================================================
-# MÓDULO 3: MEMORIA (seen_articles.json)
+# MÓDULO 5: MEMORIA
 # ===========================================================================
 
 def load_seen_urls() -> dict[str, str]:
-    """
-    Carga el fichero de memoria seen_articles.json.
-    Devuelve dict {url: "YYYY-MM-DD"} con los artículos ya reportados.
-    """
     if not SEEN_FILE.exists():
         log.info("Primera ejecución — sin memoria previa")
         return {}
-
     try:
-        data = json.loads(SEEN_FILE.read_text(encoding="utf-8"))
-        seen = data.get("seen", {})
-        log.info(f"Memoria cargada: {len(seen)} artículos conocidos")
+        data  = json.loads(SEEN_FILE.read_text(encoding="utf-8"))
+        seen  = data.get("seen", {})
+        log.info(f"Memoria cargada: {len(seen)} URLs conocidas")
         return seen
     except Exception as e:
-        log.warning(f"No se pudo cargar seen_articles.json: {e}")
+        log.warning(f"Error cargando seen_articles.json: {e}")
         return {}
 
 
 def save_seen_urls(seen: dict[str, str]) -> None:
-    """
-    Guarda el fichero de memoria, purgando entradas más antiguas
-    que SEEN_RETENTION_DAYS días.
-    """
-    cutoff = (datetime.now() - timedelta(days=SEEN_RETENTION_DAYS)).strftime("%Y-%m-%d")
+    cutoff     = (datetime.now() - timedelta(days=SEEN_RETENTION_DAYS)).strftime("%Y-%m-%d")
     seen_clean = {url: date for url, date in seen.items() if date >= cutoff}
-    purgados = len(seen) - len(seen_clean)
+    purgados   = len(seen) - len(seen_clean)
 
     OUTPUT_DIR.mkdir(exist_ok=True)
     payload = {
-        "version": "1.0",
-        "last_run": datetime.now().isoformat(),
-        "total_seen": len(seen_clean),
+        "version":        "1.0",
+        "last_run":       datetime.now().isoformat(),
+        "total_seen":     len(seen_clean),
         "retention_days": SEEN_RETENTION_DAYS,
-        "seen": seen_clean,
+        "seen":           seen_clean,
     }
     SEEN_FILE.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-
-    log.info(
-        f"Memoria guardada: {len(seen_clean)} URLs "
-        f"({purgados} purgadas por antigüedad)"
-    )
+    log.info(f"Memoria guardada: {len(seen_clean)} URLs ({purgados} purgadas)")
 
 
 def extract_urls_from_report(report: str) -> list[str]:
-    """
-    Extrae las URLs del informe generado por Gemini.
-    Busca líneas con 'Enlace: https://...'
-    """
-    pattern = r"Enlace:\s*(https?://[^\s\n\)]+)"
-    urls = re.findall(pattern, report)
-    log.info(f"URLs extraídas del informe: {len(urls)}")
-    return urls
+    return re.findall(r"Enlace:\s*(https?://[^\s\n\)]+)", report)
 
 # ===========================================================================
-# MÓDULO 4: GEMINI – PROMPT Y LLAMADA
+# MÓDULO 6: GEMINI
 # ===========================================================================
+
+def build_article_list(
+    collected: dict[str, list[dict]],
+    seen_urls: dict[str, str],
+) -> tuple[str, int, int]:
+    """
+    Construye la lista compacta de artículos para el prompt.
+    Devuelve (texto, total_nuevos, total_ya_vistos).
+    """
+    lines: list[str] = []
+    total_nuevos = 0
+    total_vistos = 0
+
+    for medio, articles in collected.items():
+        if not articles:
+            continue
+        nuevos = [a for a in articles if a["url"] not in seen_urls]
+        vistos = len(articles) - len(nuevos)
+        total_vistos  += vistos
+        total_nuevos  += len(nuevos)
+
+        if not nuevos:
+            continue
+
+        lines.append(f"\n{'─'*50}")
+        lines.append(f"MEDIO: {medio}")
+        lines.append(f"{'─'*50}")
+        for a in nuevos:
+            lines.append(f"• [{a['date']}] {a['title']}")
+            lines.append(f"  URL: {a['url']}")
+            if a["excerpt"]:
+                lines.append(f"  Resumen: {a['excerpt']}")
+
+    return "\n".join(lines), total_nuevos, total_vistos
+
+
+_MONTH_ES = {
+    "January":"enero","February":"febrero","March":"marzo","April":"abril",
+    "May":"mayo","June":"junio","July":"julio","August":"agosto",
+    "September":"septiembre","October":"octubre","November":"noviembre","December":"diciembre",
+}
+
+def date_to_spanish(dt: datetime) -> str:
+    raw = dt.strftime("%-d de %B de %Y")
+    for en, es in _MONTH_ES.items():
+        raw = raw.replace(en, es)
+    return raw
+
 
 def build_prompt(
-    collected: dict[str, str],
+    article_list_text: str,
+    total_nuevos: int,
+    total_vistos: int,
+    medios_sin_articulos: list[str],
     today_str: str,
     desde_str: str,
-    seen_urls: dict[str, str],
 ) -> str:
-    """Construye el prompt completo para Gemini, incluyendo los artículos a excluir."""
 
-    bloques = []
-    for nombre, texto in collected.items():
-        if texto:
-            bloques.append(
-                f"{'='*60}\nMEDIO: {nombre}\n{'='*60}\n{texto[:MAX_CHARS_SITE]}"
-            )
-
-    contenido_total = "\n\n".join(bloques)
-    todos_los_medios = ", ".join(collected.keys())
-
-    # Lista de URLs ya vistas (máximo 300 para no saturar el contexto)
-    seen_list_str = ""
-    if seen_urls:
-        seen_sample = list(seen_urls.keys())[:300]
-        seen_list_str = "\n".join(f"- {url}" for url in seen_sample)
-    else:
-        seen_list_str = "(ninguna — primera ejecución)"
+    medios_sin = ", ".join(medios_sin_articulos) if medios_sin_articulos else "ninguno"
 
     return f"""Eres un periodista musical especializado en rock nacional español.
 
 FECHA DE HOY: {today_str}
-VENTANA DE NOTICIAS: solo noticias publicadas entre {desde_str} y {today_str}.
-MEDIOS CONSULTADOS: {todos_los_medios}
+VENTANA DE NOTICIAS: {desde_str} → {today_str}
+ARTÍCULOS NUEVOS DISPONIBLES: {total_nuevos}
+ARTÍCULOS YA REPORTADOS (excluidos): {total_vistos}
+MEDIOS SIN ARTÍCULOS NUEVOS: {medios_sin}
 
-═══════════════════════════════════════════════════════════
-ARTÍCULOS YA REPORTADOS EN EJECUCIONES ANTERIORES
-(EXCLUYE COMPLETAMENTE estos artículos del nuevo informe)
-═══════════════════════════════════════════════════════════
-{seen_list_str}
+TAREA:
+Analiza la lista de artículos y genera el informe diario de rock nacional español.
 
-═══════════════════════════════════════════════════════════
-TAREA
-═══════════════════════════════════════════════════════════
-1. Lee el contenido de cada medio.
-2. Identifica noticias publicadas en la ventana de fechas indicada.
-3. EXCLUYE cualquier artículo cuya URL aparezca en la lista de artículos ya reportados.
-4. Filtra solo noticias relacionadas con:
-   - Bandas o artistas de rock/metal ESPAÑOLES
-   - Festivales o conciertos en ESPAÑA
-   - Lanzamientos de artistas ESPAÑOLES
-   - Entrevistas a artistas ESPAÑOLES
-   - Salas, promotores, sellos o eventos en ESPAÑA
-   - Artistas internacionales con conciertos anunciados en España (relevancia media)
-5. Para cada noticia extrae: titular exacto, medio, URL, resumen (2-3 frases), categoría, relevancia ⭐1-5.
-6. Si no hay noticias nuevas (todas ya fueron reportadas), indícalo explícitamente.
+CRITERIOS DE SELECCIÓN (incluir solo si cumple al menos uno):
+✅ Bandas o artistas de rock/metal ESPAÑOLES (discos, giras, entrevistas, noticias)
+✅ Festivales o conciertos celebrados o anunciados EN ESPAÑA
+✅ Lanzamientos de álbumes/EPs/singles de artistas ESPAÑOLES
+✅ Noticias de salas, promotoras, sellos discográficos ESPAÑOLES
+✅ Artistas internacionales con conciertos confirmados en España (relevancia media)
 
-FORMATO DE SALIDA (usa exactamente este formato):
+CRITERIOS DE EXCLUSIÓN:
+❌ Noticias puramente internacionales sin conexión con España
+❌ Noticias de fecha fuera de la ventana {desde_str}–{today_str}
+
+RELEVANCIA (1–5 estrellas):
+⭐⭐⭐⭐⭐ Banda española top-tier, disco nuevo, festival nacional de primer nivel
+⭐⭐⭐⭐   Artista/evento español destacado, entrevista relevante
+⭐⭐⭐     Festival regional, lanzamiento de banda emergente, concierto en España
+⭐⭐       Internacional con conexión España secundaria
+⭐         Mención menor, noticia de baja relevancia
+
+FORMATO OBLIGATORIO DE SALIDA:
 
 # INFORME DIARIO – ROCK NACIONAL
 Fecha: {today_str}
@@ -322,11 +542,11 @@ Fecha: {today_str}
 
 ### 🔴 ALTA RELEVANCIA
 
-**N. TITULAR COMPLETO** — NOMBRE_MEDIO
-Resumen: [2-3 frases]
-Enlace: [URL]
-Categoría: [Lanzamiento / Festival / Concierto / Entrevista / Gira / Bandas españolas / etc.]
-Relevancia: ⭐⭐⭐⭐⭐ — [justificación breve]
+**N. TITULAR** — MEDIO
+Resumen: [2-3 frases descriptivas]
+Enlace: [URL completa]
+Categoría: [Lanzamiento / Festival en España / Concierto / Entrevista / Gira / Bandas españolas]
+Relevancia: ⭐⭐⭐⭐⭐ — [justificación en una frase]
 
 ---
 
@@ -344,10 +564,10 @@ Relevancia: ⭐⭐⭐⭐⭐ — [justificación breve]
 
 ## 📊 Resumen General
 
-- **Total de noticias NUEVAS encontradas:** X
-- **Artículos descartados por ya reportados:** Y
-- **Medios con actividad relevante:** [lista]
-- **Tendencias detectadas:** [2-3 frases]
+- **Total de noticias con conexión rock nacional:** X
+- **Artículos excluidos por ya reportados:** {total_vistos}
+- **Medios con actividad nueva:** [lista]
+- **Tendencias detectadas:** [2-3 frases sobre temas recurrentes]
 
 ---
 
@@ -355,23 +575,21 @@ Relevancia: ⭐⭐⭐⭐⭐ — [justificación breve]
 
 | Medio | Estado | Noticias nuevas |
 |---|---|---|
-| [nombre] | ✅ Activo / ⚠️ Sin noticias nuevas / ❌ Sin acceso | Sí / No |
+[una fila por cada medio procesado]
 
 ---
 
 *Informe generado automáticamente por RockPress Tracker · {today_str}*
 
-═══════════════════════════════════════════════════════════
-CONTENIDO PARA ANALIZAR:
-═══════════════════════════════════════════════════════════
-{contenido_total}
+═══════════════════════════════════════════════
+LISTA DE ARTÍCULOS A ANALIZAR:
+═══════════════════════════════════════════════
+{article_list_text}
 """
 
 
 def call_gemini(prompt: str) -> str:
-    """Llama a la API de Gemini y devuelve el texto generado."""
     genai.configure(api_key=GEMINI_API_KEY)
-
     model = genai.GenerativeModel(
         model_name=GEMINI_MODEL,
         generation_config=genai.types.GenerationConfig(
@@ -379,148 +597,80 @@ def call_gemini(prompt: str) -> str:
             max_output_tokens=8192,
         ),
     )
-
     log.info(f"Enviando {len(prompt):,} chars a Gemini ({GEMINI_MODEL})…")
     response = model.generate_content(prompt)
-
     if not response.text:
         raise RuntimeError("Gemini devolvió respuesta vacía")
-
     log.info(f"Respuesta: {len(response.text):,} chars")
     return response.text
 
 # ===========================================================================
-# MÓDULO 5: EMAIL (Resend)
+# MÓDULO 7: EMAIL (Resend)
 # ===========================================================================
 
-_MONTH_ES = {
-    "January": "enero", "February": "febrero", "March": "marzo",
-    "April": "abril", "May": "mayo", "June": "junio",
-    "July": "julio", "August": "agosto", "September": "septiembre",
-    "October": "octubre", "November": "noviembre", "December": "diciembre",
-}
-
-
 def markdown_to_html(md: str) -> str:
-    """Convierte el informe markdown a HTML con estilos para email."""
     h = md
-
-    # Convertir markdown a HTML (orden importa)
-    h = re.sub(r"^### (.+)$",  r"<h3>\1</h3>",  h, flags=re.MULTILINE)
-    h = re.sub(r"^## (.+)$",   r"<h2>\1</h2>",  h, flags=re.MULTILINE)
-    h = re.sub(r"^# (.+)$",    r"<h1>\1</h1>",  h, flags=re.MULTILINE)
+    h = re.sub(r"^### (.+)$",    r"<h3>\1</h3>",  h, flags=re.MULTILINE)
+    h = re.sub(r"^## (.+)$",     r"<h2>\1</h2>",  h, flags=re.MULTILINE)
+    h = re.sub(r"^# (.+)$",      r"<h1>\1</h1>",  h, flags=re.MULTILINE)
     h = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", h)
-    h = re.sub(r"\*(.+?)\*",     r"<em>\1</em>", h)
+    h = re.sub(r"\*(.+?)\*",     r"<em>\1</em>",  h)
     h = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", r'<a href="\2">\1</a>', h)
     h = re.sub(r"^---+$", "<hr>", h, flags=re.MULTILINE)
 
-    # Convertir líneas de tabla markdown a HTML básico
     def table_to_html(match):
-        rows = [r for r in match.group(0).strip().splitlines() if "|" in r and "---" not in r]
-        html_rows = []
+        rows = [r for r in match.group(0).strip().splitlines()
+                if "|" in r and "---" not in r]
+        result = ["<table>"]
         for i, row in enumerate(rows):
             cells = [c.strip() for c in row.strip("|").split("|")]
-            tag = "th" if i == 0 else "td"
-            html_rows.append(
-                "<tr>" + "".join(f"<{tag}>{c}</{tag}>" for c in cells) + "</tr>"
-            )
-        return "<table>" + "".join(html_rows) + "</table>"
+            tag   = "th" if i == 0 else "td"
+            result.append("<tr>" + "".join(f"<{tag}>{c}</{tag}>" for c in cells) + "</tr>")
+        result.append("</table>")
+        return "\n".join(result)
 
     h = re.sub(r"(\|.+\n)+", table_to_html, h)
-
-    # Saltos de línea
     h = h.replace("\n", "<br>\n")
 
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <style>
-  body {{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    color: #2c2c2c;
-    background: #f9f9f9;
-  }}
-  .card {{
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 32px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-  }}
-  h1 {{
-    color: #c0392b;
-    border-bottom: 3px solid #c0392b;
-    padding-bottom: 10px;
-    font-size: 24px;
-  }}
-  h2 {{
-    color: #c0392b;
-    font-size: 18px;
-    margin-top: 28px;
-    margin-bottom: 8px;
-  }}
-  h3 {{
-    color: #555;
-    font-size: 15px;
-    margin-top: 20px;
-    border-left: 3px solid #e74c3c;
-    padding-left: 10px;
-  }}
-  hr {{ border: none; border-top: 1px solid #eee; margin: 20px 0; }}
-  a {{ color: #c0392b; text-decoration: none; }}
-  a:hover {{ text-decoration: underline; }}
-  strong {{ color: #1a1a1a; }}
-  table {{
-    border-collapse: collapse;
-    width: 100%;
-    margin: 12px 0;
-    font-size: 13px;
-  }}
-  th, td {{
-    border: 1px solid #ddd;
-    padding: 8px 12px;
-    text-align: left;
-  }}
-  th {{ background: #f4f4f4; font-weight: 600; }}
-  .footer {{
-    text-align: center;
-    color: #aaa;
-    font-size: 11px;
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 1px solid #eee;
-  }}
+  body{{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;
+       max-width:720px;margin:0 auto;padding:24px 16px;color:#2c2c2c;background:#f9f9f9}}
+  .card{{background:#fff;border-radius:8px;padding:32px;box-shadow:0 1px 4px rgba(0,0,0,.08)}}
+  h1{{color:#c0392b;border-bottom:3px solid #c0392b;padding-bottom:10px;font-size:24px}}
+  h2{{color:#c0392b;font-size:18px;margin-top:28px}}
+  h3{{color:#555;font-size:15px;margin-top:20px;border-left:3px solid #e74c3c;padding-left:10px}}
+  hr{{border:none;border-top:1px solid #eee;margin:20px 0}}
+  a{{color:#c0392b;text-decoration:none}}
+  strong{{color:#1a1a1a}}
+  table{{border-collapse:collapse;width:100%;margin:12px 0;font-size:13px}}
+  th,td{{border:1px solid #ddd;padding:8px 12px;text-align:left}}
+  th{{background:#f4f4f4;font-weight:600}}
+  .footer{{text-align:center;color:#aaa;font-size:11px;margin-top:32px;
+           padding-top:16px;border-top:1px solid #eee}}
 </style>
 </head>
 <body>
-<div class="card">
-{h}
-</div>
-<div class="footer">
-  RockPress Tracker · Generado automáticamente · <a href="https://github.com">Ver en GitHub</a>
-</div>
+<div class="card">{h}</div>
+<div class="footer">RockPress Tracker · Generado automáticamente</div>
 </body>
 </html>"""
 
 
 def send_email(subject: str, html_content: str, text_content: str) -> bool:
-    """Envía el informe por email usando la API de Resend."""
     if not RESEND_API_KEY:
         log.info("RESEND_API_KEY no configurada → email omitido")
         return False
-
     if not EMAIL_TO:
         log.warning("EMAIL_TO no configurada → email omitido")
         return False
-
     try:
-        import resend  # noqa: PLC0415
+        import resend
         resend.api_key = RESEND_API_KEY
-
         params: resend.Emails.SendParams = {
             "from_": EMAIL_FROM,
             "to":    EMAIL_TO,
@@ -528,12 +678,10 @@ def send_email(subject: str, html_content: str, text_content: str) -> bool:
             "html":    html_content,
             "text":    text_content,
         }
-
-        result = resend.Emails.send(params)
+        result   = resend.Emails.send(params)
         email_id = result.get("id", "N/A") if isinstance(result, dict) else getattr(result, "id", "N/A")
-        log.info(f"✅ Email enviado a {EMAIL_TO} — ID: {email_id}")
+        log.info(f"✅ Email enviado → {EMAIL_TO} (ID: {email_id})")
         return True
-
     except ImportError:
         log.error("Paquete 'resend' no instalado. Ejecuta: pip install resend")
         return False
@@ -542,19 +690,10 @@ def send_email(subject: str, html_content: str, text_content: str) -> bool:
         return False
 
 # ===========================================================================
-# MÓDULO 6: GUARDAR INFORME
+# MÓDULO 8: GUARDAR INFORME
 # ===========================================================================
 
-def date_to_spanish(dt: datetime) -> str:
-    """Formatea una fecha como '19 de junio de 2026'."""
-    raw = dt.strftime("%-d de %B de %Y")
-    for en, es in _MONTH_ES.items():
-        raw = raw.replace(en, es)
-    return raw
-
-
 def save_report(content: str, date: datetime) -> Path:
-    """Guarda el informe en informes/informe_YYYYMMDD.md"""
     OUTPUT_DIR.mkdir(exist_ok=True)
     filename = OUTPUT_DIR / f"informe_{date.strftime('%Y%m%d')}.md"
     filename.write_text(content, encoding="utf-8")
@@ -571,14 +710,15 @@ def main() -> None:
         log.error("Obtén tu clave en: https://aistudio.google.com/app/apikey")
         sys.exit(1)
 
-    today  = datetime.now()
-    desde  = today - timedelta(days=DATE_WINDOW)
+    today     = datetime.now()
+    desde     = today - timedelta(days=DATE_WINDOW)
     today_str = date_to_spanish(today)
     desde_str = desde.strftime("%d/%m/%Y")
 
     log.info("=" * 65)
     log.info(f"  RockPress Tracker · {today_str}")
     log.info(f"  Ventana: {desde_str} → {today.strftime('%d/%m/%Y')}")
+    log.info(f"  Modelo: {GEMINI_MODEL}")
     log.info("=" * 65)
 
     # 1. Cargar medios
@@ -587,46 +727,66 @@ def main() -> None:
         log.error("Sin medios en bbddMedios.md. Abortando.")
         sys.exit(1)
 
-    # 2. Cargar memoria de artículos ya reportados
+    # 2. Cargar memoria
     seen_urls = load_seen_urls()
 
-    # 3. Recopilar contenido de los medios
-    collected = collect_content(media)
-    if not any(collected.values()):
-        log.error("Sin contenido accesible. Abortando.")
+    # 3. Recopilar artículos estructurados
+    collected = collect_articles(media)
+    total_arts = sum(len(v) for v in collected.values())
+    if total_arts == 0:
+        log.error("Sin artículos extraídos. Abortando.")
         sys.exit(1)
 
-    # 4. Generar informe con Gemini
-    prompt = build_prompt(collected, today_str, desde_str, seen_urls)
-    try:
-        report = call_gemini(prompt)
-    except Exception as e:
-        log.error(f"Error con Gemini: {e}")
-        sys.exit(1)
+    # 4. Construir lista compacta para Gemini (excluyendo ya vistos)
+    article_list_text, total_nuevos, total_vistos = build_article_list(collected, seen_urls)
 
-    # 5. Guardar informe en disco
-    report_path = save_report(report, today)
+    if total_nuevos == 0:
+        log.info("No hay artículos nuevos — todos ya fueron reportados anteriormente.")
+        report = (
+            f"# INFORME DIARIO – ROCK NACIONAL\n"
+            f"Fecha: {today_str}\n\n"
+            f"No se han encontrado noticias nuevas en los medios consultados "
+            f"(todos los artículos de los últimos {DATE_WINDOW} días ya fueron reportados).\n"
+        )
+    else:
+        medios_sin = [m for m, arts in collected.items() if not arts]
+        prompt = build_prompt(
+            article_list_text,
+            total_nuevos,
+            total_vistos,
+            medios_sin,
+            today_str,
+            desde_str,
+        )
+        log.info(f"Prompt: {len(prompt):,} chars — {total_nuevos} artículos nuevos para clasificar")
 
-    # 6. Actualizar memoria con los nuevos artículos reportados
-    new_urls = extract_urls_from_report(report)
+        try:
+            report = call_gemini(prompt)
+        except Exception as e:
+            log.error(f"Error con Gemini: {e}")
+            sys.exit(1)
+
+    # 5. Guardar informe
+    path = save_report(report, today)
+
+    # 6. Actualizar memoria
+    new_urls  = extract_urls_from_report(report)
     today_date = today.strftime("%Y-%m-%d")
-    for url in new_urls:
+    # También registrar todos los artículos extraídos (no solo los que salieron en el informe)
+    all_extracted_urls = [a["url"] for arts in collected.values() for a in arts]
+    for url in all_extracted_urls + new_urls:
         seen_urls[url] = today_date
     save_seen_urls(seen_urls)
 
-    # 7. Enviar por email (si está configurado)
-    if SEND_EMAIL:
+    # 7. Enviar email
+    if SEND_EMAIL_FLAG:
         subject = f"🎸 RockPress – Rock Nacional {today.strftime('%d/%m/%Y')}"
         html    = markdown_to_html(report)
         send_email(subject, html, report)
-    else:
-        log.info("Envío de email desactivado (SEND_EMAIL=false)")
 
     log.info("=" * 65)
-    log.info(f"✅ Proceso completado → {report_path.name}")
+    log.info(f"✅ Completado → {path.name} | {total_nuevos} artículos clasificados")
     log.info("=" * 65)
-
-    # Imprimir en stdout (útil para logs de GitHub Actions)
     print("\n" + report)
 
 
