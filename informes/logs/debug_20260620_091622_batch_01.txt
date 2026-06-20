@@ -1,0 +1,284 @@
+=== ROCKPRESS DEBUG — 20260620_091622 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,444  output: 2,020
+Safety: (none)
+
+============================================================
+PROMPT (10,293 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/1 (26 artículos).
+
+FECHA HOY: 20 de junio de 2026
+VENTANA: 17/06/2026 — 20 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-20] BLACK BOMBER hoy en Gijón.
+  URL: https://www.diariodeunmetalhead.com/2026/06/black-bomber-hoy-en-gijon.html
+  Resumen: Black Bomber actúan hoy sábado en el Bola 8 de Gijón.Los detalles:BLACK BOMBER.Gijón, Bola 8, sábado 20 de junio. Puertas 21:00h. Concierto: 21:30h.Entrada única 10€.Pedro Megather
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-20] Tarja – Frisson Noir (2026)
+  URL: https://diosesdelmetal.org/tarja-frisson-noir-2026/
+  Resumen: “Un salto de fe muy potente” Reseña de Cristian Dárchez Hace unos días atrás en Facebook me encontré con un post bastante curioso como involuntariamente gracioso de la gente de Mid
+• [2026-06-20] Rockfemérides 20 junio
+  URL: https://diosesdelmetal.org/rockfemerides-20-junio/
+  Resumen: Hoy cumplen años Michael Anthony, ex-Van Halen, Chickenfoot, Chino Moreno, vocalista de Deftones; Iron Maiden publica el single «The Trooper», Scorpions su segundo directo «World W
+• [2026-06-18] Noticias: Anthrax + Night Ranger + Wednesday 13
+  URL: https://diosesdelmetal.org/noticias-anthrax-night-ranger-wednesday-13/
+  Resumen: El nuevo disco de Anthrax a punto – Nuevo single de Night Ranger – Nuevo disco en directo de Wednesday 13 y single. Por Rockberto. Anthrax editarán el próximo 18 de septiembre su n
+• [2026-06-18] Segunda jornada del Z! Live, viernes 12 de junio
+  URL: https://diosesdelmetal.org/segunda-jornada-del-z-live-viernes-12-de-junio/
+  Resumen: Grandes bandas para la segunda jornada del Z! Live Crónica de Sikanda Fotos de Fran Cea y Javier Bragado cedidas para todos los medios sin fotógrafo Iniciamos la segunda jornada de
+• [2026-06-18] Rockfemérides 18 junio
+  URL: https://diosesdelmetal.org/rockfemerides-18-junio/
+  Resumen: Hoy cumplen años Paul McCartney; Oz Fox, guitarrista de Stryper; Dizzy Reed, teclista de Guns N’ Roses; Van Halen publica su noveno álbum llamado »For Unlawful Carnal Knowledge’ e 
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-20] Piel de Pantera presentan "Bichos raros, vicios caros", su nuevo single que es puro Rock and Roll
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/piel-de-pantera-presentan-bichos-raros.html
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-06-18] Z! Live Rock, Día 1 (11-06-26)
+  URL: https://keeptheflame.es/cronicas/fest/10326-zlive-dia1.html
+  Resumen: Un año más regresamos a Zamora para disfrutar de nuestro querido Z! Live Rock Fest. Te contamos al detalle cómo se vivió el espectacular arranque del festival de la mano de Headon,
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-18] Z! LIVE 2026 – VIERNES
+  URL: https://www.nochederock.com/z-live-2026-viernes/
+• [2026-06-18] IRON HEART
+  URL: https://www.nochederock.com/iron-heart/
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-18] EPICA – RATT – NIGHT RANGER – LOTURA
+  URL: https://www.rafabasa.com/2026/06/18/epica-ratt-night-ranger-lotura/
+  Resumen: EPICA estrenan version en directo de 'Sirens - Of Blood And Water', con la colaboración de Alissa White-Gluz, Elize Ryd y Charlotte Wessels.Reedición de RATT. Adelanto del directo 
+• [2026-06-18] AVATAR – CACTUS – ENDSEEKER.
+  URL: https://www.rafabasa.com/2026/06/18/avatar-cactus-endseeker/
+  Resumen: Clip del último rodaje de AVATAR. Vídeo de CACTUS. Escucha el EP de ENDSEEKER. La entrada AVATAR – CACTUS – ENDSEEKER. se publicó primero en WWW.RAFABASA.COM - Noticias en español 
+• [2026-06-18] POPPY – SOBER – BENEDICTION.
+  URL: https://www.rafabasa.com/2026/06/18/poppy-sober-benediction/
+  Resumen: POPPY estrena vídeo. Fechas de SOBER. Vídeo en directo de BENEDICTION. La entrada POPPY – SOBER – BENEDICTION. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la
+• [2026-06-18] Crónica y Fotos del Z! LIVE ROCK FEST – Sábado 13 con + EPICA + SOZIEDAD ALKOHOLIKA + TESSERACT + LEPOKA+ BROTHERS OF METAL+ KRISIUN + DOMINUM + ROMANTHICA + LATZEN
+  URL: https://www.rafabasa.com/2026/06/18/cronica-y-fotos-del-z-live-rock-fest-con-epica-soziedad-alkoholika-tesseract-lepoka-brothers-of-metal-krisiun-dominum-romanthica-latzen/
+  Resumen: La entrada Crónica y Fotos del Z! LIVE ROCK FEST – Sábado 13 con + EPICA + SOZIEDAD ALKOHOLIKA + TESSERACT + LEPOKA+ BROTHERS OF METAL+ KRISIUN + DOMINUM + ROMANTHICA + LATZEN se p
+• [2026-06-18] BEAST IN BLACK – DRAGONFLY – THE OBSESSED
+  URL: https://www.rafabasa.com/2026/06/18/beast-in-black-dragonfly-the-obsessed/
+  Resumen: BEAST IN BLACK con nuevo guitarrista. Detalles del EP de DRAGONFLY. THE OBSESSED en el estudio. La entrada BEAST IN BLACK – DRAGONFLY – THE OBSESSED se publicó primero en WWW.RAFAB
+• [2026-06-18] IRON MAIDEN – K.K.’S PRIEST – MYRATH
+  URL: https://www.rafabasa.com/2026/06/18/iron-maiden-k-k-s-priest-myrath/
+  Resumen: Bruce Dickinson de IRON MAIDEN habla de los cantantes que ya no dan la talla. Vídeo en directo en festival alemán Rock Hard de K.K.’S PRIEST. MYRATH estrenan vídeo. La entrada IRON
+
+──────────────────────────────────────────────────
+MEDIO: Sevillametal
+──────────────────────────────────────────────────
+• [2026-06-18] SIGHT OF EMPTINESS HACE HISTORIA
+  URL: https://www.sevillametal.org/sevillametal/3165-sight-of-emptiness-hace-historia
+  Resumen: ANUNCIA SU DEBUT EN DUBÁI Y SU REGRESO A JAPÓN JUNTO A LAS LEYENDAS SUECAS THE CROWN
+• [2026-06-18] MUQUETA NA OREIA lanza el EP "MNO"
+  URL: https://www.sevillametal.org/sevillametal/3164-muqueta-na-oreia-lanza-el-ep-mno
+  Resumen: Con 19 años de trayectoria, Muqueta na Oreia consolidó su nombre como una de las fuerzas más consistentes del underground brasileño.
+• [2026-06-18] Nuevo vídeo de Physycal "Never Close"
+  URL: https://www.sevillametal.org/sevillametal/3163-nuevo-video-de-physycal-never-close
+  Resumen: El grupo granadino Physycal nos presenta un nuevo vídeo de su último trabajo “A new reality”.
+• [2026-06-18] Edición en Vinilo Armando de Castro
+  URL: https://www.sevillametal.org/sevillametal/3162-edicion-en-vinilo-armando-de-castro
+  Resumen: El próximo viernes 19 de junio se editará a través de la discográfica Demons Records la edición en vinilo del último disco del guitarrista Armando de Castro (Fundador de Barón Rojo
+• [2026-06-18] Wes Krux lanza nuevo sencillo "Golden Hill"
+  URL: https://www.sevillametal.org/sevillametal/3161-wes-krux-lanza-nuevo-sencillo-golden-hill
+  Resumen: Rock hacia la paz interior
+• [2026-06-18] Conoce Dëdalom
+  URL: https://www.sevillametal.org/sevillametal/3160-conoce-dedalom
+  Resumen: Dëdalom plantea desde el primer momento una dualidad entre el bien y el mal, usando al Minotauro como algo más que una bestia sin sentimientos y que sólo piensa en instintos primar
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-20] VANAHEIM abre la preventa de "Roede Voor De Borst", su nuevo álbum conceptual que verá la luz en septiembre
+  URL: https://tntradiorock.com/vanaheim-abre-la-preventa-de-roede-voor-de-borst-su-nuevo-album-conceptual-que-vera-la-luz-en-septiembre/
+  Resumen: La formación neerlandesa de folk metal VANAHEIM ha iniciado la campaña de reservas de "Roede Voor De Borst", su esperado nuevo álbum de estudio, que […] Contenido de TNT Radio Rock
+• [2026-06-20] THE BERZERKER reeditan “The Reawakening” a través de Apocalyptic Witchcraft este 30 de octubre
+  URL: https://tntradiorock.com/the-berzerker-reeditan-the-reawakening-a-traves-de-apocalyptic-witchcraft-este-30-de-octubre/
+  Resumen: La leyenda australiana del Industrial Death Metal The Berzerker anuncia la esperada reedición de “The Reawakening”, su obra más feroz y esquiva, que verá la […] Contenido de TNT Ra
+• [2026-06-20] THUNDERCHIEF anuncian el álbum “With Hatchet, Pike or Morning Star…” para el 1 de julio y preparan una gira de cuatro semanas por EE.UU.
+  URL: https://tntradiorock.com/thunderchief-anuncian-el-album-with-hatchet-pike-or-morning-star-para-el-1-de-julio-y-preparan-una-gira-de-cuatro-semanas-por-ee-uu/
+  Resumen: La banda de heavy metal y punk Thunderchief, originaria de Virginia, publicará su nuevo álbum “With Hatchet, Pike or Morning Star…” el 1 de julio […] Contenido de TNT Radio Rock
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-20] Limp Bizkit, a punto de agotar las entradas para su concierto en Madrid
+  URL: https://mariskalrock.com/actualidad/limp-bizkit-a-punto-de-agotar-las-entradas-para-su-concierto-en-madrid/
+  Resumen: Pero… ¿había alguna duda? La gente ya está desempolvando sus chándales para vestirse de gala y recibir su chute de nostalgia noventera de la mano de unos Limp Bizkit que visitan la
+
+============================================================
+RESPUESTA (5,134 chars):
+============================================================
+[
+  {
+    "title": "BLACK BOMBER hoy en Gijón.",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/black-bomber-hoy-en-gijon.html",
+    "date": "2026-06-20",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Black Bomber actúan hoy sábado en el Bola 8 de Gijón.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Segunda jornada del Z! Live, viernes 12 de junio",
+    "url": "https://diosesdelmetal.org/segunda-jornada-del-z-live-viernes-12-de-junio/",
+    "date": "2026-06-18",
+    "medio": "Dioses del Metal",
+    "excerpt": "Grandes bandas para la segunda jornada del Z! Live Crónica de Sikanda Fotos de Fran Cea y Javier Bragado",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Piel de Pantera presentan \"Bichos raros, vicios caros\", su nuevo single que es puro Rock and Roll",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/piel-de-pantera-presentan-bichos-raros.html",
+    "date": "2026-06-20",
+    "medio": "El Clavijero Rock",
+    "excerpt": "Piel de Pantera presentan \"Bichos raros, vicios caros\", su nuevo single que es puro Rock and Roll",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Z! Live Rock, Día 1 (11-06-26)",
+    "url": "https://keeptheflame.es/cronicas/fest/10326-zlive-dia1.html",
+    "date": "2026-06-18",
+    "medio": "Keep The Flame",
+    "excerpt": "Un año más regresamos a Zamora para disfrutar de nuestro querido Z! Live Rock Fest.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Z! LIVE 2026 – VIERNES",
+    "url": "https://www.nochederock.com/z-live-2026-viernes/",
+    "date": "2026-06-18",
+    "medio": "Noche de Rock",
+    "excerpt": "Crónica de la jornada del viernes del festival Z! Live 2026.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "EPICA – RATT – NIGHT RANGER – LOTURA",
+    "url": "https://www.rafabasa.com/2026/06/18/epica-ratt-night-ranger-lotura/",
+    "date": "2026-06-18",
+    "medio": "Rafa Basa",
+    "excerpt": "Novedades de Lotura entre otros lanzamientos internacionales.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "POPPY – SOBER – BENEDICTION.",
+    "url": "https://www.rafabasa.com/2026/06/18/poppy-sober-benediction/",
+    "date": "2026-06-18",
+    "medio": "Rafa Basa",
+    "excerpt": "Fechas de SOBER.",
+    "rel": 4,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Crónica y Fotos del Z! LIVE ROCK FEST – Sábado 13 con + EPICA + SOZIEDAD ALKOHOLIKA + TESSERACT + LEPOKA+ BROTHERS OF METAL+ KRISIUN + DOMINUM + ROMANTHICA + LATZEN",
+    "url": "https://www.rafabasa.com/2026/06/18/cronica-y-fotos-del-z-live-rock-fest-con-epica-soziedad-alkoholika-tesseract-lepoka-brothers-of-metal-krisiun-dominum-romanthica-latzen/",
+    "date": "2026-06-18",
+    "medio": "Rafa Basa",
+    "excerpt": "Crónica y Fotos del Z! LIVE ROCK FEST – Sábado 13 con Epica, Soziedad Alkoholika, Lépoka, Romanthica, Latzen y más.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "BEAST IN BLACK – DRAGONFLY – THE OBSESSED",
+    "url": "https://www.rafabasa.com/2026/06/18/beast-in-black-dragonfly-the-obsessed/",
+    "date": "2026-06-18",
+    "medio": "Rafa Basa",
+    "excerpt": "Detalles del EP de DRAGONFLY.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Nuevo vídeo de Physycal \"Never Close\"",
+    "url": "https://www.sevillametal.org/sevillametal/3163-nuevo-video-de-physycal-never-close",
+    "date": "2026-06-18",
+    "medio": "Sevillametal",
+    "excerpt": "El grupo granadino Physycal nos presenta un nuevo vídeo de su último trabajo “A new reality”.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Edición en Vinilo Armando de Castro",
+    "url": "https://www.sevillametal.org/sevillametal/3162-edicion-en-vinilo-armando-de-castro",
+    "date": "2026-06-18",
+    "medio": "Sevillametal",
+    "excerpt": "Edición en vinilo del último disco del guitarrista Armando de Castro (Fundador de Barón Rojo) a través de Demons Records.",
+    "rel": 5,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Wes Krux lanza nuevo sencillo \"Golden Hill\"",
+    "url": "https://www.sevillametal.org/sevillametal/3161-wes-krux-lanza-nuevo-sencillo-golden-hill",
+    "date": "2026-06-18",
+    "medio": "Sevillametal",
+    "excerpt": "Rock hacia la paz interior",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Conoce Dëdalom",
+    "url": "https://www.sevillametal.org/sevillametal/3160-conoce-dedalom",
+    "date": "2026-06-18",
+    "medio": "Sevillametal",
+    "excerpt": "Dëdalom plantea desde el primer momento una dualidad entre el bien y el mal, usando al Minotauro.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Limp Bizkit, a punto de agotar las entradas para su concierto en Madrid",
+    "url": "https://mariskalrock.com/actualidad/limp-bizkit-a-punto-de-agotar-las-entradas-para-su-concierto-en-madrid/",
+    "date": "2026-06-20",
+    "medio": "Mariskalrock",
+    "excerpt": "Limp Bizkit visitan Madrid y están a punto de agotar entradas.",
+    "rel": 4,
+    "categoria": "Concierto"
+  }
+]
