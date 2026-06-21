@@ -1,0 +1,253 @@
+=== ROCKPRESS DEBUG — 20260621_092715 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 4,286  output: 1,590
+Safety: (none)
+
+============================================================
+PROMPT (13,229 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/1 (30 artículos).
+
+FECHA HOY: 21 de junio de 2026
+VENTANA: 18/06/2026 — 21 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-21] Los 4 del apocalipsis (1975)
+  URL: https://diosesdelmetal.org/los-4-del-apocalipsis-1975/
+  Resumen: Calificación: 8/10 Genero: Western/drama/Thriller “La violencia (a la italiana) está entre nosotros” Reseña de Christian Dárchez Hace poco se cumplió un nuevo natalicio del directo
+• [2026-06-21] Rockfemérides 21 junio
+  URL: https://diosesdelmetal.org/rockfemerides-21-junio-2/
+  Resumen: Hoy cumplen años el teclista Don Airey (Ozzy Osbourne, Judas Priest, Black Sabbath…); Joey Kramer, batería de Aerosmith; el vocalista y bajista Kip Winger (ex-Alice Cooper y Winger
+• [2026-06-20] Noticias: Amarax + Cactus+ Among Legends
+  URL: https://diosesdelmetal.org/noticias-amarax-cactus-among-legends/
+  Resumen: Amarax estrenan vídeo clip – Nuevo tema de Cactus – Single de Among Legends. Por Rockberto. «Rescue» es el debut de Amarax. Lo podéis ver aquí abajo: Cactus han publicado un nuevo 
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-21] Propuestas para disco de la semana 1574.
+  URL: https://www.nochederock.com/propuestas-para-disco-de-la-semana-1574/
+• [2026-06-20] KABIEFEST – JORNADA 2
+  URL: https://www.nochederock.com/kabiefest-jornada-2/
+
+──────────────────────────────────────────────────
+MEDIO: Sevillametal
+──────────────────────────────────────────────────
+• [2026-06-21] Chicle nos presentan su tercer single
+  URL: https://www.sevillametal.org/sevillametal/3171-chicle-nos-presentan-su-tercer-single
+  Resumen: "BARRO"
+• [2026-06-21] LOTURA presentan el videoclip de “Barkamena”
+  URL: https://www.sevillametal.org/sevillametal/3170-lotura-presentan-el-videoclip-de-barkamena
+  Resumen: LOTURA presenta el videoclip oficial de “Barkamena”, uno de los temas más destacados de su reciente álbum Terminus, publicado a través de Art Gates Records en formato Cd/Lp y digit
+• [2026-06-21] MFC CHICKEN PRESENTAN SU ESPECTACULAR DIRECTO EN JEREZ
+  URL: https://www.sevillametal.org/sevillametal/3169-mfc-chicken-presentan-su-espectacular-directo-en-jerez
+  Resumen: Este próximo miércoles 24 de Junio en LA GUARIDA DEL ANGEL se presenta la gira de los londinenses MFC CHICKEN , la nueva, aunque ya veterana formación, realidad del Frat Rock.
+• [2026-06-21] EREBOROS lanza el sencillo
+  URL: https://www.sevillametal.org/sevillametal/3168-ereboros-lanza-el-sencillo
+  Resumen: "In The Depths of Misery"
+• [2026-06-21] Los Ojos del Cyclope presentan "Canción de Gollum"
+  URL: https://www.sevillametal.org/sevillametal/3167-los-ojos-del-cyclope-presentan-cancion-de-gollum
+  Resumen: Un guiño a la lectura entre acordes disonantes
+
+──────────────────────────────────────────────────
+MEDIO: The Sentinel
+──────────────────────────────────────────────────
+• [2026-06-19] AC/DC “Let There Be Rock” (1977)
+  URL: https://www.thesentinel.es/wpsentinel/?p=39790
+  Resumen: Hay discos que no se escuchan: te atropellan. “Let There Be Rock” es exactamente eso: un camión sin frenos bajando por una cuesta, con Bon Scott asomado por la ventanilla, Angus Yo
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-21] LEYENDAS DEL ROCK, Stand Firmas TNT Radio 2026
+  URL: https://tntradiorock.com/leyendas-del-rock-stand-firmas-tnt-radio-2026/
+  Resumen: Hablar de la experiencia del publico en Leyendas del Rock es hablar también del ya tradicional Stand de Firmas de TNT Radio Rock. En 2026, […] Contenido de TNT Radio Rock
+• [2026-06-21] DEATH PROTOCOL presenta su nuevo single "Illusion Of Faith", una ambiciosa apuesta con tres vocalistas invitados
+  URL: https://tntradiorock.com/death-protocol-presenta-su-nuevo-single-illusion-of-faith-una-ambiciosa-apuesta-con-tres-vocalistas-invitados/
+  Resumen: La banda californiana de thrash metal Death Protocol lanzará el próximo 26 de junio su nuevo single, "Illusion Of Faith", a través de Rottweiler Records. […] Contenido de TNT Radio
+• [2026-06-20] Los murcianos ECLYPSE se estrenan con "La Pócima", una descarga de buen folk metal
+  URL: https://tntradiorock.com/los-murcianos-eclypse-se-estrenan-con-la-pocima-una-descarga-de-buen-folk-metal/
+  Resumen: La banda murciana de folk/power metal Eclypse acaba de estrenar su primer single oficial y videoclip, "La Pocima", adelanto de su primer disco de estudio. […] Contenido de TNT Radi
+• [2026-06-20] POST DEATH SOUNDTRACK anuncian “Barren Mother Of All”, un doble álbum de confrontación absoluta
+  URL: https://tntradiorock.com/post-death-soundtrack-anuncian-barren-mother-of-all-un-doble-album-de-confrontacion-absoluta/
+  Resumen: La fuerza canadiense de música experimental pesada Post Death Soundtrack regresa con una declaración artística monumental: el doble álbum “Barren Mother Of All”, que verá […] Conte
+• [2026-06-20] RAINING LOCUSTS presenta el nuevo single "Maligned Into Deformity"
+  URL: https://tntradiorock.com/raining-locusts-presenta-el-nuevo-single-maligned-into-deformity/
+  Resumen: Encasillar a RAINING LOCUSTS dentro de una única vertiente del metal resulta prácticamente imposible. Aunque en su música conviven elementos del death metal, black metal, […] Conte
+• [2026-06-20] WARNING publica su nuevo álbum "Rituals Of Shame"
+  URL: https://tntradiorock.com/warning-publica-su-nuevo-album-rituals-of-shame/
+  Resumen: Veinte años después de su última publicación, WARNING pone fin a una de las ausencias más prolongadas y reverenciadas del doom metal con la llegada […] Contenido de TNT Radio Rock
+• [2026-06-20] BEAST IN BLACK vuelven a España de la mano de Madness Live en noviembre junto a SONATA ARCTICA y FROZEN CROWN
+  URL: https://tntradiorock.com/beast-in-black-lideran-la-gira-de-madness-live-con-sonata-arctica-celebrando-30-anos-y-frozen-crown-abriendo-fuego/
+  Resumen: El mejor power metal del norte de Europa aterriza este otoño en España de la mano de MADNESS LIVE, que traerá una de las giras […] Contenido de TNT Radio Rock
+
+──────────────────────────────────────────────────
+MEDIO: Red hard n heavy
+──────────────────────────────────────────────────
+• [2026-06-21] Esta noche en Corsarios: W.A.S.P. , especial primera etapa (82/87)
+  URL: https://redhardnheavy.com/corsarios-w-a-s-p-especial-primera-etapa/?utm_source=rss&utm_medium=rss&utm_campaign=corsarios-w-a-s-p-especial-primera-etapa
+  Resumen: Corsarios del Metal abordan esta noche los primeros años de W.A.S.P., se avecina un programa sangriento y controvertido, Scream until You Like it! Nos lo cuentan los propios Corsar
+• [2026-06-20] Llega Rock Imperium Festival 2026
+  URL: https://redhardnheavy.com/llega-rock-imperium-festival-2026/?utm_source=rss&utm_medium=rss&utm_campaign=llega-rock-imperium-festival-2026
+  Resumen: Ya llega la nueva y potente edición de Rock Imperium a nuestro país… Os recordamos y resumimos los datos principales: Del 3 al 5 de julio de 2026, Cartagena volverá a recibir a mil
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-21] Gene Simmons (Kiss) incorpora a Phil Demmel (Kerry King, ex-Machine Head) para tocar en directo esta canción de Kiss
+  URL: https://mariskalrock.com/actualidad/gene-simmons-kiss-incorpora-a-phil-demmel-kerry-king-ex-machine-head-para-tocar-en-directo-esta-cancion-de-kiss/
+  Resumen: Aceptémoslo: Kiss, tal y como lo conocemos, ha terminado. Esta vez de verdad. Si queremos volver a sentir lo que eran sus magnánimas actuaciones en directo, tendremos que esperar a
+• [2026-06-21] Erik Grönwall canta en directo canciones de Skid Row, H.E.A.T, Deep Purple o Black Sabbath
+  URL: https://mariskalrock.com/actualidad/erik-gronwall-canta-en-directo-canciones-de-skid-row-h-e-a-t-deep-purple-o-black-sabbath/
+  Resumen: El frontman de Skid Row entre 2022 y 2024, el sueco ganador del formato Swedish Idol Erik Grönwall, encara los primeros pasos de una carrera en solitario materializada en ‘Bad Bone
+• [2026-06-21] K.K. Downing, sobre una posible reunión con Judas Priest: "La edad es un factor importante para todos nosotros"
+  URL: https://mariskalrock.com/actualidad/k-k-downing-sobre-una-posible-reunion-con-judas-priest-la-edad-es-un-factor-importante-para-todos-nosotros/
+  Resumen: Dejemos las cosas claras: K.K. está deseando volver a Judas. O, por lo menos, reunirse con ellos, tocar ante masas desatadas y sentir de nuevo esa sensación que hace tiempo que ya 
+• [2026-06-21] Los hermanos Cavalera (ex-Sepultura) sufren un grave accidente de tráfico y suspenden su concierto en Hellfest
+  URL: https://mariskalrock.com/actualidad/los-hermanos-cavalera-ex-sepultura-sufren-un-grave-accidente-de-trafico-y-suspenden-su-concierto-en-hellfest/
+  Resumen: Noticias como estas nunca dejan de ponernos los pelos de punta. Un mero comunicado en Instagram, blanco sobre negro, y la palabra accidente. ¿La cuenta? La de Cavalera Conspiracy, 
+• [2026-06-20] Nuno Bettencourt (Extreme) sobre Yngwie Malmsteen: "La destreza técnica no era su superpoder"
+  URL: https://mariskalrock.com/actualidad/nuno-bettencourt-extreme-sobre-yngwie-malmsteen-la-destreza-tecnica-no-era-su-superpoder/
+  Resumen: El neoclasicismo de Yngwie Malmsteen, quizá por lo impresionante de su propuesta o por su ruptura con las convenciones de la era en la que surgió, ha inspirado a decenas de nombres
+• [2026-06-20] La obsesión de James Hetfield (Metallica) con el vudú cuando escribió esta canción de "Reload": "Es como cuando alguien clava otra aguja en tu muñeco"
+  URL: https://mariskalrock.com/actualidad/la-obsesion-de-james-hetfield-metallica-con-el-vudu-cuando-escribio-esta-cancion-de-reload-es-como-cuando-alguien-clava-otra-aguja-en-tu-muneco/
+  Resumen: Bueno, bueno, bueno… ‘Load’. ‘Reload’. Posiblemente, la etapa más controvertida de Metallica (si dejamos al margen ese tabú llamado ‘Lulú’). En nuestra opinión, hay cortes salvable
+• [2026-06-20] Cuando Steven Adler ayudó a Slash a sacar el comienzo de "Sweet Child O' Mine" de Guns N' Roses: "Tío, tócalo con la mitad de las notas"
+  URL: https://mariskalrock.com/actualidad/cuando-steven-adler-ayudo-a-slash-a-sacar-el-comienzo-de-sweet-child-o-mine-de-guns-n-roses-tio-tocalo-con-la-mitad-de-las-notas/
+  Resumen: ¿A que no tenías ni idea de que el que posiblemente sea el riff más icónico de toda la trayectoria de Guns N’ Roses llegó a buen puerto gracias a un batería? Como oís: Steven Adler
+• [2026-06-20] Mikkey Dee explica por qué rechazó las invitaciones de Lemmy para unirse a Motörhead durante muchos años: "Fueron dos razones, respetuosamente"
+  URL: https://mariskalrock.com/actualidad/mikkey-dee-explica-por-que-rechazo-las-invitaciones-de-lemmy-para-unirse-a-motorhead-durante-muchos-anos-fueron-dos-razones-respetuosamente/
+  Resumen: Levantad la mano… ¿Cuántos de vosotros rechazaríais la oportunidad de uniros a Motörhead a finales de los 80 para tocar la batería junto con el icónico Lemmy Kilmister? ¡No oséis, 
+• [2026-06-20] Keith Richards (The Rolling Stones) ya lo decía en los ochenta: "Si haces discos y no sales a la carretera, te estás acobardando"
+  URL: https://mariskalrock.com/actualidad/keith-richards-the-rolling-stones-ya-lo-decia-en-los-ochenta-si-haces-discos-y-no-sales-a-la-carretera-te-estas-acobardando/
+  Resumen: Se ha perdido una figura ciertamente interesante en la escena musical: la banda de estudio. Durante varias décadas, era frecuente ver muchas bandas que hacían grandísimos discos qu
+• [2026-06-20] Bruce Dickinson (Iron Maiden) dice que hay "muchísimos cantantes cuya voz está destrozada": "No son malditas leyendas, son gente que ya no puede cantar"
+  URL: https://mariskalrock.com/actualidad/bruce-dickinson-iron-maiden-dice-que-hay-muchisimos-cantantes-cuya-voz-esta-destrozada-no-son-malditas-leyendas-son-gente-que-ya-no-puede-cantar/
+  Resumen: En la escena del metal hemos normalizado, reconozcámoslo, lo imposible. Las extensísimas carreras de muchas de nuestras bandas predilectas son de todo menos homogéneas: mientras qu
+
+============================================================
+RESPUESTA (4,407 chars):
+============================================================
+[
+  {
+    "title": "KABIEFEST – JORNADA 2",
+    "url": "https://www.nochederock.com/kabiefest-jornada-2/",
+    "date": "2026-06-20",
+    "medio": "Noche de Rock",
+    "excerpt": "Crónica o información sobre la segunda jornada del festival Kabiefest celebrado en el País Vasco.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Chicle nos presentan su tercer single",
+    "url": "https://www.sevillametal.org/sevillametal/3171-chicle-nos-presentan-su-tercer-single",
+    "date": "2026-06-21",
+    "medio": "Sevillametal",
+    "excerpt": "La banda de rock Chicle presenta \"BARRO\", el tercer single de su trayectoria.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "LOTURA presentan el videoclip de “Barkamena”",
+    "url": "https://www.sevillametal.org/sevillametal/3170-lotura-presentan-el-videoclip-de-barkamena",
+    "date": "2026-06-21",
+    "medio": "Sevillametal",
+    "excerpt": "LOTURA presenta el videoclip oficial de “Barkamena”, uno de los temas más destacados de su reciente álbum Terminus, publicado a través de Art Gates Records.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "MFC CHICKEN PRESENTAN SU ESPECTACULAR DIRECTO EN JEREZ",
+    "url": "https://www.sevillametal.org/sevillametal/3169-mfc-chicken-presentan-su-espectacular-directo-en-jerez",
+    "date": "2026-06-21",
+    "medio": "Sevillametal",
+    "excerpt": "Este próximo miércoles 24 de Junio en LA GUARIDA DEL ANGEL se presenta la gira de los londinenses MFC CHICKEN, la nueva, aunque ya veterana formación de Frat Rock.",
+    "rel": 2,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "EREBOROS lanza el sencillo",
+    "url": "https://www.sevillametal.org/sevillametal/3168-ereboros-lanza-el-sencillo",
+    "date": "2026-06-21",
+    "medio": "Sevillametal",
+    "excerpt": "La banda de metal Ereboros lanza su nuevo sencillo \"In The Depths of Misery\".",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Los Ojos del Cyclope presentan \"Canción de Gollum\"",
+    "url": "https://www.sevillametal.org/sevillametal/3167-los-ojos-del-cyclope-presentan-cancion-de-gollum",
+    "date": "2026-06-21",
+    "medio": "Sevillametal",
+    "excerpt": "Los Ojos del Cyclope presentan su nuevo tema \"Canción de Gollum\", un guiño a la lectura entre acordes disonantes.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "LEYENDAS DEL ROCK, Stand Firmas TNT Radio 2026",
+    "url": "https://tntradiorock.com/leyendas-del-rock-stand-firmas-tnt-radio-2026/",
+    "date": "2026-06-21",
+    "medio": "TNT Radio Rock",
+    "excerpt": "Hablar de la experiencia del público en Leyendas del Rock es hablar también del ya tradicional Stand de Firmas de TNT Radio Rock para la edición 2026.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Los murcianos ECLYPSE se estrenan con \"La Pócima\", una descarga de buen folk metal",
+    "url": "https://tntradiorock.com/los-murcianos-eclypse-se-estrenan-con-la-pocima-una-descarga-de-buen-folk-metal/",
+    "date": "2026-06-20",
+    "medio": "TNT Radio Rock",
+    "excerpt": "La banda murciana de folk/power metal Eclypse acaba de estrenar su primer single oficial y videoclip, \"La Pócima\", adelanto de su primer disco de estudio.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "BEAST IN BLACK vuelven a España de la mano de Madness Live en noviembre junto a SONATA ARCTICA y FROZEN CROWN",
+    "url": "https://tntradiorock.com/beast-in-black-lideran-la-gira-de-madness-live-con-sonata-arctica-celebrando-30-anos-y-frozen-crown-abriendo-fuego/",
+    "date": "2026-06-20",
+    "medio": "TNT Radio Rock",
+    "excerpt": "El mejor power metal del norte de Europa aterriza este otoño en España de la mano de MADNESS LIVE, que traerá una de las giras más esperadas con Beast In Black, Sonata Arctica y Frozen Crown.",
+    "rel": 4,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Llega Rock Imperium Festival 2026",
+    "url": "https://redhardnheavy.com/llega-rock-imperium-festival-2026/?utm_source=rss&utm_medium=rss&utm_campaign=llega-rock-imperium-festival-2026",
+    "date": "2026-06-20",
+    "medio": "Red hard n heavy",
+    "excerpt": "Ya llega la nueva y potente edición de Rock Imperium a nuestro país. Del 3 al 5 de julio de 2026, Cartagena volverá a recibir a miles de metaleros.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  }
+]
