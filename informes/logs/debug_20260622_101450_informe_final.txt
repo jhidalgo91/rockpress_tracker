@@ -1,0 +1,442 @@
+=== ROCKPRESS DEBUG — 20260622_101450 — informe_final ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 16384
+finish_reason: 1
+Tokens → input: 4,234  output: 4,718
+Safety: (none)
+
+============================================================
+PROMPT (12,291 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 22 de junio de 2026
+VENTANA: 19/06/2026 — 22 de junio de 2026
+
+Tienes 27 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 22 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 27
+- Articulos excluidos (ya reportados): 61
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, The Sentinel, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 22 de junio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 27 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, The Sentinel, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, Esquirlas de Metal, Hoy Rock, Iguana Rock, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Radio Domination, Rock Sesion, Rockeando, Sancocho, The Metal Dreamer, Turbo Rock
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-06-22] Boikot estrena ‘Me Levantaré Otra Vez’ con la colaboración de Ska-P
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/boikot-estrena-me-levantare-otra-vez-con-la-colaboracion-de-ska-p/
+   Resumen: Boikot presenta su nuevo single con la colaboración especial de los vallecanos Ska-P.
+
+2. [2026-06-22] Boikot a punto de estrenar ‘Me Levantaré Otra Vez’, otro adelanto de su nuevo disco con la colaboración de Ska-P
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/boikot-a-punto-de-estrenar-me-levantare-otra-vez-otro-adelanto-de-su-nuevo-disco-con-la-colaboracion-de-ska-p/
+   Resumen: Detalles previos al lanzamiento del nuevo single de Boikot junto a Ska-P.
+
+3. [2026-06-22] Sôber lanzan ‘Indestructible’, el primer adelanto de su nuevo disco de estudio
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/sober-lanzan-indestructible-el-primer-adelanto-de-su-nuevo-disco-de-estudio/
+   Resumen: Sôber presenta el primer sencillo de lo que será su próximo trabajo discográfico.
+
+4. [2026-06-22] Sôber a punto de lanzar ‘Indestructible’, el primer adelanto de su nuevo disco de estudio
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/sober-a-punto-de-lanzar-indestructible-el-primer-adelanto-de-su-nuevo-disco-de-estudio/
+   Resumen: Expectación ante el inminente estreno del nuevo single de la banda madrileña Sôber.
+
+5. [2026-06-22] Boikot lanza ‘El Pueblo’, cuarto adelanto de su nuevo álbum
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/boikot-lanza-el-pueblo-cuarto-adelanto-de-su-nuevo-album/
+   Resumen: Boikot sigue desvelando temas de su próximo trabajo discográfico con este nuevo single.
+
+6. [2026-06-22] Rueda de prensa íntegra de Robe presentando su nuevo disco, ‘Se Nos Lleva El Aire’
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Bandas espanolas
+   URL: https://rockcircus.net/rueda-de-prensa-integra-de-robe-presentando-su-nuevo-disco-se-nos-lleva-el-aire/
+   Resumen: Robe Iniesta comparece ante los medios para dar todos los detalles de su aclamado nuevo álbum.
+
+7. [2026-06-22] Ya a la venta el nuevo disco de Boikot “No Les Interesa”
+   Medio: The Sound of The Embryo | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/ya-a-la-venta-el-nuevo-disco-de-boikot-no-les-interesa/
+   Resumen: Ya a la venta el nuevo disco de Boikot “No Les Interesa”
+
+8. [2026-06-22] Mad Cool Festival cierra el cartel de su próxima edición, encabezada por Foo Fighters, Pixies o The Black Crowes, incorporando a Linka Moja o Ksal
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://mariskalrock.com/actualidad/mad-cool-festival-cierra-el-cartel-de-su-proxima-edicion-encabezada-por-foo-fighters-pixies-o-the-black-crowes-incorporando-a-linka-moja-o-ksal/
+   Resumen: Estamos a solo dos semanas de disfrutar de los conciertos de artistas de la talla de Foo Fighters, Pixies o The Black Crowes, entre muchos otros, en la próxima edición del Mad Cool
+
+9. [2026-06-22] Mägo De Oz, Boikot o Rebrote en el Zaidín Rock 2026
+   Medio: Rock Circus | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://rockcircus.net/mago-de-oz-boikot-o-rebrote-en-el-zaidin-rock-2026/
+   Resumen: El festival granadino Zaidín Rock confirma en su cartel a grandes nombres del rock estatal como Mägo de Oz y Boikot.
+
+10. [2026-06-22] Moscow Death Brigade, Tremenda Jauría o Kaotiko en el Castañazo Rock 2026
+   Medio: Rock Circus | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://rockcircus.net/moscow-death-brigade-tremenda-jauria-o-kaotiko-en-el-castanazo-rock-2026/
+   Resumen: El festival gallego Castañazo Rock anuncia las primeras confirmaciones de su edición de 2026 con presencia de bandas nacionales destacadas.
+
+11. [2026-06-22] Quantica lanza ‘Un día en Texas’ en colaboración con Ana Curra y Manolo UVI
+   Medio: Rock Circus | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/quantica-lanza-un-dia-en-texas-en-colaboracion-con-ana-curra-y-manolo-uvi/
+   Resumen: Quantica se une a dos leyendas del punk y la movida madrileña para su nuevo single.
+
+12. [2026-06-22] Despistaos lanza ‘Las De Perder’ con la colaboración de Aaron Romero de Linaje
+   Medio: Rock Circus | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/despistaos-lanza-las-de-perder-con-la-colaboracion-de-aaron-romero-de-linaje/
+   Resumen: Despistaos presenta nuevo tema contando con la voz de Aaron Romero.
+
+13. [2026-06-22] Entrevista a Desakato en el programa La Resistencia
+   Medio: Rock Circus | Relevancia: 4/5 | Cat: Entrevista
+   URL: https://rockcircus.net/entrevista-a-desakato-en-el-programa-la-resistencia/
+   Resumen: La banda asturiana Desakato pasa por el conocido programa de televisión para charlar sobre su trayectoria y despedida.
+
+14. [2026-06-22] Zirrosis estrena single “Morirás Sin Nada”
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/zirrosis-estrena-single-moriras-sin-nada/
+   Resumen: La mítica banda de punk rock de Aranda de Duero, Zirrosis, regresa con un potente nuevo single titulado 'Morirás Sin Nada'.
+
+15. [2026-06-22] Detalles del próximo disco de Dragonfly “Laberinto”
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/detalles-del-proximo-disco-de-dragonfly-laberinto/
+   Resumen: Detalles del próximo disco de Dragonfly “Laberinto”
+
+16. [2026-06-22] Primeras confirmaciones del Piorno Rock 2026
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.thesoundoftheembryo.es/primeras-confirmaciones-del-piorno-rock-2026/
+   Resumen: Primeras confirmaciones del Piorno Rock 2026
+
+17. [2026-06-22] Fechas de la décima edición del festival Vintoro
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.thesoundoftheembryo.es/fechas-de-la-decima-edicion-del-festival-vintoro/
+   Resumen: Fechas de la décima edición del festival Vintoro
+
+18. [2026-06-22] El Último Ke Zierre o Envidia Kotxina en el Cecla Rock Festival 2026
+   Medio: Rock Circus | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://rockcircus.net/el-ultimo-ke-zierre-o-envidia-kotxina-en-el-cecla-rock-festival-2026/
+   Resumen: Bandas míticas del punk rock estatal se darán cita en la nueva edición del Cecla Rock Festival.
+
+19. [2026-06-22] Kaos Urbano, Los De Marras o El Último Ke Zierre en el Rock Albox Festival 2026
+   Medio: Rock Circus | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://rockcircus.net/kaos-urbano-los-de-marras-o-el-ultimo-ke-zierre-en-el-rock-albox-festival-2026/
+   Resumen: El veterano festival de Almería presenta un cartel potente encabezado por referentes del punk y rock urbano nacional.
+
+20. [2026-06-22] The Buzzos estrena ‘Storm Inside My Brain’, el tercer single de adelanto de su próximo álbum ‘Survival’
+   Medio: Rock Circus | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/the-buzzos-estrena-storm-inside-my-brain-el-tercer-single-de-adelanto-de-su-proximo-album-survival/
+   Resumen: La banda extremeña de hard rock estrena un nuevo adelanto de su esperado disco 'Survival'.
+
+21. [2026-06-22] Argion lanza el ‘Renacer del Héroe’ junto a Isra Ramos, adelanto de su nuevo álbum ‘Vltreia’
+   Medio: Rock Circus | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/argion-lanza-el-renacer-del-heroe-junto-a-isra-ramos-adelanto-de-su-nuevo-album-vltreia/
+   Resumen: La banda de metal asturiana Argion colabora con Isra Ramos en su nuevo single de adelanto.
+
+22. [2026-06-22] Sujeto K estrena ‘Resujetókate’, el segundo adelanto de su álbum ‘XX Aniversario, En Directo’
+   Medio: Rock Circus | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/sujeto-k-estrena-resujetokate-el-segundo-adelanto-de-su-album-xx-aniversario-en-directo/
+   Resumen: Sujeto K comparte un nuevo adelanto en directo para celebrar sus dos décadas de trayectoria.
+
+23. [2026-06-22] Mikel Bizar lanza ‘Cumbia Negra’, el primer single de su próximo disco
+   Medio: Rock Circus | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://rockcircus.net/mikel-bizar-lanza-cumbia-negra-el-primer-single-de-su-proximo-disco/
+   Resumen: El músico vasco Mikel Bizar presenta el primer adelanto de su nuevo proyecto en solitario.
+
+24. [2026-06-22] Entrevista a La Desbandada presentando «Acabamos de Empezar».
+   Medio: Rock Circus | Relevancia: 3/5 | Cat: Entrevista
+   URL: https://rockcircus.net/entrevista-a-la-desbandada-presentando-acabamos-de-empezar/
+   Resumen: Entrevista con la banda de rock de El Vendrell sobre su nuevo lanzamiento discográfico.
+
+25. [2026-06-22] Deep Purple presenta nuevo disco, ‘SPLAT!’, y culminará su gira europea 2026 con conciertos en Barcelona y Madrid
+   Medio: Rock Circus | Relevancia: 2/5 | Cat: Gira
+   URL: https://rockcircus.net/deep-purple-presenta-nuevo-disco-splat-y-culminara-su-gira-europea-2026-con-conciertos-en-barcelona-y-madrid/
+   Resumen: Deep Purple anuncia las fechas de su gira europea que incluirá paradas en Barcelona y Madrid para presentar su nuevo trabajo de estudio.
+
+26. [2026-06-22] Entrevista a Kee Marcello con motivo de sus conciertos en España para conmemorar el 30 aniversario del «Out Of This World» de Europe.
+   Medio: Rock Circus | Relevancia: 2/5 | Cat: Entrevista
+   URL: https://rockcircus.net/entrevista-a-kee-marcello-con-motivo-de-sus-conciertos-en-espana-para-conmemorar-el-20-aniversario-del-out-of-this-world-de-europe/
+   Resumen: Hablamos con el guitarrista sueco Kee Marcello ante su inminente visita de conciertos a nuestro país.
+
+27. [2026-06-22] Papa Roach anuncia concierto en Madrid, en único en España en 2026, con su gira “Rise of the Roach”
+   Medio: Mariskalrock | Relevancia: 2/5 | Cat: Concierto
+   URL: https://mariskalrock.com/actualidad/papa-roach-anuncia-concierto-en-madrid-en-unico-en-espana-en-2026-con-su-gira-rise-of-the-roach/
+   Resumen: Papa Roach ha confirmado que visitará España este 2026, y lo hará con un gran concierto que tendrá lugar en Madrid dentro de la gira “Rise of the Roach”
+
+============================================================
+RESPUESTA (16,410 chars):
+============================================================
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 22 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**1. Boikot estrena ‘Me Levantaré Otra Vez’ con la colaboración de Ska-P** - Rock Circus
+Resumen: Boikot presenta su nuevo single con la colaboración especial de los vallecanos Ska-P. Este tema se posiciona como uno de los lanzamientos más esperados del rock urbano estatal.
+Enlace: https://rockcircus.net/boikot-estrena-me-levantare-otra-vez-con-la-colaboracion-de-ska-p/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Colaboración de gran impacto entre dos de las bandas más grandes del punk-rock estatal.
+
+**2. Boikot a punto de estrenar ‘Me Levantaré Otra Vez’, otro adelanto de su nuevo disco con la colaboración de Ska-P** - Rock Circus
+Resumen: Detalles previos al lanzamiento del nuevo single de Boikot junto a Ska-P. La expectación es máxima ante la unión de estas dos formaciones históricas.
+Enlace: https://rockcircus.net/boikot-a-punto-de-estrenar-me-levantare-otra-vez-otro-adelanto-de-su-nuevo-disco-con-la-colaboracion-de-ska-p/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Gran expectación por el inminente estreno de un sencillo conjunto muy relevante.
+
+**3. Sôber lanzan ‘Indestructible’, el primer adelanto de su nuevo disco de estudio** - Rock Circus
+Resumen: Sôber presenta el primer sencillo de lo que será su próximo trabajo discográfico. La banda madrileña regresa con su característico sonido potente y melódico.
+Enlace: https://rockcircus.net/sober-lanzan-indestructible-el-primer-adelanto-de-su-nuevo-disco-de-estudio/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Primer adelanto del esperado nuevo álbum de una de las bandas de metal alternativo más importantes del país.
+
+**4. Sôber a punto de lanzar ‘Indestructible’, el primer adelanto de su nuevo disco de estudio** - Rock Circus
+Resumen: Expectación ante el inminente estreno del nuevo single de la banda madrileña Sôber. Los seguidores del grupo esperan con ansias este primer vistazo a su nueva etapa musical.
+Enlace: https://rockcircus.net/sober-a-punto-de-lanzar-indestructible-el-primer-adelanto-de-su-nuevo-disco-de-estudio/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Anticipación de un lanzamiento clave para la escena del rock y metal nacional.
+
+**5. Boikot lanza ‘El Pueblo’, cuarto adelanto de su nuevo álbum** - Rock Circus
+Resumen: Boikot sigue desvelando temas de su próximo trabajo discográfico con este nuevo single. La canción continúa la línea comprometida y enérgica de la banda.
+Enlace: https://rockcircus.net/boikot-lanza-el-pueblo-cuarto-adelanto-de-su-nuevo-album/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Cuarto adelanto de un disco muy esperado de una banda referente del punk-rock.
+
+**6. Rueda de prensa íntegra de Robe presentando su nuevo disco, ‘Se Nos Lleva El Aire’** - Rock Circus
+Resumen: Robe Iniesta comparece ante los medios para dar todos los detalles de su aclamado nuevo álbum. El artista extremeño explica el proceso de creación y sus planes de futuro.
+Enlace: https://rockcircus.net/rueda-de-prensa-integra-de-robe-presentando-su-nuevo-disco-se-nos-lleva-el-aire/
+Categoria: Bandas espanolas
+Relevancia: ⭐⭐⭐⭐⭐ - Declaraciones completas del líder de Extremoduro sobre su último y exitoso trabajo en solitario.
+
+**7. Ya a la venta el nuevo disco de Boikot “No Les Interesa”** - The Sound of The Embryo
+Resumen: Ya se encuentra disponible en el mercado el nuevo trabajo discográfico de Boikot titulado “No Les Interesa”. Este lanzamiento supone un hito importante para sus seguidores.
+Enlace: https://www.thesoundoftheembryo.es/ya-a-la-venta-el-nuevo-disco-de-boikot-no-les-interesa/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Lanzamiento oficial del nuevo álbum de estudio de una banda fundamental del rock estatal.
+
+**8. Mad Cool Festival cierra el cartel de su próxima edición, encabezada por Foo Fighters, Pixies o The Black Crowes, incorporando a Linka Moja o Ksal** - Mariskalrock
+Resumen: Estamos a solo dos semanas de disfrutar de los conciertos de artistas de la talla de Foo Fighters, Pixies o The Black Crowes, entre muchos otros, en la próxima edición del Mad Cool. El festival madrileño cierra definitivamente su propuesta artística con estas últimas incorporaciones.
+Enlace: https://mariskalrock.com/actualidad/mad-cool-festival-cierra-el-cartel-de-su-proxima-edicion-encabezada-por-foo-fighters-pixies-o-the-black-crowes-incorporando-a-linka-moja-o-ksal/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Cierre de cartel de uno de los festivales más multitudinarios e importantes de España.
+
+**9. Mägo De Oz, Boikot o Rebrote en el Zaidín Rock 2026** - Rock Circus
+Resumen: El festival granadino Zaidín Rock confirma en su cartel a grandes nombres del rock estatal como Mägo de Oz y Boikot. El evento gratuito sigue siendo un referente indispensable del panorama nacional.
+Enlace: https://rockcircus.net/mago-de-oz-boikot-o-rebrote-en-el-zaidin-rock-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Confirmaciones de peso para un festival histórico y gratuito de la escena estatal.
+
+**10. Moscow Death Brigade, Tremenda Jauría o Kaotiko en el Castañazo Rock 2026** - Rock Circus
+Resumen: El festival gallego Castañazo Rock anuncia las primeras confirmaciones de su edición de 2026 con presencia de bandas nacionales destacadas. El cartel promete una mezcla potente de punk, rock y sonidos urbanos.
+Enlace: https://rockcircus.net/moscow-death-brigade-tremenda-jauria-o-kaotiko-en-el-castanazo-rock-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Primeras confirmaciones de un festival gallego de gran arraigo en la escena punk-rock.
+
+**11. Quantica lanza ‘Un día en Texas’ en colaboración con Ana Curra y Manolo UVI** - Rock Circus
+Resumen: Quantica se une a dos leyendas del punk y la movida madrileña para su nuevo single. La colaboración aporta un sonido oscuro y clásico muy esperado por los amantes del género.
+Enlace: https://rockcircus.net/quantica-lanza-un-dia-en-texas-en-colaboracion-con-ana-curra-y-manolo-uvi/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Colaboración destacada con figuras históricas del punk y la movida madrileña.
+
+**12. Despistaos lanza ‘Las De Perder’ con la colaboración de Aaron Romero de Linaje** - Rock Circus
+Resumen: Despistaos presenta nuevo tema contando con la voz de Aaron Romero. Esta unión ofrece una interesante mezcla de estilos dentro del rock melódico nacional.
+Enlace: https://rockcircus.net/despistaos-lanza-las-de-perder-con-la-colaboracion-de-aaron-romero-de-linaje/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Nuevo sencillo de una banda muy popular con una colaboración de interés para la escena.
+
+**13. Entrevista a Desakato en el programa La Resistencia** - Rock Circus
+Resumen: La banda asturiana Desakato pasa por el conocido programa de televisión para charlar sobre su trayectoria y despedida. Los músicos compartieron anécdotas en un tono distendido y cercano.
+Enlace: https://rockcircus.net/entrevista-a-desakato-en-el-programa-la-resistencia/
+Categoria: Entrevista
+Relevancia: ⭐⭐⭐⭐ - Aparición en televisión nacional de gran audiencia de una de las bandas de rock más importantes de los últimos años.
+
+**14. Zirrosis estrena single “Morirás Sin Nada”** - The Sound of The Embryo
+Resumen: La mítica banda de punk rock de Aranda de Duero, Zirrosis, regresa con un potente nuevo single titulado 'Morirás Sin Nada'. El tema mantiene la esencia crítica y directa que caracteriza al grupo.
+Enlace: https://www.thesoundoftheembryo.es/zirrosis-estrena-single-moriras-sin-nada/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Regreso discográfico de una banda clásica y respetada del punk rock nacional.
+
+**15. Detalles del próximo disco de Dragonfly “Laberinto”** - The Sound of The Embryo
+Resumen: Se revelan los detalles del próximo disco de Dragonfly titulado “Laberinto”. Los seguidores del power metal nacional ya conocen más sobre este esperado trabajo.
+Enlace: https://www.thesoundoftheembryo.es/detalles-del-proximo-disco-de-dragonfly-laberinto/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Información relevante sobre el nuevo álbum de una banda destacada de metal melódico.
+
+**16. Primeras confirmaciones del Piorno Rock 2026** - The Sound of The Embryo
+Resumen: Se anuncian las primeras confirmaciones para el festival Piorno Rock 2026. El evento andaluz empieza a dar forma a su propuesta para la próxima edición.
+Enlace: https://www.thesoundoftheembryo.es/primeras-confirmaciones-del-piorno-rock-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Primeros nombres para el regreso de un festival histórico del sur peninsular.
+
+**17. Fechas de la décima edición del festival Vintoro** - The Sound of The Embryo
+Resumen: Se confirman las fechas oficiales para la celebración de la décima edición del festival Vintoro. El evento de Toro (Zamora) se prepara para un aniversario muy especial.
+Enlace: https://www.thesoundoftheembryo.es/fechas-de-la-decima-edicion-del-festival-vintoro/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Anuncio de fechas para la edición especial del décimo aniversario de un festival consolidado.
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+**18. El Último Ke Zierre o Envidia Kotxina en el Cecla Rock Festival 2026** - Rock Circus
+Resumen: Bandas míticas del punk rock estatal se darán cita en la nueva edición del Cecla Rock Festival. El evento se consolida como una cita ineludible para los amantes del género.
+Enlace: https://rockcircus.net/el-ultimo-ke-zierre-o-envidia-kotxina-en-el-cecla-rock-festival-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Confirmación de bandas clásicas del punk estatal en un festival de formato medio.
+
+**19. Kaos Urbano, Los De Marras o El Último Ke Zierre en el Rock Albox Festival 2026** - Rock Circus
+Resumen: El veterano festival de Almería presenta un cartel potente encabezado por referentes del punk y rock urbano nacional. La cita promete reunir a un gran número de seguidores de la escena estatal.
+Enlace: https://rockcircus.net/kaos-urbano-los-de-marras-o-el-ultimo-ke-zierre-en-el-rock-albox-festival-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Cartel de un festival veterano con bandas consolidadas del punk y rock urbano.
+
+**20. The Buzzos estrena ‘Storm Inside My Brain’, el tercer single de adelanto de su próximo álbum ‘Survival’** - Rock Circus
+Resumen: La banda extremeña de hard rock estrena un nuevo adelanto de su esperado disco 'Survival'. El tema muestra la faceta más enérgica y directa del grupo.
+Enlace: https://rockcircus.net/the-buzzos-estrena-storm-inside-my-brain-el-tercer-single-de-adelanto-de-su-proximo-album-survival/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Tercer adelanto de una banda de hard rock nacional con buena trayectoria.
+
+**21. Argion lanza el ‘Renacer del Héroe’ junto a Isra Ramos, adelanto de su nuevo álbum ‘Vltreia’** - Rock Circus
+Resumen: La banda de metal asturiana Argion colabora con Isra Ramos en su nuevo single de adelanto. El tema sirve como carta de presentación de su próximo trabajo de estudio.
+Enlace: https://rockcircus.net/argion-lanza-el-renacer-del-heroe-junto-a-isra-ramos-adelanto-de-su-nuevo-album-vltreia/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Adelanto de metal nacional con una colaboración destacada de la escena.
+
+**22. Sujeto K estrena ‘Resujetókate’, el segundo adelanto de su álbum ‘XX Aniversario, En Directo’** - Rock Circus
+Resumen: Sujeto K comparte un nuevo adelanto en directo para celebrar sus dos décadas de trayectoria. El tema captura la energía que la banda despliega sobre el escenario.
+Enlace: https://rockcircus.net/sujeto-k-estrena-resujetokate-el-segundo-adelanto-de-su-album-xx-aniversario-en-directo/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Segundo adelanto de un disco en directo conmemorativo de una banda nacional.
+
+**23. Mikel Bizar lanza ‘Cumbia Negra’, el primer single de su próximo disco** - Rock Circus
+Resumen: El músico vasco Mikel Bizar presenta el primer adelanto de su nuevo proyecto en solitario. El tema explora nuevas sonoridades dentro de su propuesta artística.
+Enlace: https://rockcircus.net/mikel-bizar-lanza-cumbia-negra-el-primer-single-de-su-proximo-disco/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Primer adelanto en solitario de un músico reconocido de la escena vasca.
+
+**24. Entrevista a La Desbandada presentando «Acabamos de Empezar».** - Rock Circus
+Resumen: Entrevista con la banda de rock de El Vendrell sobre su nuevo lanzamiento discográfico. Los miembros del grupo detallan sus sensaciones y planes de gira.
+Enlace: https://rockcircus.net/entrevista-a-la-desbandada-presentando-acabamos-de-empezar/
+Categoria: Entrevista
+Relevancia: ⭐⭐⭐ - Entrevista promocional a una banda de rock urbano en pleno lanzamiento.
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+**25. Deep Purple presenta nuevo disco, ‘SPLAT!’, y culminará su gira europea 2026 con conciertos en Barcelona y Madrid** - Rock Circus
+Resumen: Deep Purple anuncia las fechas de su gira europea que incluirá paradas en Barcelona y Madrid para presentar su nuevo trabajo de estudio. Los legendarios rockeros británicos regresan a los escenarios españoles.
+Enlace: https://rockcircus.net/deep-purple-presenta-nuevo-disco-splat-y-culminara-su-gira-europea-2026-con-conciertos-en-barcelona-y-madrid/
+Categoria: Gira
+Relevancia: ⭐⭐ - Gira de una banda internacional legendaria con fechas en España.
+
+**26. Entrevista a Kee Marcello con motivo de sus conciertos en España para conmemorar el 30 aniversario del «Out Of This World» de Europe.** - Rock Circus
+Resumen: Hablamos con el guitarrista sueco Kee Marcello ante su inminente visita de conciertos a nuestro país. El músico repasa su etapa en Europe y lo que espera de estos shows especiales.
+Enlace: https://rockcircus.net/entrevista-a-kee-marcello-con-motivo-de-sus-conciertos-en-espana-para-conmemorar-el-20-aniversario-del-out-of-this-world-de-europe/
+Categoria: Entrevista
+Relevancia: ⭐⭐ - Entrevista a un artista internacional de visita en España.
+
+**27. Papa Roach anuncia concierto en Madrid, en único en España en 2026, con su gira “Rise of the Roach”** - Mariskalrock
+Resumen: Papa Roach ha confirmado que visitará España este 2026, y lo hará con un gran concierto que tendrá lugar en Madrid dentro de la gira “Rise of the Roach”. Será la única oportunidad de ver a la banda estadounidense en el país este año.
+Enlace: https://mariskalrock.com/actualidad/papa-roach-anuncia-concierto-en-madrid-en-unico-en-espana-en-2026-con-su-gira-rise-of-the-roach/
+Categoria: Concierto
+Relevancia: ⭐⭐ - Concierto único en España de una banda internacional de renombre.
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 27
+- Artículos excluidos (ya reportados): 61
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, The Sentinel, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: Se observa una gran actividad en el lanzamiento de nuevos sencillos y adelantos discográficos por parte de bandas consagradas como Boikot y Sôber. Asimismo, la temporada de festivales nacionales para 2026 sigue sumando confirmaciones clave en eventos como el Zaidín Rock, Castañazo Rock y Mad Cool. Las colaboraciones entre artistas consolidados y emergentes marcan la pauta de los estrenos de esta semana.
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+| Diario de un Metalhead | Activo | Sí |
+| Dioses del Metal | Activo | Sí |
+| El Clavijero Rock | Activo | Sí |
+| El Suavecito | Activo | Sí |
+| Keep The Flame | Activo | Sí |
+| Noche de Rock | Activo | Sí |
+| Rafa Basa | Activo | Sí |
+| Rock Circus | Activo | Sí |
+| The Sentinel | Activo | Sí |
+| TNT Radio Rock | Activo | Sí |
+| The Sound of The Embryo | Activo | Sí |
+| Mariskalrock | Activo | Sí |
+| Ballesterock | Sin actividad | No |
+| Canedorock | Sin actividad | No |
+| Esquirlas de Metal | Sin actividad | No |
+| Hoy Rock | Sin actividad | No |
+| Iguana Rock | Sin actividad | No |
+| La Frontera del Silencio | Sin actividad | No |
+| Metal Symphony | Sin actividad | No |
+| Metalcry | Sin actividad | No |
+| Metaltrip | Sin actividad | No |
+| Radio Domination | Sin actividad | No |
+| Rock Sesion | Sin actividad | No |
+| Rockeando | Sin actividad | No |
+| Sancocho | Sin actividad | No |
+| The Metal Dreamer | Sin actividad | No |
+| Turbo Rock | Sin actividad | No |
+
+---
+
+*Informe generado automáticamente por RockPress Tracker · 22 de junio de 2026*

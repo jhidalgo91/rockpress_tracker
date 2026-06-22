@@ -1,0 +1,329 @@
+=== ROCKPRESS DEBUG — 20260622_101319 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 2
+Tokens → input: 3,445  output: 2,924
+Safety: (none)
+
+============================================================
+PROMPT (9,822 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/3 (30 artículos).
+
+FECHA HOY: 22 de junio de 2026
+VENTANA: 19/06/2026 — 22 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-22] MASTERPLAN: Metalmorphosis (Frontiers Music s.r.l., 2026) Alemania.
+  URL: https://www.diariodeunmetalhead.com/2026/06/masterplan-metalmorphosis-frontiers.html
+  Resumen: 📝 Larry Runner. No sabía de Masterplan desde que actuaron en Oviedo de nuestra mano hace casi ocho años. Desde entonces anuncios fallidos poco después y no volvimos a verles. Ya ha
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-22] Paralelum – Patchwork (EP) (2026)
+  URL: https://diosesdelmetal.org/paralelum-patchwork-ep-2026/
+  Resumen: «Fragmentos llenos de fuerza» Crítica realizada por ElyAngelOfDeath Alternative Metal – España Los madrileños Paralelum, vuelven este año con su nuevo trabajo. Se trata de un EP qu
+• [2026-06-22] Rockfemérides 22 junio
+  URL: https://diosesdelmetal.org/rockfemerides-22-junio/
+  Resumen: Un día como hoy Queen lanza su primer álbum en vivo «Live Killers», Black Sabbath su decimosexto álbum titulado «Dehumanizer», se publica el single de Metallica «FUEL» y Motörhead 
+• [2026-06-21] Noticias: Samael + Dark Funeral + Armando De Castro
+  URL: https://diosesdelmetal.org/noticias-samael-dark-funeral-armando-de-castro/
+  Resumen: Samael estrenan single – Nuevo tema de Dark Funeral en vivo – Vinilo de Armando de Castro. Por Rockberto. Samael han estrenado un nuevo vídeo single del tema «Hail to the sun» que 
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-22] Rebrote continúan con un nuevo single para su segundo disco
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/rebrote-continuan-con-un-nuevo-single.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-21] "EL QUE LA SEPA, QUE LA BAILE .Y EL QUE NO, QUE LA DISFRUTE". DA IGUAL publica su primer disco en directo en Escenario Santander
+  URL: https://elsuavecitofn.blogspot.com/2026/06/el-que-la-sepa-que-la-baile-y-el-que-no.html
+  Resumen: "EL QUE LA SEPA, QUE LA BAILE. Y EL QUE NO, QUE LA DISFRUTE" Da Igual publica su primer disco en directo tras años convirtiendo cada concierto en una celebración colectiva Grabado 
+• [2026-06-21] BOIKOT: Presenta su nuevo y frenético álbum "No Les Interesa"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/boikot-presenta-su-nuevo-y-frenetico.html
+  Resumen: BOIKOT vuelve a golpear la mesa con "No Les Interesa", un álbum directo, incendiario y absolutamente necesario. La banda madrileña firma un trabajo cargado de energía, mensaje y ac
+• [2026-06-21] ARMANDO DE CASTRO INMORTALIZA SU ÁLBUM "HARD ROCK" EN EDICIÓN LIMITADA EN VINILO
+  URL: https://elsuavecitofn.blogspot.com/2026/06/armando-de-castro-inmortaliza-su-album.html
+  Resumen: El legendario fundador y guitarrista de Barón Rojo edita su cuarto trabajo en solitario en formato LP a través del sello Demons Records, incluyendo colaboraciones históricas del ro
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-06-22] Gira de Sôber. Z! Live 2027. Frozen Shield, Demothyc y Erzsébet en Badalona
+  URL: https://keeptheflame.es/noticias/conciertos/10331-sober-z.html
+  Resumen: Ponemos al día la agenda con tres paradas obligatorias para arrancar bien la semana. Sôber no pierde el tiempo y despliega la primera hoja de ruta de su inminente "Anandamida Tour"
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-22] 1563 – TESTAMENT – Para Bellum
+  URL: https://www.nochederock.com/1563-testament-para-bellum/
+• [2026-06-21] NEW CITY ROCK 2026 – VIERNES
+  URL: https://www.nochederock.com/new-city-rock-2026-viernes/
+• [2026-06-21] Z! LIVE 2026 – SÁBADO (Y DOMINGO)
+  URL: https://www.nochederock.com/z-live-2026-sabado-y-domingo/
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-22] SAXON – Erik Grönwall – PAPA ROACH
+  URL: https://www.rafabasa.com/2026/06/22/saxon-erik-gronwall-papa-roach/
+  Resumen: SAXON: Biff Byford y el exguitarrista Graham Oliver han hecho las paces. Vídeos en directo de Erik Grönwall. PAPA ROACH en Madrid. La entrada SAXON – Erik Grönwall – PAPA ROACH se 
+• [2026-06-22] FIESTA LEYENDAS DEL ROCK, con ABONOS y CAMISETAS, el sábado 27 en GRANADA
+  URL: https://www.rafabasa.com/2026/06/22/fiesta-leyendas-del-rock-con-abonos-y-camisetas-el-sabado-27-en-granada/
+  Resumen: La entrada FIESTA LEYENDAS DEL ROCK, con ABONOS y CAMISETAS, el sábado 27 en GRANADA se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos
+• [2026-06-22] HELLFEST – Conciertos completos de SABATON, SEPULTURA, ANTHRAX, BEHEMOTH, ALESTORM, CARCASS, etc
+  URL: https://www.rafabasa.com/2026/06/22/hellfest-conciertos-completos-de-sabaton-sepultura-anthrax-behemoth-alestorm-carcass-etc/
+  Resumen: La entrada HELLFEST – Conciertos completos de SABATON, SEPULTURA, ANTHRAX, BEHEMOTH, ALESTORM, CARCASS, etc se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la mú
+• [2026-06-21] ANTHRAX – K.K. Downing – JUDAS PRIEST – EINHERJER.
+  URL: https://www.rafabasa.com/2026/06/21/anthrax-k-k-downing-judas-priest-einherjer/
+  Resumen: Baja temporal en ANTHRAX. K.K. Downing no cree que sea posible volver a JUDAS PRIEST. Vídeo de EINHERJER. La entrada ANTHRAX – K.K. Downing – JUDAS PRIEST – EINHERJER. se publicó p
+• [2026-06-21] KISS – BLOODBATH – MATTADOR.
+  URL: https://www.rafabasa.com/2026/06/21/kiss-bloodbath-mattador/
+  Resumen: Reedición especial del acústico de KISS. Horarios para BLOODBATH. Single de MATTADOR. La entrada KISS – BLOODBATH – MATTADOR. se publicó primero en WWW.RAFABASA.COM - Noticias en e
+• [2026-06-21] SAMAEL estrenan un nuevo single para el tema “Hail To The Sun”
+  URL: https://www.rafabasa.com/2026/06/21/samael-estrenan-un-nuevo-single-para-el-tema-hail-to-the-sun/
+  Resumen: La entrada SAMAEL estrenan un nuevo single para el tema “Hail To The Sun” se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos de METAL y
+
+──────────────────────────────────────────────────
+MEDIO: Rock Circus
+──────────────────────────────────────────────────
+• [2026-06-22] Medina Azahara actuará en Barcelona en noviembre
+  URL: https://rockcircus.net/medina-azahara-actuara-en-barcelona-en-noviembre/
+• [2026-06-22] Sôber anuncian las primeras fechas del ‘Anandamida Tour’
+  URL: https://rockcircus.net/sober-anuncian-las-primeras-fechas-del-anandamida-tour/
+• [2026-06-22] Latzen actuarán el 11 de julio en Barakaldo
+  URL: https://rockcircus.net/latzen-actuaran-el-11-de-julio-en-barakaldo/
+• [2026-06-22] Anni B Sweet, Nat Simons y Luis Brea actuarán en la primera edición de VERMÚSICA en Tetuán
+  URL: https://rockcircus.net/anni-b-sweet-nat-simons-y-luis-brea-actuaran-en-la-primera-edicion-de-vermusica-en-tetuan/
+• [2026-06-22] El Z! Live Rock Fest anuncia fechas para 2027 y la primera venta especial de abonos
+  URL: https://rockcircus.net/el-z-live-rock-fest-anuncia-fechas-para-2027-y-la-primera-venta-especial-de-abonos/
+• [2026-06-22] Uuhai presentarán su album de debut, ‘Human Herd’, en España en 2027
+  URL: https://rockcircus.net/uuhai-presentaran-su-album-de-debut-human-herd-en-espana-en-2027/
+• [2026-06-22] Se publica por primera vez en vinilo el álbum ‘Sangre Y Mierda’ de Gatillazo con motivo de su 15º aniversario
+  URL: https://rockcircus.net/se-publica-por-primera-vez-en-vinilo-el-album-sangre-y-mierda-de-gatillazo-con-motivo-de-su-15o-aniversario/
+• [2026-06-22] Kamelot anuncian nuevo disco, ‘Dark Asylum’
+  URL: https://rockcircus.net/kamelot-anuncian-nuevo-disco-dark-asylum/
+• [2026-06-22] Dark Moor lanzan un doble CD recopilatorio para celebrar su 25 aniversario
+  URL: https://rockcircus.net/dark-moor-lanzan-un-doble-cd-recopilatorio-para-celebrar-su-25-aniversario/
+• [2026-06-22] ‘The Wanderer’, nuevo trabajo de los daneses Boys From Heaven
+  URL: https://rockcircus.net/the-wanderer-nuevo-trabajo-de-los-daneses-boys-from-heaven/
+• [2026-06-22] Jared James Nichols editará en junio su nuevo disco, ‘Louder Than Fate’
+  URL: https://rockcircus.net/jared-james-nichols-editara-en-junio-su-nuevo-disco-louder-than-fate/
+• [2026-06-22] ‘Just Live Loud!’, nuevo álbum para los suizos Shakra en septiembre
+  URL: https://rockcircus.net/just-live-loud-nuevo-album-para-los-suizos-shakra-en-septiembre/
+
+============================================================
+RESPUESTA (7,589 chars):
+============================================================
+[
+  {
+    "title": "Paralelum – Patchwork (EP) (2026)",
+    "url": "https://diosesdelmetal.org/paralelum-patchwork-ep-2026/",
+    "date": "2026-06-22",
+    "medio": "Dioses del Metal",
+    "excerpt": "Los madrileños Paralelum, vuelven este año con su nuevo trabajo. Se trata de un EP",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Noticias: Samael + Dark Funeral + Armando De Castro",
+    "url": "https://diosesdelmetal.org/noticias-samael-dark-funeral-armando-de-castro/",
+    "date": "2026-06-21",
+    "medio": "Dioses del Metal",
+    "excerpt": "Vinilo de Armando de Castro. Por Rockberto.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Rebrote continúan con un nuevo single para su segundo disco",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/rebrote-continuan-con-un-nuevo-single.html",
+    "date": "2026-06-22",
+    "medio": "El Clavijero Rock",
+    "excerpt": "Rebrote continúan con un nuevo single para su segundo disco",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "\"EL QUE LA SEPA, QUE LA BAILE .Y EL QUE NO, QUE LA DISFRUTE\". DA IGUAL publica su primer disco en directo en Escenario Santander",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/el-que-la-sepa-que-la-baile-y-el-que-no.html",
+    "date": "2026-06-21",
+    "medio": "El Suavecito",
+    "excerpt": "Da Igual publica su primer disco en directo tras años convirtiendo cada concierto en una celebración colectiva Grabado en Escenario Santander",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "BOIKOT: Presenta su nuevo y frenético álbum \"No Les Interesa\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/boikot-presenta-su-nuevo-y-frenetico.html",
+    "date": "2026-06-21",
+    "medio": "El Suavecito",
+    "excerpt": "BOIKOT vuelve a golpear la mesa con \"No Les Interesa\", un álbum directo, incendiario y absolutamente necesario. La banda madrileña firma un trabajo cargado de energía, mensaje y ac",
+    "rel": 5,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "ARMANDO DE CASTRO INMORTALIZA SU ÁLBUM \"HARD ROCK\" EN EDICIÓN LIMITADA EN VINILO",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/armando-de-castro-inmortaliza-su-album.html",
+    "date": "2026-06-21",
+    "medio": "El Suavecito",
+    "excerpt": "El legendario fundador y guitarrista de Barón Rojo edita su cuarto trabajo en solitario en formato LP a través del sello Demons Records, incluyendo colaboraciones históricas del ro",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Gira de Sôber. Z! Live 2027. Frozen Shield, Demothyc y Erzsébet en Badalona",
+    "url": "https://keeptheflame.es/noticias/conciertos/10331-sober-z.html",
+    "date": "2026-06-22",
+    "medio": "Keep The Flame",
+    "excerpt": "Sôber no pierde el tiempo y despliega la primera hoja de ruta de su inminente \"Anandamida Tour\"",
+    "rel": 5,
+    "categoria": "Gira"
+  },
+  {
+    "title": "NEW CITY ROCK 2026 – VIERNES",
+    "url": "https://www.nochederock.com/new-city-rock-2026-viernes/",
+    "date": "2026-06-21",
+    "medio": "Noche de Rock",
+    "excerpt": "Crónica del festival New City Rock 2026",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Z! LIVE 2026 – SÁBADO (Y DOMINGO)",
+    "url": "https://www.nochederock.com/z-live-2026-sabado-y-domingo/",
+    "date": "2026-06-21",
+    "medio": "Noche de Rock",
+    "excerpt": "Crónica de las jornadas del festival Z! Live 2026",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "SAXON – Erik Grönwall – PAPA ROACH",
+    "url": "https://www.rafabasa.com/2026/06/22/saxon-erik-gronwall-papa-roach/",
+    "date": "2026-06-22",
+    "medio": "Rafa Basa",
+    "excerpt": "PAPA ROACH en Madrid.",
+    "rel": 2,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "FIESTA LEYENDAS DEL ROCK, con ABONOS y CAMISETAS, el sábado 27 en GRANADA",
+    "url": "https://www.rafabasa.com/2026/06/22/fiesta-leyendas-del-rock-con-abonos-y-camisetas-el-sabado-27-en-granada/",
+    "date": "2026-06-22",
+    "medio": "Rafa Basa",
+    "excerpt": "Fiesta de presentación del festival Leyendas del Rock en Granada con sorteo de abonos y camisetas.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "KISS – BLOODBATH – MATTADOR.",
+    "url": "https://www.rafabasa.com/2026/06/21/kiss-bloodbath-mattador/",
+    "date": "2026-06-21",
+    "medio": "Rafa Basa",
+    "excerpt": "Single de MATTADOR.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Medina Azahara actuará en Barcelona en noviembre",
+    "url": "https://rockcircus.net/medina-azahara-actuara-en-barcelona-en-noviembre/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "Medina Azahara actuará en Barcelona en noviembre",
+    "rel": 5,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Sôber anuncian las primeras fechas del ‘Anandamida Tour’",
+    "url": "https://rockcircus.net/sober-anuncian-las-primeras-fechas-del-anandamida-tour/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "Sôber anuncian las primeras fechas del ‘Anandamida Tour’",
+    "rel": 5,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Latzen actuarán el 11 de julio en Barakaldo",
+    "url": "https://rockcircus.net/latzen-actuaran-el-11-de-julio-en-barakaldo/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "Latzen actuarán el 11 de julio en Barakaldo",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Anni B Sweet, Nat Simons y Luis Brea actuarán en la primera edición de VERMÚSICA en Tetuán",
+    "url": "https://rockcircus.net/anni-b-sweet-nat-simons-y-luis-brea-actuaran-en-la-primera-edicion-de-vermusica-en-tetuan/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "Anni B Sweet, Nat Simons y Luis Brea actuarán en la primera edición de VERMÚSICA en Tetuán",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "El Z! Live Rock Fest anuncia fechas para 2027 y la primera venta especial de abonos",
+    "url": "https://rockcircus.net/el-z-live-rock-fest-anuncia-fechas-para-2027-y-la-primera-venta-especial-de-abonos/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "El Z! Live Rock Fest anuncia fechas para 2027 y la primera venta especial de abonos",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Uuhai presentarán su album de debut, ‘Human Herd’, en España en 2027",
+    "url": "https://rockcircus.net/uuhai-presentaran-su-album-de-debut-human-herd-en-espana-en-2027/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "Uuhai presentarán su album de debut, ‘Human Herd’, en España en 2027",
+    "rel": 2,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Se publica por primera vez en vinilo el álbum ‘Sangre Y Mierda’ de Gatillazo con motivo de su 15º aniversario",
+    "url": "https://rockcircus.net/se-publica-por-primera-vez-en-vinilo-el-album-sangre-y-mierda-de-gatillazo-con-motivo-de-su-15o-aniversario/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "Se publica por primera vez en vinilo el álbum ‘Sangre Y Mierda’ de Gatillazo con motivo de su 15º aniversario",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Dark Moor lanzan un doble CD recopilatorio para celebrar su 25 aniversario",
+    "url": "https://rockcircus.net/dark-moor-lanzan-un-doble-cd-recopilatorio-para-celebrar-su-25-aniversario/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "Dark Moor lanzan un doble CD

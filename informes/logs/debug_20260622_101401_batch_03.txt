@@ -1,0 +1,141 @@
+=== ROCKPRESS DEBUG — 20260622_101401 — batch_03 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 1,872  output: 958
+Safety: (none)
+
+============================================================
+PROMPT (5,686 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 3/3 (12 artículos).
+
+FECHA HOY: 22 de junio de 2026
+VENTANA: 19/06/2026 — 22 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-22] Detalles del próximo disco de Dragonfly “Laberinto”
+  URL: https://www.thesoundoftheembryo.es/detalles-del-proximo-disco-de-dragonfly-laberinto/
+• [2026-06-22] Ya a la venta el nuevo disco de Boikot “No Les Interesa”
+  URL: https://www.thesoundoftheembryo.es/ya-a-la-venta-el-nuevo-disco-de-boikot-no-les-interesa/
+• [2026-06-22] Primeras confirmaciones del Piorno Rock 2026
+  URL: https://www.thesoundoftheembryo.es/primeras-confirmaciones-del-piorno-rock-2026/
+• [2026-06-22] Fechas de la décima edición del festival Vintoro
+  URL: https://www.thesoundoftheembryo.es/fechas-de-la-decima-edicion-del-festival-vintoro/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-22] Efemérides de la semana 22/06 - 28/06: Pantera, AC/DC, Black Sabbath, Bon Jovi, Kiss, Rammstein, Nightwish, Testament, Nickelback, Bloodhunter…
+  URL: https://mariskalrock.com/actualidad/efemerides-de-la-semana-22-06-28-06-pantera-ac-dc-black-sabbath-bon-jovi-kiss-rammstein-nightwish-testament-nickelback-bloodhunter/
+  Resumen: Una semana más, os traemos este recopilatorio con todas las fechas destacadas (cumpleaños, muertes, ediciones de discos…) del mundo del rock y del metal. 22 de junio Larry Junstrom
+• [2026-06-22] Mad Cool Festival cierra el cartel de su próxima edición, encabezada por Foo Fighters, Pixies o The Black Crowes, incorporando a Linka Moja o Ksal
+  URL: https://mariskalrock.com/actualidad/mad-cool-festival-cierra-el-cartel-de-su-proxima-edicion-encabezada-por-foo-fighters-pixies-o-the-black-crowes-incorporando-a-linka-moja-o-ksal/
+  Resumen: Estamos a solo dos semanas de disfrutar de los conciertos de artistas de la talla de Foo Fighters, Pixies o The Black Crowes, entre muchos otros, en la próxima edición del Mad Cool
+• [2026-06-22] Iron Maiden prohibirá los teléfonos móviles en la pista del concierto que grabará para la película de la gira "Run for Your Lives”
+  URL: https://mariskalrock.com/actualidad/iron-maiden-prohibira-los-telefonos-moviles-en-la-pista-del-concierto-que-grabara-para-la-pelicula-de-la-gira-run-for-your-lives/
+  Resumen: La petición que Iron Maiden ha mantenido en sus conciertos de la gira "Run for Your Lives” hacia los asistentes, especialmente en la zona más cercana al escenario, de mantener tant
+• [2026-06-22] Papa Roach anuncia concierto en Madrid, en único en España en 2026, con su gira “Rise of the Roach”
+  URL: https://mariskalrock.com/actualidad/papa-roach-anuncia-concierto-en-madrid-en-unico-en-espana-en-2026-con-su-gira-rise-of-the-roach/
+  Resumen: Papa Roach ha confirmado que visitará España este 2026, y lo hará con un gran concierto que tendrá lugar en Madrid dentro de la gira “Rise of the Roach”, con la que la siempre dest
+• [2026-06-22] Kirk Hammett sufre una nueva caída durante un concierto de Metallica y bautizan el episodio como “Slip & Destroy” (vídeo)
+  URL: https://mariskalrock.com/actualidad/caida-kirk-hammett-metallica/
+  Resumen: Sinceramente, no sabemos cómo lo hace. Puede que haya un componente estadístico por la cantidad de bolos que se curra cada año, pero Kirk Hammett tiene un problema con los resbalon
+• [2026-06-21] Charlie Benante se perderá un buen puñado de conciertos de Anthrax a causa de una lesión
+  URL: https://mariskalrock.com/actualidad/charlie-benante-se-perdera-un-buen-punado-de-conciertos-de-anthrax-a-causa-de-una-lesion/
+  Resumen: Si es que tenemos una edad. La sorpresa no es que el bueno de Charlie Benante se tenga que perder unos cuantos conciertos de su gira europea por unos problemas físicos, sino que es
+• [2026-06-21] Limp Bizkit bromea con Metallica en su último concierto en Hellfest
+  URL: https://mariskalrock.com/actualidad/limp-bizkit-bromea-con-metallica-en-su-ultimo-concierto-en-hellfest/
+  Resumen: A Limp Bizkit le gusta vacilar (y homenajear) a Metallica. Así de claro. Entendemos que de buen rollo, porque los de Fred Durst han sido teloneros de the Four Horsemen en varias fe
+• [2026-06-21] El día que Cronos (Venom) conoció a Kate Bush: "Se inclinó y me besó en los labios"
+  URL: https://mariskalrock.com/actualidad/el-dia-que-cronos-venom-conocio-a-kate-bush-se-inclino-y-me-beso-en-los-labios/
+  Resumen: Dicen que los polos opuestos se atraen. Pero ¿quién iba a poder imaginar que, según ha contado recientemente el mismísimo vocalista y bajista de Venom, el siempre raruno Cronos, la
+
+============================================================
+RESPUESTA (2,651 chars):
+============================================================
+[
+  {
+    "title": "Detalles del próximo disco de Dragonfly “Laberinto”",
+    "url": "https://www.thesoundoftheembryo.es/detalles-del-proximo-disco-de-dragonfly-laberinto/",
+    "date": "2026-06-22",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Detalles del próximo disco de Dragonfly “Laberinto”",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Ya a la venta el nuevo disco de Boikot “No Les Interesa”",
+    "url": "https://www.thesoundoftheembryo.es/ya-a-la-venta-el-nuevo-disco-de-boikot-no-les-interesa/",
+    "date": "2026-06-22",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Ya a la venta el nuevo disco de Boikot “No Les Interesa”",
+    "rel": 5,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Primeras confirmaciones del Piorno Rock 2026",
+    "url": "https://www.thesoundoftheembryo.es/primeras-confirmaciones-del-piorno-rock-2026/",
+    "date": "2026-06-22",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Primeras confirmaciones del Piorno Rock 2026",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Fechas de la décima edición del festival Vintoro",
+    "url": "https://www.thesoundoftheembryo.es/fechas-de-la-decima-edicion-del-festival-vintoro/",
+    "date": "2026-06-22",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Fechas de la décima edición del festival Vintoro",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Mad Cool Festival cierra el cartel de su próxima edición, encabezada por Foo Fighters, Pixies o The Black Crowes, incorporando a Linka Moja o Ksal",
+    "url": "https://mariskalrock.com/actualidad/mad-cool-festival-cierra-el-cartel-de-su-proxima-edicion-encabezada-por-foo-fighters-pixies-o-the-black-crowes-incorporando-a-linka-moja-o-ksal/",
+    "date": "2026-06-22",
+    "medio": "Mariskalrock",
+    "excerpt": "Estamos a solo dos semanas de disfrutar de los conciertos de artistas de la talla de Foo Fighters, Pixies o The Black Crowes, entre muchos otros, en la próxima edición del Mad Cool",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Papa Roach anuncia concierto en Madrid, en único en España en 2026, con su gira “Rise of the Roach”",
+    "url": "https://mariskalrock.com/actualidad/papa-roach-anuncia-concierto-en-madrid-en-unico-en-espana-en-2026-con-su-gira-rise-of-the-roach/",
+    "date": "2026-06-22",
+    "medio": "Mariskalrock",
+    "excerpt": "Papa Roach ha confirmado que visitará España este 2026, y lo hará con un gran concierto que tendrá lugar en Madrid dentro de la gira “Rise of the Roach”",
+    "rel": 2,
+    "categoria": "Concierto"
+  }
+]
