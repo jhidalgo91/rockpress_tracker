@@ -208,7 +208,7 @@ jobs:
       needs.generate-report.outputs.total_noticias != '0' &&
       (inputs.publicar_en_wp == 'true' || inputs.publicar_en_wp == '' || github.event_name == 'schedule')
 
-    uses: jhidalgo91/gestor-cordoba-rock/.github/workflows/cordoba_rock_agent.yml@main
+    uses: jhidalgo91/gestorCordobaRock/.github/workflows/cordoba_rock_agent.yml@main
     with:
       action: lote_noticias
       payload: ${{ needs.generate-report.outputs.noticias_json }}
