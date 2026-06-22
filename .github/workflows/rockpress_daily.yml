@@ -20,7 +20,27 @@ on:
         description: 'Enviar informe por email (true/false)'
         required: false
         default: 'true'
+      # ── Control del agente gestor ─────────────────────────────────────────
+      limite_wp:
+        description: 'Noticias a publicar en WP (-1 = todas, N = solo las primeras N)'
+        required: false
+        default: '-1'
+      estado_wp:
+        description: 'Estado en WordPress: draft (borrador) | publish (publicar directo)'
+        required: false
+        default: 'draft'
+      auto_publish_first:
+        description: 'Auto-publicar las primeras N noticias, el resto como borrador (0 = desactivado)'
+        required: false
+        default: '0'
+      publicar_en_wp:
+        description: 'Enviar noticias al Córdoba Rock Agent para publicar en WP (true/false)'
+        required: false
+        default: 'true'
 
+# ============================================================================
+# JOB 1: Generar el informe diario de rock nacional
+# ============================================================================
 jobs:
   generate-report:
     name: Generar y Enviar Informe
@@ -30,12 +50,19 @@ jobs:
     permissions:
       contents: write
 
+    outputs:
+      # JSON con la lista de noticias relevantes para el agente gestor
+      noticias_json: ${{ steps.build-payload.outputs.noticias_json }}
+      # Número de noticias relevantes encontradas
+      total_noticias: ${{ steps.build-payload.outputs.total_noticias }}
+      # Fecha del informe (YYYYMMDD)
+      informe_fecha: ${{ steps.build-payload.outputs.informe_fecha }}
+
     steps:
       # 1. Descarga el repositorio (incluye seen_articles.json si ya existe)
       - name: 📥 Checkout repositorio
         uses: actions/checkout@v4
         with:
-          # Usamos fetch-depth: 1 (suficiente, no necesitamos historial)
           fetch-depth: 1
 
       # 2. Setup Python
@@ -61,13 +88,96 @@ jobs:
           SEND_EMAIL:        ${{ inputs.send_email || 'true' }}
         run: python rockpress_tracker.py
 
-      # 5. Commit del informe + memoria actualizados
+      # 5. Construir el payload JSON para el Córdoba Rock Agent
+      #    Lee el informe recién generado y extrae los titulares + URLs
+      #    para pasarlos al gestor como lista de noticias a publicar
+      - name: 🔧 Construir payload para el agente gestor
+        id: build-payload
+        run: |
+          FECHA=$(date +'%Y%m%d')
+          INFORME="informes/informe_${FECHA}.md"
+
+          echo "informe_fecha=$FECHA" >> $GITHUB_OUTPUT
+
+          if [ ! -f "$INFORME" ]; then
+            echo "⚠️  No se encontró el informe $INFORME"
+            echo "noticias_json={\"noticias\":[]}" >> $GITHUB_OUTPUT
+            echo "total_noticias=0" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Extraer titulares y URLs del informe Markdown.
+          # El informe tiene el formato:
+          #   **N. TITULAR** - MEDIO
+          #   Resumen: ...
+          #   Enlace: https://...
+          # Usamos Python para parsear de forma fiable.
+          python3 << 'PYEOF'
+          import re, json, os
+
+          fecha = os.environ.get("FECHA", "")
+          informe_path = f"informes/informe_{fecha}.md"
+
+          try:
+              content = open(informe_path, encoding="utf-8").read()
+          except FileNotFoundError:
+              payload = {"noticias": []}
+              print(f"noticias_json={json.dumps(payload, ensure_ascii=False)}")
+              print("total_noticias=0")
+              exit(0)
+
+          noticias = []
+
+          # Patrón: bloque de noticia con titular, resumen y enlace
+          # **N. TITULAR** - MEDIO
+          # Resumen: texto
+          # Enlace: URL
+          bloques = re.split(r'\n(?=\*\*\d+\.)', content)
+
+          for bloque in bloques:
+              # Titular
+              m_titulo = re.match(r'\*\*\d+\.\s+(.+?)\*\*', bloque.strip())
+              if not m_titulo:
+                  continue
+              titulo = m_titulo.group(1).strip()
+              # Limpiar " - MEDIO" al final del titular si existe
+              titulo = re.sub(r'\s*-\s*[A-ZÁÉÍÓÚa-záéíóú\s]+$', '', titulo).strip()
+
+              # Enlace
+              m_url = re.search(r'Enlace:\s*(https?://\S+)', bloque)
+              url = m_url.group(1).strip() if m_url else ""
+
+              # Resumen (apuntes para la IA)
+              m_resumen = re.search(r'Resumen:\s*(.+?)(?=\nEnlace:|$)', bloque, re.DOTALL)
+              apuntes = m_resumen.group(1).strip().replace('\n', ' ') if m_resumen else ""
+
+              if titulo and len(titulo) > 5:
+                  noticias.append({
+                      "titulo": titulo,
+                      "apuntes": apuntes or f"Noticia sobre: {titulo}",
+                      "url_fuente": url,
+                  })
+
+          payload = {"noticias": noticias}
+          payload_str = json.dumps(payload, ensure_ascii=False)
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"noticias_json={payload_str}\n")
+              f.write(f"total_noticias={len(noticias)}\n")
+
+          print(f"✅ {len(noticias)} noticias extraídas del informe para el agente gestor")
+          for i, n in enumerate(noticias, 1):
+              print(f"  {i}. {n['titulo'][:70]}")
+          PYEOF
+        env:
+          FECHA: ${{ steps.build-payload.outputs.informe_fecha }}
+
+      # 6. Commit del informe + memoria actualizados
       - name: 📝 Commit informe y memoria al repositorio
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions"
           git add informes/
-          # Si no hay cambios (p.ej. ejecución duplicada el mismo día), salir sin error
           git diff --staged --quiet || (
             git commit -m "📰 Informe RockPress $(date +'%Y-%m-%d') [skip ci]" &&
             git push
@@ -75,7 +185,7 @@ jobs:
           echo "Ficheros commiteados:"
           git show --stat HEAD 2>/dev/null || echo "(sin cambios)"
 
-      # 6. Artefacto descargable (útil para revisar sin entrar al repo)
+      # 7. Artefacto descargable
       - name: 📎 Subir informe y logs como artefacto
         uses: actions/upload-artifact@v4
         if: always()
@@ -85,3 +195,57 @@ jobs:
             informes/informe_*.md
             informes/logs/debug_*.txt
           retention-days: 30
+
+# ============================================================================
+# JOB 2: Publicar noticias en WordPress via Córdoba Rock Agent
+#         Solo se ejecuta si hay noticias Y publicar_en_wp = true
+# ============================================================================
+  publicar-en-wordpress:
+    name: "📰 Publicar en WP (${{ needs.generate-report.outputs.total_noticias }} noticias | estado=${{ inputs.estado_wp || 'draft' }})"
+    needs: generate-report    # ← espera a que el informe esté listo
+    # Condición: hay noticias que publicar Y el flag está activo
+    if: |
+      needs.generate-report.outputs.total_noticias != '0' &&
+      (inputs.publicar_en_wp == 'true' || inputs.publicar_en_wp == '' || github.event_name == 'schedule')
+
+    uses: jhidalgo91/gestor-cordoba-rock/.github/workflows/cordoba_rock_agent.yml@main
+    with:
+      action: lote_noticias
+      payload: ${{ needs.generate-report.outputs.noticias_json }}
+      # Límite: del input manual o -1 (todas) si es ejecución automática
+      limite: ${{ inputs.limite_wp || '-1' }}
+      # Estado: del input manual o draft por defecto (seguro para producción)
+      estado_defecto: ${{ inputs.estado_wp || 'draft' }}
+      # Auto-publicar las primeras N, el resto a borrador
+      auto_publish_first: ${{ inputs.auto_publish_first || '0' }}
+    secrets:
+      WP_URL: ${{ secrets.WP_URL }}
+      WP_USER: ${{ secrets.WP_USER }}
+      WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+  # ============================================================================
+  # JOB 3: Resumen final del pipeline completo
+  # ============================================================================
+  resumen-pipeline:
+    name: "📊 Resumen Pipeline"
+    needs: [generate-report, publicar-en-wordpress]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📊 Resumen completo"
+        run: |
+          echo "## 🎸 RockPress + Córdoba Rock Agent — Pipeline Diario" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Fase | Estado |" >> $GITHUB_STEP_SUMMARY
+          echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
+          echo "| 📰 Generar informe | ${{ needs.generate-report.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| 🌐 Publicar en WP  | ${{ needs.publicar-en-wordpress.result }} |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Noticias extraídas del informe:** ${{ needs.generate-report.outputs.total_noticias }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Estado WP configurado:** ${{ inputs.estado_wp || 'draft' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Límite aplicado:** ${{ inputs.limite_wp || '-1 (todas)' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Auto-publicar primeras:** ${{ inputs.auto_publish_first || '0' }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Publicados en WP:** ${{ needs.publicar-en-wordpress.outputs.publicados || '—' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Borradores en WP:** ${{ needs.publicar-en-wordpress.outputs.borradores || '—' }}" >> $GITHUB_STEP_SUMMARY
