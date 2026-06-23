@@ -1,0 +1,329 @@
+=== ROCKPRESS DEBUG — 20260623_092314 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,892  output: 2,609
+Safety: (none)
+
+============================================================
+PROMPT (12,033 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/2 (30 artículos).
+
+FECHA HOY: 23 de junio de 2026
+VENTANA: 20/06/2026 — 23 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-23] APOGEAN: Waste Where Life Begins (The Artisan Era, 2026) Canadá.
+  URL: https://www.diariodeunmetalhead.com/2026/06/apogean-waste-where-life-begins-artisan.html
+  Resumen: 📝 Larry Runner.Death Metal sin concesiones. Eso es lo que nos traen estos bestias de Toronto a los que reconozco haber descubierto ahora, aunque también es verdad que sólo tienen u
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-23] Rachel Bolan – Gargoyles Of The Garden State (2026)
+  URL: https://diosesdelmetal.org/rachel-bolan-gargoyles-of-the-garden-state-2026/
+  Resumen: “En guerra con el Punk” Reseña de Christian Dárchez Me resulta muy dificil el siquiera imaginarme la bronca que debió sentir el bajista Rachel Bolan en 2024. Justo cuando creyó hab
+• [2026-06-23] Rockfemérides 23 junio
+  URL: https://diosesdelmetal.org/rockfemerides-23-junio/
+  Resumen: Hoy cumplen años Chris Holmes (W.A.S.P.); Chuck Billy, vocalista principal de Testament; AC/DC publica «Let There Be Rock», Metallica publica el single «St. Anger», Kreator edita s
+• [2026-06-22] Noticias: Papa Roach + Casus Belli + Avalance
+  URL: https://diosesdelmetal.org/noticias-papa-roach-casus-belli-avalance/
+  Resumen: Estreno de Papa Roach – Casus Belli estrena tema y vídeo – Estreno de Avalance. Por Rockberto. Papa Roach han anunciado nuevas fechas de conciertos, entre ellos sólo una en nuestro
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-23] Barullo publican su nuevo álbum "La senda del que a nadie se parece"
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/barullo-publican-su-nuevo-album-la.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-22] ROCK ARENA 2026
+  URL: https://elsuavecitofn.blogspot.com/2026/06/rock-arena-2026.html
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-06-23] Z! Live Rock, Día 2 (12-06-26)
+  URL: https://keeptheflame.es/cronicas/fest/10330-zlive-dia2.html
+  Resumen: Tras un arranque espectacular, el Z! Live Rock Fest metió la directa en su segundo asalto en Zamora con una jornada de auténtica locura. Te contamos al detalle todo lo que dio de s
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-22] Noche de Rock 1563 – Testament – The Mañana Culture
+  URL: https://www.nochederock.com/noche-de-rock-1563-testament-the-manana-culture/
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-22] CASUS BELLI anuncia el estreno de su nuevo videoclip «En pie», una colaboración con el proyecto científico #prebored de la ucm
+  URL: https://www.rafabasa.com/2026/06/22/casus-belli-anuncia-el-estreno-de-su-nuevo-videoclip-en-pie-una-colaboracion-con-el-proyecto-cientifico-prebored-de-la-ucm/
+  Resumen: La entrada CASUS BELLI anuncia el estreno de su nuevo videoclip «En pie», una colaboración con el proyecto científico #prebored de la ucm se publicó primero en WWW.RAFABASA.COM - N
+• [2026-06-22] Recordamos los detalles del festival GINETAROCK con «cartelazo»
+  URL: https://www.rafabasa.com/2026/06/22/recordamos-los-detalles-del-festival-ginetarock-con-cartelazo/
+  Resumen: La entrada Recordamos los detalles del festival GINETAROCK con «cartelazo» se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos de METAL 
+• [2026-06-22] IRON MAIDEN – DOKKEN – Rock Arena.
+  URL: https://www.rafabasa.com/2026/06/22/iron-maiden-dokken-rock-arena/
+  Resumen: IRON MAIDEN grabarán su concierto de París. Vídeo de DOKKEN en el Whisky A Go Go. Rock Arena. La entrada IRON MAIDEN – DOKKEN – Rock Arena. se publicó primero en WWW.RAFABASA.COM -
+• [2026-06-22] SCORPIONS – Floor Jansen – AYREON.
+  URL: https://www.rafabasa.com/2026/06/22/scorpions-floor-jansen-ayreon/
+  Resumen: Vídeo en directo de SCORPIONS. Próximo single de Floor Jansen. Vídeo del directo de AYREON. La entrada SCORPIONS – Floor Jansen – AYREON. se publicó primero en WWW.RAFABASA.COM - N
+
+──────────────────────────────────────────────────
+MEDIO: Rock Circus
+──────────────────────────────────────────────────
+• [2026-06-22] Dünedain o Jolly Joker en el Rock Arena Festival 2026
+  URL: https://rockcircus.net/dunedain-o-jolly-joker-en-el-rock-arena-festival-2026/
+  Resumen: El 18 de julio tendrá lugar el Festival Rock Arena 2026. Y en el mismo estarán: Dünedain Jolly Joker Dawn Of Extinción Strangers Argion Mandrágora Negra Khëlleden Será en San Fulge
+
+──────────────────────────────────────────────────
+MEDIO: The Sentinel
+──────────────────────────────────────────────────
+• [2026-06-23] Programa 505: 22-06-2026
+  URL: https://www.thesentinel.es/wpsentinel/?p=39794
+  Resumen: Playlist: THE VIGUS REPORT: “We´re coming for you all” GUNS N’ ROSES: “You could be mine” MAMA’S BOYS: “Gentleman rogues” TESLA: “Never alone” RYDER: “Neon flames” CIRCLE OF FRIEND
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-23] DROWN IN SULPHUR inicia una nueva etapa junto a Noble Demon y presenta el single "New Moon Rising on Florence"
+  URL: https://tntradiorock.com/drown-in-sulphur-inicia-una-nueva-etapa-junto-a-noble-demon-y-presenta-el-single-new-moon-rising-on-florence/
+  Resumen: La formación italiana de blackened deathcore Drown In Sulphur ha anunciado su incorporación al sello alemán Noble Demon y ha estrenado el videoclip de su […] Contenido de TNT Radio
+• [2026-06-23] LALU presenta “I Am The One”, segundo adelanto de su nuevo álbum “A Mythmaker’s Demise”
+  URL: https://tntradiorock.com/lalu-presenta-i-am-the-one-segundo-adelanto-de-su-nuevo-album-a-mythmakers-demise/
+  Resumen: La formación francesa de rock progresivo Lalu ha estrenado el videoclip de “I Am The One”, segundo sencillo extraído de su próximo trabajo de estudio, […] Contenido de TNT Radio Ro
+• [2026-06-23] IRONFLAME anuncia "World To Conquer" y estrena el single "Legion Of Fire"
+  URL: https://tntradiorock.com/ironflame-anuncia-world-to-conquer-y-estrena-el-single-legion-of-fire/
+  Resumen: La formación estadounidense de heavy metal IRONFLAME publicará el próximo 14 de agosto su sexto álbum de estudio, "World To Conquer", que supondrá además su […] Contenido de TNT Ra
+• [2026-06-22] THE VICIOUS HEAD SOCIETY explora la pérdida de propósito y la reconstrucción personal en "Call Of The Void"
+  URL: https://tntradiorock.com/the-vicious-head-society-explora-la-perdida-de-proposito-y-la-reconstruccion-personal-en-call-of-the-void/
+  Resumen: El proyecto irlandés de metal progresivo THE VICIOUS HEAD SOCIETY regresará el próximo 24 de julio con "Call Of The Void", su tercer álbum de […] Contenido de TNT Radio Rock
+• [2026-06-22] MOUNTAINSCAPE anuncia "Traversing Realms", un viaje post-metal inspirado por Dune y The Elder Scrolls
+  URL: https://tntradiorock.com/mountainscape-anuncia-traversing-realms-un-viaje-post-metal-inspirado-por-dune-y-the-elder-scrolls/
+  Resumen: La banda británica de post-metal cinematográfico Mountainscape ha anunciado el lanzamiento de su nuevo álbum, "Traversing Realms", que verá la luz el próximo 24 de […] Contenido de
+• [2026-06-22] FANE presenta "Passages", primer adelanto de su próximo álbum para Octopus Rising
+  URL: https://tntradiorock.com/fane-presenta-passages-primer-adelanto-de-su-proximo-album-para-octopus-rising/
+  Resumen: La banda estadounidense FANE ha anunciado su incorporación al sello Octopus Rising, con el que publicará su próximo trabajo de estudio. Para acompañar la noticia, […] Contenido de 
+• [2026-06-22] GLORYHAMMER anuncia "Space 1993: Wrath Of Kor-Virliath", quinto capítulo de su saga intergaláctica
+  URL: https://tntradiorock.com/gloryhammer-anuncia-space-1993-wrath-of-kor-virliath-quinto-capitulo-de-su-saga-intergalactica/
+  Resumen: Los héroes del Imperio Intergaláctico de Fife están de regreso. GLORYHAMMER ha anunciado el lanzamiento de su esperado quinto álbum de estudio, "Space 1993: Wrath […] Contenido de 
+• [2026-06-22] ROCK JUSTICE debutará con "You've Been Served", un homenaje al espíritu inmortal del hard rock y el metal
+  URL: https://tntradiorock.com/rock-justice-debutara-con-youve-been-served-un-homenaje-al-espiritu-inmortal-del-hard-rock-y-el-metal/
+  Resumen: El próximo 26 de junio verá la luz "You've Been Served", el álbum debut de ROCK JUSTICE, una nueva formación de hard rock y heavy […] Contenido de TNT Radio Rock
+• [2026-06-22] VINDICTA visitarán Barcelona el próximo 12 de julio
+  URL: https://tntradiorock.com/vindicta-visitaran-barcelona-el-proximo-12-de-julio/
+  Resumen: El próximo 12 de julio, Vindicta (ex Dogma) tomará en la sala Razzmatazz 3 (Barcelona) con un set donde rescatarán piezas de su álbum "Dogma" […] Contenido de TNT Radio Rock
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-23] Ya a la venta el nuevo disco de Umbra “Renacer”
+  URL: https://www.thesoundoftheembryo.es/ya-a-la-venta-el-nuevo-disco-de-umbra-renacer/
+• [2026-06-23] Gaizkillers estrena videoclip “Lortu gabe ihes egitea”
+  URL: https://www.thesoundoftheembryo.es/gaizkillers-estrena-videoclip-lortu-gabe-ihes-egitea/
+• [2026-06-23] Cartel completo del Rock Arena 2026
+  URL: https://www.thesoundoftheembryo.es/cartel-completo-del-rock-arena-2026/
+• [2026-06-23] Mildeo publica su nuevo disco “Igual Que Ayer”
+  URL: https://www.thesoundoftheembryo.es/mildeo-publica-su-nuevo-disco-igual-que-ayer/
+• [2026-06-23] Huracán Romántica estrena videoclip “Carnaval”
+  URL: https://www.thesoundoftheembryo.es/huracan-romantica-estrena-videoclip-carnaval/
+• [2026-06-23] Nuevas bandas se suman al cartel del Tajuña Rock 2026
+  URL: https://www.thesoundoftheembryo.es/nuevas-bandas-se-suman-al-cartel-del-tajuna-rock-2026/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-23] BBK Legends Bilbao: Toda la información, mapa del recinto, horarios y últimas entradas para el festival con Tom Morello, Beat o Chris Isaak
+  URL: https://mariskalrock.com/actualidad/bbk-legends-bilbao-toda-la-informacion-mapa-del-recinto-horarios-y-ultimas-entradas-para-el-festival-con-tom-morello-beat-o-chris-isaak/
+  Resumen: Bilbao se prepara para recibir este fin de semana del 26 y 27 de junio la edición que celebrará el décimo aniversario del festival BBK Legends Bilbao, que este 2026 cuenta con Tom 
+
+============================================================
+RESPUESTA (7,250 chars):
+============================================================
+[
+  {
+    "title": "Noticias: Papa Roach + Casus Belli + Avalance",
+    "url": "https://diosesdelmetal.org/noticias-papa-roach-casus-belli-avalance/",
+    "date": "2026-06-22",
+    "medio": "Dioses del Metal",
+    "excerpt": "Papa Roach han anunciado nuevas fechas de conciertos, entre ellos sólo una en nuestro país. Casus Belli estrena tema y vídeo, y novedades sobre Avalance.",
+    "rel": 4,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Barullo publican su nuevo álbum \"La senda del que a nadie se parece\"",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/barullo-publican-su-nuevo-album-la.html",
+    "date": "2026-06-23",
+    "medio": "El Clavijero Rock",
+    "excerpt": "La banda de rock Barullo presenta su nuevo trabajo discográfico titulado 'La senda del que a nadie se parece'.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "ROCK ARENA 2026",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/rock-arena-2026.html",
+    "date": "2026-06-22",
+    "medio": "El Suavecito",
+    "excerpt": "Detalles y novedades sobre la edición de 2026 del festival Rock Arena.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Z! Live Rock, Día 2 (12-06-26)",
+    "url": "https://keeptheflame.es/cronicas/fest/10330-zlive-dia2.html",
+    "date": "2026-06-23",
+    "medio": "Keep The Flame",
+    "excerpt": "Tras un arranque espectacular, el Z! Live Rock Fest metió la directa en su segundo asalto en Zamora con una jornada de auténtica locura.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Noche de Rock 1563 – Testament – The Mañana Culture",
+    "url": "https://www.nochederock.com/noche-de-rock-1563-testament-the-manana-culture/",
+    "date": "2026-06-22",
+    "medio": "Noche de Rock",
+    "excerpt": "Nuevo programa de radio con protagonismo para Testament y la banda cántabra The Mañana Culture.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "CASUS BELLI anuncia el estreno de su nuevo videoclip «En pie», una colaboración con el proyecto científico #prebored de la ucm",
+    "url": "https://www.rafabasa.com/2026/06/22/casus-belli-anuncia-el-estreno-de-su-nuevo-videoclip-en-pie-una-colaboracion-con-el-proyecto-cientifico-prebored-de-la-ucm/",
+    "date": "2026-06-22",
+    "medio": "Rafa Basa",
+    "excerpt": "La banda Casus Belli estrena su nuevo videoclip 'En pie' en colaboración con un proyecto científico de la Universidad Complutense de Madrid.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Recordamos los detalles del festival GINETAROCK con «cartelazo»",
+    "url": "https://www.rafabasa.com/2026/06/22/recordamos-los-detalles-del-festival-ginetarock-con-cartelazo/",
+    "date": "2026-06-22",
+    "medio": "Rafa Basa",
+    "excerpt": "Repaso a los detalles y la programación del festival Ginetarock, que presenta un gran cartel para su próxima edición.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "IRON MAIDEN – DOKKEN – Rock Arena.",
+    "url": "https://www.rafabasa.com/2026/06/22/iron-maiden-dokken-rock-arena/",
+    "date": "2026-06-22",
+    "medio": "Rafa Basa",
+    "excerpt": "Noticias breves que incluyen novedades de Iron Maiden, Dokken y la última hora sobre el festival español Rock Arena.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Dünedain o Jolly Joker en el Rock Arena Festival 2026",
+    "url": "https://rockcircus.net/dunedain-o-jolly-joker-en-el-rock-arena-festival-2026/",
+    "date": "2026-06-22",
+    "medio": "Rock Circus",
+    "excerpt": "El 18 de julio tendrá lugar el Festival Rock Arena 2026 en San Fulgencio con bandas como Dünedain, Jolly Joker, Dawn Of Extinction y más.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "VINDICTA visitarán Barcelona el próximo 12 de julio",
+    "url": "https://tntradiorock.com/vindicta-visitaran-barcelona-el-proximo-12-de-julio/",
+    "date": "2026-06-22",
+    "medio": "TNT Radio Rock",
+    "excerpt": "El próximo 12 de julio, Vindicta (ex Dogma) tomará la sala Razzmatazz 3 de Barcelona con un set especial rescatando piezas de su álbum 'Dogma'.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Ya a la venta el nuevo disco de Umbra “Renacer”",
+    "url": "https://www.thesoundoftheembryo.es/ya-a-la-venta-el-nuevo-disco-de-umbra-renacer/",
+    "date": "2026-06-23",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda de metal Umbra lanza al mercado su nuevo trabajo discográfico titulado 'Renacer'.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Gaizkillers estrena videoclip “Lortu gabe ihes egitea”",
+    "url": "https://www.thesoundoftheembryo.es/gaizkillers-estrena-videoclip-lortu-gabe-ihes-egitea/",
+    "date": "2026-06-23",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La formación de punk rock Gaizkillers presenta su nuevo videoclip para el tema 'Lortu gabe ihes egitea'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Cartel completo del Rock Arena 2026",
+    "url": "https://www.thesoundoftheembryo.es/cartel-completo-del-rock-arena-2026/",
+    "date": "2026-06-23",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Se revela la distribución final y el cartel completo de bandas para el festival Rock Arena 2026.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Mildeo publica su nuevo disco “Igual Que Ayer”",
+    "url": "https://www.thesoundoftheembryo.es/mildeo-publica-su-nuevo-disco-igual-que-ayer/",
+    "date": "2026-06-23",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda de rock Mildeo estrena su nueva producción discográfica bajo el título 'Igual Que Ayer'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Huracán Romántica estrena videoclip “Carnaval”",
+    "url": "https://www.thesoundoftheembryo.es/huracan-romantica-estrena-videoclip-carnaval/",
+    "date": "2026-06-23",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda valenciana Huracán Romántica lanza el videoclip oficial de su single 'Carnaval'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Nuevas bandas se suman al cartel del Tajuña Rock 2026",
+    "url": "https://www.thesoundoftheembryo.es/nuevas-bandas-se-suman-al-cartel-del-tajuna-rock-2026/",
+    "date": "2026-06-23",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "El festival madrileño Tajuña Rock confirma nuevas incorporaciones nacionales para su edición de 2026.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "BBK Legends Bilbao: Toda la información, mapa del recinto, horarios y últimas entradas para el festival con Tom Morello, Beat o Chris Isaak",
+    "url": "https://mariskalrock.com/actualidad/bbk-legends-bilbao-toda-la-informacion-mapa-del-recinto-horarios-y-ultimas-entradas-para-el-festival-con-tom-morello-beat-o-chris-isaak/",
+    "date": "2026-06-23",
+    "medio": "Mariskalrock",
+    "excerpt": "Bilbao se prepara para recibir este fin de semana la edición del décimo aniversario del festival BBK Legends Bilbao con Tom Morello, Beat o Chris Isaak.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  }
+]

@@ -1,0 +1,93 @@
+=== ROCKPRESS DEBUG — 20260623_092343 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 2,304  output: 233
+Safety: (none)
+
+============================================================
+PROMPT (7,091 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/2 (11 artículos).
+
+FECHA HOY: 23 de junio de 2026
+VENTANA: 20/06/2026 — 23 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-23] Iron Maiden interrumpe una hora y recorta el concierto que grababa para la película de la gira "Run for Your Lives" a causa de un apagón masivo en París
+  URL: https://mariskalrock.com/actualidad/iron-maiden-interrumpe-una-hora-y-recorta-el-concierto-que-grababa-para-la-pelicula-de-la-gira-run-for-your-lives-a-causa-de-un-apagon-masivo-en-paris/
+  Resumen: Todo estaba planeado para que Iron Maiden ofreciera en París un concierto histórico, el que iba a quedar inmortalizado para la posteridad como película oficial de la gran gira “Run
+• [2026-06-22] Los 20 Duros del 22/06 al 28/06 en Spotify: Pantera, Judas Priest, David Gilmour, Anthrax, The Beach Boys, Danzig, Hoobastank, A Perfect Circle o Sínkope en nuestra playlist de rock y metal
+  URL: https://mariskalrock.com/actualidad/los-20-duros-del-22-06-al-28-06-en-spotify-pantera-judas-priest-david-gilmour-anthrax-the-beach-boys-danzig-hoobastank-a-perfect-circle-o-sinkope-en-nuestra-playlist-de-rock-y-metal/
+  Resumen: El mejor rock y el mejor metal en todas sus vertientes y subgéneros reluce cada semana en la playlist más completa de Spotify, la que actualiza el equipo de La Heavy y MariskalRock
+• [2026-06-22] Entrevista a Bloodstain: “Es genial ir a España por primera vez a tocar y, encima, a un festival que está creciendo; el concierto va a ser impresionante”
+  URL: https://mariskalrock.com/actualidad/entrevista-a-bloodstain-es-genial-ir-a-espana-por-primera-vez-a-tocar-y-encima-a-un-festival-que-esta-creciendo-el-concierto-va-a-ser-impresionante/
+  Resumen: Ya llega uno de los eventos más atractivos en nuestro país para el que firma: la fastuosa nueva edición del festival gratuito Zurbarán Rock Burgos, que tendrá lugar el 10 y 11 de J
+• [2026-06-22] El trono sobre el que Ozzy Osbourne ofreció su último concierto con Black Sabbath será expuesto en esta importante galería
+  URL: https://mariskalrock.com/actualidad/el-trono-sobre-el-que-ozzy-osbourne-ofrecio-su-ultimo-concierto-con-black-sabbath-sera-expuesto-en-esta-importante-galeria/
+  Resumen: Jamás hubiéramos imaginado lo que iba a suponer el "Back To The Beginning", el que fue el último concierto de Ozzy Osbourne junto a Black Sabbath. El ya mítico espectáculo cumplirá
+• [2026-06-22] La razón por la que Joe Satriani rechazó ser guitarrista permanente de Deep Purple: “Siempre me sentí el bicho raro de la banda”
+  URL: https://mariskalrock.com/actualidad/la-razon-por-la-que-joe-satriani-rechazo-ser-guitarrista-permanente-de-deep-purple-siempre-me-senti-el-bicho-raro-de-la-banda/
+  Resumen: La siempre asombrosa lista de músicos que han pasado en algún momento por las filas de Deep Purple tiene un apartado especialmente exigente en el puesto de guitarrista, donde la so
+• [2026-06-22] Ocho años sin Vinnie Paul: Las cinco canciones de Pantera con su pegada más brutal a la batería
+  URL: https://mariskalrock.com/actualidad/ocho-anos-sin-vinnie-paul-las-cinco-canciones-de-pantera-con-su-pegada-mas-brutal-a-la-bateria/
+  Resumen: El castigado corazón de Vinnie Paul, uno de los más carismáticos miembros de la escena metalera en todo el planeta, se detuvo para siempre el 22 de junio de 2018. Catorce años desp
+• [2026-06-22] Vivian Campbell (Def Leppard) confiesa que siempre se sintió “el eslabón débil” de Dio
+  URL: https://mariskalrock.com/actualidad/vivian-campbell-def-leppard-confiesa-que-siempre-se-sintio-el-eslabon-debil-de-dio/
+  Resumen: Vivian Campbell ha empuñado su guitarra junto a Def Leppard durante las últimas tres décadas, pero previamente militó en Dio, su primera banda de renombre. El guitarrista, que reci
+• [2026-06-22] Cuando Desmond Child, coautor de “I Was Made for Lovin’ You” de Kiss, mandó a esparragar a Gene Simmons por dejarlo mal ante la prensa: “Siempre odió la canción”
+  URL: https://mariskalrock.com/actualidad/cuando-desmond-child-coautor-de-i-was-made-for-lovin-you-de-kiss-mando-a-esparragar-a-gene-simmons-por-dejarlo-mal-ante-la-prensa-siempre-odio-la-cancion/
+  Resumen: “I Was Made For Lovin’ You” supuso un punto de inflexión para Kiss, cosechando un éxito absolutamente masivo con una pieza que incorporaba elementos de música disco. Desmond Child,
+• [2026-06-22] “Nuestro equipo estaba siendo bombardeado mientras grababa”: Roger Waters (Pink Floyd) y la palestina Mona Miari publican el videoclip de su nueva versión de “Comfortably Numb”
+  URL: https://mariskalrock.com/actualidad/nuestro-equipo-estaba-siendo-bombardeado-mientras-grababa-roger-waters-pink-floyd-y-la-palestina-mona-miari-publican-el-videoclip-de-su-nueva-version-de-comfortably-numb/
+  Resumen: La versión que Roger Waters y la artista palestina Mona Miari han realizado del clásico de Pink Floyd “Comfortably Numb”, reimaginada y rebautizada como “Comfortably Numb Re-Imagin
+• [2026-06-22] El disco de rock progresivo que Axl Rose (Guns N’ Roses) dijo que era “su favorito de todos los tiempos”, según Justin Hawkins (The Darkness)
+  URL: https://mariskalrock.com/actualidad/el-disco-de-rock-progresivo-que-axl-rose-guns-n-roses-dijo-que-era-su-favorito-de-todos-los-tiempos-segun-justin-hawkins-the-darkness/
+  Resumen: Al decidir sumergirte en el mundo de la música, es garantía de que en más de una ocasión vas a recibir la tediosa cuestión que te enfrenta a la tesitura de abordar cuál es tu disco
+• [2026-06-22] La razón por la que Van Halen exigía por contrato quitar de su catering todos los M&M’s marrones, que décadas después serán retirados por la marca
+  URL: https://mariskalrock.com/actualidad/la-razon-por-la-que-van-halen-exigia-por-contrato-quitar-de-su-catering-todos-los-mms-marrones-que-decadas-despues-seran-retirados-por-la-marca/
+  Resumen: Al igual que la música, algunos dulces tienen una connotación nostálgica que nos transporta directamente a nuestra infancia. Más de uno recordará aquellas tardes en las que rebusca
+
+============================================================
+RESPUESTA (678 chars):
+============================================================
+[
+  {
+    "title": "Entrevista a Bloodstain: “Es genial ir a España por primera vez a tocar y, encima, a un festival que está creciendo; el concierto va a ser impresionante”",
+    "url": "https://mariskalrock.com/actualidad/entrevista-a-bloodstain-es-genial-ir-a-espana-por-primera-vez-a-tocar-y-encima-a-un-festival-que-esta-creciendo-el-concierto-va-a-ser-impresionante/",
+    "date": "2026-06-22",
+    "medio": "Mariskalrock",
+    "excerpt": "Ya llega uno de los eventos más atractivos en nuestro país para el que firma: la fastuosa nueva edición del festival gratuito Zurbarán Rock Burgos, que tendrá lugar el 10 y 11 de J",
+    "rel": 3,
+    "categoria": "Entrevista"
+  }
+]
