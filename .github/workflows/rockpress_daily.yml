@@ -141,22 +141,22 @@ jobs:
           noticias = []
 
           # Patrón: bloque de noticia con titular, resumen y enlace
-          # **N. TITULAR** - MEDIO
+          # **N. TITULAR** - MEDIO o simplemente **TITULAR** - MEDIO
           # Resumen: texto
           # Enlace: URL
-          bloques = re.split(r'\n(?=\*\*\d+\.)', content)
-
+          bloques = re.split(r'\n(?=\*\*)', content)
+          
           for bloque in bloques:
-              # Titular
-              m_titulo = re.match(r'\*\*\d+\.\s+(.+?)\*\*', bloque.strip())
+              # Titular (puede empezar con números o no)
+              m_titulo = re.match(r'\*\*(?:\d+\.\s*)?(.+?)\*\*', bloque.strip())
               if not m_titulo:
                   continue
               titulo = m_titulo.group(1).strip()
               # Limpiar " - MEDIO" al final del titular si existe
               titulo = re.sub(r'\s*-\s*[A-ZÁÉÍÓÚa-záéíóú\s]+$', '', titulo).strip()
 
-              # Enlace
-              m_url = re.search(r'Enlace:\s*(https?://\S+)', bloque)
+              # Enlace (puede venir como texto plano o como markdown link [url](url))
+              m_url = re.search(r'Enlace:\s*(?:\[)?(https?://[^\s\]\)]+)', bloque)
               url = m_url.group(1).strip() if m_url else ""
 
               # Resumen (apuntes para la IA)
