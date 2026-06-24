@@ -38,6 +38,7 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 AI_MODEL       = os.environ.get("AI_MODEL", "gemini-3.5-flash")
+API_DELAY_SECONDS = int(os.environ.get("API_DELAY_SECONDS", "120"))
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 EMAIL_FROM     = os.environ.get("EMAIL_FROM", "RockPress Tracker <onboarding@resend.dev>")
 EMAIL_TO       = [e.strip() for e in os.environ.get("EMAIL_TO", "").split(",") if e.strip()]
@@ -502,8 +503,9 @@ def _call_ai_raw(prompt: str, max_output_tokens: int, debug_label: str = "ai") -
     Soporta Gemini, OpenAI y Anthropic.
     Aplica delay de 2 minutos antes de realizar la petición.
     """
-    log.info(f"  [{debug_label}] Esperando 2 minutos (120s) para evitar saturación de API...")
-    time.sleep(120)
+    if API_DELAY_SECONDS > 0:
+        log.info(f"  [{debug_label}] Esperando {API_DELAY_SECONDS}s para evitar saturación de API...")
+        time.sleep(API_DELAY_SECONDS)
 
     is_batch = debug_label.startswith("batch_")
     

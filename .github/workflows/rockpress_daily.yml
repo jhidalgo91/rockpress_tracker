@@ -12,10 +12,14 @@ on:
         description: 'Días de ventana para buscar noticias'
         required: false
         default: '3'
-      gemini_model:
-        description: 'Modelo Gemini a usar'
+      ai_model:
+        description: 'Modelo IA a usar'
         required: false
         default: 'gemini-3.5-flash'
+      api_delay_seconds:
+        description: 'Segundos de espera antes de cada llamada a la API IA'
+        required: false
+        default: '120'
       send_email:
         description: 'Enviar informe por email (true/false)'
         required: false
@@ -80,10 +84,13 @@ jobs:
       - name: 🔍 Ejecutar RockPress Tracker
         env:
           GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY:    ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           RESEND_API_KEY:    ${{ secrets.RESEND_API_KEY }}
           EMAIL_FROM:        ${{ vars.EMAIL_FROM || 'RockPress Tracker <onboarding@resend.dev>' }}
           EMAIL_TO:          ${{ vars.EMAIL_TO }}
-          GEMINI_MODEL:      ${{ inputs.gemini_model || 'gemini-3.5-flash' }}
+          AI_MODEL:          ${{ inputs.ai_model || vars.AI_MODEL || 'gemini-3.5-flash' }}
+          API_DELAY_SECONDS: ${{ inputs.api_delay_seconds || vars.API_DELAY_SECONDS || '120' }}
           DATE_WINDOW_DAYS:  ${{ inputs.date_window_days || '3' }}
           SEND_EMAIL:        ${{ inputs.send_email || 'true' }}
         run: python rockpress_tracker.py
@@ -223,6 +230,8 @@ jobs:
       WP_USER: ${{ secrets.WP_USER }}
       WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
   # ============================================================================
   # JOB 3: Resumen final del pipeline completo
