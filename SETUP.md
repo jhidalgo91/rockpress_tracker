@@ -94,8 +94,15 @@ Ve a la pestaña **Variables** (misma sección):
 |---|---|---|
 | `EMAIL_TO` | `jahipe@gmail.com` | Solo si quieres email |
 | `EMAIL_FROM` | `RockPress <noreply@tudominio.com>` | No (hay valor por defecto) |
+| `MAX_ARTICLES_TO_ANALYZE` | `100` | No (por defecto `-1` sin límite) |
 
 Para añadir: **New repository variable** → introduce nombre y valor → **Add variable**
+
+---
+
+### Priorización de Medios (`bbddMedios.md`)
+La lista de medios ahora soporta una cuarta columna de `Prioridad` (1 a 4, siendo 1 la más alta).
+Si estableces un `MAX_ARTICLES_TO_ANALYZE`, el sistema ordenará las noticias extraídas dando preferencia a los medios con prioridad 1, luego a los de prioridad 2, etc. Los medios sin valor asignado se tratan como prioridad 4.
 
 ---
 

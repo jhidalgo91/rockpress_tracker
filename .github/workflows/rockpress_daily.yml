@@ -20,6 +20,10 @@ on:
         description: 'Segundos de espera antes de cada llamada a la API IA'
         required: false
         default: '120'
+      max_articles_to_analyze:
+        description: 'Límite máximo de noticias a analizar (-1 para ilimitado)'
+        required: false
+        default: '-1'
       send_email:
         description: 'Enviar informe por email (true/false)'
         required: false
@@ -91,6 +95,7 @@ jobs:
           EMAIL_TO:          ${{ vars.EMAIL_TO }}
           AI_MODEL:          ${{ inputs.ai_model || vars.AI_MODEL || 'gemini-3.5-flash' }}
           API_DELAY_SECONDS: ${{ inputs.api_delay_seconds || vars.API_DELAY_SECONDS || '120' }}
+          MAX_ARTICLES_TO_ANALYZE: ${{ inputs.max_articles_to_analyze || vars.MAX_ARTICLES_TO_ANALYZE || '-1' }}
           DATE_WINDOW_DAYS:  ${{ inputs.date_window_days || '3' }}
           SEND_EMAIL:        ${{ inputs.send_email || 'true' }}
         run: python rockpress_tracker.py

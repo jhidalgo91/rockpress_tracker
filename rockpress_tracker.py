@@ -99,8 +99,12 @@ def load_media(path: Path) -> list[dict]:
         nombre = parts[0]
         url    = parts[1] if len(parts) > 1 else ""
         rss    = parts[2] if len(parts) > 2 else ""
+        prioridad = 4
+        if len(parts) > 3 and parts[3].isdigit():
+            prioridad = int(parts[3])
+            
         if url.startswith("http"):
-            media.append({"nombre": nombre, "url": url.rstrip("/"), "rss": rss})
+            media.append({"nombre": nombre, "url": url.rstrip("/"), "rss": rss, "prioridad": prioridad})
 
     log.info(f"Medios con URL: {len(media)}")
     return media
@@ -1012,8 +1016,53 @@ def main() -> None:
         log.error("Sin artículos extraídos. Abortando.")
         sys.exit(1)
 
-    # 4. Construir lista compacta para Gemini (excluyendo ya vistos)
-    article_list_text, total_nuevos, total_vistos = build_article_list(collected, seen_urls)
+    # --- FILTRADO POR PRIORIDAD Y LÍMITE ---
+    # Convertimos a lista plana de artículos nuevos para poder ordenarlos
+    # (Excluyendo previamente los ya vistos para no gastar cupo en ellos)
+    flat_articles = []
+    total_vistos_pre_filter = 0
+    
+    media_dict = {m["nombre"]: m for m in media}
+    
+    for medio_name, arts in collected.items():
+        prioridad = media_dict.get(medio_name, {}).get("prioridad", 4)
+        for a in arts:
+            if a["url"] in seen_urls:
+                total_vistos_pre_filter += 1
+            else:
+                flat_articles.append({
+                    "medio": medio_name,
+                    "prioridad": prioridad,
+                    "article": a
+                })
+    
+    # Ordenar por prioridad (1 es mejor) y luego por fecha descendente
+    flat_articles.sort(key=lambda x: (x["prioridad"], x["article"]["date"]), reverse=False)
+    # Como queremos fecha descendente (más nuevas primero), pero prioridad ascendente,
+    # necesitamos un sort custom o doble sort.
+    # Python's sort is stable, so we sort by date descending first, then by priority ascending.
+    flat_articles.sort(key=lambda x: x["article"]["date"], reverse=True)
+    flat_articles.sort(key=lambda x: x["prioridad"], reverse=False)
+    
+    # Aplicar límite si existe
+    if MAX_ARTICLES_TO_ANALYZE > 0 and len(flat_articles) > MAX_ARTICLES_TO_ANALYZE:
+        log.info(f"Limitando de {len(flat_articles)} a {MAX_ARTICLES_TO_ANALYZE} artículos según prioridad.")
+        flat_articles = flat_articles[:MAX_ARTICLES_TO_ANALYZE]
+        
+    # Reconstruir collected solo con los artículos seleccionados y nuevos
+    collected_filtered = {m["nombre"]: [] for m in media}
+    for item in flat_articles:
+        collected_filtered[item["medio"]].append(item["article"])
+        
+    # Para mantener compatibilidad con las funciones posteriores (que vuelven a filtrar por vistos,
+    # aunque aquí ya lo hemos hecho, simplemente no encontrarán vistos extra):
+    collected = collected_filtered
+
+    # 4. Construir lista compacta para Gemini (usando ya la colección filtrada y limitada)
+    # Re-inyectamos los vistos originales para el contador global de stats
+    article_list_text, total_nuevos_post, _ = build_article_list(collected, seen_urls)
+    total_vistos = total_vistos_pre_filter # Override vistos con los reales prepurgados
+    total_nuevos = total_nuevos_post
 
     if total_nuevos == 0:
         log.info("No hay artículos nuevos — todos ya fueron reportados anteriormente.")
