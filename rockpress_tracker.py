@@ -44,6 +44,7 @@ EMAIL_FROM     = os.environ.get("EMAIL_FROM", "RockPress Tracker <onboarding@res
 EMAIL_TO       = [e.strip() for e in os.environ.get("EMAIL_TO", "").split(",") if e.strip()]
 
 DATE_WINDOW         = int(os.environ.get("DATE_WINDOW_DAYS", "3"))
+MAX_ARTICLES_TO_ANALYZE = int(os.environ.get("MAX_ARTICLES_TO_ANALYZE", "-1"))
 SEEN_RETENTION_DAYS = 30
 SEND_EMAIL_FLAG     = os.environ.get("SEND_EMAIL", "true").lower() == "true"
 

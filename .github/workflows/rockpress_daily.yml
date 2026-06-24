@@ -15,7 +15,7 @@ on:
       ai_model:
         description: 'Modelo IA a usar'
         required: false
-        default: 'gemini-3.5-flash'
+        default: 'gpt-4o-mini'
       api_delay_seconds:
         description: 'Segundos de espera antes de cada llamada a la API IA'
         required: false
@@ -23,7 +23,7 @@ on:
       max_articles_to_analyze:
         description: 'Límite máximo de noticias a analizar (-1 para ilimitado)'
         required: false
-        default: '-1'
+        default: '100'
       send_email:
         description: 'Enviar informe por email (true/false)'
         required: false
