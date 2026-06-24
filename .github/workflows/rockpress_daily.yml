@@ -230,6 +230,8 @@ jobs:
       estado_defecto: ${{ inputs.estado_wp || 'draft' }}
       # Auto-publicar las primeras N, el resto a borrador
       auto_publish_first: ${{ inputs.auto_publish_first || '0' }}
+      # Modelo IA
+      ai_model: ${{ inputs.ai_model || vars.AI_MODEL || 'gemini-3.5-flash' }}
     secrets:
       WP_URL: ${{ secrets.WP_URL }}
       WP_USER: ${{ secrets.WP_USER }}
