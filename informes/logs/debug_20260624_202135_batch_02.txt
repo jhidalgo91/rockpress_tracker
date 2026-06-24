@@ -1,0 +1,129 @@
+=== ROCKPRESS DEBUG — 20260624_202135 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: ERROR
+Tokens → input: 0  output: 0
+
+============================================================
+PROMPT (8,074 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/3 (30 artículos).
+
+FECHA HOY: 24 de junio de 2026
+VENTANA: 23/06/2026 — 24 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-24] IRON MAIDEN – Seventh Son of a Seventh Son
+  URL: https://www.nochederock.com/iron-maiden-seventh-son-of-a-seventh-son/
+• [2026-06-24] LAMB OF GOD – Sacrament
+  URL: https://www.nochederock.com/lamb-of-god-sacrament/
+• [2026-06-24] AYREON – Into the Electric Castle
+  URL: https://www.nochederock.com/ayreon-into-the-electric-castle/
+• [2026-06-24] PINK FLOYD – Dark Side of the Moon
+  URL: https://www.nochederock.com/pink-floyd-dark-side-of-the-moon/
+• [2026-06-24] AEROSMITH – Pump
+  URL: https://www.nochederock.com/aerosmith-pump/
+• [2026-06-24] THE ROLLING STONES – Their Satanic Majesties Request
+  URL: https://www.nochederock.com/the-rolling-stones-their-satanic-majesties-request/
+• [2026-06-24] THE HOLLIES – Butterfly
+  URL: https://www.nochederock.com/the-hollies-butterfly/
+• [2026-06-24] W.A.S.P. – The Last Command
+  URL: https://www.nochederock.com/w-a-s-p-the-last-command/
+• [2026-06-24] The Fellowship
+  URL: https://www.nochederock.com/category/brotherssisters/
+• [2026-06-24] THE MAÑANA CULTURE
+  URL: https://www.nochederock.com/the-manana-culture/
+• [2026-06-24] LOS TUDANCA
+  URL: https://www.nochederock.com/tudanca-2/
+• [2026-06-24] MAMÁ LADILLA
+  URL: https://www.nochederock.com/mama-ladilla-7/
+• [2026-06-24] Daily Bugle
+  URL: https://www.nochederock.com/category/daily-bugle/
+• [2026-06-24] Miscelánea
+  URL: https://www.nochederock.com/category/noche-de-rock/
+• [2026-06-24] ASMA al Disco de la Semana
+  URL: https://www.nochederock.com/asma-al-disco-de-la-semana-2/
+• [2026-06-24] Habitación 101
+  URL: https://www.nochederock.com/habitacion101/
+• [2026-06-24] SUSPENSE
+  URL: https://www.nochederock.com/suspense/
+• [2026-06-24] GEORGIE AND MANDY’S FIRST MARRIAGE
+  URL: https://www.nochederock.com/george-and-mandys-first-marriage/
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-24] METALLICA – FROZEN CROWN – Rob Zombie.
+  URL: https://www.rafabasa.com/2026/06/24/metallica-frozen-crown-rob-zombie/
+  Resumen: Nuevos vídeos en directo de METALLICA. FROZEN CROWN estrenan su nuevo vídeo “The One”. Single y vídeo de Rob Zombie. La entrada METALLICA – FROZEN CROWN – Rob Zombie. se publicó pr
+• [2026-06-24] Tim “Ripper” Owens – IRON MAIDEN – JUDAS PRIEST – DEEP PURPLE – IGNEA
+  URL: https://www.rafabasa.com/2026/06/24/tim-ripper-owens-iron-maiden-judas-priest-deep-purple-ignea/
+  Resumen: Tim “Ripper” Owens explica porque IRON MAIDEN son más grandes que JUDAS PRIEST. DEEP PURPLE estrenan nuevo single y vídeo. Nuevo vídeo de IGNEA. La entrada Tim “Ripper” Owens – IRO
+• [2026-06-24] IRON MAIDEN – THE PINNEAPPLE THIEF – ENDSEEKER – LORD OF THE LOST.
+  URL: https://www.rafabasa.com/2026/06/24/iron-maiden-the-pinneapple-thief-endseeker-lord-of-the-lost/
+  Resumen: Comunicado de IRON MAIDEN respecto a su problema en el concierto de París. Vídeo y single de THE PINNEAPPLE THIEF. ENDSEEKER estrenan vídeo acompañados por LORD OF THE LOST La entr
+• [2026-06-24] FIESTA LEYENDAS DEL ROCK en GRANADA el sábado 27, con ABONOS y CAMISETAS.
+  URL: https://www.rafabasa.com/2026/06/24/fiesta-leyendas-del-rock-en-granada-el-sabado-27-con-abonos-y-camisetas/
+  Resumen: La entrada FIESTA LEYENDAS DEL ROCK en GRANADA el sábado 27, con ABONOS y CAMISETAS. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-24] DOGTAK anuncia el lanzamiento de su EP de debut "Shattered Reflection" para agosto de 2026
+  URL: https://tntradiorock.com/dogtak-anuncia-el-lanzamiento-de-su-ep-de-debut-shattered-reflection-para-agosto-de-2026/
+  Resumen: La banda alemana DOGTAK publicará de forma independiente su EP de debut, "Shattered Reflection", el próximo 21 de agosto de 2026. El trabajo supondrá el […] Contenido de TNT Radio 
+• [2026-06-24] WAILIN STORMS avivan las llamas del rock gótico sureño con su nuevo álbum "The Arsonist"
+  URL: https://tntradiorock.com/wailin-storms-avivan-las-llamas-del-rock-gotico-sureno-con-su-nuevo-album-the-arsonist/
+  Resumen: Tras una década consolidando su propuesta entre el blues punk más crudo, el rock gótico sureño y las atmósferas oscuras, Wailin Storms regresan con "The […] Contenido de TNT Radio 
+• [2026-06-24] FROZEN CROWN anuncia su nuevo álbum "The Legend of the Six Kings" y presenta el épico sencillo "The One"
+  URL: https://tntradiorock.com/frozen-crown-anuncia-su-nuevo-album-the-legend-of-the-six-kings-y-presenta-el-epico-sencillo-the-one/
+  Resumen: Frozen Crown iniciará una nueva etapa en su trayectoria con el lanzamiento de "The Legend of the Six Kings", su sexto trabajo de estudio, que […] Contenido de TNT Radio Rock
+• [2026-06-24] IGNEA anuncia "Monumental", un viaje sonoro a la nostalgia que verá la luz en octubre de 2026
+  URL: https://tntradiorock.com/ignea-anuncia-monumental-un-viaje-sonoro-a-la-nostalgia-que-vera-la-luz-en-octubre-de-2026/
+  Resumen: IGNEA ha anunciado el lanzamiento de su nuevo álbum de estudio, "Monumental", que llegará el próximo 23 de octubre de 2026 a través de Napalm […] Contenido de TNT Radio Rock
+• [2026-06-24] PAENIL ERA presenta "The Scene", nuevo adelanto de su próximo álbum "A Wilting Fountain"
+  URL: https://tntradiorock.com/paenil-era-presenta-the-scene-nuevo-adelanto-de-su-proximo-album-a-wilting-fountain/
+  Resumen: El proyecto rumano de post-black metal PAENIL ERA estrena el lyric video de "The Scene", adelanto de su próximo trabajo de estudio, "A Wilting Fountain", […] Contenido de TNT Radio
+• [2026-06-24] FleXanT golpea con fuerza con su nuevo single "Bloody Photographer"
+  URL: https://tntradiorock.com/flexant-golpea-con-fuerza-con-su-nuevo-single-bloody-photographer/
+  Resumen: La formación belga de melodic death/thrash metal FleXanT ha estrenado recientemente su nuevo single y videoclip, "Bloody Photographer", una nueva muestra de la contundencia y […] C
+• [2026-06-24] TYGERS OF PAN TANG refuerzan su apuesta por la melodía y la épica con el nuevo sencillo “Forevermore”
+  URL: https://tntradiorock.com/tygers-of-pan-tang-refuerzan-su-apuesta-por-la-melodia-y-la-epica-con-el-nuevo-sencillo-forevermore-2/
+  Resumen: TYGERS OF PAN TANG continúan desvelando detalles de su próximo álbum, “Electrifyed”, previsto para septiembre, con el lanzamiento de un nuevo adelanto titulado “Forevermore”. Tras 
+• [2026-06-24] AMBERIAN DAWN presenta el single "Moon" de su álbum "Temptation's Gates"
+  URL: https://tntradiorock.com/amberian-dawn-presenta-el-single-moon-de-su-album-temptations-gates/
+  Resumen: La formación finlandesa de metal sinfónico AMBERIAN DAWN publicará el próximo 26 de junio, a través de Napalm Records, su nuevo álbum de estudio, "Temptation's […] Contenido de TNT
+
+============================================================
+RESPUESTA (0 chars):
+============================================================
+

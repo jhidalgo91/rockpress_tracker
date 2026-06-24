@@ -1,0 +1,121 @@
+=== ROCKPRESS DEBUG — 20260624_201932 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: ERROR
+Tokens → input: 0  output: 0
+
+============================================================
+PROMPT (5,975 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/3 (30 artículos).
+
+FECHA HOY: 24 de junio de 2026
+VENTANA: 23/06/2026 — 24 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-24] PAPA ROACH anuncian su único concierto en España en 2026.
+  URL: https://www.diariodeunmetalhead.com/2026/06/papa-roach-anuncian-su-unico-concierto.html
+  Resumen: Papa Roach anuncian un único concierto en España para todo el 2026 dentro de su gira mundial "Rise of the Roach". La banda californiana actuará el 4 de diciembre en el Palacio Vist
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-24] TREGUA ponen broche de oro a su exitosa gira
+  URL: https://elsuavecitofn.blogspot.com/2026/06/tregua-ponen-broche-de-oro-su-exitosa.html
+  Resumen: TREGUA han puesto el broche de oro a una gira que los ha llevado a recorrer las salas de todo el estado con varios sold-outs durante los últimos meses. Los gallegos han llevado su 
+• [2026-06-24] LOS DE MARRAS: Próximos conciertos para este Verano/Otoño 2026
+  URL: https://elsuavecitofn.blogspot.com/2026/06/los-de-marras-proximos-conciertos-para.html
+  Resumen: // PRÓXIMOS CONCIERTOS //03 JUL | ARAIA, ÁRABA | JAIAK04 JUL | VIMIANZO, PONTEVEDRA | ASALTO AO CASTELO10 JUL | GANDÍA, VALENCIA | PIRATA FEST25 JUL | CASAS BAJAS, VALENCIA | PEÑA 
+• [2026-06-24] El sentido homenaje de DESASTRE -legendaria banda de Rock madrileña- a un personaje ejemplar: PEPE MUJICA
+  URL: https://elsuavecitofn.blogspot.com/2026/06/el-sentido-homenaje-de-desastre_0820150698.html
+  Resumen: DESASTRECREADORES DEL GENUINO PUNK ROCK MADRILEÑO JUNTOA BOIKOT, SKA-P, PORRETAS, MAMA LADILLA, ANDANADA7… HOMENAJEAN A PEPE MUJICA “EL HOMBRE LIBRE” NUEVAS FECHAS DE GIRAPINCHA AQ
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-24] ESCUCHA NOCHE DE ROCK
+  URL: https://www.nochederock.com/category/radio/
+• [2026-06-24] Noche de Rock 1562 – Leprous – Medussa
+  URL: https://www.nochederock.com/noche-de-rock-1562-leprous-medussa/
+• [2026-06-24] 1562 – LEPROUS – An Evening of Atonement – Live In Tilburg
+  URL: https://www.nochederock.com/1562-leprous-an-evening-of-atonement-live-in-tilburg/
+• [2026-06-24] 1561 – REPION – Repion Acústico
+  URL: https://www.nochederock.com/1561-repion-repion-acustico/
+• [2026-06-24] 1560 – KREATOR – Krushers of the World
+  URL: https://www.nochederock.com/1560-kreator-krushers-of-the-world/
+• [2026-06-24] 1559 – RIVERS OF NIHIL – Rivers of Nihil
+  URL: https://www.nochederock.com/1559-rivers-of-nihil-rivers-of-nihil/
+• [2026-06-24] 1558 – APOTHEUS – Ergo Athlas
+  URL: https://www.nochederock.com/1558-apotheus-ergo-atlas/
+• [2026-06-24] 1557 – MESSA – The Spin
+  URL: https://www.nochederock.com/1557-messa-the-spin/
+• [2026-06-24] 1556 – CHVRCH – Distant Light
+  URL: https://www.nochederock.com/1555-chvrch-distant-light/
+• [2026-06-24] 1555 – H.E.A.T. – Welcome to the Future
+  URL: https://www.nochederock.com/1556-h-e-a-t-welcome-to-the-future/
+• [2026-06-24] 1554 – ROTTING CHRIST – Pro Xristou
+  URL: https://www.nochederock.com/1554-rotting-christ-pro-xristoy/
+• [2026-06-24] 1553 – MACHINE HEAD – Unatøned
+  URL: https://www.nochederock.com/1553-machine-head-unatoned/
+• [2026-06-24] 1552 – PARADISE LOST – Ascension
+  URL: https://www.nochederock.com/1552-paradise-lost-ascension/
+• [2026-06-24] 1551 – LUNÁTICA – Electra
+  URL: https://www.nochederock.com/1551-lunatica-elektra/
+• [2026-06-24] 1550 – LOS ESTANQUES Y EL CANIJO DE JEREZ – Lágrimas de Plomo Fundido
+  URL: https://www.nochederock.com/1550-los-estanques-y-el-canijo-de-jerez-lagrimas-de-plomo-fundido/
+• [2026-06-24] 1549 – QUAOAR – Five Friends Floating
+  URL: https://www.nochederock.com/1549-quaoar-five-friends-floating/
+• [2026-06-24] 1548 – GHOST – Rite Here Rite Now
+  URL: https://www.nochederock.com/1548-ghost-rite-here-rite-now/
+• [2026-06-24] RAMMSTEIN – Mutter
+  URL: https://www.nochederock.com/rammstein-mutter/
+• [2026-06-24] LED ZEPPELIN – IV
+  URL: https://www.nochederock.com/led-zeppelin-iv/
+• [2026-06-24] DREAM THEATER – Images and Words
+  URL: https://www.nochederock.com/dream-theater-images-and-words/
+• [2026-06-24] MASTODON – Leviathan
+  URL: https://www.nochederock.com/mastodon-leviathan/
+• [2026-06-24] FUGAZI – Repeater
+  URL: https://www.nochederock.com/fugazi-repeater/
+• [2026-06-24] LOS SUAVES – Maldita Sea mi Suerte
+  URL: https://www.nochederock.com/clasico-134-los-suaves-maldita-sea-mi-suerte/
+• [2026-06-24] AC/DC – Back in Black
+  URL: https://www.nochederock.com/ac-dc-back-in-black/
+• [2026-06-24] EMPEROR – Anthems to the Welkin at Dusk
+  URL: https://www.nochederock.com/clasico-emperor-anthems-to-the-welkin-at-dusk/
+• [2026-06-24] SAM COOKE – Ain’t that Good News
+  URL: https://www.nochederock.com/sam-cooke-aint-that-good-news/
+
+============================================================
+RESPUESTA (0 chars):
+============================================================
+
