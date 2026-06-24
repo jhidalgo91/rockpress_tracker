@@ -21,6 +21,8 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 import google.generativeai as genai
+import openai
+import anthropic
 
 # ---------------------------------------------------------------------------
 # Configuración
@@ -33,7 +35,9 @@ logging.basicConfig(
 log = logging.getLogger("rockpress")
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
-GEMINI_MODEL   = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")   # ← modelos válidos: gemini-3.5-flash, gemini-2.0-flash, gemini-1.5-flash
+OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
+AI_MODEL       = os.environ.get("AI_MODEL", "gemini-3.5-flash")
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
 EMAIL_FROM     = os.environ.get("EMAIL_FROM", "RockPress Tracker <onboarding@resend.dev>")
 EMAIL_TO       = [e.strip() for e in os.environ.get("EMAIL_TO", "").split(",") if e.strip()]
@@ -492,78 +496,102 @@ def date_to_spanish(dt: datetime) -> str:
 BATCH_SIZE = 30  # artículos por llamada de clasificación a Gemini
 
 
-def _call_gemini_raw(prompt: str, max_output_tokens: int, debug_label: str = "gemini") -> tuple[str, str]:
+def _call_ai_raw(prompt: str, max_output_tokens: int, debug_label: str = "ai") -> tuple[str, str]:
     """
-    Llamada base a Gemini. Devuelve (response_text, finish_reason).
-    Guarda debug log completo en informes/logs/.
-
-    NOTA — gemini-3.5-flash es un modelo "thinking": razona en voz alta antes de
-    responder, consumiendo todos los tokens de salida en chain-of-thought y nunca
-    llegando al JSON real.  Solución:
-      • Lotes de clasificación → response_mime_type="application/json" fuerza salida
-        JSON pura sin ningún razonamiento previo.
-      • Informe final → sin mime type (texto Markdown), pero con max_output_tokens alto.
+    Llamada base a la IA. Devuelve (response_text, finish_reason).
+    Soporta Gemini, OpenAI y Anthropic.
+    Aplica delay de 2 minutos antes de realizar la petición.
     """
-    genai.configure(api_key=GEMINI_API_KEY)
+    log.info(f"  [{debug_label}] Esperando 2 minutos (120s) para evitar saturación de API...")
+    time.sleep(120)
 
     is_batch = debug_label.startswith("batch_")
-
-    # ── Configuración base ────────────────────────────────────────────────────
-    gen_config_kwargs: dict = {
-        "temperature": 0.1,
-        "max_output_tokens": max_output_tokens,
-    }
-
-    # Para clasificación por lotes: forzar JSON puro y sistema sin thinking
-    if is_batch:
-        try:
-            gen_config_kwargs["response_mime_type"] = "application/json"
-        except Exception:
-            pass  # SDK más antiguo: simplemente no lo añadimos
-
-    try:
-        gen_config = genai.types.GenerationConfig(**gen_config_kwargs)
-    except TypeError:
-        # Si response_mime_type no está soportado en este SDK, quitarlo
-        gen_config_kwargs.pop("response_mime_type", None)
-        gen_config = genai.types.GenerationConfig(**gen_config_kwargs)
-
-    # System instruction: evitar razonamiento en la respuesta (sobre todo en lotes JSON)
+    
     system_instr = (
         "Eres un sistema de clasificación de noticias de rock. "
         "Responde ÚNICAMENTE con JSON válido. "
         "NUNCA incluyas razonamiento, explicaciones ni texto fuera del JSON."
-    ) if is_batch else None
+    ) if is_batch else "Eres un periodista musical especializado en rock nacional espanol."
 
-    model = genai.GenerativeModel(
-        model_name=GEMINI_MODEL,
-        generation_config=gen_config,
-        system_instruction=system_instr,
-    )
+    log.info(f"  [{debug_label}] Enviando {len(prompt):,} chars a {AI_MODEL} (max_tokens={max_output_tokens})…")
+    
+    response_text = ""
+    finish_reason = "UNKNOWN"
+    input_tokens = 0
+    output_tokens = 0
 
-    log.info(f"  [{debug_label}] Enviando {len(prompt):,} chars a {GEMINI_MODEL} (max_tokens={max_output_tokens})…")
-    response = model.generate_content(prompt)
+    try:
+        if AI_MODEL.startswith("gpt"):
+            client = openai.Client(api_key=OPENAI_API_KEY)
+            messages = []
+            if system_instr:
+                messages.append({"role": "system", "content": system_instr})
+            messages.append({"role": "user", "content": prompt})
+            
+            kwargs = {"model": AI_MODEL, "messages": messages, "temperature": 0.1, "max_tokens": max_output_tokens}
+            if is_batch:
+                kwargs["response_format"] = {"type": "json_object"}
+                
+            res = client.chat.completions.create(**kwargs)
+            response_text = res.choices[0].message.content or ""
+            finish_reason = res.choices[0].finish_reason
+            if res.usage:
+                input_tokens = res.usage.prompt_tokens
+                output_tokens = res.usage.completion_tokens
 
-    # ── Metadata ────────────────────────────────────────────────────────────
-    candidate    = response.candidates[0] if response.candidates else None
-    finish_reason = str(candidate.finish_reason) if candidate else "UNKNOWN"
-    usage         = response.usage_metadata
-    input_tokens  = getattr(usage, "prompt_token_count",     0) if usage else 0
-    output_tokens = getattr(usage, "candidates_token_count", 0) if usage else 0
+        elif AI_MODEL.startswith("claude"):
+            client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+            kwargs = {
+                "model": AI_MODEL,
+                "max_tokens": max_output_tokens,
+                "temperature": 0.1,
+                "messages": [{"role": "user", "content": prompt}]
+            }
+            if system_instr:
+                kwargs["system"] = system_instr
+                
+            res = client.messages.create(**kwargs)
+            response_text = res.content[0].text if res.content else ""
+            finish_reason = res.stop_reason or "UNKNOWN"
+            if hasattr(res, "usage"):
+                input_tokens = res.usage.input_tokens
+                output_tokens = res.usage.output_tokens
 
-    safety_str = ""
-    if candidate and hasattr(candidate, "safety_ratings"):
-        safety_str = " | ".join(
-            f"{getattr(sr.category,'name',sr.category)}:{getattr(sr.probability,'name',sr.probability)}"
-            for sr in candidate.safety_ratings
-        )
+        else:
+            # Gemini default
+            genai.configure(api_key=GEMINI_API_KEY)
+            gen_config_kwargs = {"temperature": 0.1, "max_output_tokens": max_output_tokens}
+            if is_batch:
+                gen_config_kwargs["response_mime_type"] = "application/json"
+            
+            # Quitar si falla en SDK viejo
+            try:
+                gen_config = genai.types.GenerationConfig(**gen_config_kwargs)
+            except TypeError:
+                gen_config_kwargs.pop("response_mime_type", None)
+                gen_config = genai.types.GenerationConfig(**gen_config_kwargs)
+
+            model = genai.GenerativeModel(
+                model_name=AI_MODEL,
+                generation_config=gen_config,
+                system_instruction=system_instr if is_batch else None,
+            )
+            res = model.generate_content(prompt)
+            response_text = res.text if res.text else ""
+            
+            candidate = res.candidates[0] if res.candidates else None
+            finish_reason = str(candidate.finish_reason) if candidate else "UNKNOWN"
+            usage = res.usage_metadata
+            input_tokens = getattr(usage, "prompt_token_count", 0) if usage else 0
+            output_tokens = getattr(usage, "candidates_token_count", 0) if usage else 0
+
+    except Exception as e:
+        log.error(f"  [{debug_label}] Error en llamada API: {e}")
+        finish_reason = "ERROR"
 
     log.info(f"  [{debug_label}] finish_reason={finish_reason}  tokens in={input_tokens:,} out={output_tokens:,}")
-    if finish_reason not in ("FinishReason.STOP", "STOP", "1"):
-        log.warning(f"  [{debug_label}] ⚠️  finish_reason inesperado: {finish_reason}")
 
     # ── Debug log ────────────────────────────────────────────────────────────
-    response_text = response.text if response.text else ""
     try:
         ts_label = datetime.now().strftime("%Y%m%d_%H%M%S")
         logs_dir  = OUTPUT_DIR / "logs"
@@ -572,22 +600,20 @@ def _call_gemini_raw(prompt: str, max_output_tokens: int, debug_label: str = "ge
         debug_path = logs_dir / f"debug_{ts_label}_{safe_label}.txt"
         debug_path.write_text(
             f"=== ROCKPRESS DEBUG — {ts_label} — {debug_label} ===\n"
-            f"Modelo: {GEMINI_MODEL}\n"
+            f"Modelo: {AI_MODEL}\n"
             f"max_output_tokens: {max_output_tokens}\n"
             f"finish_reason: {finish_reason}\n"
             f"Tokens → input: {input_tokens:,}  output: {output_tokens:,}\n"
-            f"Safety: {safety_str or '(none)'}\n"
             f"\n{'='*60}\nPROMPT ({len(prompt):,} chars):\n{'='*60}\n"
             f"{prompt}\n"
             f"\n{'='*60}\nRESPUESTA ({len(response_text):,} chars):\n{'='*60}\n"
             f"{response_text}\n",
             encoding="utf-8",
         )
-        log.info(f"  [{debug_label}] Debug log → {debug_path.name}")
     except Exception as e:
         log.warning(f"  [{debug_label}] Error guardando debug log: {e}")
 
-    return response_text, finish_reason
+    return response_text, str(finish_reason)
 
 
 def _articles_to_text(articles_with_medio: list[tuple[str, dict]]) -> str:
@@ -657,7 +683,7 @@ ARTICULOS:
 
     log.info(f"Lote {batch_num}/{total_batches}: clasificando {len(articles_with_medio)} artículos…")
     try:
-        text, finish_reason = _call_gemini_raw(prompt, max_output_tokens=8192, debug_label=f"batch_{batch_num:02d}")
+        text, finish_reason = _call_ai_raw(prompt, max_output_tokens=8192, debug_label=f"batch_{batch_num:02d}")
 
         if not text.strip():
             log.warning(f"  Lote {batch_num}: respuesta vacía (finish_reason={finish_reason})")
@@ -792,7 +818,7 @@ ARTICULOS CLASIFICADOS:
 {articles_text}"""
 
     log.info(f"Generando informe final con {len(relevant)} artículos…")
-    text, finish_reason = _call_gemini_raw(prompt, max_output_tokens=16384, debug_label="informe_final")
+    text, finish_reason = _call_ai_raw(prompt, max_output_tokens=16384, debug_label="informe_final")
 
     if not text:
         raise RuntimeError(f"Gemini no devolvió informe (finish_reason={finish_reason})")
@@ -952,8 +978,8 @@ def save_report(content: str, date: datetime) -> Path:
 # ===========================================================================
 
 def main() -> None:
-    if not GEMINI_API_KEY:
-        log.error("GEMINI_API_KEY no configurada.")
+    if not (GEMINI_API_KEY or OPENAI_API_KEY or ANTHROPIC_API_KEY):
+        log.error("No se ha configurado ninguna API_KEY.")
         log.error("Obtén tu clave en: https://aistudio.google.com/app/apikey")
         sys.exit(1)
 
@@ -965,7 +991,7 @@ def main() -> None:
     log.info("=" * 65)
     log.info(f"  RockPress Tracker · {today_str}")
     log.info(f"  Ventana: {desde_str} → {today.strftime('%d/%m/%Y')}")
-    log.info(f"  Modelo: {GEMINI_MODEL}")
+    log.info(f"  Modelo: {AI_MODEL}")
     log.info("=" * 65)
 
     # 1. Cargar medios

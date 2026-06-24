@@ -77,8 +77,12 @@ Ve a tu repositorio → **Settings → Secrets and variables → Actions**
 
 | Secret | Valor | Obligatorio |
 |---|---|---|
-| `GEMINI_API_KEY` | Tu clave de Google AI Studio (`AIzaSy...`) | ✅ Sí |
+| `GEMINI_API_KEY` | Tu clave de Google AI Studio (`AIzaSy...`) | Depende (1) |
+| `OPENAI_API_KEY` | Tu clave de OpenAI (`sk-...`) | Depende (1) |
+| `ANTHROPIC_API_KEY`| Tu clave de Anthropic (`sk-ant-...`) | Depende (1) |
 | `RESEND_API_KEY` | Tu clave de Resend (`re_...`) | Solo si quieres email |
+
+*(1) Es obligatorio configurar **al menos una** de las tres API Keys según el modelo que elijas.*
 
 Para añadir cada secret: **New repository secret** → introduce nombre y valor → **Add secret**
 
@@ -159,7 +163,7 @@ SEND_EMAIL=false python rockpress_tracker.py
 | `RESEND_API_KEY` | — | Secret | Clave de Resend. Sin ella, el email se omite |
 | `EMAIL_TO` | — | Variable | Email(s) destinatario, separados por coma |
 | `EMAIL_FROM` | `RockPress Tracker <onboarding@resend.dev>` | Variable | Remitente del email |
-| `GEMINI_MODEL` | `gemini-3.5-flash` | Variable | Modelo Gemini a usar |
+| `AI_MODEL` | `gemini-3.5-flash` | Variable | Modelo a usar (gpt-4o, claude-3-5-sonnet, gemini...) |
 | `DATE_WINDOW_DAYS` | `3` | Variable | Días hacia atrás para buscar noticias |
 | `SEND_EMAIL` | `true` | Variable | Activa/desactiva el envío de email |
 
