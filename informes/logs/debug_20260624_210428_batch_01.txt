@@ -1,0 +1,155 @@
+=== ROCKPRESS DEBUG — 20260624_210428 — batch_01 ===
+Modelo: gpt-4o-mini
+max_output_tokens: 8192
+finish_reason: stop
+Tokens → input: 2,713  output: 731
+
+============================================================
+PROMPT (9,207 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/1 (23 artículos).
+
+FECHA HOY: 24 de junio de 2026
+VENTANA: 23/06/2026 — 24 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-24] DEPECHE MODE – Violator
+  URL: https://www.nochederock.com/depeche-mode-violator/
+• [2026-06-24] FRAME – Frame of Mind
+  URL: https://www.nochederock.com/frame-frame-of-mind/
+• [2026-06-24] DREAM THEATER – Metropolis Pt. 2: Scenes from a Memory
+  URL: https://www.nochederock.com/dream-theater-metropolis-pt-2-scenes-from-a-memory/
+• [2026-06-24] BIG BROTHER & THE HOLDING COMPANY – Cheap Thrills
+  URL: https://www.nochederock.com/big-brother-the-holding-company-cheap-thrills/
+• [2026-06-24] THE BYRDS – Fifth Dimension
+  URL: https://www.nochederock.com/the-byrds-fifth-dimension/
+• [2026-06-24] CREAM – Wheels of Fire
+  URL: https://www.nochederock.com/cream-wheels-of-fire/
+• [2026-06-24] METALLICA – Kill ’em All
+  URL: https://www.nochederock.com/metallica-kill-em-all/
+• [2026-06-24] AMORPHIS – Elegy
+  URL: https://www.nochederock.com/clasico-amorphis-elegy/
+• [2026-06-24] BLUE CHEER – Vincebus Eruptum
+  URL: https://www.nochederock.com/blue-cheer-vincebus-eruptum/
+• [2026-06-24] THE JIMI HENDRIX EXPERIENCE – Are You Experienced?
+  URL: https://www.nochederock.com/the-jimi-hendrix-experience-are-you-experienced/
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-24] RAVAGED BY THE YETI presenta "Tusk of the Yeti", último adelanto de su nuevo álbum "Snowbound Horror"
+  URL: https://tntradiorock.com/ravaged-by-the-yeti-presenta-tusk-of-the-yeti-ultimo-adelanto-de-su-nuevo-album-snowbound-horror/
+  Resumen: RAVAGED BY THE YETI ha estrenado "Tusk of the Yeti", el último sencillo de adelanto de su próximo álbum "Snowbound Horror", que verá la luz […] Contenido de TNT Radio Rock
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-24] Oasis ofrecerá conciertos en Europa en 2027 y Liam Gallagher confirma una primera ciudad “al cien por cien”
+  URL: https://mariskalrock.com/actualidad/oasis-ofrecera-conciertos-en-europa-en-2027-y-liam-gallagher-confirma-una-primera-ciudad-al-cien-por-cien/
+  Resumen: Si echamos la vista atrás y rebuscamos en nuestra memoria cuáles son los momentos más trascendentales que ha vivido el rock en los últimos años, sin duda uno de ellos sería la reun
+• [2026-06-24] Kritter lanza “Desperate”, segundo adelanto de "Kakskümend", su próximo EP, con el que recupera su sonido más característico
+  URL: https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/
+  Resumen: Tras el lanzamiento de "I Fight My Fears", con el que se acercaron al metal moderno a través de un sonido más fresco, Kritter sigue avanzando con fuerza en su carrera. "Desperate" 
+• [2026-06-24] Barón Rojo calienta motores para tocar en Suecia por primera vez y darlo todo en el Time to Rock: “No sabemos qué nos vamos a encontrar allí"
+  URL: https://mariskalrock.com/actualidad/baron-rojo-calienta-motores-para-tocar-en-suecia-por-primera-vez-y-darlo-todo-en-el-time-to-rock-no-sabemos-que-nos-vamos-a-encontrar-alli/
+  Resumen: Barón Rojo es un acertado sinónimo de hard rock en el idioma de Cervantes. La que es una de las bandas más representativas del género en España se encuentra celebrando su 45º anive
+• [2026-06-24] Sôber: Asistimos a la premiere de “Mi refugio”, el nuevo videoclip que nos acerca a su próximo disco
+  URL: https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/
+  Resumen: Sôber, el talentoso combo de rock y metal alternativo capitaneado por Carlos Escobedo, presentaba en el Cine Artistic Metrópol de Madrid, en exclusiva y como premiere para la prens
+• [2026-06-24] Velveteen Queen lanza “Adrenaline”, segundo adelanto de “The Greater Good”, con el que celebran la vida en la carretera y la pasión por el rock and roll
+  URL: https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/
+  Resumen: Tras el lanzamiento de “The Greater Good”, single que da título a su segundo disco, Velveteen Queen continúa derrochando la fuerza de su hard rock con un nuevo single. Se trata de 
+• [2026-06-24] King Ultramega estrena "Loud Love", nuevo homenaje a Chris Cornell, con Alex Skolnick (Testament), Lzzy Hale (Halestorm) y Dave Krusen (Pearl Jam): “Yo era un gran fan de Soundgarden”
+  URL: https://mariskalrock.com/actualidad/king-ultramega-estrena-loud-love-nuevo-homenaje-a-chris-cornell-con-alex-skolnick-testament-lzzy-hale-halestorm-y-dave-krusen-pearl-jam-yo-era-un-gran-fan-de-soundgarden/
+  Resumen: Chris Cornell es una figura imprescindible para comprender la escena de los años 90 y una de las voces clave dentro de la evolución del grunge y el hard rock. Su paso por los legen
+• [2026-06-24] El Decálogo de Mariskal recibe en RockFM a M Clan celebrando tres décadas de rock con Ricardo Ruipérez como invitado
+  URL: https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/
+  Resumen: El Decálogo de Mariskal vuelve una semana más a RockFM. Como cada miércoles, cuando la noche dé paso a la madrugada del jueves, a las 00:00, comenzará una nueva edición del program
+• [2026-06-24] Tim "Ripper" Owens: "Hay una razón por la que Iron Maiden toca frente a 20.000 personas y Judas Priest a 5.000"
+  URL: https://mariskalrock.com/actualidad/tim-ripper-owens-hay-una-razon-por-la-que-iron-maiden-toca-frente-a-20-000-personas-y-judas-priest-a-5-000/
+  Resumen: Tim "Ripper" Owens tuvo que enfrentarse a la complicada labor de sustituir a Rob Halford al sostener el micrófono junto a Judas Priest desde 1996 hasta 2003, año en el que regresó 
+• [2026-06-24] El estrés del director del documental de Paul Di'Anno por si Iron Maiden le negaban el permiso para usar las imágenes de Steve Harris visitando al vocalista: "Al final, fueron supermajos”
+  URL: https://mariskalrock.com/actualidad/el-estres-del-director-del-documental-de-paul-dianno-por-si-iron-maiden-le-negaban-el-permiso-para-usar-las-imagenes-de-steve-harris-visitando-al-vocalista-al-final-fueron-supermajos/
+  Resumen: La historia de Iron Maiden tuvo una bonita página que escribir con el reencuentro entre Paul Di’Anno, el que fuera vocalista de los primeros discos de la banda, con Steve Harris en
+• [2026-06-24] Crónica de Corrosion of Conformity en Madrid: Un rugido devastador
+  URL: https://mariskalrock.com/actualidad/cronica-de-corrosion-of-conformity-en-madrid-un-rugido-devastador/
+  Resumen: Ha tenido que pasar más de una década para volver a disfrutar de Corrosion of Conformity, que ofreció un show absolutamente demoledor. Para mí, no se le puede poner ninguna pega a 
+• [2026-06-24] Adam Lambert, sobre la posibilidad de que Queen vuelva a salir de gira: "Nunca hemos tenido la conversación diciendo que hemos terminado”
+  URL: https://mariskalrock.com/actualidad/adam-lambert-sobre-la-posibilidad-de-que-queen-vuelva-a-salir-de-gira-nunca-hemos-tenido-la-conversacion-diciendo-que-hemos-terminado/
+  Resumen: Volver a disfrutar de las canciones de Queen en directo es un deseo constante entre los seguidores de la banda británica cuyo legado sigue vivo en manos de Brian May y Roger Taylor
+• [2026-06-24] Cuando Dimebag Darrell (Pantera) tocó con Ace Frehley (Kiss): “Se había maquillado como Gene Simmons y se puso a escupir kétchup por todos lados”
+  URL: https://mariskalrock.com/actualidad/cuando-dimebag-darrell-pantera-toco-con-ace-frehley-kiss-se-habia-maquillado-como-gene-simmons-y-se-puso-a-escupir-ketchup-por-todos-lados/
+  Resumen: Vamos a viajar hacia una de esas noches que todo amante del rock y el metal habría querido presenciar. Corría el año 1992 y Skid Row iba a ofrecer un concierto en Nueva Jersey (Est
+
+============================================================
+RESPUESTA (2,548 chars):
+============================================================
+{
+  "articulos": [
+    {
+      "title": "Kritter lanza “Desperate”, segundo adelanto de \"Kakskümend\", su próximo EP, con el que recupera su sonido más característico",
+      "url": "https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/",
+      "date": "2026-06-24",
+      "medio": "Mariskalrock",
+      "excerpt": "Tras el lanzamiento de \"I Fight My Fears\", con el que se acercaron al metal moderno a través de un sonido más fresco, Kritter sigue avanzando con fuerza en su carrera.",
+      "rel": 4,
+      "categoria": "Lanzamiento"
+    },
+    {
+      "title": "Sôber: Asistimos a la premiere de “Mi refugio”, el nuevo videoclip que nos acerca a su próximo disco",
+      "url": "https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/",
+      "date": "2026-06-24",
+      "medio": "Mariskalrock",
+      "excerpt": "Sôber, el talentoso combo de rock y metal alternativo capitaneado por Carlos Escobedo, presentaba en el Cine Artistic Metrópol de Madrid, en exclusiva y como premiere para la prensa.",
+      "rel": 4,
+      "categoria": "Lanzamiento"
+    },
+    {
+      "title": "Velveteen Queen lanza “Adrenaline”, segundo adelanto de “The Greater Good”, con el que celebran la vida en la carretera y la pasión por el rock and roll",
+      "url": "https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/",
+      "date": "2026-06-24",
+      "medio": "Mariskalrock",
+      "excerpt": "Tras el lanzamiento de “The Greater Good”, single que da título a su segundo disco, Velveteen Queen continúa derrochando la fuerza de su hard rock con un nuevo single.",
+      "rel": 4,
+      "categoria": "Lanzamiento"
+    },
+    {
+      "title": "El Decálogo de Mariskal recibe en RockFM a M Clan celebrando tres décadas de rock con Ricardo Ruipérez como invitado",
+      "url": "https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/",
+      "date": "2026-06-24",
+      "medio": "Mariskalrock",
+      "excerpt": "El Decálogo de Mariskal vuelve una semana más a RockFM. Como cada miércoles, cuando la noche dé paso a la madrugada del jueves, comenzará una nueva edición del programa.",
+      "rel": 3,
+      "categoria": "Entrevista"
+    }
+  ]
+}

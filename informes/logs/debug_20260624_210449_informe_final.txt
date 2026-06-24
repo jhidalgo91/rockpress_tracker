@@ -1,0 +1,188 @@
+=== ROCKPRESS DEBUG — 20260624_210449 — informe_final ===
+Modelo: gpt-4o-mini
+max_output_tokens: 16384
+finish_reason: stop
+Tokens → input: 1,224  output: 1,519
+
+============================================================
+PROMPT (4,144 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 24 de junio de 2026
+VENTANA: 23/06/2026 — 24 de junio de 2026
+
+Tienes 4 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 24 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 4
+- Articulos excluidos (ya reportados): 159
+- Medios con actividad nueva: Noche de Rock, TNT Radio Rock, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 24 de junio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 4 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Noche de Rock, TNT Radio Rock, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Esquirlas de Metal, Hoy Rock, Iguana Rock, Keep The Flame, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Radio Domination, Rafa Basa, Rock Circus, Rock Sesion, Rockeando, Sancocho, Sevillametal, The Metal Dreamer, The Sentinel, Trueno Metálico, Turbo Rock, Reino de Sueños, Red hard n heavy, The Sound of The Embryo
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-06-24] Kritter lanza “Desperate”, segundo adelanto de "Kakskümend", su próximo EP, con el que recupera su sonido más característico
+   Medio: Mariskalrock | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/
+   Resumen: Tras el lanzamiento de "I Fight My Fears", con el que se acercaron al metal moderno a través de un sonido más fresco, Kritter sigue avanzando con fuerza en su carrera.
+
+2. [2026-06-24] Sôber: Asistimos a la premiere de “Mi refugio”, el nuevo videoclip que nos acerca a su próximo disco
+   Medio: Mariskalrock | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/
+   Resumen: Sôber, el talentoso combo de rock y metal alternativo capitaneado por Carlos Escobedo, presentaba en el Cine Artistic Metrópol de Madrid, en exclusiva y como premiere para la prensa.
+
+3. [2026-06-24] Velveteen Queen lanza “Adrenaline”, segundo adelanto de “The Greater Good”, con el que celebran la vida en la carretera y la pasión por el rock and roll
+   Medio: Mariskalrock | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/
+   Resumen: Tras el lanzamiento de “The Greater Good”, single que da título a su segundo disco, Velveteen Queen continúa derrochando la fuerza de su hard rock con un nuevo single.
+
+4. [2026-06-24] El Decálogo de Mariskal recibe en RockFM a M Clan celebrando tres décadas de rock con Ricardo Ruipérez como invitado
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Entrevista
+   URL: https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/
+   Resumen: El Decálogo de Mariskal vuelve una semana más a RockFM. Como cada miércoles, cuando la noche dé paso a la madrugada del jueves, comenzará una nueva edición del programa.
+
+============================================================
+RESPUESTA (5,794 chars):
+============================================================
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 24 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**Kritter lanza “Desperate”, segundo adelanto de "Kakskümend", su próximo EP, con el que recupera su sonido más característico** - Mariskalrock  
+Resumen: Kritter continúa su evolución musical con el lanzamiento de "Desperate", el segundo adelanto de su próximo EP "Kakskümend". Este nuevo tema marca un regreso a su sonido más característico, tras haber explorado el metal moderno en su anterior sencillo.  
+Enlace: [https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/](https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/)  
+Categoria: Lanzamiento  
+Relevancia: ⭐⭐⭐⭐ - Importante avance en la carrera de Kritter con un sonido renovado.
+
+**Sôber: Asistimos a la premiere de “Mi refugio”, el nuevo videoclip que nos acerca a su próximo disco** - Mariskalrock  
+Resumen: Sôber presentó en exclusiva su nuevo videoclip "Mi refugio" en el Cine Artistic Metrópol de Madrid, ofreciendo a los asistentes un primer vistazo a lo que será su próximo disco. La banda, liderada por Carlos Escobedo, sigue consolidándose en la escena del rock alternativo.  
+Enlace: [https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/](https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/)  
+Categoria: Lanzamiento  
+Relevancia: ⭐⭐⭐⭐ - La premiere genera gran expectativa por el nuevo material de Sôber.
+
+**Velveteen Queen lanza “Adrenaline”, segundo adelanto de “The Greater Good”, con el que celebran la vida en la carretera y la pasión por el rock and roll** - Mariskalrock  
+Resumen: Velveteen Queen lanza "Adrenaline", el segundo adelanto de su disco "The Greater Good". Este nuevo single refleja la energía del rock and roll y la celebración de la vida en la carretera, consolidando su estilo en la escena musical.  
+Enlace: [https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/](https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/)  
+Categoria: Lanzamiento  
+Relevancia: ⭐⭐⭐⭐ - Un nuevo himno del rock que resuena con la audiencia.
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+**El Decálogo de Mariskal recibe en RockFM a M Clan celebrando tres décadas de rock con Ricardo Ruipérez como invitado** - Mariskalrock  
+Resumen: En una nueva edición de "El Decálogo de Mariskal", M Clan celebra sus 30 años de carrera musical con una entrevista especial a Ricardo Ruipérez. El programa promete revivir los momentos más destacados de la banda en la escena del rock español.  
+Enlace: [https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/](https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/)  
+Categoria: Entrevista  
+Relevancia: ⭐⭐⭐ - Un homenaje a la trayectoria de M Clan que atrae la atención de los fans.
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 4
+- Articulos excluidos (ya reportados): 159
+- Medios con actividad nueva: Noche de Rock, TNT Radio Rock, Mariskalrock
+- Tendencias detectadas: Se observa un fuerte enfoque en lanzamientos de nuevos sencillos y videoclips por parte de bandas consolidadas, así como celebraciones de aniversarios que destacan la historia del rock nacional.
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+| Noche de Rock | Activo | Relevante |
+| TNT Radio Rock | Activo | Relevante |
+| Mariskalrock | Activo | Relevante |
+| Ballesterock | Inactivo | Sin noticias relevantes |
+| Canedorock | Inactivo | Sin noticias relevantes |
+| Diario de un Metalhead | Inactivo | Sin noticias relevantes |
+| Dioses del Metal | Inactivo | Sin noticias relevantes |
+| El Clavijero Rock | Inactivo | Sin noticias relevantes |
+| El Suavecito | Inactivo | Sin noticias relevantes |
+| Esquirlas de Metal | Inactivo | Sin noticias relevantes |
+| Hoy Rock | Inactivo | Sin noticias relevantes |
+| Iguana Rock | Inactivo | Sin noticias relevantes |
+| Keep The Flame | Inactivo | Sin noticias relevantes |
+| La Frontera del Silencio | Inactivo | Sin noticias relevantes |
+| Metal Symphony | Inactivo | Sin noticias relevantes |
+| Metalcry | Inactivo | Sin noticias relevantes |
+| Metaltrip | Inactivo | Sin noticias relevantes |
+| Radio Domination | Inactivo | Sin noticias relevantes |
+| Rafa Basa | Inactivo | Sin noticias relevantes |
+| Rock Circus | Inactivo | Sin noticias relevantes |
+| Rock Sesion | Inactivo | Sin noticias relevantes |
+| Rockeando | Inactivo | Sin noticias relevantes |
+| Sancocho | Inactivo | Sin noticias relevantes |
+| Sevillametal | Inactivo | Sin noticias relevantes |
+| The Metal Dreamer | Inactivo | Sin noticias relevantes |
+| The Sentinel | Inactivo | Sin noticias relevantes |
+| Trueno Metálico | Inactivo | Sin noticias relevantes |
+| Turbo Rock | Inactivo | Sin noticias relevantes |
+| Reino de Sueños | Inactivo | Sin noticias relevantes |
+| Red hard n heavy | Inactivo | Sin noticias relevantes |
+| The Sound of The Embryo | Inactivo | Sin noticias relevantes |
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 24 de junio de 2026*
