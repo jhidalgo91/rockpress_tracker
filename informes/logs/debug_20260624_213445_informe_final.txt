@@ -1,0 +1,163 @@
+=== ROCKPRESS DEBUG — 20260624_213445 — informe_final ===
+Modelo: gpt-4o-mini
+max_output_tokens: 16384
+finish_reason: stop
+Tokens → input: 1,234  output: 1,142
+
+============================================================
+PROMPT (4,161 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 24 de junio de 2026
+VENTANA: 23/06/2026 — 24 de junio de 2026
+
+Tienes 4 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 24 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 4
+- Articulos excluidos (ya reportados): 153
+- Medios con actividad nueva: Noche de Rock, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 24 de junio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 4 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Noche de Rock, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Esquirlas de Metal, Hoy Rock, Iguana Rock, Keep The Flame, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Radio Domination, Rafa Basa, Rock Circus, Rock Sesion, Rockeando, Sancocho, Sevillametal, The Metal Dreamer, The Sentinel, TNT Radio Rock, Trueno Metálico, Turbo Rock, Reino de Sueños, Red hard n heavy, The Sound of The Embryo
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-06-24] Kritter lanza “Desperate”, segundo adelanto de "Kakskümend", su próximo EP, con el que recupera su sonido más característico
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/
+   Resumen: Tras el lanzamiento de "I Fight My Fears", con el que se acercaron al metal moderno a través de un sonido más fresco, Kritter sigue avanzando con fuerza en su carrera. "Desperate"
+
+2. [2026-06-24] Sôber: Asistimos a la premiere de “Mi refugio”, el nuevo videoclip que nos acerca a su próximo disco
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/
+   Resumen: Sôber, el talentoso combo de rock y metal alternativo capitaneado por Carlos Escobedo, presentaba en el Cine Artistic Metrópol de Madrid, en exclusiva y como premiere para la prens
+
+3. [2026-06-24] Velveteen Queen lanza “Adrenaline”, segundo adelanto de “The Greater Good”, con el que celebran la vida en la carretera y la pasión por el rock and roll
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/
+   Resumen: Tras el lanzamiento de “The Greater Good”, single que da título a su segundo disco, Velveteen Queen continúa derrochando la fuerza de su hard rock con un nuevo single. Se trata de
+
+4. [2026-06-24] El Decálogo de Mariskal recibe en RockFM a M Clan celebrando tres décadas de rock con Ricardo Ruipérez como invitado
+   Medio: Mariskalrock | Relevancia: 4/5 | Cat: Entrevista
+   URL: https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/
+   Resumen: El Decálogo de Mariskal vuelve una semana más a RockFM. Como cada miércoles, cuando la noche dé paso a la madrugada del jueves, a las 00:00, comenzará una nueva edición del program
+
+============================================================
+RESPUESTA (4,150 chars):
+============================================================
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 24 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**Kritter lanza “Desperate”, segundo adelanto de "Kakskümend", su próximo EP, con el que recupera su sonido más característico** - Mariskalrock  
+Resumen: Tras el lanzamiento de "I Fight My Fears", Kritter continúa su camino musical con "Desperate", un segundo adelanto que refleja su sonido más auténtico. Este EP promete ser un regreso a sus raíces sonoras.  
+Enlace: [https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/](https://mariskalrock.com/noticias-breves/kritter-lanza-desperate-segundo-adelanto-de-kakskumend-su-proximo-ep-con-el-que-recupera-su-sonido-mas-caracteristico/)  
+Categoria: Lanzamiento  
+Relevancia: ⭐⭐⭐⭐⭐ - Importante avance en la carrera de Kritter con un sonido que promete conectar con sus seguidores.
+
+---
+
+**Sôber: Asistimos a la premiere de “Mi refugio”, el nuevo videoclip que nos acerca a su próximo disco** - Mariskalrock  
+Resumen: Sôber presentó en exclusiva su nuevo videoclip "Mi refugio" en el Cine Artistic Metrópol de Madrid, generando gran expectativa por su próximo álbum. La banda sigue consolidándose en la escena del rock alternativo.  
+Enlace: [https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/](https://mariskalrock.com/actualidad/sober-asistimos-a-la-premiere-de-mi-refugio-el-nuevo-videoclip-que-nos-acerca-a-su-proximo-disco/)  
+Categoria: Lanzamiento  
+Relevancia: ⭐⭐⭐⭐⭐ - La premiere de un videoclip de Sôber es un evento significativo que atrae la atención de los fans y medios.
+
+---
+
+**Velveteen Queen lanza “Adrenaline”, segundo adelanto de “The Greater Good”, con el que celebran la vida en la carretera y la pasión por el rock and roll** - Mariskalrock  
+Resumen: Velveteen Queen sigue con su potente propuesta de hard rock lanzando "Adrenaline", un nuevo single que celebra la vida en la carretera. Este tema es el segundo adelanto de su esperado álbum "The Greater Good".  
+Enlace: [https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/](https://mariskalrock.com/noticias-breves/velveteen-queen-lanza-adrenaline-segundo-adelanto-de-the-greater-good-con-el-que-celebran-la-vida-en-la-carretera-y-la-pasion-por-el-rock-and-roll/)  
+Categoria: Lanzamiento  
+Relevancia: ⭐⭐⭐⭐⭐ - Un lanzamiento que refuerza la energía y la esencia del rock and roll de la banda.
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+**El Decálogo de Mariskal recibe en RockFM a M Clan celebrando tres décadas de rock con Ricardo Ruipérez como invitado** - Mariskalrock  
+Resumen: En una edición especial de "El Decálogo de Mariskal", M Clan celebra 30 años de trayectoria musical con una entrevista a Ricardo Ruipérez, donde se repasan sus hitos y anécdotas más memorables.  
+Enlace: [https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/](https://mariskalrock.com/actualidad/el-decalogo-de-mariskal-recibe-en-rockfm-a-m-clan-celebrando-tres-decadas-de-rock-con-ricardo-ruiperez-como-invitado/)  
+Categoria: Entrevista  
+Relevancia: ⭐⭐⭐⭐ - La celebración de tres décadas de M Clan es un evento relevante en la historia del rock nacional.
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 4
+- Articulos excluidos (ya reportados): 153
+- Medios con actividad nueva: Noche de Rock, Mariskalrock
+- Tendencias detectadas: Se observa un fuerte enfoque en lanzamientos de nuevos sencillos y videoclips por parte de bandas consolidadas, así como celebraciones de aniversarios importantes en la escena del rock nacional.
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+| Noche de Rock | Activo | No hay noticias relevantes |
+| Mariskalrock | Activo | 4 |
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 24 de junio de 2026*
