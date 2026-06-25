@@ -1,3 +1,92 @@
+=== ROCKPRESS DEBUG — 20260625_092849 — informe_final ===
+Modelo: gpt-4o-mini
+max_output_tokens: 16384
+finish_reason: stop
+Tokens → input: 816  output: 962
+
+============================================================
+PROMPT (2,675 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 25 de junio de 2026
+VENTANA: 22/06/2026 — 25 de junio de 2026
+
+Tienes 2 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 25 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 2
+- Articulos excluidos (ya reportados): 101
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, TNT Radio Rock, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 25 de junio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 2 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, TNT Radio Rock, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, Esquirlas de Metal, Hoy Rock, Iguana Rock, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Noche de Rock, Radio Domination, Rafa Basa, Rock Circus, Rock Sesion, Rockeando, Sancocho, Sevillametal, The Metal Dreamer, The Sentinel, Trueno Metálico, Turbo Rock, Reino de Sueños, Red hard n heavy, The Sound of The Embryo
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-06-25] ROCK EN LA NOCHE BLANCA DE MONTILLA 2026
+   Medio: El Suavecito | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://elsuavecitofn.blogspot.com/2026/06/rock-en-la-noche-blanca-de-montilla-2026.html
+   Resumen: (sin extracto)
+
+2. [2026-06-25] Gira de Rebrote. Papa Roach en España. Fechas de Los de Marras
+   Medio: Keep The Flame | Relevancia: 2/5 | Cat: Concierto
+   URL: https://keeptheflame.es/noticias/conciertos/10335-paparoach-ldm-rebrote.html
+   Resumen: ¡Ponemos al día la agenda de conciertos! Papa Roach ha confirmado su regreso a España con una única fecha exclusiva en Madrid para presentar su gira mundial "Rise of the Roach".
+
+============================================================
+RESPUESTA (3,964 chars):
+============================================================
 # INFORME DIARIO - ROCK NACIONAL
 Fecha: 25 de junio de 2026
 
