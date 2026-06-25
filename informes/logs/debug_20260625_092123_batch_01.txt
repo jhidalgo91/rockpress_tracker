@@ -1,0 +1,104 @@
+=== ROCKPRESS DEBUG — 20260625_092123 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: ERROR
+Tokens → input: 0  output: 0
+
+============================================================
+PROMPT (5,791 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/1 (11 artículos).
+
+FECHA HOY: 25 de junio de 2026
+VENTANA: 22/06/2026 — 25 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-25] PRIDE OF LIONS: Unbridled (Frontiers Music srl) USA.
+  URL: https://www.diariodeunmetalhead.com/2026/06/pride-of-lions-unbridled-frontiers.html
+  Resumen: 📝 Larry Runner.Pride of Lions vuelven a la carga con "Unbriled" y sin sorpresas. Esto es AOR de manual, inmensamente bien tocado.Abren con el tema que da título al disco, con un gu
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-25] Lex Legion – Lex Legion (2026)
+  URL: https://diosesdelmetal.org/lex-legion-lex-legion-2026/
+  Resumen: «Una nueva súper banda que conquista el Heavy Metal internacional» Crítica realizada por ElyAngelOfDeath Heavy Metal – Suecia/Noruega/Estados Unidos Lex Legion, es la nueva banda i
+• [2026-06-25] Rockfemérides 25 junio
+  URL: https://diosesdelmetal.org/rockfemerides-25-junio/
+  Resumen: Hoy cumplen años el guitarrista Tom Maxwell (Knives Out! y Hellyeah); Roope Latvala, ex-Sinergy y Children Of Bodom; el bajista Rob van der Loo (Epica), Anthrax lanza »Attack of th
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-25] Revisando Clásicos. Los Rebeldes - Más allá del bien y del mal
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/revisando-clasicos-los-rebeldes-mas.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-25] QueenMilk regresa con 'Hold the Fire"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/queenmilk-regresa-con-hold-fire.html
+  Resumen: Nuevo sencillo de los maestros del rock Tras una pausa musical, y luego de haber remecido en 2023 la escena del hard rock latinoamericano con tres singles -además de compartir esce
+• [2026-06-25] ROCK EN LA NOCHE BLANCA DE MONTILLA 2026
+  URL: https://elsuavecitofn.blogspot.com/2026/06/rock-en-la-noche-blanca-de-montilla-2026.html
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-06-25] Gira de Rebrote. Papa Roach en España. Fechas de Los de Marras
+  URL: https://keeptheflame.es/noticias/conciertos/10335-paparoach-ldm-rebrote.html
+  Resumen: ¡Ponemos al día la agenda de conciertos! Papa Roach ha confirmado su regreso a España con una única fecha exclusiva en Madrid para presentar su gira mundial "Rise of the Roach" jun
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-25] GREEN CARNATION pondrá el broche final a "A Dark Poem" con "The Messiah Complex" en septiembre
+  URL: https://tntradiorock.com/green-carnation-pondra-el-broche-final-a-a-dark-poem-con-the-messiah-complex-en-septiembre/
+  Resumen: Los noruegos GREEN CARNATION han anunciado el lanzamiento de "A Dark Poem, Part III: The Messiah Complex", tercera y última entrega de su ambiciosa trilogía […] Contenido de TNT Ra
+• [2026-06-25] JOHN DIVA & THE ROCKETS OF LOVE presentan el explosivo nuevo single “S.M.I.L.E.” y anuncian álbum para octubre
+  URL: https://tntradiorock.com/john-diva-the-rockets-of-love-presentan-el-explosivo-nuevo-single-s-m-i-l-e-y-anuncian-album-para-octubre/
+  Resumen: John Diva & The Rockets Of Love han estrenado hoy su nuevo single, “S.M.I.L.E.”, acompañado de un visualizer oficial, como adelanto de su próximo álbum, […] Contenido de TNT Radio 
+• [2026-06-25] PSYCROPTIC presenta “No Blade Of Grass”, nuevo adelanto de su próximo álbum
+  URL: https://tntradiorock.com/psycroptic-presenta-no-blade-of-grass-nuevo-adelanto-de-su-proximo-album/
+  Resumen: Los referentes del death metal técnico PSYCROPTIC han estrenado "No Blade Of Grass", el nuevo sencillo extraído de su próximo trabajo de estudio, "The Pulse […] Contenido de TNT Ra
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-25] Deep Purple estrena "Guilt Trippin'", nuevo single de "Splat!", su inminente disco: "Juré cuando tenía cuarenta años que dejaría de gritar a los sesenta”
+  URL: https://mariskalrock.com/actualidad/deep-purple-estrena-guilt-trippin-nuevo-single-de-splat-su-inminente-disco-jure-cuando-tenia-cuarenta-anos-que-dejaria-de-gritar-a-los-sesenta/
+  Resumen: Nos encontramos a una semana del esperado lanzamiento de ‘Splat!’, el nuevo disco de Deep Purple, que verá la luz el próximo 3 de julio a través de earMusic (reserva disponible aqu
+
+============================================================
+RESPUESTA (0 chars):
+============================================================
+
