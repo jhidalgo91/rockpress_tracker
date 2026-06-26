@@ -1,0 +1,155 @@
+=== ROCKPRESS DEBUG — 20260626_092425 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 2,239  output: 1,203
+
+============================================================
+PROMPT (7,047 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/2 (13 artículos).
+
+FECHA HOY: 26 de junio de 2026
+VENTANA: 23/06/2026 — 26 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-26] Próximas actuaciones de Hamlet
+  URL: https://www.thesoundoftheembryo.es/actuaciones-hamlet/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-26] Crónica de Hellfest 2026 en Clisson, Francia (viernes) con Iron Maiden, Helloween, Sabaton o Bloodywood: Entre leyendas y nuevos héroes del metal
+  URL: https://mariskalrock.com/actualidad/cronica-de-hellfest-2026-en-clisson-francia-viernes-con-iron-maiden-helloween-sabaton-o-bloodywood-entre-leyendas-y-nuevos-heroes-del-metal/
+  Resumen: Si el jueves estuvo dominado en Hellfest por propuestas más modernas y por la vertiente más contemporánea del metal (lee aquí la crónica), el viernes fue una auténtica celebración 
+• [2026-06-25] La olvidada banda a cuyo guitarrista Lars Ulrich (Metallica) se le abrazó a la pierna: "No sabéis lo que significáis para mí”
+  URL: https://mariskalrock.com/actualidad/la-olvidada-banda-a-cuyo-guitarrista-lars-ulrich-metallica-se-le-abrazo-a-la-pierna-no-sabeis-lo-que-significais-para-mi/
+  Resumen: Cuando repasamos los orígenes del hard rock y el heavy metal que deslumbró al mundo entero en la década de los ochenta, la mirada suele dirigirse a la nueva ola que surgió en los 7
+• [2026-06-25] Crónica de Linkin Park en Madrid (miércoles): El renacer de una bestia híbrida
+  URL: https://mariskalrock.com/actualidad/cronica-de-linkin-park-en-madrid-miercoles-el-renacer-de-una-bestia-hibrida/
+  Resumen: “La parte más difícil de terminar es empezar otra vez”, una frase que dice mucho, palabras que nacen de una de grandes canciones de Linkin Park: “Waiting for the End”. En ella Ches
+• [2026-06-25] Crónica de Rock in Rio Lisboa: Por un mundo aún mejor
+  URL: https://mariskalrock.com/actualidad/cronica-de-rock-in-rio-lisboa-por-un-mundo-aun-mejor/
+  Resumen: Un filósofo de dudosa reputación dijo que “la vida sin música sería un error”, y al menos en eso estoy totalmente de acuerdo con él. A pesar de todo lo malo que nos rodea, la vida 
+• [2026-06-25] The Rolling Stones estrenan “Jealous Lover” y “Divine Intervention” como nuevos adelantos de “Foreign Tongues”, su nuevo disco
+  URL: https://mariskalrock.com/actualidad/the-rolling-stones-estrenan-jealous-lover-y-divine-intervention-como-nuevos-adelantos-de-foreign-tongues-su-nuevo-disco/
+  Resumen: Estamos ya en la recta final que desemboca en el esperado lanzamiento de un nuevo disco de The Rolling Stones, ‘Foreign Tongues’, que un día antes de lo anunciado ya tiene a dispos
+• [2026-06-25] Imaginarte Creaciones y el poder de convertir una celebración en un recuerdo imborrable
+  URL: https://mariskalrock.com/actualidad/imaginarte-creaciones-y-el-poder-de-convertir-una-celebracion-en-un-recuerdo-imborrable/
+  Resumen: Hay eventos que no tienen recorrido en la memoria, terminando cuando se apagan las luces. Otros, en cambio, permanecen durante años en los recuerdos de quienes estuvieron allí y a 
+• [2026-06-25] Tom Morello cancela su concierto en BBK Legends Bilbao por el delicado estado de salud de su madre, de 102 años
+  URL: https://mariskalrock.com/actualidad/tom-morello-cancela-su-concierto-en-bbk-legends-bilbao-por-el-delicado-estado-de-salud-de-su-madre-de-102-anos/
+  Resumen: El delicado estado de salud de su madre, de 102 años, ha obligado a Tom Morello a cancelar la actuación que tenía programada como cabeza de cartel del BBK Legends Bilbao el próximo
+• [2026-06-25] Crónica de El Hombre del Saco + Veladura en Madrid: Con el nervio de los grandes
+  URL: https://mariskalrock.com/actualidad/cronica-de-el-hombre-del-saco-en-madrid-con-el-nervio-de-los-grandes/
+  Resumen: En sus discos demuestran fehacientemente que no es solo una banda más, sino que tienen algo para trascender por encima de la mayoría. Ese nervio, esa acidez, esa vehemencia conjuga
+• [2026-06-25] Crónica de Hellfest 2026 en Clisson, Francia (jueves) con Alice Cooper, Deep Purple, Bring Me The Horizon y The Pretty Reckless marcando un espectacular inicio
+  URL: https://mariskalrock.com/actualidad/cronica-de-hellfest-2026-en-clisson-francia-jueves-con-alice-cooper-deep-purple-bring-me-the-horizon-y-the-pretty-reckless-marcando-un-espectacular-inicio/
+  Resumen: A lo largo de sus diecinueve ediciones, el festival francés se ha consolidado como uno de los eventos de música pesada más importantes del planeta, reuniendo este año a cerca de 20
+• [2026-06-25] Entrevista a Sôber y la mejor programación de rock y metal en nuestra radio
+  URL: https://mariskalrock.com/actualidad/entrevista-a-sober-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/
+  Resumen: Nos acercamos peligrosamente un nuevo fin de semana, el último de este mes de junio, al que llegaremos tras una nueva jornada de jueves en la que seguiremos dando caña desde la rad
+• [2026-06-25] Rock Imperium Festival presenta la programación cultural de Side Imperium, subasta de guitarra firmada por Within Temptation incluida
+  URL: https://mariskalrock.com/actualidad/rock-imperium-festival-presenta-la-programacion-cultural-de-side-imperium-subasta-de-guitarra-firmada-por-within-temptation-incluida/
+  Resumen: Los inminentes días 3, 4 y 5 de julio traerán la esperada celebración de una nueva edición de Rock Imperium Festival, el gran evento de Cartagena en el que tendremos a Iron Maiden,
+• [2026-06-25] Fito & Fitipaldis anuncian nuevos conciertos del “Aullidos Tour” en teatros y auditorios para 2026 y 2027
+  URL: https://mariskalrock.com/actualidad/fito-fitipaldis-anuncian-nuevos-conciertos-del-aullidos-tour-en-teatros-y-auditorios-para-2026-y-2027/
+  Resumen: Siguiendo la buena costumbre que han acuñado en los últimos años, Fito & Fitipaldis volverá a la carretera con su “Aullidos Tour”, la gira que presenta la más reciente creación de 
+
+============================================================
+RESPUESTA (3,464 chars):
+============================================================
+[
+  {
+    "title": "Próximas actuaciones de Hamlet",
+    "url": "https://www.thesoundoftheembryo.es/actuaciones-hamlet/",
+    "date": "2026-06-26",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Próximas actuaciones confirmadas de la banda madrileña de metal Hamlet.",
+    "rel": 4,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Crónica de Linkin Park en Madrid (miércoles): El renacer de una bestia híbrida",
+    "url": "https://mariskalrock.com/actualidad/cronica-de-linkin-park-en-madrid-miercoles-el-renacer-de-una-bestia-hibrida/",
+    "date": "2026-06-25",
+    "medio": "Mariskalrock",
+    "excerpt": "Crónica del esperado concierto de Linkin Park en Madrid, marcando el inicio de su nueva etapa con Emily Armstrong.",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Tom Morello cancela su concierto en BBK Legends Bilbao por el delicado estado de salud de su madre, de 102 años",
+    "url": "https://mariskalrock.com/actualidad/tom-morello-cancela-su-concierto-en-bbk-legends-bilbao-por-el-delicado-estado-de-salud-de-su-madre-de-102-anos/",
+    "date": "2026-06-25",
+    "medio": "Mariskalrock",
+    "excerpt": "El delicado estado de salud de su madre ha obligado a Tom Morello a cancelar la actuación que tenía programada como cabeza de cartel del BBK Legends Bilbao.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Crónica de El Hombre del Saco + Veladura en Madrid: Con el nervio de los grandes",
+    "url": "https://mariskalrock.com/actualidad/cronica-de-el-hombre-del-saco-en-madrid-con-el-nervio-de-los-grandes/",
+    "date": "2026-06-25",
+    "medio": "Mariskalrock",
+    "excerpt": "Crónica de la potente descarga de El Hombre del Saco y Veladura en Madrid, demostrando su gran nivel en directo.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Entrevista a Sôber y la mejor programación de rock y metal en nuestra radio",
+    "url": "https://mariskalrock.com/actualidad/entrevista-a-sober-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/",
+    "date": "2026-06-25",
+    "medio": "Mariskalrock",
+    "excerpt": "La banda madrileña Sôber protagoniza la programación de radio de Mariskalrock en una jornada cargada de rock y metal.",
+    "rel": 4,
+    "categoria": "Entrevista"
+  },
+  {
+    "title": "Rock Imperium Festival presenta la programación cultural de Side Imperium, subasta de guitarra firmada por Within Temptation incluida",
+    "url": "https://mariskalrock.com/actualidad/rock-imperium-festival-presenta-la-programacion-cultural-de-side-imperium-subasta-de-guitarra-firmada-por-within-temptation-incluida/",
+    "date": "2026-06-25",
+    "medio": "Mariskalrock",
+    "excerpt": "Los inminentes días 3, 4 y 5 de julio traerán la esperada celebración de una nueva edición de Rock Imperium Festival en Cartagena, que presenta sus actividades paralelas.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Fito & Fitipaldis anuncian nuevos conciertos del “Aullidos Tour” en teatros y auditorios para 2026 y 2027",
+    "url": "https://mariskalrock.com/actualidad/fito-fitipaldis-anuncian-nuevos-conciertos-del-aullidos-tour-en-teatros-y-auditorios-para-2026-y-2027/",
+    "date": "2026-06-25",
+    "medio": "Mariskalrock",
+    "excerpt": "Fito & Fitipaldis volverá a la carretera con su “Aullidos Tour”, la gira que presenta su más reciente creación en un formato íntimo de teatros y auditorios.",
+    "rel": 5,
+    "categoria": "Gira"
+  }
+]

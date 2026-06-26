@@ -1,0 +1,318 @@
+=== ROCKPRESS DEBUG — 20260626_092210 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,708  output: 2,583
+
+============================================================
+PROMPT (11,439 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/2 (30 artículos).
+
+FECHA HOY: 26 de junio de 2026
+VENTANA: 23/06/2026 — 26 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-25] El Especial RESURRECTION FEST 2026 listo ya en podcast.
+  URL: https://www.diariodeunmetalhead.com/2026/06/especial-resurrection-fest-2026-esta.html
+  Resumen: La próxima semana se celebra la XXI edición del RESURRECTION FEST. Esta semana emitimos el tradicional programa especial dedicado al festival. Tracklist:01 Sintonía02 IRON MAIDEN -
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-26] Videns Veritatis – Man From the Sky (EP 2026)
+  URL: https://diosesdelmetal.org/videns-veritatis-man-from-the-sky-ep-2026/
+  Resumen: “Arquitectos de la disparidad” Crítica escrita por Christian Darchéz Desde Great Yarmouth nos llega el debut de este dúo inglés llamado Videns Veritatis, integrado por el cantante 
+• [2026-06-26] Rockfemérides 26 junio
+  URL: https://diosesdelmetal.org/rockfemerides-26-junio/
+  Resumen: Hoy cumplen años el batería de Kreator, Jürgen Rei; Jussi Sydanmaa, guitarrista de Lordi; Bad English publica su primer disco homónimo, Stratovarius lanza su noveno álbum «Intermis
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-26] El Flacotirador lanza "Poética desordenada" como nuevo single
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/el-flacotirador-lanza-poetica.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-26] CROM regresa tras tres décadas y presenta 'Last Charge', primer adelanto de su nuevo EP 'III
+  URL: https://elsuavecitofn.blogspot.com/2026/06/crom-regresa-tras-tres-decadas-y.html
+  Resumen: CROM regresa tras tres décadas y presenta 'Last Charge', primer adelanto de su nuevo EP 'III'El single, de sonido rápido e intenso, se estrena hoy, 26 de junio, en plataformas digi
+• [2026-06-26] 💣 "Barro" el segundo single de Chicle, con un sonido muy definido y una temática peculiar 💣
+  URL: https://elsuavecitofn.blogspot.com/2026/06/barro-el-segundo-single-de-chicle-con.html
+  Resumen: Chicle presenta susegundo single "Barro"- Un nuevo tema inspirado en la guerra de Vietnam que define el sonido del grupo - Videoclip "Barro" - ChicleChicle presenta su segundo sing
+• [2026-06-26] Lumpem lanza 'Satura': la crudeza del hard rock de los 70 grabada en riguroso directo analógico
+  URL: https://elsuavecitofn.blogspot.com/2026/06/lumpem-lanza-satura-la-crudeza-del-hard.html
+  Resumen: Lumpem lanza 'Satura': la crudeza del hard rock de los 70 grabada en riguroso directo analógicoEl segundo álbum de estudio de la banda abulense ve la luz hoy, 26 de junio de 2026.U
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-06-26] Metal Mad Fest, Madrid (07-06-26)
+  URL: https://keeptheflame.es/cronicas/fest/10333-metalmadfest.html
+  Resumen: El pasado domingo 7 de junio Madrid vibró con la celebración de la primera edición del Metal Mad Fest. Hoy te contamos al detalle todo lo que dio de sí esta jornada histórica de he
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-25] UN LUGAR TRANQUILO
+  URL: https://www.nochederock.com/a-quiet-place/
+
+──────────────────────────────────────────────────
+MEDIO: Sevillametal
+──────────────────────────────────────────────────
+• [2026-06-25] Dünedain encabeza el Rock Arena Fest 2026
+  URL: https://www.sevillametal.org/sevillametal/3180-duenedain-encabeza-el-rock-arena-fest-2026
+  Resumen: La banda abulense encabezará el clásico festival de metal que se realiza en la localidad alicantina de San Fulgencio.
+• [2026-06-25] Aldebaran presenta el lyric video oficial de “Cielos Muertos”
+  URL: https://www.sevillametal.org/sevillametal/3179-aldebaran-presenta-el-lyric-video-oficial-de-cielos-muertos
+  Resumen: La agrupación internacional de heavy metal en español continúa promocionando su álbum debut “Perséfone” con el estreno del lyric video de
+• [2026-06-25] Unholy Harakiri lanza disco
+  URL: https://www.sevillametal.org/sevillametal/3178-unholy-harakiri-lanza-disco
+  Resumen: Unholy Harakiri lanza una inmersión sombría por la cultura japonesa y el Deathcore en el álbum "Higeki 悲劇"
+• [2026-06-25] El sentido homenaje de DESASTRE a un personaje ejemplar: PEPE MUJICA
+  URL: https://www.sevillametal.org/sevillametal/3177-el-sentido-homenaje-de-desastre-a-un-personaje-ejemplar-pepe-mujica
+  Resumen: NUEVAS FECHAS DE GIRA
+• [2026-06-25] CHARGOLA FUCKINGFEST 2026
+  URL: https://www.sevillametal.org/sevillametal/3176-chargola-fuckingfest-2026
+  Resumen: CHARGOLA FUCKINGFEST 2026 CELEBRARÁ SU OCTAVA EDICIÓN ENCABEZADA POR UNDERCROFT EN TEATRO CARIOLA
+• [2026-06-25] Carminium lanza "Owls"
+  URL: https://www.sevillametal.org/sevillametal/3175-carminium-lanza-owls
+  Resumen: Bonus track del álbum "Kintsugi"
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-26] GRADIENCE rompe fronteras entre el death metal y el trap en su debut 'Anomaly', disponible en septiembre
+  URL: https://tntradiorock.com/gradience-rompe-fronteras-entre-el-death-metal-y-el-trap-en-su-debut-anomaly-disponible-en-septiembre/
+  Resumen: La formación danesa GRADIENCE publicará su álbum de debut, "Anomaly", el próximo 4 de septiembre a través de Metal Blade Records. El trabajo supone una […] Contenido de TNT Radio R
+• [2026-06-26] CROM rompe tres décadas de silencio con "Last Charge", adelanto de su nuevo EP III
+  URL: https://tntradiorock.com/crom-rompe-tres-decadas-de-silencio-con-last-charge-adelanto-de-su-nuevo-ep-iii/
+  Resumen: La veterana formación vallisoletana CROM regresa a la actividad discográfica tras más de treinta años de ausencia con el lanzamiento de "Last Charge", primer sencillo […] Contenido
+• [2026-06-26] MOTHER MORGANA inicia una nueva etapa junto a Argonauta Records y presenta el single "Janushead"
+  URL: https://tntradiorock.com/mother-morgana-inicia-una-nueva-etapa-junto-a-argonauta-records-y-presenta-el-single-janushead/
+  Resumen: La banda austríaca de rock progresivo y heavy psych Mother Morgana ha firmado con Argonauta Records y ya prepara el lanzamiento de su nuevo álbum, […] Contenido de TNT Radio Rock
+• [2026-06-25] VORAX presenta el último adelanto de su debut "Volcano Shock" antes de su lanzamiento este 27 de junio
+  URL: https://tntradiorock.com/vorax-presenta-el-ultimo-adelanto-de-su-debut-volcano-shock-antes-de-su-lanzamiento-este-27-de-junio/
+  Resumen: La banda suiza VORAX ha desvelado el último adelanto de su álbum de debut, "Volcano Shock", cuya publicación está prevista para el próximo 27 de […] Contenido de TNT Radio Rock
+• [2026-06-25] STORM FORCE regresan con "Truth", un álbum más poderoso y ambicioso que su debut
+  URL: https://tntradiorock.com/storm-force-regresan-con-truth-un-album-mas-poderoso-y-ambicioso-que-su-debut/
+  Resumen: Los canadienses STORM FORCE han anunciado el lanzamiento de su segundo álbum de estudio, "Truth", que verá la luz el próximo 14 de agosto a […] Contenido de TNT Radio Rock
+• [2026-06-25] SHAKRA convierte el clásico de Anastacia en un poderoso dueto junto a Seraina Telli y anuncia nuevo disco
+  URL: https://tntradiorock.com/shakra-convierte-el-clasico-de-anastacia-en-un-poderoso-dueto-junto-a-seraina-telli-y-anuncia-nuevo-disco/
+  Resumen: Los veteranos del hard rock suizo Shakra han publicado hoy "Left Outside Alone", una versión del exitoso tema que Anastacia lanzó originalmente en 2004. La […] Contenido de TNT Rad
+• [2026-06-25] SIAMESE exploran su etapa más íntima y pesada con "dissolution"
+  URL: https://tntradiorock.com/siamese-exploran-su-etapa-mas-intima-y-pesada-con-dissolution/
+  Resumen: Los daneses SIAMESE publicarán el próximo 26 de junio, a través de Long Branch Records, su nuevo álbum de estudio, "dissolution", un trabajo que se […] Contenido de TNT Radio Rock
+• [2026-06-25] IMMISERATOR firma con Apocalyptic Witchcraft y anuncia el lanzamiento de su debut "The Blight Of Subsistence"
+  URL: https://tntradiorock.com/immiserator-firma-con-apocalyptic-witchcraft-y-anuncia-el-lanzamiento-de-su-debut-the-blight-of-subsistence/
+  Resumen: Immiserator, el nuevo proyecto de blackened death metal experimental creado por Harrison McKenzie a finales de 2025, ha firmado con Apocalyptic Witchcraft para la publicación […] C
+• [2026-06-25] TUNGSTEN presenta “Sunshine Of Fall” y anuncia los detalles de su nuevo álbum Ashes
+  URL: https://tntradiorock.com/tungsten-presenta-sunshine-of-fall-y-anuncia-los-detalles-de-su-nuevo-album-ashes/
+  Resumen: Los suecos TUNGSTEN continúan revelando detalles de su próximo trabajo de estudio con el lanzamiento de "Sunshine Of Fall", un nuevo adelanto de "Ashes", su […] Contenido de TNT Ra
+• [2026-06-25] GREY SHORES anuncia su debut con “Dark Waters of Night”, una ambiciosa fusión de black metal atmosférico y emoción post-rock
+  URL: https://tntradiorock.com/grey-shores-anuncia-su-debut-con-dark-waters-of-night-una-ambiciosa-fusion-de-black-metal-atmosferico-y-emocion-post-rock/
+  Resumen: El dúo sueco de black metal atmosférico Grey Shores ha anunciado el lanzamiento de su álbum de debut, “Dark Waters of Night”, cuya publicación está […] Contenido de TNT Radio Rock
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-26] The Inductions anuncia su sexto trabajo
+  URL: https://www.thesoundoftheembryo.es/the-inductions-anuncia-su-sexto-trabajo/
+• [2026-06-26] V.I.L. lanza videoclip “The Epitaph”
+  URL: https://www.thesoundoftheembryo.es/v-i-l-lanza-videoclip-the-epitaph/
+• [2026-06-26] Arendel estrena videoclip “Tu veneno”
+  URL: https://www.thesoundoftheembryo.es/arendel-estrena-videoclip-tu-veneno/
+• [2026-06-26] Cartel del festival Rock D’aki
+  URL: https://www.thesoundoftheembryo.es/cartel-del-festival-rock-daki/
+• [2026-06-26] La Muestra Bilbao Metal, Pop-Rock Aste Nagusia 2026
+  URL: https://www.thesoundoftheembryo.es/la-muestra-bilbao-metal-pop-rock-aste-nagusia-2026/
+
+============================================================
+RESPUESTA (7,139 chars):
+============================================================
+[
+  {
+    "title": "El Especial RESURRECTION FEST 2026 listo ya en podcast.",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/especial-resurrection-fest-2026-esta.html",
+    "date": "2026-06-25",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "La próxima semana se celebra la XXI edición del RESURRECTION FEST. Esta semana emitimos el tradicional programa especial dedicado al festival.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "El Flacotirador lanza \"Poética desordenada\" como nuevo single",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/el-flacotirador-lanza-poetica.html",
+    "date": "2026-06-26",
+    "medio": "El Clavijero Rock",
+    "excerpt": "El Flacotirador lanza \"Poética desordenada\" como nuevo single",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "CROM regresa tras tres décadas y presenta 'Last Charge', primer adelanto de su nuevo EP 'III",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/crom-regresa-tras-tres-decadas-y.html",
+    "date": "2026-06-26",
+    "medio": "El Suavecito",
+    "excerpt": "CROM regresa tras tres décadas y presenta 'Last Charge', primer adelanto de su nuevo EP 'III' El single, de sonido rápido e intenso, se estrena hoy, 26 de junio, en plataformas digitales.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "💣 \"Barro\" el segundo single de Chicle, con un sonido muy definido y una temática peculiar 💣",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/barro-el-segundo-single-de-chicle-con.html",
+    "date": "2026-06-26",
+    "medio": "El Suavecito",
+    "excerpt": "Chicle presenta su segundo single \"Barro\" - Un nuevo tema inspirado en la guerra de Vietnam que define el sonido del grupo.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Lumpem lanza 'Satura': la crudeza del hard rock de los 70 grabada en riguroso directo analógico",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/lumpem-lanza-satura-la-crudeza-del-hard.html",
+    "date": "2026-06-26",
+    "medio": "El Suavecito",
+    "excerpt": "El segundo álbum de estudio de la banda abulense ve la luz hoy, 26 de junio de 2026. Grabado en riguroso directo analógico.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Metal Mad Fest, Madrid (07-06-26)",
+    "url": "https://keeptheflame.es/cronicas/fest/10333-metalmadfest.html",
+    "date": "2026-06-26",
+    "medio": "Keep The Flame",
+    "excerpt": "El pasado domingo 7 de junio Madrid vibró con la celebración de la primera edición del Metal Mad Fest. Hoy te contamos al detalle todo lo que dio de sí esta jornada histórica.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Dünedain encabeza el Rock Arena Fest 2026",
+    "url": "https://www.sevillametal.org/sevillametal/3180-duenedain-encabeza-el-rock-arena-fest-2026",
+    "date": "2026-06-25",
+    "medio": "Sevillametal",
+    "excerpt": "La banda abulense encabezará el clásico festival de metal que se realiza en la localidad alicantina de San Fulgencio.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Aldebaran presenta el lyric video oficial de “Cielos Muertos”",
+    "url": "https://www.sevillametal.org/sevillametal/3179-aldebaran-presenta-el-lyric-video-oficial-de-cielos-muertos",
+    "date": "2026-06-25",
+    "medio": "Sevillametal",
+    "excerpt": "La agrupación de heavy metal en español continúa promocionando su álbum debut “Perséfone” con el estreno del lyric video de “Cielos Muertos”.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Unholy Harakiri lanza disco",
+    "url": "https://www.sevillametal.org/sevillametal/3178-unholy-harakiri-lanza-disco",
+    "date": "2026-06-25",
+    "medio": "Sevillametal",
+    "excerpt": "Unholy Harakiri lanza una inmersión sombría por la cultura japonesa y el Deathcore en el álbum \"Higeki 悲劇\"",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "El sentido homenaje de DESASTRE a un personaje ejemplar: PEPE MUJICA",
+    "url": "https://www.sevillametal.org/sevillametal/3177-el-sentido-homenaje-de-desastre-a-un-personaje-ejemplar-pepe-mujica",
+    "date": "2026-06-25",
+    "medio": "Sevillametal",
+    "excerpt": "NUEVAS FECHAS DE GIRA de la banda madrileña Desastre presentando su homenaje a Pepe Mujica.",
+    "rel": 4,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Carminium lanza \"Owls\"",
+    "url": "https://www.sevillametal.org/sevillametal/3175-carminium-lanza-owls",
+    "date": "2026-06-25",
+    "medio": "Sevillametal",
+    "excerpt": "Bonus track del álbum \"Kintsugi\" de la banda sevillana Carminium.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "CROM rompe tres décadas de silencio con \"Last Charge\", adelanto de su nuevo EP III",
+    "url": "https://tntradiorock.com/crom-rompe-tres-decadas-de-silencio-con-last-charge-adelanto-de-su-nuevo-ep-iii/",
+    "date": "2026-06-26",
+    "medio": "TNT Radio Rock",
+    "excerpt": "La veterana formación vallisoletana CROM regresa a la actividad discográfica tras más de treinta años de ausencia con el lanzamiento de \"Last Charge\".",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "The Inductions anuncia su sexto trabajo",
+    "url": "https://www.thesoundoftheembryo.es/the-inductions-anuncia-su-sexto-trabajo/",
+    "date": "2026-06-26",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda sevillana The Inductions anuncia los detalles de lo que será su sexto trabajo discográfico.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "V.I.L. lanza videoclip “The Epitaph”",
+    "url": "https://www.thesoundoftheembryo.es/v-i-l-lanza-videoclip-the-epitaph/",
+    "date": "2026-06-26",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda de metal nacional V.I.L. estrena su nuevo videoclip oficial para el tema “The Epitaph”.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Arendel estrena videoclip “Tu veneno”",
+    "url": "https://www.thesoundoftheembryo.es/arendel-estrena-videoclip-tu-veneno/",
+    "date": "2026-06-26",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda valenciana de power metal Arendel presenta su nuevo videoclip correspondiente al tema “Tu veneno”.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Cartel del festival Rock D’aki",
+    "url": "https://www.thesoundoftheembryo.es/cartel-del-festival-rock-daki/",
+    "date": "2026-06-26",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Se revela el cartel completo para la nueva edición del festival Rock D'aki.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "La Muestra Bilbao Metal, Pop-Rock Aste Nagusia 2026",
+    "url": "https://www.thesoundoftheembryo.es/la-muestra-bilbao-metal-pop-rock-aste-nagusia-2026/",
+    "date": "2026-06-26",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Se anuncian las bandas seleccionadas para participar en la Muestra de Bilbao Metal, Pop-Rock de la Aste Nagusia 2026.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  }
+]

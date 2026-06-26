@@ -1,0 +1,414 @@
+=== ROCKPRESS DEBUG — 20260626_092717 — informe_final ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 16384
+finish_reason: 1
+Tokens → input: 3,854  output: 4,160
+
+============================================================
+PROMPT (11,223 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 26 de junio de 2026
+VENTANA: 23/06/2026 — 26 de junio de 2026
+
+Tienes 24 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 26 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 24
+- Articulos excluidos (ya reportados): 63
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Sevillametal, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 26 de junio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 24 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Sevillametal, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, Esquirlas de Metal, Hoy Rock, Iguana Rock, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Radio Domination, Rafa Basa, Rock Circus, Rock Sesion, Rockeando, Sancocho, The Metal Dreamer, The Sentinel, Trueno Metálico, Turbo Rock, Reino de Sueños, Red hard n heavy
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-06-25] El Especial RESURRECTION FEST 2026 listo ya en podcast.
+   Medio: Diario de un Metalhead | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://www.diariodeunmetalhead.com/2026/06/especial-resurrection-fest-2026-esta.html
+   Resumen: La próxima semana se celebra la XXI edición del RESURRECTION FEST. Esta semana emitimos el tradicional programa especial dedicado al festival.
+
+2. [2026-06-25] Rock Imperium Festival presenta la programación cultural de Side Imperium, subasta de guitarra firmada por Within Temptation incluida
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://mariskalrock.com/actualidad/rock-imperium-festival-presenta-la-programacion-cultural-de-side-imperium-subasta-de-guitarra-firmada-por-within-temptation-incluida/
+   Resumen: Los inminentes días 3, 4 y 5 de julio traerán la esperada celebración de una nueva edición de Rock Imperium Festival en Cartagena, que presenta sus actividades paralelas.
+
+3. [2026-06-25] Fito & Fitipaldis anuncian nuevos conciertos del “Aullidos Tour” en teatros y auditorios para 2026 y 2027
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Gira
+   URL: https://mariskalrock.com/actualidad/fito-fitipaldis-anuncian-nuevos-conciertos-del-aullidos-tour-en-teatros-y-auditorios-para-2026-y-2027/
+   Resumen: Fito & Fitipaldis volverá a la carretera con su “Aullidos Tour”, la gira que presenta su más reciente creación en un formato íntimo de teatros y auditorios.
+
+4. [2026-06-26] CROM regresa tras tres décadas y presenta 'Last Charge', primer adelanto de su nuevo EP 'III
+   Medio: El Suavecito | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://elsuavecitofn.blogspot.com/2026/06/crom-regresa-tras-tres-decadas-y.html
+   Resumen: CROM regresa tras tres décadas y presenta 'Last Charge', primer adelanto de su nuevo EP 'III' El single, de sonido rápido e intenso, se estrena hoy, 26 de junio, en plataformas digitales.
+
+5. [2026-06-26] 💣 "Barro" el segundo single de Chicle, con un sonido muy definido y una temática peculiar 💣
+   Medio: El Suavecito | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://elsuavecitofn.blogspot.com/2026/06/barro-el-segundo-single-de-chicle-con.html
+   Resumen: Chicle presenta su segundo single "Barro" - Un nuevo tema inspirado en la guerra de Vietnam que define el sonido del grupo.
+
+6. [2026-06-25] Dünedain encabeza el Rock Arena Fest 2026
+   Medio: Sevillametal | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.sevillametal.org/sevillametal/3180-duenedain-encabeza-el-rock-arena-fest-2026
+   Resumen: La banda abulense encabezará el clásico festival de metal que se realiza en la localidad alicantina de San Fulgencio.
+
+7. [2026-06-25] El sentido homenaje de DESASTRE a un personaje ejemplar: PEPE MUJICA
+   Medio: Sevillametal | Relevancia: 4/5 | Cat: Gira
+   URL: https://www.sevillametal.org/sevillametal/3177-el-sentido-homenaje-de-desastre-a-un-personaje-ejemplar-pepe-mujica
+   Resumen: NUEVAS FECHAS DE GIRA de la banda madrileña Desastre presentando su homenaje a Pepe Mujica.
+
+8. [2026-06-26] CROM rompe tres décadas de silencio con "Last Charge", adelanto de su nuevo EP III
+   Medio: TNT Radio Rock | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://tntradiorock.com/crom-rompe-tres-decadas-de-silencio-con-last-charge-adelanto-de-su-nuevo-ep-iii/
+   Resumen: La veterana formación vallisoletana CROM regresa a la actividad discográfica tras más de treinta años de ausencia con el lanzamiento de "Last Charge".
+
+9. [2026-06-26] La Muestra Bilbao Metal, Pop-Rock Aste Nagusia 2026
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.thesoundoftheembryo.es/la-muestra-bilbao-metal-pop-rock-aste-nagusia-2026/
+   Resumen: Se anuncian las bandas seleccionadas para participar en la Muestra de Bilbao Metal, Pop-Rock de la Aste Nagusia 2026.
+
+10. [2026-06-26] Próximas actuaciones de Hamlet
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Gira
+   URL: https://www.thesoundoftheembryo.es/actuaciones-hamlet/
+   Resumen: Próximas actuaciones confirmadas de la banda madrileña de metal Hamlet.
+
+11. [2026-06-25] Crónica de Linkin Park en Madrid (miércoles): El renacer de una bestia híbrida
+   Medio: Mariskalrock | Relevancia: 4/5 | Cat: Concierto
+   URL: https://mariskalrock.com/actualidad/cronica-de-linkin-park-en-madrid-miercoles-el-renacer-de-una-bestia-hibrida/
+   Resumen: Crónica del esperado concierto de Linkin Park en Madrid, marcando el inicio de su nueva etapa con Emily Armstrong.
+
+12. [2026-06-25] Entrevista a Sôber y la mejor programación de rock y metal en nuestra radio
+   Medio: Mariskalrock | Relevancia: 4/5 | Cat: Entrevista
+   URL: https://mariskalrock.com/actualidad/entrevista-a-sober-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/
+   Resumen: La banda madrileña Sôber protagoniza la programación de radio de Mariskalrock en una jornada cargada de rock y metal.
+
+13. [2026-06-26] El Flacotirador lanza "Poética desordenada" como nuevo single
+   Medio: El Clavijero Rock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://el-clavijero-rock.blogspot.com/2026/06/el-flacotirador-lanza-poetica.html
+   Resumen: El Flacotirador lanza "Poética desordenada" como nuevo single
+
+14. [2026-06-26] Lumpem lanza 'Satura': la crudeza del hard rock de los 70 grabada en riguroso directo analógico
+   Medio: El Suavecito | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://elsuavecitofn.blogspot.com/2026/06/lumpem-lanza-satura-la-crudeza-del-hard.html
+   Resumen: El segundo álbum de estudio de la banda abulense ve la luz hoy, 26 de junio de 2026. Grabado en riguroso directo analógico.
+
+15. [2026-06-26] Metal Mad Fest, Madrid (07-06-26)
+   Medio: Keep The Flame | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://keeptheflame.es/cronicas/fest/10333-metalmadfest.html
+   Resumen: El pasado domingo 7 de junio Madrid vibró con la celebración de la primera edición del Metal Mad Fest. Hoy te contamos al detalle todo lo que dio de sí esta jornada histórica.
+
+16. [2026-06-25] Aldebaran presenta el lyric video oficial de “Cielos Muertos”
+   Medio: Sevillametal | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.sevillametal.org/sevillametal/3179-aldebaran-presenta-el-lyric-video-oficial-de-cielos-muertos
+   Resumen: La agrupación de heavy metal en español continúa promocionando su álbum debut “Perséfone” con el estreno del lyric video de “Cielos Muertos”.
+
+17. [2026-06-25] Unholy Harakiri lanza disco
+   Medio: Sevillametal | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.sevillametal.org/sevillametal/3178-unholy-harakiri-lanza-disco
+   Resumen: Unholy Harakiri lanza una inmersión sombría por la cultura japonesa y el Deathcore en el álbum "Higeki 悲劇"
+
+18. [2026-06-25] Carminium lanza "Owls"
+   Medio: Sevillametal | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.sevillametal.org/sevillametal/3175-carminium-lanza-owls
+   Resumen: Bonus track del álbum "Kintsugi" de la banda sevillana Carminium.
+
+19. [2026-06-26] The Inductions anuncia su sexto trabajo
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/the-inductions-anuncia-su-sexto-trabajo/
+   Resumen: La banda sevillana The Inductions anuncia los detalles de lo que será su sexto trabajo discográfico.
+
+20. [2026-06-26] V.I.L. lanza videoclip “The Epitaph”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/v-i-l-lanza-videoclip-the-epitaph/
+   Resumen: La banda de metal nacional V.I.L. estrena su nuevo videoclip oficial para el tema “The Epitaph”.
+
+21. [2026-06-26] Arendel estrena videoclip “Tu veneno”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/arendel-estrena-videoclip-tu-veneno/
+   Resumen: La banda valenciana de power metal Arendel presenta su nuevo videoclip correspondiente al tema “Tu veneno”.
+
+22. [2026-06-26] Cartel del festival Rock D’aki
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://www.thesoundoftheembryo.es/cartel-del-festival-rock-daki/
+   Resumen: Se revela el cartel completo para la nueva edición del festival Rock D'aki.
+
+23. [2026-06-25] Tom Morello cancela su concierto en BBK Legends Bilbao por el delicado estado de salud de su madre, de 102 años
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Concierto
+   URL: https://mariskalrock.com/actualidad/tom-morello-cancela-su-concierto-en-bbk-legends-bilbao-por-el-delicado-estado-de-salud-de-su-madre-de-102-anos/
+   Resumen: El delicado estado de salud de su madre ha obligado a Tom Morello a cancelar la actuación que tenía programada como cabeza de cartel del BBK Legends Bilbao.
+
+24. [2026-06-25] Crónica de El Hombre del Saco + Veladura en Madrid: Con el nervio de los grandes
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Concierto
+   URL: https://mariskalrock.com/actualidad/cronica-de-el-hombre-del-saco-en-madrid-con-el-nervio-de-los-grandes/
+   Resumen: Crónica de la potente descarga de El Hombre del Saco y Veladura en Madrid, demostrando su gran nivel en directo.
+
+============================================================
+RESPUESTA (14,433 chars):
+============================================================
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 26 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**1. El Especial RESURRECTION FEST 2026 listo ya en podcast.** - Diario de un Metalhead
+Resumen: La próxima semana se celebra la XXI edición del RESURRECTION FEST. Esta semana se emite el tradicional programa especial dedicado al festival para calentar motores.
+Enlace: https://www.diariodeunmetalhead.com/2026/06/especial-resurrection-fest-2026-esta.html
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Información clave sobre uno de los festivales de metal más importantes del país.
+
+**2. Rock Imperium Festival presenta la programación cultural de Side Imperium, subasta de guitarra firmada por Within Temptation incluida** - Mariskalrock
+Resumen: Los inminentes días 3, 4 y 5 de julio traerán la esperada celebración de una nueva edición de Rock Imperium Festival en Cartagena. El evento presenta sus actividades paralelas, incluyendo una subasta benéfica de una guitarra firmada por Within Temptation.
+Enlace: https://mariskalrock.com/actualidad/rock-imperium-festival-presenta-la-programacion-cultural-de-side-imperium-subasta-de-guitarra-firmada-por-within-temptation-incluida/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Detalles de las actividades culturales de un festival de gran envergadura nacional.
+
+**3. Fito & Fitipaldis anuncian nuevos conciertos del “Aullidos Tour” en teatros y auditorios para 2026 y 2027** - Mariskalrock
+Resumen: Fito & Fitipaldis volverá a la carretera con su “Aullidos Tour”, la gira que presenta su más reciente creación. Los conciertos se realizarán en un formato íntimo de teatros y auditorios durante los años 2026 y 2027.
+Enlace: https://mariskalrock.com/actualidad/fito-fitipaldis-anuncian-nuevos-conciertos-del-aullidos-tour-en-teatros-y-auditorios-para-2026-y-2027/
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐⭐ - Anuncio de gira de uno de los artistas más multitudinarios del rock español.
+
+**4. CROM regresa tras tres décadas y presenta 'Last Charge', primer adelanto de su nuevo EP 'III'** - El Suavecito
+Resumen: CROM regresa tras tres décadas de silencio discográfico y presenta 'Last Charge', primer adelanto de su nuevo EP 'III'. El single, de sonido rápido e intenso, se estrena hoy, 26 de junio, en plataformas digitales.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/crom-regresa-tras-tres-decadas-y.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Retorno histórico de una banda clásica tras 30 años de inactividad.
+
+**5. 💣 "Barro" el segundo single de Chicle, con un sonido muy definido y una temática peculiar 💣** - El Suavecito
+Resumen: Chicle presenta su segundo single "Barro", un nuevo tema inspirado en la guerra de Vietnam. La canción define el sonido característico y la temática peculiar del grupo.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/barro-el-segundo-single-de-chicle-con.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Lanzamiento destacado de una banda emergente con propuesta sólida.
+
+**6. Dünedain encabeza el Rock Arena Fest 2026** - Sevillametal
+Resumen: La banda abulense Dünedain encabezará el clásico festival de metal Rock Arena Fest 2026. El evento se realiza en la localidad alicantina de San Fulgencio.
+Enlace: https://www.sevillametal.org/sevillametal/3180-duenedain-encabeza-el-rock-arena-fest-2026
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Confirmación de cabeza de cartel para un festival nacional relevante.
+
+**7. El sentido homenaje de DESASTRE a un personaje ejemplar: PEPE MUJICA** - Sevillametal
+Resumen: La banda madrileña Desastre anuncia nuevas fechas de gira para presentar su homenaje a Pepe Mujica. El grupo rinde un sentido tributo a este personaje ejemplar.
+Enlace: https://www.sevillametal.org/sevillametal/3177-el-sentido-homenaje-de-desastre-a-un-personaje-ejemplar-pepe-mujica
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐ - Anuncio de fechas de gira de una banda mítica estatal con temática social.
+
+**8. CROM rompe tres décadas de silencio con "Last Charge", adelanto de su nuevo EP III** - TNT Radio Rock
+Resumen: La veterana formación vallisoletana CROM regresa a la actividad discográfica tras más de treinta años de ausencia. El retorno se materializa con el lanzamiento de su nuevo single "Last Charge", adelanto de su EP III.
+Enlace: https://tntradiorock.com/crom-rompe-tres-decadas-de-silencio-con-last-charge-adelanto-de-su-nuevo-ep-iii/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Cobertura del esperado regreso discográfico de una banda de culto nacional.
+
+**9. La Muestra Bilbao Metal, Pop-Rock Aste Nagusia 2026** - The Sound of The Embryo
+Resumen: Se anuncian las bandas seleccionadas para participar en la Muestra de Bilbao Metal, Pop-Rock de la Aste Nagusia 2026. Este evento es una plataforma clave para la escena local.
+Enlace: https://www.thesoundoftheembryo.es/la-muestra-bilbao-metal-pop-rock-aste-nagusia-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Selección de bandas para un evento de gran tradición en el norte.
+
+**10. Próximas actuaciones de Hamlet** - The Sound of The Embryo
+Resumen: Se confirman las próximas actuaciones de la banda madrileña de metal Hamlet. El grupo continúa con su intensa actividad en directo por todo el territorio nacional.
+Enlace: https://www.thesoundoftheembryo.es/actuaciones-hamlet/
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐ - Fechas de directo de uno de los pilares del metal nacional.
+
+**11. Crónica de Linkin Park en Madrid (miércoles): El renacer de una bestia híbrida** - Mariskalrock
+Resumen: Crónica del esperado concierto de Linkin Park en Madrid, marcando el inicio de su nueva etapa con Emily Armstrong. El show demostró el renacer de la banda ante el público español.
+Enlace: https://mariskalrock.com/actualidad/cronica-de-linkin-park-en-madrid-miercoles-el-renacer-de-una-bestia-hibrida/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐⭐ - Cobertura de un gran concierto internacional en territorio nacional.
+
+**12. Entrevista a Sôber y la mejor programación de rock y metal en nuestra radio** - Mariskalrock
+Resumen: La banda madrileña Sôber protagoniza la programación de radio de Mariskalrock en una jornada cargada de rock y metal. El grupo ofrece una entrevista exclusiva para repasar su actualidad.
+Enlace: https://mariskalrock.com/actualidad/entrevista-a-sober-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/
+Categoria: Entrevista
+Relevancia: ⭐⭐⭐⭐ - Entrevista a una de las bandas más importantes del metal alternativo nacional.
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+**13. El Flacotirador lanza "Poética desordenada" como nuevo single** - El Clavijero Rock
+Resumen: El Flacotirador lanza "Poética desordenada" como su nuevo single. El tema ya se encuentra disponible para los seguidores del rock nacional.
+Enlace: https://el-clavijero-rock.blogspot.com/2026/06/el-flacotirador-lanza-poetica.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de nuevo material de rock de autor nacional.
+
+**14. Lumpem lanza 'Satura': la crudeza del hard rock de los 70 grabada en riguroso directo analógico** - El Suavecito
+Resumen: El segundo álbum de estudio de la banda abulense Lumpem ve la luz hoy, 26 de junio de 2026. El trabajo, titulado 'Satura', fue grabado en riguroso directo analógico para capturar la crudeza del hard rock de los 70.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/lumpem-lanza-satura-la-crudeza-del-hard.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento discográfico de interés para los seguidores del hard rock clásico.
+
+**15. Metal Mad Fest, Madrid (07-06-26)** - Keep The Flame
+Resumen: El pasado domingo 7 de junio Madrid vibró con la celebración de la primera edición del Metal Mad Fest. Se detallan todos los pormenores de esta jornada histórica para el metal en la capital.
+Enlace: https://keeptheflame.es/cronicas/fest/10333-metalmadfest.html
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Crónica de un festival nacional de reciente creación.
+
+**16. Aldebaran presenta el lyric video oficial de “Cielos Muertos”** - Sevillametal
+Resumen: La agrupación de heavy metal en español Aldebaran continúa promocionando su álbum debut “Perséfone”. Para ello, presentan el estreno del lyric video oficial de su tema “Cielos Muertos”.
+Enlace: https://www.sevillametal.org/sevillametal/3179-aldebaran-presenta-el-lyric-video-oficial-de-cielos-muertos
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Promoción de material audiovisual de banda nacional de heavy metal.
+
+**17. Unholy Harakiri lanza disco** - Sevillametal
+Resumen: Unholy Harakiri lanza su nuevo álbum titulado "Higeki 悲劇". El trabajo propone una inmersión sombría por la cultura japonesa y el Deathcore.
+Enlace: https://www.sevillametal.org/sevillametal/3178-unholy-harakiri-lanza-disco
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de álbum de metal extremo nacional.
+
+**18. Carminium lanza "Owls"** - Sevillametal
+Resumen: Se estrena "Owls", un bonus track perteneciente al álbum "Kintsugi" de la banda sevillana Carminium. El tema complementa el repertorio reciente de la agrupación.
+Enlace: https://www.sevillametal.org/sevillametal/3175-carminium-lanza-owls
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de tema extra de banda local.
+
+**19. The Inductions anuncia su sexto trabajo** - The Sound of The Embryo
+Resumen: La banda sevillana The Inductions anuncia los detalles de lo que será su sexto trabajo discográfico. El grupo desvela los pormenores de esta nueva producción.
+Enlace: https://www.thesoundoftheembryo.es/the-inductions-anuncia-su-sexto-trabajo/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Anuncio de nuevos detalles de producción discográfica nacional.
+
+**20. V.I.L. lanza videoclip “The Epitaph”** - The Sound of The Embryo
+Resumen: La banda de metal nacional V.I.L. estrena su nuevo videoclip oficial para el tema “The Epitaph”. El lanzamiento audiovisual ya está disponible para sus seguidores.
+Enlace: https://www.thesoundoftheembryo.es/v-i-l-lanza-videoclip-the-epitaph/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Estreno de videoclip de banda de metal nacional.
+
+**21. Arendel estrena videoclip “Tu veneno”** - The Sound of The Embryo
+Resumen: La banda valenciana de power metal Arendel presenta su nuevo videoclip correspondiente al tema “Tu veneno”. El grupo sigue promocionando su propuesta musical con este lanzamiento.
+Enlace: https://www.thesoundoftheembryo.es/arendel-estrena-videoclip-tu-veneno/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Estreno de videoclip de power metal nacional.
+
+**22. Cartel del festival Rock D’aki** - The Sound of The Embryo
+Resumen: Se revela el cartel completo para la nueva edición del festival Rock D'aki. El evento confirma su nómina de artistas para esta entrega.
+Enlace: https://www.thesoundoftheembryo.es/cartel-del-festival-rock-daki/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Confirmación de cartel de festival nacional de formato medio/pequeño.
+
+**23. Tom Morello cancela su concierto en BBK Legends Bilbao por el delicado estado de salud de su madre, de 102 años** - Mariskalrock
+Resumen: El delicado estado de salud de su madre de 102 años ha obligado a Tom Morello a cancelar su actuación en el BBK Legends Bilbao. El guitarrista iba a participar como cabeza de cartel del festival.
+Enlace: https://mariskalrock.com/actualidad/tom-morello-cancela-su-concierto-en-bbk-legends-bilbao-por-el-delicado-estado-de-salud-de-su-madre-de-102-anos/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Cancelación de un cabeza de cartel internacional en un festival nacional.
+
+**24. Crónica de El Hombre del Saco + Veladura en Madrid: Con el nervio de los grandes** - Mariskalrock
+Resumen: Crónica de la potente descarga de El Hombre del Saco y Veladura en Madrid. Ambas agrupaciones demostraron su gran nivel y nervio en directo ante el público de la capital.
+Enlace: https://mariskalrock.com/actualidad/cronica-de-el-hombre-del-saco-en-madrid-con-el-nervio-de-los-grandes/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Crónica de concierto de bandas de la escena underground nacional.
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+*No se registraron noticias en este rango de relevancia para esta jornada.*
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 24
+- Articulos excluidos (ya reportados): 63
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Sevillametal, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: Se observa una intensa actividad en lanzamientos discográficos y videoclips de bandas nacionales de diversos subgéneros como el heavy, power y deathcore. Asimismo, los festivales de verano (Resurrection Fest, Rock Imperium, Rock Arena) y las giras de grandes nombres como Fito & Fitipaldis y Hamlet marcan la pauta de la actualidad musical.
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+| Diario de un Metalhead | Con noticias relevantes | Sí |
+| Dioses del Metal | Con noticias relevantes | Sí |
+| El Clavijero Rock | Con noticias relevantes | Sí |
+| El Suavecito | Con noticias relevantes | Sí |
+| Keep The Flame | Con noticias relevantes | Sí |
+| Noche de Rock | Con noticias relevantes | Sí |
+| Sevillametal | Con noticias relevantes | Sí |
+| TNT Radio Rock | Con noticias relevantes | Sí |
+| The Sound of The Embryo | Con noticias relevantes | Sí |
+| Mariskalrock | Con noticias relevantes | Sí |
+| Ballesterock | Sin noticias relevantes | No |
+| Canedorock | Sin noticias relevantes | No |
+| Esquirlas de Metal | Sin noticias relevantes | No |
+| Hoy Rock | Sin noticias relevantes | No |
+| Iguana Rock | Sin noticias relevantes | No |
+| La Frontera del Silencio | Sin noticias relevantes | No |
+| Metal Symphony | Sin noticias relevantes | No |
+| Metalcry | Sin noticias relevantes | No |
+| Metaltrip | Sin noticias relevantes | No |
+| Radio Domination | Sin noticias relevantes | No |
+| Rafa Basa | Sin noticias relevantes | No |
+| Rock Circus | Sin noticias relevantes | No |
+| Rock Sesion | Sin noticias relevantes | No |
+| Rockeando | Sin noticias relevantes | No |
+| Sancocho | Sin noticias relevantes | No |
+| The Metal Dreamer | Sin noticias relevantes | No |
+| The Sentinel | Sin noticias relevantes | No |
+| Trueno Metálico | Sin noticias relevantes | No |
+| Turbo Rock | Sin noticias relevantes | No |
+| Reino de Sueños | Sin noticias relevantes | No |
+| Red hard n heavy | Sin noticias relevantes | No |
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 26 de junio de 2026*
