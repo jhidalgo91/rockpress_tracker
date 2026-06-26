@@ -19,7 +19,7 @@ on:
       api_delay_seconds:
         description: 'Segundos de espera antes de cada llamada a la API IA'
         required: false
-        default: '5'
+        default: '0'
       max_articles_to_analyze:
         description: 'Límite máximo de noticias a analizar (-1 para ilimitado)'
         required: false
