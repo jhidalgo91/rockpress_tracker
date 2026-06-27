@@ -1,0 +1,317 @@
+=== ROCKPRESS DEBUG — 20260627_090919 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 4,085  output: 2,827
+
+============================================================
+PROMPT (12,343 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/2 (30 artículos).
+
+FECHA HOY: 27 de junio de 2026
+VENTANA: 24/06/2026 — 27 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-26] Z! LIVE 2027: el lunes (29 de junio) comienza el viaje.
+  URL: https://www.diariodeunmetalhead.com/2026/06/z-live-2027-el-lunes-29-de-junio.html
+  Resumen: El viaje al Z! LIVE 2027 comienza este lunes, 29 de junio. Desde las 10:00h de la mañana del lunes y solo durante 24 horas podrán adquirirse los primeros 1.000 abonos de la ya adel
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-27] Humble Pie – Winterland (1973, deluxe edition 2026)
+  URL: https://diosesdelmetal.org/humble-pie-winterland-1973-deluxe-edition-2026/
+  Resumen: “Arqueología hard rockera” Escrita por Christian Darchéz Muchos historiadores del Rock hoy en día señalan a bandas como Faces, Cream, The Yardbirds o los mismos Emerson, Lake & Pal
+• [2026-06-27] Rockfemérides 27 junio
+  URL: https://diosesdelmetal.org/rockfemerides-27-junio/
+  Resumen: Un día como hoy se publica «You Can’t Stop Rock ‘n’ Roll», el segundo álbum de estudio de Twisted Sister; Panzer graba su directo »Sábado negro», Bon Jovi publica su sexto álbum de
+• [2026-06-26] Noticias: Savatage + Crom + Avulsed
+  URL: https://diosesdelmetal.org/noticias-savatage-crom-avulsed/
+  Resumen: Single de Savatage – Crom vuelven con nuevo tema – Estreno de Avulsed. Por Rockberto. Savatage han estrenado un nuevo vídeo de su tema clásico «Gutter ballet»m recogido en el álbum
+• [2026-06-26] Profecía + Khelleden + Ángel Negro (Sala Spectrum, Murcia), 20-6-26
+  URL: https://diosesdelmetal.org/profecia-khelleden-angel-negro-sala-spectrum-murcia-20-6-26/
+  Resumen: Ángel Negro renace en una noche de folk y metal junto a Profecía y Khelleden Crónica escrita por Isa M., Fotos de Crom El pasado 20 de junio fue una fecha complicada para cualquier
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-27] Censurados presentan su nuevo sencillo, "Ven"
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/censurados-presentan-su-nuevo-sencillo.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-26] NUEVO SINGLE DE COLAPSO
+  URL: https://elsuavecitofn.blogspot.com/2026/06/nuevo-single-de-colapso.html
+  Resumen: ¿Escuchas “de todo” cuando en realidad quieres decir “de todo lo que mete Espotifai en sus listas de mierda”?Segundo single del nuevo disco PROGRE DE MÍ¡ESCÚCHALO!
+• [2026-06-26] THE BUZZOS: Estrena su nuevo y esperado álbum "Survival"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/the-buzzos-estrena-su-nuevo-y-esperado.html
+  Resumen: THE BUZZOS presenta su nuevo álbum, “Survival”. Este disco es toda una declaración de principios que reflejan la larga trayectoria de la banda, marcada por la perseverancia, la pas
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-27] HOY sábado 27, FIESTA LEYENDAS DEL ROCK en GRANADA con ABONOS y CAMISETAS.
+  URL: https://www.rafabasa.com/2026/06/27/hoy-sabado-27-fiesta-leyendas-del-rock-en-granada-con-abonos-y-camisetas/
+  Resumen: La entrada HOY sábado 27, FIESTA LEYENDAS DEL ROCK en GRANADA con ABONOS y CAMISETAS. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupo
+• [2026-06-26] Floor Jansen – Eric Johnson – CROM.
+  URL: https://www.rafabasa.com/2026/06/26/floor-jansen-eric-johnson-crom/
+  Resumen: Floor Jansen estrena single. Fechas de Eric Johnson. Adelanto de CROM. La entrada Floor Jansen – Eric Johnson – CROM. se publicó primero en WWW.RAFABASA.COM - Noticias en español s
+• [2026-06-26] METALLICA- MASTERPLAN – AVULSED.
+  URL: https://www.rafabasa.com/2026/06/26/metallica-masterplan-avulsed/
+  Resumen: Lyric vídeos de METALLICA. Single de MASTERPLAN. Adelanto de AVULSED. La entrada METALLICA- MASTERPLAN – AVULSED. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre
+• [2026-06-26] FIVE FINGER DEATH PUNCH – MIDJUNGARDS – PERENNIAL ISOLATION
+  URL: https://www.rafabasa.com/2026/06/26/five-finger-death-punch-midjungards-perennial-isolation/
+  Resumen: Nuevo disco de FIVE FINGER DEATH PUNCH. Vídeo de MIDJUNGARDS. PERENNIAL ISOLATION estrenan single. La entrada FIVE FINGER DEATH PUNCH – MIDJUNGARDS – PERENNIAL ISOLATION se publicó
+• [2026-06-26] Crónica y Fotos del AZKENA ROCK FESTIVAL con ALICE COOPER + CORROSION OF CONFORMITY + VOIVOD + SOCIAL DISTORTION + EVARISTO
+  URL: https://www.rafabasa.com/2026/06/26/cronica-y-fotos-del-azkena-rock-festival-con-alice-cooper-corrosion-of-conformity-voivod-social-distortion-evaristo/
+  Resumen: La entrada Crónica y Fotos del AZKENA ROCK FESTIVAL con ALICE COOPER + CORROSION OF CONFORMITY + VOIVOD + SOCIAL DISTORTION + EVARISTO se publicó primero en WWW.RAFABASA.COM - Noti
+• [2026-06-26] SAVATAGE – BRING ME THE HORIZON – SINNER – ARGI
+  URL: https://www.rafabasa.com/2026/06/26/savatage-bring-me-the-horizon-sinner-argi/
+  Resumen: Nuevo vídeo de SAVATAGE para “Gutter Ballet”. Regrabación de BRING ME THE HORIZON. Vídeo de SINNER. ARGI estrenan single. La entrada SAVATAGE – BRING ME THE HORIZON – SINNER – ARGI
+• [2026-06-26] WHITESNAKE – SHAKRA – Tajuña Rock.
+  URL: https://www.rafabasa.com/2026/06/26/whitesnake-shakra-tajuna-rock/
+  Resumen: Reediciones de WHITESNAKE. Vídeo de SHAKRA. Tajuña Rock. La entrada WHITESNAKE – SHAKRA – Tajuña Rock. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música 
+• [2026-06-26] BLIND GUARDIAN – ANGRA – GREEN CARNATION.
+  URL: https://www.rafabasa.com/2026/06/26/blind-guardian-angra-green-carnation/
+  Resumen: Vídeo en directo de BLIND GUARDIAN. ANGRA estrenan vídeo. Nuevo disco de GREEN CARNATION. La entrada BLIND GUARDIAN – ANGRA – GREEN CARNATION. se publicó primero en WWW.RAFABASA.CO
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-27] RAUNCHY profundiza en sus cicatrices emocionales con "Darkest Self", un nuevo adelanto de "Prisoner"
+  URL: https://tntradiorock.com/raunchy-profundiza-en-sus-cicatrices-emocionales-con-darkest-self-un-nuevo-adelanto-de-prisoner/
+  Resumen: Tras presentar dos prometedores sencillos y alimentar la expectación por su esperado regreso, RAUNCHY acaba de lanzar "Darkest Self", un nuevo adelanto de su próximo […] Contenido 
+• [2026-06-27] DESERTFEST BELGIUM 2026; bandas distribuidas por día
+  URL: https://tntradiorock.com/desertfest-belgium-2026-bandas-distribuidas-por-dia/
+  Resumen: La próxima edición de DESERFEST BELGIUM se celebrará el próximo año en la ciudad de Liège (Lieja) entre los días 16 y 18 de octubre […] Contenido de TNT Radio Rock
+• [2026-06-27] AS OCEANS DIVIDE presenta "World Collapse", un nuevo adelanto de su próximo EP homónimo
+  URL: https://tntradiorock.com/as-oceans-divide-presenta-world-collapse-un-nuevo-adelanto-de-su-proximo-ep-homonimo/
+  Resumen: La banda canadiense de metalcore As Oceans Divide continúa consolidando su trayectoria con el anuncio de su nuevo sencillo, "World Collapse". La canción supone el […] Contenido de 
+• [2026-06-26] PRIME CREATION publica su nuevo álbum "Souls Of The Fallen" y reafirma su apuesta por un power metal más ambicioso
+  URL: https://tntradiorock.com/prime-creation-publica-su-nuevo-album-souls-of-the-fallen-y-reafirma-su-apuesta-por-un-power-metal-mas-ambicioso/
+  Resumen: La banda sueca de power metal melódico PRIME CREATION celebra hoy el lanzamiento de su cuarto álbum de estudio, "Souls Of The Fallen", ya disponible […] Contenido de TNT Radio Rock
+• [2026-06-26] CASTLE acelera hacia su nuevo álbum con el estreno del potente sencillo "Truckgrinder"
+  URL: https://tntradiorock.com/castle-acelera-hacia-su-nuevo-album-con-el-estreno-del-potente-sencillo-truckgrinder/
+  Resumen: Castle continúa desvelando el contenido de su próximo trabajo de estudio, "Carrie Chains", cuyo lanzamiento está previsto para el 4 de septiembre a través de […] Contenido de TNT R
+• [2026-06-26] KONGH pone fin a casi una década de silencio con el épico adelanto "Staining the Ether" y anuncia nuevo álbum para septiembre
+  URL: https://tntradiorock.com/kongh-pone-fin-a-casi-una-decada-de-silencio-con-el-epico-adelanto-staining-the-ether-y-anuncia-nuevo-album-para-septiembre/
+  Resumen: Tras casi diez años de silencio, los suecos KONGH regresan con el lanzamiento de "Staining the Ether", el primer adelanto de su esperado cuarto álbum […] Contenido de TNT Radio Roc
+• [2026-06-26] WACKEN 2026; running order
+  URL: https://tntradiorock.com/wacken-2026-running-order/
+  Resumen: La 35ª edición de Wacken Open Air 2026 tendrá lugar del 29 de julio al 1 de agosto de 2026. ¿Quién encenderá el escenario sagrado […] Contenido de TNT Radio Rock
+• [2026-06-26] A GOLPES DE ROCK 362 26/06/2026
+  URL: https://tntradiorock.com/a-golpes-de-rock-362-26-06-2026/
+  Resumen: Podcast del programa para bandas emergentes y poco conocidas A GOLPES DE ROCK 360. En este programa cabe cualquier estilo de música relacionado con el […] Contenido de TNT Radio Ro
+• [2026-06-26] SWR BARROSELAS METALFEST 2027 anunció sus próximas fechas
+  URL: https://tntradiorock.com/swr-barroselas-metalfest-2027-anuncio-sus-proximas-fechas/
+  Resumen: Una vez más la organización del festival lo volvió a lograr de nuevo y por todo lo alto. ¡Fue un fin de semana perfecto del […] Contenido de TNT Radio Rock
+• [2026-06-26] MONUMENT OF MISANTHROPY publica el álbum conceptual "Washington State Charm" inspirado en Ted Bundy
+  URL: https://tntradiorock.com/monument-of-misanthropy-publica-el-album-conceptual-washington-state-charm-inspirado-en-ted-bundy/
+  Resumen: La formación austríaca de brutal death metal MONUMENT OF MISANTHROPY ha lanzado su nuevo álbum de estudio, "Washington State Charm". El trabajo llegará tras la […] Contenido de TNT
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-27] Cartel completo del Inkestas Rock Festibal 2026
+  URL: https://www.thesoundoftheembryo.es/cartel-completo-del-inkestas-rock-festibal-2026/
+• [2026-06-27] Feelingless estrena single “Rise From The Ashes”
+  URL: https://www.thesoundoftheembryo.es/feelingless-estrena-single-rise-from-the-ashes/
+• [2026-06-27] The Buzzos publica su nuevo disco “Survival”
+  URL: https://www.thesoundoftheembryo.es/the-buzzos-publica-su-nuevo-disco-survival/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-27] “Rage for Order” de Queensrÿche cumple 40 años: La preparación, las canciones y el legado de uno de sus discos más celebrados
+  URL: https://mariskalrock.com/actualidad/rage-for-order-de-queensryche-cumple-40-anos-la-preparacion-las-canciones-y-el-legado-de-uno-de-sus-discos-mas-celebrados/
+  Resumen: Retrocedamos hasta la década de los años ochenta. Más precisamente hasta 1986. En aquel momento, en todo el mundo, pero específicamente en Estados Unidos, el fenómeno comercial del
+
+============================================================
+RESPUESTA (7,577 chars):
+============================================================
+[
+  {
+    "title": "Z! LIVE 2027: el lunes (29 de junio) comienza el viaje.",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/z-live-2027-el-lunes-29-de-junio.html",
+    "date": "2026-06-26",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "El viaje al Z! LIVE 2027 comienza este lunes, 29 de junio. Desde las 10:00h de la mañana del lunes y solo durante 24 horas podrán adquirirse los primeros 1.000 abonos de la ya adel",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Noticias: Savatage + Crom + Avulsed",
+    "url": "https://diosesdelmetal.org/noticias-savatage-crom-avulsed/",
+    "date": "2026-06-26",
+    "medio": "Dioses del Metal",
+    "excerpt": "Single de Savatage – Crom vuelven con nuevo tema – Estreno de Avulsed. Por Rockberto. Savatage han estrenado un nuevo vídeo de su tema clásico «Gutter ballet»m recogido en el álbum",
+    "rel": 4,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Profecía + Khelleden + Ángel Negro (Sala Spectrum, Murcia), 20-6-26",
+    "url": "https://diosesdelmetal.org/profecia-khelleden-angel-negro-sala-spectrum-murcia-20-6-26/",
+    "date": "2026-06-26",
+    "medio": "Dioses del Metal",
+    "excerpt": "Ángel Negro renace en una noche de folk y metal junto a Profecía y Khelleden Crónica escrita por Isa M., Fotos de Crom El pasado 20 de junio fue una fecha complicada para cualquier",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Censurados presentan su nuevo sencillo, \"Ven\"",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/censurados-presentan-su-nuevo-sencillo.html",
+    "date": "2026-06-27",
+    "medio": "El Clavijero Rock",
+    "excerpt": "Censurados presentan su nuevo sencillo, \"Ven\"",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "NUEVO SINGLE DE COLAPSO",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/nuevo-single-de-colapso.html",
+    "date": "2026-06-26",
+    "medio": "El Suavecito",
+    "excerpt": "¿Escuchas “de todo” cuando en realidad quieres decir “de todo lo que mete Espotifai en sus listas de mierda”?Segundo single del nuevo disco PROGRE DE MÍ¡ESCÚCHALO!",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "THE BUZZOS: Estrena su nuevo y esperado álbum \"Survival\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/the-buzzos-estrena-su-nuevo-y-esperado.html",
+    "date": "2026-06-26",
+    "medio": "El Suavecito",
+    "excerpt": "THE BUZZOS presenta su nuevo álbum, “Survival”. Este disco es toda una declaración de principios que reflejan la larga trayectoria de la banda, marcada por la perseverancia, la pas",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "HOY sábado 27, FIESTA LEYENDAS DEL ROCK en GRANADA con ABONOS y CAMISETAS.",
+    "url": "https://www.rafabasa.com/2026/06/27/hoy-sabado-27-fiesta-leyendas-del-rock-en-granada-con-abonos-y-camisetas/",
+    "date": "2026-06-27",
+    "medio": "Rafa Basa",
+    "excerpt": "La entrada HOY sábado 27, FIESTA LEYENDAS DEL ROCK en GRANADA con ABONOS y CAMISETAS. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupo",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Floor Jansen – Eric Johnson – CROM.",
+    "url": "https://www.rafabasa.com/2026/06/26/floor-jansen-eric-johnson-crom/",
+    "date": "2026-06-26",
+    "medio": "Rafa Basa",
+    "excerpt": "Floor Jansen estrena single. Fechas de Eric Johnson. Adelanto de CROM. La entrada Floor Jansen – Eric Johnson – CROM. se publicó primero en WWW.RAFABASA.COM - Noticias en español s",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "METALLICA- MASTERPLAN – AVULSED.",
+    "url": "https://www.rafabasa.com/2026/06/26/metallica-masterplan-avulsed/",
+    "date": "2026-06-26",
+    "medio": "Rafa Basa",
+    "excerpt": "Lyric vídeos de METALLICA. Single de MASTERPLAN. Adelanto de AVULSED. La entrada METALLICA- MASTERPLAN – AVULSED. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "FIVE FINGER DEATH PUNCH – MIDJUNGARDS – PERENNIAL ISOLATION",
+    "url": "https://www.rafabasa.com/2026/06/26/five-finger-death-punch-midjungards-perennial-isolation/",
+    "date": "2026-06-26",
+    "medio": "Rafa Basa",
+    "excerpt": "Nuevo disco de FIVE FINGER DEATH PUNCH. Vídeo de MIDJUNGARDS. PERENNIAL ISOLATION estrenan single. La entrada FIVE FINGER DEATH PUNCH – MIDJUNGARDS – PERENNIAL ISOLATION se publicó",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Crónica y Fotos del AZKENA ROCK FESTIVAL con ALICE COOPER + CORROSION OF CONFORMITY + VOIVOD + SOCIAL DISTORTION + EVARISTO",
+    "url": "https://www.rafabasa.com/2026/06/26/cronica-y-fotos-del-azkena-rock-festival-con-alice-cooper-corrosion-of-conformity-voivod-social-distortion-evaristo/",
+    "date": "2026-06-26",
+    "medio": "Rafa Basa",
+    "excerpt": "La entrada Crónica y Fotos del AZKENA ROCK FESTIVAL con ALICE COOPER + CORROSION OF CONFORMITY + VOIVOD + SOCIAL DISTORTION + EVARISTO se publicó primero en WWW.RAFABASA.COM - Noti",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "SAVATAGE – BRING ME THE HORIZON – SINNER – ARGI",
+    "url": "https://www.rafabasa.com/2026/06/26/savatage-bring-me-the-horizon-sinner-argi/",
+    "date": "2026-06-26",
+    "medio": "Rafa Basa",
+    "excerpt": "Nuevo vídeo de SAVATAGE para “Gutter Ballet”. Regrabación de BRING ME THE HORIZON. Vídeo de SINNER. ARGI estrenan single. La entrada SAVATAGE – BRING ME THE HORIZON – SINNER – ARGI",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "WHITESNAKE – SHAKRA – Tajuña Rock.",
+    "url": "https://www.rafabasa.com/2026/06/26/whitesnake-shakra-tajuna-rock/",
+    "date": "2026-06-26",
+    "medio": "Rafa Basa",
+    "excerpt": "Reediciones de WHITESNAKE. Vídeo de SHAKRA. Tajuña Rock. La entrada WHITESNAKE – SHAKRA – Tajuña Rock. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música ",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "A GOLPES DE ROCK 362 26/06/2026",
+    "url": "https://tntradiorock.com/a-golpes-de-rock-362-26-06-2026/",
+    "date": "2026-06-26",
+    "medio": "TNT Radio Rock",
+    "excerpt": "Podcast del programa para bandas emergentes y poco conocidas A GOLPES DE ROCK 360. En este programa cabe cualquier estilo de música relacionado con el […] Contenido de TNT Radio Ro",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Cartel completo del Inkestas Rock Festibal 2026",
+    "url": "https://www.thesoundoftheembryo.es/cartel-completo-del-inkestas-rock-festibal-2026/",
+    "date": "2026-06-27",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Cartel completo del Inkestas Rock Festibal 2026",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Feelingless estrena single “Rise From The Ashes”",
+    "url": "https://www.thesoundoftheembryo.es/feelingless-estrena-single-rise-from-the-ashes/",
+    "date": "2026-06-27",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Feelingless estrena single “Rise From The Ashes”",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "The Buzzos publica su nuevo disco “Survival”",
+    "url": "https://www.thesoundoftheembryo.es/the-buzzos-publica-su-nuevo-disco-survival/",
+    "date": "2026-06-27",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "The Buzzos publica su nuevo disco “Survival”",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  }
+]

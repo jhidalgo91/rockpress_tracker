@@ -1,0 +1,119 @@
+=== ROCKPRESS DEBUG — 20260627_091131 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 1,995  output: 769
+
+============================================================
+PROMPT (6,195 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/2 (11 artículos).
+
+FECHA HOY: 27 de junio de 2026
+VENTANA: 24/06/2026 — 27 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-27] Floor Jansen sigue avanzando en su carrera al margen de Nightwish y estrena “Run”, su nuevo single
+  URL: https://mariskalrock.com/actualidad/floor-jansen-sigue-avanzando-en-su-carrera-al-margen-de-nightwish-y-estrena-run-su-nuevo-single/
+  Resumen: La vocalista Floor Jansen avanza en su carrera al margen de Nightwish y sorprende con “Run”, un nuevo single en solitario. Este adelanto se trata del primer material que publica al
+• [2026-06-26] The Hu estrena "Grey Hun”, nuevo single y videoclip de “Hun”, su tercer disco: “Queríamos asegurarnos de transmitir el mensaje positivo de ser uno mismo”
+  URL: https://mariskalrock.com/noticias-breves/the-hu-estrena-grey-hun-nuevo-single-y-videoclip-de-hun-su-tercer-disco-queriamos-asegurarnos-de-transmitir-el-mensaje-positivo-de-ser-uno-mismo/
+  Resumen: Desde tierras mongolas, The Hu vuelve a la carga con un nuevo adelanto del que será su tercer disco, ‘Hun’. Tras presentarnos temas como “The Real You” o “Lost Soul”, el nuevo sing
+• [2026-06-26] Five Finger Death Punch estrena “De Oppresso Liber”, nuevo adelanto de “Legacy”, su décimo disco: “Nunca creímos que el cielo fuera el límite”
+  URL: https://mariskalrock.com/actualidad/five-finger-death-punch-estrena-de-oppresso-liber-nuevo-adelanto-de-legacy-su-decimo-disco-nunca-creimos-que-el-cielo-fuera-el-limite/
+  Resumen: Five Finger Death Punch tiene programada para inicios del año 2027 una gran gira con la que estará celebrando veinte años de trayectoria marcados por el lanzamiento de su primer di
+• [2026-06-26] Cochè Vil Band lanza “Be Gone”, nueva canción con Pacho Brea (Ankhara) a la voz
+  URL: https://mariskalrock.com/noticias-breves/coche-vil-band-lanza-be-gone-nueva-cancion-con-pacho-brea-ankhara-a-la-voz/
+  Resumen: El rock progresivo de tintes setenteros de la Cochè Vil Band tiene un nuevo ariete con el que seguir conquistando oídos y escenarios. Con la incorporación de Pacho Brea, la potente
+• [2026-06-26] Órdago: “Los días perdidos” es su nuevo single en el camino a su próximo disco
+  URL: https://mariskalrock.com/noticias-breves/ordago-los-dias-perdidos-es-su-nuevo-single-en-el-camino-a-su-proximo-disco/
+  Resumen: Solo un mes después de que nos sorprendiera el estreno de “La tiritera”, el rock de los madrileños Órdago vuelve a rugir con el estreno de “Los días perdidos”, canción que la banda
+• [2026-06-26] Censurados estrena “Ven”, nuevo single y videoclip de su segunda oleada
+  URL: https://mariskalrock.com/noticias-breves/censurados-estrena-ven-nuevo-single-y-videoclip-de-su-segunda-oleada/
+  Resumen: Una de las bandas que a principios del milenio parecían llamadas a ocupar un sitio destacado en la escena de nuestro rock volvía el pasado 2025 tras un largo letargo de más de una 
+• [2026-06-26] The Offspring: El mayor pogo con una canción de Taylor Swift se vivió en Hellfest
+  URL: https://mariskalrock.com/actualidad/the-offspring-el-mayor-pogo-con-una-cancion-de-taylor-swift-se-vivio-en-hellfest/
+  Resumen: La provocación y el salto de cualquier barrera sigue siendo parte de la esencia punk que The Offspring mantiene también cuando están tocando frente a sesenta mil personas en uno de
+• [2026-06-26] Crítica de Cristales Rotos: Sube sube
+  URL: https://mariskalrock.com/actualidad/critica-de-cristales-rotos-sube-sube/
+  Resumen: Los que crecimos con nuestro pop-rock de los 80 y primeros 90, desde los pioneros Miguel Ríos, Topo o Alarma!! a nombres como 091, El Último de la Fila, Tam Tam Go!, La Guardia e i
+• [2026-06-26] Ripper Owens dice que “no tiene sentido” que Judas Priest haya excluido sus discos de Spotify: “Supongo que hay cultura “woke” en el metal también”
+  URL: https://mariskalrock.com/actualidad/ripper-owens-dice-que-no-tiene-sentido-que-judas-priest-haya-excluido-sus-discos-de-spotify-supongo-que-hay-cultura-woke-en-el-metal-tambien/
+  Resumen: Tim “Ripper” Owens, vocalista que sustituyó a Rob Halford en la etapa en la que Judas Priest publicó los discos ‘Jugulator’ y ‘Demolition’, en la segunda mitad de los 90, sigue sin
+• [2026-06-26] Crónica de Rush en Ciudad de México: Veinticuatro años después
+  URL: https://mariskalrock.com/actualidad/cronica-de-rush-en-ciudad-de-mexico-veinticuatro-anos-despues/
+  Resumen: Habían pasado veinticuatro años desde la última visita de la banda al país y once desde que Rush ofreciera su gira de despedida. En el camino, luego de una batalla contra el cáncer
+• [2026-06-26] Una hija encuentra muerto a su padre en la tienda de campaña en el Download Festival: “Cuando era pequeña, me cantaba Slipknot para calmarme”
+  URL: https://mariskalrock.com/actualidad/una-hija-encuentra-muerto-a-su-padre-en-la-tienda-de-campana-en-el-download-festival-cuando-era-pequena-me-cantaba-slipknot-para-calmarme/
+  Resumen: Una tragedia sacudió la última edición de Download Festival, el mítico evento que se celebra tradicionalmente en Castle Donington. El pasado 11 de junio, una joven encontró muerto 
+
+============================================================
+RESPUESTA (2,238 chars):
+============================================================
+[
+  {
+    "title": "Cochè Vil Band lanza “Be Gone”, nueva canción con Pacho Brea (Ankhara) a la voz",
+    "url": "https://mariskalrock.com/noticias-breves/coche-vil-band-lanza-be-gone-nueva-cancion-con-pacho-brea-ankhara-a-la-voz/",
+    "date": "2026-06-26",
+    "medio": "Mariskalrock",
+    "excerpt": "El rock progresivo de tintes setenteros de la Cochè Vil Band tiene un nuevo ariete con el que seguir conquistando oídos y escenarios. Con la incorporación de Pacho Brea, la potente voz de Ankhara...",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Órdago: “Los días perdidos” es su nuevo single en el camino a su próximo disco",
+    "url": "https://mariskalrock.com/noticias-breves/ordago-los-dias-perdidos-es-su-nuevo-single-en-el-camino-a-su-proximo-disco/",
+    "date": "2026-06-26",
+    "medio": "Mariskalrock",
+    "excerpt": "Solo un mes después de que nos sorprendiera el estreno de “La tiritera”, el rock de los madrileños Órdago vuelve a rugir con el estreno de “Los días perdidos”, canción que la banda presenta como adelanto de su próximo disco.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Censurados estrena “Ven”, nuevo single y videoclip de su segunda oleada",
+    "url": "https://mariskalrock.com/noticias-breves/censurados-estrena-ven-nuevo-single-y-videoclip-de-su-segunda-oleada/",
+    "date": "2026-06-26",
+    "medio": "Mariskalrock",
+    "excerpt": "Una de las bandas que a principios del milenio parecían llamadas a ocupar un sitio destacado en la escena de nuestro rock volvía el pasado 2025 tras un largo letargo de más de una década. Censurados estrena ahora 'Ven'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Crítica de Cristales Rotos: Sube sube",
+    "url": "https://mariskalrock.com/actualidad/critica-de-cristales-rotos-sube-sube/",
+    "date": "2026-06-26",
+    "medio": "Mariskalrock",
+    "excerpt": "Los que crecimos con nuestro pop-rock de los 80 y primeros 90, desde los pioneros Miguel Ríos, Topo o Alarma!! a nombres como 091, El Último de la Fila, Tam Tam Go!, La Guardia e incluso Héroes del Silencio, encontramos en Cristales Rotos una propuesta muy interesante.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  }
+]

@@ -1,0 +1,381 @@
+=== ROCKPRESS DEBUG — 20260627_091400 — informe_final ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 16384
+finish_reason: 1
+Tokens → input: 3,708  output: 3,648
+
+============================================================
+PROMPT (10,590 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 27 de junio de 2026
+VENTANA: 24/06/2026 — 27 de junio de 2026
+
+Tienes 21 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 27 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 21
+- Articulos excluidos (ya reportados): 66
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Rafa Basa, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 27 de junio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 21 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Rafa Basa, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, Esquirlas de Metal, Hoy Rock, Iguana Rock, Keep The Flame, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Noche de Rock, Radio Domination, Rock Circus, Rock Sesion, Rockeando, Sancocho, Sevillametal, The Metal Dreamer, The Sentinel, Trueno Metálico, Turbo Rock, Reino de Sueños, Red hard n heavy
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-06-26] Z! LIVE 2027: el lunes (29 de junio) comienza el viaje.
+   Medio: Diario de un Metalhead | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://www.diariodeunmetalhead.com/2026/06/z-live-2027-el-lunes-29-de-junio.html
+   Resumen: El viaje al Z! LIVE 2027 comienza este lunes, 29 de junio. Desde las 10:00h de la mañana del lunes y solo durante 24 horas podrán adquirirse los primeros 1.000 abonos de la ya adel
+
+2. [2026-06-26] Crónica y Fotos del AZKENA ROCK FESTIVAL con ALICE COOPER + CORROSION OF CONFORMITY + VOIVOD + SOCIAL DISTORTION + EVARISTO
+   Medio: Rafa Basa | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/26/cronica-y-fotos-del-azkena-rock-festival-con-alice-cooper-corrosion-of-conformity-voivod-social-distortion-evaristo/
+   Resumen: La entrada Crónica y Fotos del AZKENA ROCK FESTIVAL con ALICE COOPER + CORROSION OF CONFORMITY + VOIVOD + SOCIAL DISTORTION + EVARISTO se publicó primero en WWW.RAFABASA.COM - Noti
+
+3. [2026-06-26] Noticias: Savatage + Crom + Avulsed
+   Medio: Dioses del Metal | Relevancia: 4/5 | Cat: Bandas espanolas
+   URL: https://diosesdelmetal.org/noticias-savatage-crom-avulsed/
+   Resumen: Single de Savatage – Crom vuelven con nuevo tema – Estreno de Avulsed. Por Rockberto. Savatage han estrenado un nuevo vídeo de su tema clásico «Gutter ballet»m recogido en el álbum
+
+4. [2026-06-27] Censurados presentan su nuevo sencillo, "Ven"
+   Medio: El Clavijero Rock | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://el-clavijero-rock.blogspot.com/2026/06/censurados-presentan-su-nuevo-sencillo.html
+   Resumen: Censurados presentan su nuevo sencillo, "Ven"
+
+5. [2026-06-26] THE BUZZOS: Estrena su nuevo y esperado álbum "Survival"
+   Medio: El Suavecito | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://elsuavecitofn.blogspot.com/2026/06/the-buzzos-estrena-su-nuevo-y-esperado.html
+   Resumen: THE BUZZOS presenta su nuevo álbum, “Survival”. Este disco es toda una declaración de principios que reflejan la larga trayectoria de la banda, marcada por la perseverancia, la pas
+
+6. [2026-06-27] HOY sábado 27, FIESTA LEYENDAS DEL ROCK en GRANADA con ABONOS y CAMISETAS.
+   Medio: Rafa Basa | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/27/hoy-sabado-27-fiesta-leyendas-del-rock-en-granada-con-abonos-y-camisetas/
+   Resumen: La entrada HOY sábado 27, FIESTA LEYENDAS DEL ROCK en GRANADA con ABONOS y CAMISETAS. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupo
+
+7. [2026-06-26] METALLICA- MASTERPLAN – AVULSED.
+   Medio: Rafa Basa | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://www.rafabasa.com/2026/06/26/metallica-masterplan-avulsed/
+   Resumen: Lyric vídeos de METALLICA. Single de MASTERPLAN. Adelanto de AVULSED. La entrada METALLICA- MASTERPLAN – AVULSED. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre
+
+8. [2026-06-26] WHITESNAKE – SHAKRA – Tajuña Rock.
+   Medio: Rafa Basa | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/26/whitesnake-shakra-tajuna-rock/
+   Resumen: Reediciones de WHITESNAKE. Vídeo de SHAKRA. Tajuña Rock. La entrada WHITESNAKE – SHAKRA – Tajuña Rock. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música 
+
+9. [2026-06-27] Cartel completo del Inkestas Rock Festibal 2026
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.thesoundoftheembryo.es/cartel-completo-del-inkestas-rock-festibal-2026/
+   Resumen: Cartel completo del Inkestas Rock Festibal 2026
+
+10. [2026-06-27] The Buzzos publica su nuevo disco “Survival”
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/the-buzzos-publica-su-nuevo-disco-survival/
+   Resumen: The Buzzos publica su nuevo disco “Survival”
+
+11. [2026-06-26] Profecía + Khelleden + Ángel Negro (Sala Spectrum, Murcia), 20-6-26
+   Medio: Dioses del Metal | Relevancia: 3/5 | Cat: Concierto
+   URL: https://diosesdelmetal.org/profecia-khelleden-angel-negro-sala-spectrum-murcia-20-6-26/
+   Resumen: Ángel Negro renace en una noche de folk y metal junto a Profecía y Khelleden Crónica escrita por Isa M., Fotos de Crom El pasado 20 de junio fue una fecha complicada para cualquier
+
+12. [2026-06-26] NUEVO SINGLE DE COLAPSO
+   Medio: El Suavecito | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://elsuavecitofn.blogspot.com/2026/06/nuevo-single-de-colapso.html
+   Resumen: ¿Escuchas “de todo” cuando en realidad quieres decir “de todo lo que mete Espotifai en sus listas de mierda”?Segundo single del nuevo disco PROGRE DE MÍ¡ESCÚCHALO!
+
+13. [2026-06-26] Floor Jansen – Eric Johnson – CROM.
+   Medio: Rafa Basa | Relevancia: 3/5 | Cat: Bandas espanolas
+   URL: https://www.rafabasa.com/2026/06/26/floor-jansen-eric-johnson-crom/
+   Resumen: Floor Jansen estrena single. Fechas de Eric Johnson. Adelanto de CROM. La entrada Floor Jansen – Eric Johnson – CROM. se publicó primero en WWW.RAFABASA.COM - Noticias en español s
+
+14. [2026-06-26] FIVE FINGER DEATH PUNCH – MIDJUNGARDS – PERENNIAL ISOLATION
+   Medio: Rafa Basa | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.rafabasa.com/2026/06/26/five-finger-death-punch-midjungards-perennial-isolation/
+   Resumen: Nuevo disco de FIVE FINGER DEATH PUNCH. Vídeo de MIDJUNGARDS. PERENNIAL ISOLATION estrenan single. La entrada FIVE FINGER DEATH PUNCH – MIDJUNGARDS – PERENNIAL ISOLATION se publicó
+
+15. [2026-06-26] SAVATAGE – BRING ME THE HORIZON – SINNER – ARGI
+   Medio: Rafa Basa | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.rafabasa.com/2026/06/26/savatage-bring-me-the-horizon-sinner-argi/
+   Resumen: Nuevo vídeo de SAVATAGE para “Gutter Ballet”. Regrabación de BRING ME THE HORIZON. Vídeo de SINNER. ARGI estrenan single. La entrada SAVATAGE – BRING ME THE HORIZON – SINNER – ARGI
+
+16. [2026-06-26] A GOLPES DE ROCK 362 26/06/2026
+   Medio: TNT Radio Rock | Relevancia: 3/5 | Cat: Bandas espanolas
+   URL: https://tntradiorock.com/a-golpes-de-rock-362-26-06-2026/
+   Resumen: Podcast del programa para bandas emergentes y poco conocidas A GOLPES DE ROCK 360. En este programa cabe cualquier estilo de música relacionado con el […] Contenido de TNT Radio Ro
+
+17. [2026-06-27] Feelingless estrena single “Rise From The Ashes”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/feelingless-estrena-single-rise-from-the-ashes/
+   Resumen: Feelingless estrena single “Rise From The Ashes”
+
+18. [2026-06-26] Cochè Vil Band lanza “Be Gone”, nueva canción con Pacho Brea (Ankhara) a la voz
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/coche-vil-band-lanza-be-gone-nueva-cancion-con-pacho-brea-ankhara-a-la-voz/
+   Resumen: El rock progresivo de tintes setenteros de la Cochè Vil Band tiene un nuevo ariete con el que seguir conquistando oídos y escenarios. Con la incorporación de Pacho Brea, la potente voz de Ankhara...
+
+19. [2026-06-26] Órdago: “Los días perdidos” es su nuevo single en el camino a su próximo disco
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/ordago-los-dias-perdidos-es-su-nuevo-single-en-el-camino-a-su-proximo-disco/
+   Resumen: Solo un mes después de que nos sorprendiera el estreno de “La tiritera”, el rock de los madrileños Órdago vuelve a rugir con el estreno de “Los días perdidos”, canción que la banda presenta como adelanto de su próximo disco.
+
+20. [2026-06-26] Censurados estrena “Ven”, nuevo single y videoclip de su segunda oleada
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/censurados-estrena-ven-nuevo-single-y-videoclip-de-su-segunda-oleada/
+   Resumen: Una de las bandas que a principios del milenio parecían llamadas a ocupar un sitio destacado en la escena de nuestro rock volvía el pasado 2025 tras un largo letargo de más de una década. Censurados estrena ahora 'Ven'.
+
+21. [2026-06-26] Crítica de Cristales Rotos: Sube sube
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Bandas espanolas
+   URL: https://mariskalrock.com/actualidad/critica-de-cristales-rotos-sube-sube/
+   Resumen: Los que crecimos con nuestro pop-rock de los 80 y primeros 90, desde los pioneros Miguel Ríos, Topo o Alarma!! a nombres como 091, El Último de la Fila, Tam Tam Go!, La Guardia e incluso Héroes del Silencio, encontramos en Cristales Rotos una propuesta muy interesante.
+
+============================================================
+RESPUESTA (12,426 chars):
+============================================================
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 27 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**1. Z! LIVE 2027: el lunes (29 de junio) comienza el viaje.** - Diario de un Metalhead
+Resumen: El festival Z! Live 2027 inicia su camino este lunes 29 de junio con la venta de sus primeros 1.000 abonos. Las entradas estarán disponibles a partir de las 10:00h de la mañana y solo durante un periodo exclusivo de 24 horas.
+Enlace: https://www.diariodeunmetalhead.com/2026/06/z-live-2027-el-lunes-29-de-junio.html
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Anuncio de gran relevancia para uno de los festivales de metal más importantes del país.
+
+**2. Crónica y Fotos del AZKENA ROCK FESTIVAL con ALICE COOPER + CORROSION OF CONFORMITY + VOIVOD + SOCIAL DISTORTION + EVARISTO** - Rafa Basa
+Resumen: Crónica detallada y galería fotográfica de la reciente edición del Azkena Rock Festival. El evento contó con las actuaciones destacadas de Alice Cooper, Corrosion of Conformity, Voivod, Social Distortion y Evaristo.
+Enlace: https://www.rafabasa.com/2026/06/26/cronica-y-fotos-del-azkena-rock-festival-con-alice-cooper-corrosion-of-conformity-voivod-social-distortion-evaristo/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Cobertura exhaustiva de uno de los festivales de rock más multitudinarios y tradicionales del territorio nacional.
+
+**3. Noticias: Savatage + Crom + Avulsed** - Dioses del Metal
+Resumen: Actualidad sobre diversas bandas que incluye el regreso de Crom con un nuevo tema y el estreno de Avulsed. Además, se destaca el lanzamiento de un nuevo videoclip para el clásico "Gutter Ballet" de Savatage.
+Enlace: https://diosesdelmetal.org/noticias-savatage-crom-avulsed/
+Categoria: Bandas espanolas
+Relevancia: ⭐⭐⭐⭐ - Información de alto interés sobre el regreso y estrenos de bandas clave de la escena nacional.
+
+**4. Censurados presentan su nuevo sencillo, "Ven"** - El Clavijero Rock
+Resumen: La agrupación madrileña Censurados presenta de manera oficial su nuevo sencillo titulado "Ven". Este lanzamiento marca una nueva etapa para la banda de rock nacional.
+Enlace: https://el-clavijero-rock.blogspot.com/2026/06/censurados-presentan-su-nuevo-sencillo.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Retorno discográfico de una banda nacional muy esperada por sus seguidores.
+
+**5. THE BUZZOS: Estrena su nuevo y esperado álbum "Survival"** - El Suavecito
+Resumen: The Buzzos estrena su esperado nuevo álbum de estudio bajo el título de "Survival". Este trabajo discográfico se presenta como una declaración de principios que refleja la perseverancia y pasión de su larga trayectoria.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/the-buzzos-estrena-su-nuevo-y-esperado.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Lanzamiento de larga duración de una banda nacional consolidada.
+
+**6. HOY sábado 27, FIESTA LEYENDAS DEL ROCK en GRANADA con ABONOS y CAMISETAS.** - Rafa Basa
+Resumen: Este sábado 27 de junio se celebra en Granada la fiesta oficial del festival Leyendas del Rock. Durante el evento se realizarán sorteos de abonos y camisetas oficiales para los asistentes.
+Enlace: https://www.rafabasa.com/2026/06/27/hoy-sabado-27-fiesta-leyendas-del-rock-en-granada-con-abonos-y-camisetas/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Evento promocional oficial de uno de los festivales de rock y metal más grandes de España.
+
+**7. METALLICA- MASTERPLAN – AVULSED.** - Rafa Basa
+Resumen: Novedades discográficas que incluyen lyric videos de Metallica, un nuevo single de Masterplan y un adelanto de la banda nacional de death metal Avulsed.
+Enlace: https://www.rafabasa.com/2026/06/26/metallica-masterplan-avulsed/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Adelanto discográfico de Avulsed, referente histórico del metal extremo nacional.
+
+**8. WHITESNAKE – SHAKRA – Tajuña Rock.** - Rafa Basa
+Resumen: Actualidad de festivales y lanzamientos con detalles sobre las reediciones de Whitesnake, el nuevo vídeo de Shakra y novedades del festival nacional Tajuña Rock.
+Enlace: https://www.rafabasa.com/2026/06/26/whitesnake-shakra-tajuna-rock/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Novedades sobre un festival gratuito de gran tradición en la escena madrileña.
+
+**9. Cartel completo del Inkestas Rock Festibal 2026** - The Sound of The Embryo
+Resumen: Se ha dado a conocer el cartel completo para la edición 2026 del Inkestas Rock Festibal. El evento sigue consolidando su propuesta dentro de la escena nacional.
+Enlace: https://www.thesoundoftheembryo.es/cartel-completo-del-inkestas-rock-festibal-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Confirmación del cartel completo de un festival nacional especializado.
+
+**10. The Buzzos publica su nuevo disco “Survival”** - The Sound of The Embryo
+Resumen: La banda The Buzzos publica de forma oficial su nuevo trabajo discográfico titulado "Survival". El lanzamiento ya se encuentra disponible para sus seguidores en plataformas.
+Enlace: https://www.thesoundoftheembryo.es/the-buzzos-publica-su-nuevo-disco-survival/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Cobertura del lanzamiento del nuevo álbum de la banda nacional.
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+**11. Profecía + Khelleden + Ángel Negro (Sala Spectrum, Murcia), 20-6-26** - Dioses del Metal
+Resumen: Crónica del concierto celebrado el pasado 20 de junio en la Sala Spectrum de Murcia. La noche contó con las actuaciones de Ángel Negro, Profecía y Khelleden en una velada marcada por el folk y el metal.
+Enlace: https://diosesdelmetal.org/profecia-khelleden-angel-negro-sala-spectrum-murcia-20-6-26/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Crónica de un concierto de la escena underground nacional.
+
+**12. NUEVO SINGLE DE COLAPSO** - El Suavecito
+Resumen: Colapso presenta el segundo single de su nuevo disco titulado "PROGRE DE MÍ". El tema se lanza como una alternativa crítica a las listas de reproducción comerciales.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/nuevo-single-de-colapso.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de un nuevo sencillo de banda nacional.
+
+**13. Floor Jansen – Eric Johnson – CROM.** - Rafa Basa
+Resumen: Actualidad musical que destaca el estreno del nuevo single de Floor Jansen y las fechas de Eric Johnson. En el plano nacional, se presenta un nuevo adelanto de la banda Crom.
+Enlace: https://www.rafabasa.com/2026/06/26/floor-jansen-eric-johnson-crom/
+Categoria: Bandas espanolas
+Relevancia: ⭐⭐⭐ - Adelanto de material de una banda clásica del heavy metal nacional.
+
+**14. FIVE FINGER DEATH PUNCH – MIDJUNGARDS – PERENNIAL ISOLATION** - Rafa Basa
+Resumen: Lanzamientos recientes que incluyen el nuevo disco de Five Finger Death Punch y el vídeo de Midjungards. Asimismo, la banda nacional Perennial Isolation estrena su nuevo single.
+Enlace: https://www.rafabasa.com/2026/06/26/five-finger-death-punch-midjungards-perennial-isolation/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Estreno de sencillo de una banda nacional de metal extremo.
+
+**15. SAVATAGE – BRING ME THE HORIZON – SINNER – ARGI** - Rafa Basa
+Resumen: Novedades internacionales y nacionales con el nuevo vídeo de Savatage para "Gutter Ballet" y una regrabación de Bring Me The Horizon. También se incluye el vídeo de Sinner y el estreno del single de Argi.
+Enlace: https://www.rafabasa.com/2026/06/26/savatage-bring-me-the-horizon-sinner-argi/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de single de un proyecto nacional.
+
+**16. A GOLPES DE ROCK 362 26/06/2026** - TNT Radio Rock
+Resumen: Publicación del podcast número 362 del programa "A Golpes de Rock", emitido el 26 de junio de 2026. El espacio está dedicado a la difusión de bandas emergentes y propuestas menos conocidas dentro del rock y metal.
+Enlace: https://tntradiorock.com/a-golpes-de-rock-362-26-06-2026/
+Categoria: Bandas espanolas
+Relevancia: ⭐⭐⭐ - Programa de radio enfocado en la difusión de la escena emergente nacional.
+
+**17. Feelingless estrena single “Rise From The Ashes”** - The Sound of The Embryo
+Resumen: El proyecto Feelingless estrena su nuevo sencillo titulado “Rise From The Ashes”. El tema ya se encuentra disponible en plataformas digitales.
+Enlace: https://www.thesoundoftheembryo.es/feelingless-estrena-single-rise-from-the-ashes/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de single de un proyecto nacional.
+
+**18. Cochè Vil Band lanza “Be Gone”, nueva canción con Pacho Brea (Ankhara) a la voz** - Mariskalrock
+Resumen: Cochè Vil Band presenta su nueva canción de rock progresivo setentero titulada "Be Gone". El tema destaca por contar con la potente colaboración de Pacho Brea, vocalista de Ankhara, en las voces.
+Enlace: https://mariskalrock.com/noticias-breves/coche-vil-band-lanza-be-gone-nueva-cancion-con-pacho-brea-ankhara-a-la-voz/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Colaboración destacada entre músicos de la escena nacional.
+
+**19. Órdago: “Los días perdidos” es su nuevo single en el camino a su próximo disco** - Mariskalrock
+Resumen: La banda madrileña Órdago estrena su nuevo single "Los días perdidos", apenas un mes después de lanzar "La tiritera". Este tema sirve como un nuevo adelanto de su próximo trabajo discográfico.
+Enlace: https://mariskalrock.com/noticias-breves/ordago-los-dias-perdidos-es-su-nuevo-single-en-el-camino-a-su-proximo-disco/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Adelanto de nuevo material de banda nacional.
+
+**20. Censurados estrena “Ven”, nuevo single y videoclip de su segunda oleada** - Mariskalrock
+Resumen: Censurados estrena el videoclip de su nuevo single "Ven", consolidando su regreso tras un largo letargo de más de una década. La banda busca recuperar su lugar destacado en la escena del rock nacional.
+Enlace: https://mariskalrock.com/noticias-breves/censurados-estrena-ven-nuevo-single-y-videoclip-de-su-segunda-oleada/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de videoclip y single de retorno de banda nacional.
+
+**21. Crítica de Cristales Rotos: Sube sube** - Mariskalrock
+Resumen: Reseña del nuevo trabajo de Cristales Rotos titulado "Sube sube". La propuesta de la banda evoca el sonido del pop-rock español de los años 80 y primeros 90.
+Enlace: https://mariskalrock.com/actualidad/critica-de-cristales-rotos-sube-sube/
+Categoria: Bandas espanolas
+Relevancia: ⭐⭐⭐ - Crítica y análisis de un lanzamiento discográfico nacional.
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+*No se registraron noticias en esta categoría para el periodo actual.*
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 21
+- Articulos excluidos (ya reportados): 66
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Rafa Basa, TNT Radio Rock, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: Se observa una intensa actividad en la confirmación de carteles y venta de abonos para festivales nacionales de cara a las próximas temporadas. Asimismo, destaca el retorno y la constante publicación de nuevos sencillos y álbumes por parte de bandas clásicas y emergentes de la escena estatal, consolidando la reactivación del panorama discográfico.
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+| Diario de un Metalhead | Activo | Sí |
+| Dioses del Metal | Activo | Sí |
+| El Clavijero Rock | Activo | Sí |
+| El Suavecito | Activo | Sí |
+| Rafa Basa | Activo | Sí |
+| TNT Radio Rock | Activo | Sí |
+| The Sound of The Embryo | Activo | Sí |
+| Mariskalrock | Activo | Sí |
+| Ballesterock | Sin actividad | No |
+| Canedorock | Sin actividad | No |
+| Esquirlas de Metal | Sin actividad | No |
+| Hoy Rock | Sin actividad | No |
+| Iguana Rock | Sin actividad | No |
+| Keep The Flame | Sin actividad | No |
+| La Frontera del Silencio | Sin actividad | No |
+| Metal Symphony | Sin actividad | No |
+| Metalcry | Sin actividad | No |
+| Metaltrip | Sin actividad | No |
+| Noche de Rock | Sin actividad | No |
+| Radio Domination | Sin actividad | No |
+| Rock Circus | Sin actividad | No |
+| Rock Sesion | Sin actividad | No |
+| Rockeando | Sin actividad | No |
+| Sancocho | Sin actividad | No |
+| Sevillametal | Sin actividad | No |
+| The Metal Dreamer | Sin actividad | No |
+| The Sentinel | Sin actividad | No |
+| Trueno Metálico | Sin actividad | No |
+| Turbo Rock | Sin actividad | No |
+| Reino de Sueños | Sin actividad | No |
+| Red hard n heavy | Sin actividad | No |
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 27 de junio de 2026*
