@@ -32,7 +32,7 @@ on:
       limite_wp:
         description: 'Noticias a publicar en WP (-1 = todas, N = solo las primeras N)'
         required: false
-        default: '-1'
+        default: '3'
       estado_wp:
         description: 'Estado en WordPress: draft (borrador) | publish (publicar directo)'
         required: false
