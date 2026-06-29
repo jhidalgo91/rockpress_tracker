@@ -1,0 +1,151 @@
+=== ROCKPRESS DEBUG — 20260629_095747 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: ERROR
+Tokens → input: 0  output: 0
+
+============================================================
+PROMPT (13,012 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/2 (29 artículos).
+
+FECHA HOY: 29 de junio de 2026
+VENTANA: 26/06/2026 — 29 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Sevillametal
+──────────────────────────────────────────────────
+• [2026-06-28] QueenMilk regresa con 'Hold the Fire'
+  URL: https://www.sevillametal.org/sevillametal/3184-queenmilk-regresa-con-hold-the-fire
+  Resumen: Nuevo sencillo de los maestros del rock
+
+──────────────────────────────────────────────────
+MEDIO: The Sentinel
+──────────────────────────────────────────────────
+• [2026-06-29] Conciertos
+  URL: https://www.thesentinel.es/wpsentinel/?cat=5
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-29] HEXJAKT irrumpen con su ritual de doom ocultista en el split “Four Altars Of Sin”
+  URL: https://tntradiorock.com/hexjakt-irrumpen-con-su-ritual-de-doom-ocultista-en-el-split-four-altars-of-sin/
+  Resumen: La formación sueca de doom Hexjakt emerge desde el subsuelo con una aportación aplastante al split “Four Altars Of Sin”, disponible ya en formato vinilo […] Contenido de TNT Radio 
+• [2026-06-29] LOST RELICS presentan “Saint Catharines”, primer adelanto de su EP más crudo
+  URL: https://tntradiorock.com/lost-relics-presentan-saint-catharines-primer-adelanto-de-su-ep-mas-crudo/
+  Resumen: La formación estadounidense de sludge y dirt rock Lost Relics vuelve a escena con nuevo material y abre su próximo ciclo de lanzamientos con el […] Contenido de TNT Radio Rock
+• [2026-06-28] ELYSION lanzan el single “Guardian Angel” y anuncian su nuevo álbum “Identity” para el 16 de octubre de 2026
+  URL: https://tntradiorock.com/elysion-lanzan-el-single-guardian-angel-y-anuncian-su-nuevo-album-identity-para-el-16-de-octubre-de-2026/
+  Resumen: La banda griega de metal atmosférico Elysion inicia una nueva etapa con el lanzamiento de su single “Guardian Angel”, acompañado de su videoclip oficial y […] Contenido de TNT Radi
+• [2026-06-28] LUJURIA encabezará la primera edición del OLIVOROCK FEST en Villanueva del Arzobispo (Jaén)
+  URL: https://tntradiorock.com/lujuria-encabezara-la-primera-edicion-del-olivorock-fest-en-villanueva-del-arzobispo-jaen/
+  Resumen: La escena del rock y el Heavy Metal en la provincia de Jaén suma una nueva cita a su calendario con el nacimiento del OLIVOROCK […] Contenido de TNT Radio Rock
+• [2026-06-28] I YA TOYAH explora el lado más oscuro del ego con su nuevo single "Apology"
+  URL: https://tntradiorock.com/i-ya-toyah-explora-el-lado-mas-oscuro-del-ego-con-su-nuevo-single-apology/
+  Resumen: Tras el lanzamiento de "FEELINGS", I Ya Toyah da un giro radical con "Apology", un nuevo tema de rock industrial que abandona la vulnerabilidad para […] Contenido de TNT Radio Rock
+• [2026-06-28] CHALK TEETH publican su álbum debut homónimo, un rito darkwave abrasivo ya disponible en vinilo y digital
+  URL: https://tntradiorock.com/chalk-teeth-publican-su-album-debut-homonimo-un-rito-darkwave-abrasivo-ya-disponible-en-vinilo-y-digital/
+  Resumen: El trío estadounidense Chalk Teeth acaba de publicar su álbum debut homónimo, disponible desde el 26 de junio en formato vinilo y digital a través […] Contenido de TNT Radio Rock
+• [2026-06-28] HELLFEST 2027; anuncio de nuevos escenarios y venta de abonos
+  URL: https://tntradiorock.com/hellfest-2027-anuncio-de-nuevos-escenarios-y-venta-de-abonos/
+  Resumen: La próxima edición de Hellfest tendrá lugar del 17 al 20 de junio de 2027 Esas son las fechas en la que hay que poner […] Contenido de TNT Radio Rock
+• [2026-06-28] WARCRY presenta "El Hombre En El Espejo", segundo adelanto de su esperado nuevo álbum "Entre La Niebla"
+  URL: https://tntradiorock.com/warcry-presenta-el-hombre-en-el-espejo-segundo-adelanto-de-su-esperado-nuevo-album-entre-la-niebla/
+  Resumen: WarCry continúa desvelando el contenido de su próximo trabajo de estudio con el lanzamiento de "El hombre en el espejo", segundo single extraído de Entre […] Contenido de TNT Radio
+• [2026-06-28] ADxHD presenta su nuevo EP "Attraction Through ADHD" con una contundente descarga de death metal extremo
+  URL: https://tntradiorock.com/adxhd-presenta-su-nuevo-ep-attraction-through-adhd-con-una-contundente-descarga-de-death-metal-extremo/
+  Resumen: ADxHD, banda de brutal death metal con integrantes de Polonia y Bielorrusia, acaba de publicar su nuevo EP "Attraction Through ADHD", un trabajo de cuatro […] Contenido de TNT Radi
+• [2026-06-27] ALTERA DOOMONICA aborda el devastador impacto del Alzheimer en su nuevo single "Losing My Mind"
+  URL: https://tntradiorock.com/altera-doomonica-aborda-el-devastador-impacto-del-alzheimer-en-su-nuevo-single-losing-my-mind/
+  Resumen: La formación británica de doom metal Altera Doomonica presenta "Losing My Mind", un nuevo y sobrecogedor sencillo que verá la luz el próximo 26 de […] Contenido de TNT Radio Rock
+
+──────────────────────────────────────────────────
+MEDIO: Red hard n heavy
+──────────────────────────────────────────────────
+• [2026-06-28] Escucha el especial corsario: ¡Qué viene el Papa! (Corsario X)- ¡Salve, Fariseos!
+  URL: https://redhardnheavy.com/corsarios-papa-2/?utm_source=rss&utm_medium=rss&utm_campaign=corsarios-papa-2
+  Resumen: Corsarios del Metal abrasaban con un corrosivo especial la visita del Papa a España con buen Heavy y Música Dura… e historia. ¡Tendrán bula papal?: ¡Escúchalo completo aquí! Nos lo
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-29] Koma encabezará el Hervias Rock 2026
+  URL: https://www.thesoundoftheembryo.es/koma-encabezara-el-hervias-rock-2026/
+• [2026-06-29] Cartel del Metal United Festival
+  URL: https://www.thesoundoftheembryo.es/cartel-del-metal-united-festival/
+• [2026-06-29] Cartel del Tajuña Rock 2026
+  URL: https://www.thesoundoftheembryo.es/cartel-del-tajuna-rock-2026/
+• [2026-06-29] Cartel del Irrintzi Fest 2026
+  URL: https://www.thesoundoftheembryo.es/cartel-del-irrintzi-fest-2026/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-29] Efemérides de la semana 29/06 - 05/07: Deep Purple, The Rolling Stones, AC/DC, The Doors, Slipknot, Kiss, Guns N’ Roses, Pantera, Yngwie J. Malmsteen, Queen, Dokken…
+  URL: https://mariskalrock.com/actualidad/efemerides-de-la-semana-29-06-05-07-deep-purple-the-rolling-stones-ac-dc-the-doors-slipknot-kiss-guns-n-roses-pantera-yngwie-j-malmsteen-queen-dokken/
+  Resumen: Una semana más os traemos este recopilatorio con todas las fechas destacadas (cumpleaños, muertes, ediciones de discos…) del mundo del rock y del metal 29 de junio Ian Paice, el hi
+• [2026-06-29] Blaze Bayley, sobre la incorporación de Iron Maiden al Rock and Roll Hall of Fame: "Estoy organizándome para ir”
+  URL: https://mariskalrock.com/actualidad/blaze-bayley-sobre-la-incorporacion-de-iron-maiden-al-rock-and-roll-hall-of-fame-estoy-organizandome-para-ir/
+  Resumen: Iron Maiden no estará presente en la próxima ceremonia de entrada al Rock and Roll Hall of Fame, en la que será una de las bandas que pasen a formar parte de la prestigiosa institu
+• [2026-06-28] El motivo por el que el batería Tommy Clufetos (Ozzy Osbourne) no sustituyó a Bill Ward en el último disco de Black Sabbath
+  URL: https://mariskalrock.com/actualidad/el-motivo-por-el-que-el-bateria-tommy-clufetos-ozzy-osbourne-no-sustituyo-a-bill-ward-en-el-ultimo-disco-de-black-sabbath/
+  Resumen: El batería Tommy Clufetos cuenta con una prolífica trayectoria que podría asombrar a muchos, pues entre los artistas en los que ha dejado su huella se incluyen Ozzy Osbourne, Alice
+• [2026-06-28] Gene Simmons (Kiss), sobre la polarización política en EEUU: “La gente de cada uno de los lados ha llevado las cosas al extremo”
+  URL: https://mariskalrock.com/actualidad/gene-simmons-kiss-sobre-la-polarizacion-politica-en-eeuu-la-gente-de-cada-uno-de-los-lados-ha-llevado-las-cosas-al-extremo/
+  Resumen: La actual situación política en EEUU ha visto florecer iniciativas como Power to the People, un festival montado por Tom Morello (Rage Against the Machine) por “la libertad, la jus
+• [2026-06-28] La canción de Led Zeppelin con la que Mick Jagger (The Rolling Stones) se quedó “bastante asombrado”
+  URL: https://mariskalrock.com/actualidad/la-cancion-de-led-zeppelin-con-la-que-mick-jagger-the-rolling-stones-se-quedo-bastante-asombrado/
+  Resumen: Una estrella del calibre del vocalista de The Rolling Stones, Mick Jagger, ha podido coincidir con músicos tan míticos como Bob Dylan, con el que llegó a bromear en una gala de los
+• [2026-06-28] Warcry estrena “El hombre en el espejo”, segundo single de su nuevo disco “Entre la niebla”
+  URL: https://mariskalrock.com/actualidad/warcry-estrena-el-hombre-en-el-espejo-segundo-single-de-su-nuevo-disco-entre-la-niebla/
+  Resumen: Cada vez nos acercamos más a ‘Entre la niebla’, ese esperado disco que están cocinando a fuego lento los asturianos Warcry. Si a finales de marzo nos llegaba “Lo siento”, un primer
+• [2026-06-28] Crónica de Hellfest 2026 en Clisson, Francia (domingo), con The Hives, The Offspring, Bad Omens o Down: El broche de oro a una edición marcada por el calor y el anuncio de un 20º aniversario histórico
+  URL: https://mariskalrock.com/actualidad/cronica-de-hellfest-2026-en-clisson-francia-domingo-con-the-hives-the-offspring-bad-omens-o-down-el-broche-de-oro-a-una-edicion-marcada-por-el-calor-y-el-anuncio-de-un-20o-aniversario-historico/
+  Resumen: El jueves las propuestas más modernas fueron las protagonistas del Hellfest 2026, el viernes el heavy metal clásico tomó el protagonismo con Iron Maiden, Queensrÿche, Accept o Hell
+• [2026-06-28] Children of Bodom anuncia sus primeros conciertos para 2027, rubricando su regreso definitivo
+  URL: https://mariskalrock.com/actualidad/children-of-bodom-anuncia-su-primer-concierto-para-2027-rubricando-su-regreso-definitivo/
+  Resumen: Allá por mediados de abril los finlandeses Children of Bodom confirmaron su intención de ofrecer más conciertos en 2027 tras el éxito que cosecharon sus homenajes al desaparecido v
+• [2026-06-27] Chris Fehn (ex-Slipknot): “Era muy intimidante ser percusionista con Joey Jordison”
+  URL: https://mariskalrock.com/actualidad/chris-fehn-slipknot-era-muy-intimidante-ser-percusionista-con-joey-jordison/
+  Resumen: La figura del añorado Joey Jordison era algo que no pasaba desapercibido en Slipknot. Hace pocos meses, el otrora batería de los enmascarados, Jay Weinberg, nos confesaba que ensay
+• [2026-06-27] Tregua regraba “Descalzo por tus besos”, un tema muy aclamado que une amistad y música
+  URL: https://mariskalrock.com/actualidad/tregua-regraba-descalzo-por-tus-besos-un-tema-muy-aclamado-que-une-amistad-y-musica/
+  Resumen: Siempre hay canciones que los seguidores esperan con ansia en los conciertos. Gritan cada dos por tres su nombre, a ver si alguien se da por aludido, y cuando por fin llega, es el 
+• [2026-06-27] El alcalde más metalero de una gran ciudad de Estados Unidos le entrega sus llaves a Machine Head tras hacerlo previamente con Iron Maiden y Judas Priest
+  URL: https://mariskalrock.com/actualidad/el-alcalde-mas-metalero-de-una-gran-ciudad-de-estados-unidos-le-entrega-sus-llaves-a-machine-head-tras-hacerlo-previamente-con-iron-maiden-y-judas-priest/
+  Resumen: En ocasiones los méritos de los músicos son tan grandes que ni siquiera los representantes políticos pueden evitar rendirles el merecido homenaje. Hace un tiempo, vimos cómo Tony I
+• [2026-06-27] Kirk Hammett (Metallica): "Ahora mismo, la música pop es una porquería"
+  URL: https://mariskalrock.com/actualidad/kirk-hammett-metallica-opina-sobre-el-estado-de-la-musica-actual-y-revela-un-concierto-fantastico-al-que-asistio/
+  Resumen: Las grandes estrellas también poseen esa faceta de fan que les humaniza y les acerca a los seguidores. Si hace poco el batería de Metallica, Lars Ulrich, nos descubría una olvidada
+
+============================================================
+RESPUESTA (0 chars):
+============================================================
+

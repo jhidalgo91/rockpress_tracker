@@ -1,0 +1,146 @@
+=== ROCKPRESS DEBUG — 20260629_095543 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: ERROR
+Tokens → input: 0  output: 0
+
+============================================================
+PROMPT (8,954 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/2 (30 artículos).
+
+FECHA HOY: 29 de junio de 2026
+VENTANA: 26/06/2026 — 29 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-29] COME BACK FROM THE DEAD: Ad Nauseam (Coffin Entrails Sound / Taume Records, 2026).
+  URL: https://www.diariodeunmetalhead.com/2026/06/come-back-from-deadad-nauseam-coffin.html
+  Resumen: 📝 Larry Runner. Oh, no. Otro disco de death metal. Tengo el buzón lleno, Qué aburrimiento. Espera, son cuatro temas, déjame darle un pase.Y menos mal que me dio por darle al play, 
+• [2026-06-27] Entrevista a Ángel Gutiérrez de NURCRY.
+  URL: https://www.diariodeunmetalhead.com/2026/06/entrevista-angel-gutierrez-de-nurcry.html
+  Resumen: Un mes más tarde del paso de NURCRY por Asturias abriendo para Jelusick, rememoramos la entrevista vía telefónica que le hicimos un par de semanas antes a Angel Gutierrez, guitarri
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-29] Artillery – Made in Hell (EP 2026)
+  URL: https://diosesdelmetal.org/artillery-made-in-hell-ep-2026/
+  Resumen: “Thrash Metal infernal en envase pequeño” Escrito por Christian Darchéz Para esta oportunidad hice un ejercicio bastante sencillo: bajé considerablemente las expectativas. ¿La razó
+• [2026-06-29] Rockfemérides 29 junio
+  URL: https://diosesdelmetal.org/rockfemerides-29_junio/
+  Resumen: Hoy cumplen años Don Dokken y el batería de Kreator, Jurgen Reil; Great White publica «Once Bitten», Iron Maiden publica el single «From Here to Eternity» y Slipknot debuta con su 
+• [2026-06-28] Noticias: Floor Jansen + Eric Johnson + Sinner
+  URL: https://diosesdelmetal.org/noticias-floor-jansen-eric-johnson-sinner/
+  Resumen: Estreno de Floor Jansen – Eric Johnson en julio en España -Single de Sinner. Por Rockberto. «Run» es el nuevo single de Floor Jansen, correspondiente a su nuevo disco que saldrá en
+• [2026-06-28] Así aprenderás (2026)
+  URL: https://diosesdelmetal.org/asi-aprenderas-2026/
+  Resumen: “Una lección bien aprendida” Escrita por Christian Darchéz Calificación: 9/10 genero: acción/comedia/drama Venia bastante desencantado con el tema de las series este año, pues de h
+• [2026-06-28] Rockfemérides 28 junio
+  URL: https://diosesdelmetal.org/rockfemerides-28-junio/
+  Resumen: Hoy cumplen años Kurdt Vanderhoof, guitarrista y miembro fundador de Metal Church y Carl Sentance, actual vocalista de Nazaret; AC/DC publica »Fly on the Wall», Stryper lanza su cu
+• [2026-06-27] Noticias: Angra + Triskelyon + Shakra
+  URL: https://diosesdelmetal.org/noticias-angra-triskelyon-shakra/
+  Resumen: Canción futbolera de Angra – Estreno de Triskelyon – Nueva versión de Shakra. Por Rockberto. Angra han estrenado un nuevo vídeo clip del tema «Pra frente Brasil», una canción en ap
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-06-29] Warcry lanza "El hombre en el espejo" como segundo sencillo de adelanto de su próximo álbum de estudio
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/warcry-lanza-el-hombre-en-el-espejo.html
+• [2026-06-28] Niño Mandarina - La vida menloquece
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/nino-mandarina-la-vida-menloquece.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-28] INTERFERENCIAS -joven banda de Rock formada por cuatro hermanos- publican "ANTES DE CERRAR EL BAR" nuevo himno para fiestas y garitos
+  URL: https://elsuavecitofn.blogspot.com/2026/06/interferencias-joven-banda-de-rock.html
+  Resumen: INTERFERENCIAS UN NUEVO HIMNO PARAGARITOS ROCKEROS “ANTES DE CERRAR EL BAR” SEGUNDO SINGLE ANTICIPO DE SU PRIMER DISCO PINCHA AQUÍ PARA ESCUCHAR “ANTES DE CERRAR EL BAR DE INTERFER
+• [2026-06-27] HOY ES EL 33 ANIVERSARIO DE "EL SUAVECITO" EN ONDA MARINA RADIO
+  URL: https://elsuavecitofn.blogspot.com/2026/06/hoy-es-el-33-aniversario-de-el.html
+  Resumen: Hoy Sábado 27 de Junio de 2026, hace exactamente 33 Años que comenzamos a realizar nuestro primer programa de "El Suavecito" en Onda Marina Radio, un 27 de Junio de 1993.Ya ha llov
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-29] 1564 – WET CACTUS – Live at OVNI Estudio
+  URL: https://www.nochederock.com/1564-wet-cactus-live-at-ovni-estudio/
+• [2026-06-28] Propuestas para disco de la semana 1575.
+  URL: https://www.nochederock.com/propuestas-para-disco-de-la-semana-1575/
+• [2026-06-27] SMOOTH BEANS
+  URL: https://www.nochederock.com/smooth-beans-3/
+• [2026-06-27] ALMA EN SUPLICIO
+  URL: https://www.nochederock.com/alma-en-suplicio/
+
+──────────────────────────────────────────────────
+MEDIO: Rock Circus
+──────────────────────────────────────────────────
+• [2026-06-29] Este lunes comienza la preventa especial de Z! Live Rock Fest 2027
+  URL: https://rockcircus.net/este-lunes-comienza-la-preventa-especial-de-z-live-rock-fest-2027/
+• [2026-06-29] Los Enemigos actuarán en la Sala Totem de Villava en marzo de 2027
+  URL: https://rockcircus.net/los-enemigos-actuaran-en-la-sala-totem-de-villava-en-marzo-de-2027/
+• [2026-06-29] Fito & Fitipaldis anuncian gira de teatros y auditorios
+  URL: https://rockcircus.net/fito-fitipaldis-anuncian-gira-de-teatros-y-auditorios/
+• [2026-06-29] Ya disponible la preventa de ‘Carne Con Patatas’, el nuevo disco de Los Zigarros
+  URL: https://rockcircus.net/ya-disponible-la-preventa-de-carne-con-patatas-el-nuevo-disco-de-los-zigarros/
+• [2026-06-29] Primal Fear vuelve a Barcelona en octubre
+  URL: https://rockcircus.net/primal-fear-vuelve-a-barcelona-en-octubre/
+• [2026-06-29] Angus McSix se unen a la gira de Orden Ogan y Ensiferum
+  URL: https://rockcircus.net/angus-mcsix-se-unen-a-la-gira-de-orden-ogan-y-ensiferum/
+• [2026-06-29] Evaristo, Soziedad Alkoholika, Reincidentes, Porretas y La Gripe Y Tú en el Festival Rock D’Aki
+  URL: https://rockcircus.net/evaristo-soziedad-alkoholika-reincidentes-porretas-y-la-gripe-y-tu-en-el-festival-rock-daki/
+• [2026-06-29] Alfredo Piedrafita, Forraje o Vértize en Festival El Último Bus el sábado 27 de junio
+  URL: https://rockcircus.net/alfredo-piedrafita-forraje-o-vertize-en-festival-el-ultimo-bus-el-sabado-27-de-junio/
+• [2026-06-29] Cobardes, tercera confirmación para el Rock@rena Festival: 9 de octubre en el Navarra Arena
+  URL: https://rockcircus.net/cobardes-tercera-confirmacion-para-el-rockrena-festival-9-de-octubre-en-el-navarra-arena/
+• [2026-06-29] El Drogas, M Clan y A Tiro actuarán gratis en las Fiestas de Fuenlabrada 2026
+  URL: https://rockcircus.net/el-drogas-m-clan-y-a-tiro-actuaran-gratis-en-las-fiestas-de-fuenlabrada-2026/
+• [2026-06-29] ‘Un mundo mágico’, primer single de adelanto del próximo disco de Los Zigarros
+  URL: https://rockcircus.net/un-mundo-magico-primer-single-de-adelanto-del-proximo-disco-de-los-zigarros/
+
+──────────────────────────────────────────────────
+MEDIO: Sevillametal
+──────────────────────────────────────────────────
+• [2026-06-28] Lumpem lanza 'Satura'
+  URL: https://www.sevillametal.org/sevillametal/3187-lumpem-lanza-satura
+  Resumen: La crudeza del hard rock de los 70 grabada en riguroso directo analógico
+• [2026-06-28] CROM regresa tras tres décadas
+  URL: https://www.sevillametal.org/sevillametal/3186-crom-regresa-tras-tres-decadas
+  Resumen: CROM presenta 'Last Charge', primer adelanto de su nuevo EP 'III'
+• [2026-06-28] EL VIAJE HACIA Z! LIVE 2027 COMIENZA ESTE LUNES 29 DE JUNIO
+  URL: https://www.sevillametal.org/sevillametal/3185-el-viaje-hacia-z-live-2027-comienza-este-lunes-29-de-junio
+  Resumen: Desde las 10:00 horas del lunes y solo durante 24 horas podrán adquirirse los primeros 1.000 abonos de la edición más ambiciosa del festival.
+
+============================================================
+RESPUESTA (0 chars):
+============================================================
+
