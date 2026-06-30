@@ -1,0 +1,239 @@
+=== ROCKPRESS DEBUG — 20260630_092449 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,165  output: 2,183
+
+============================================================
+PROMPT (9,798 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/2 (22 artículos).
+
+FECHA HOY: 30 de junio de 2026
+VENTANA: 27/06/2026 — 30 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-29] EASY ACTION estrenan el single “Dazed”, su primer lanzamiento para Frontiers Music Srl
+  URL: https://tntradiorock.com/easy-action-estrenan-el-single-dazed-su-primer-lanzamiento-para-frontiers-music-srl/
+  Resumen: La histórica formación sueca de hard rock Easy Action presenta su nuevo single “Dazed”, acompañado de su videoclip oficial y disponible ya en todas las […] Contenido de TNT Radio R
+• [2026-06-29] GUDEWIFE profundizan en la pérdida con “When Silence Forgets Itself”, un corte de enorme carga emocional
+  URL: https://tntradiorock.com/gudewife-profundizan-en-la-perdida-con-when-silence-forgets-itself-un-corte-de-enorme-carga-emocional/
+  Resumen: El dúo instrumental británico Gudewife presenta el videoclip de su nuevo single “When Silence Forgets Itself”, adelanto de su próximo EP “Atoms, Don’t Die”, que […] Contenido de TN
+• [2026-06-29] HEKZ publican su álbum de metal progresivo “Qisma”, una obra conceptual de precisión y emoción
+  URL: https://tntradiorock.com/hekz-publican-su-album-de-metal-progresivo-qisma-una-obra-conceptual-de-precision-y-emocion/
+  Resumen: La formación británica de metal progresivo HeKz presenta su nuevo álbum “Qisma”, disponible ya en todo el mundo en streaming y compra digital a través […] Contenido de TNT Radio Ro
+
+──────────────────────────────────────────────────
+MEDIO: Red hard n heavy
+──────────────────────────────────────────────────
+• [2026-06-29] Volvemos al MIDGARDSBLOT FESTIVAL en 2026
+  URL: https://redhardnheavy.com/volvemos-midgardsblot-festival-en-2026/?utm_source=rss&utm_medium=rss&utm_campaign=volvemos-midgardsblot-festival-en-2026
+  Resumen: Volvemos al increíble MIDGARDSBLOT FESTIVAL que se celebra en tierras noruegas, concretamente en Borre. Una experiencia para todos los sentidos, y un evento mágico del que os damos
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-06-30] Envidia Kotxina al Antorcha Festival 2026
+  URL: https://www.thesoundoftheembryo.es/envidia-kotxina-al-antorcha-festival-2026/
+• [2026-06-30] Lumpem publica su nuevo disco “Satura”
+  URL: https://www.thesoundoftheembryo.es/lumpem-publica-su-nuevo-disco-satura/
+• [2026-06-30] Pycaya también actuará en Maldito Metal Fest 2026
+  URL: https://www.thesoundoftheembryo.es/pycaya-tambien-actuara-en-maldito-metal-fest-2026/
+• [2026-06-30] Crom lanza single “Last Charge”
+  URL: https://www.thesoundoftheembryo.es/crom-lanza-single-last-charge/
+• [2026-06-30] Urgila estrena Lyric Video “Ahir, avui, demà”
+  URL: https://www.thesoundoftheembryo.es/urgila-estrena-lyric-video-ahir-avui-dema/
+• [2026-06-30] WarCry publica single “El Hombre en el Espejo”
+  URL: https://www.thesoundoftheembryo.es/warcry-publica-single-el-hombre-en-el-espejo/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-06-30] Crónica de Starbenders en Madrid: Derroche de magnetismo glam que supo a poco
+  URL: https://mariskalrock.com/actualidad/cronica-de-starbenders-en-madrid-derroche-de-magnetismo-glam-que-supo-a-poco/
+  Resumen: Aprovechando su paso por el Azkena Rock Festival, el cuarteto norteamericano Starbenders visitó la capital madrileña el día siguiente para presentar su nuevo trabajo discográfico, 
+• [2026-06-30] Muse pretende construir una nave espacial más cara que una casa de lujo en Londres para su próxima gira
+  URL: https://mariskalrock.com/actualidad/muse-pretende-construir-una-nave-espacial-mas-cara-que-una-casa-de-lujo-en-londres-para-su-proxima-gira/
+  Resumen: El espectáculo que está preparando Muse para su próxima gira, en la que estará presentando su flamante nuevo disco, ‘The Wow! Signal’, promete hacer historia en lo que a las más im
+• [2026-06-29] Interferencias presenta “Antes de cerrar el bar”, el festivo segundo single de adelanto de su primer disco
+  URL: https://mariskalrock.com/noticias-breves/interferencias-presenta-antes-de-cerrar-el-bar-el-festivo-segundo-single-de-adelanto-de-su-primer-disco/
+  Resumen: Los hermanos Óscar (voz), Luis (guitarra), Pablo (armónica, guitarra) y César (bajo) vuelven a la carga con el segundo adelanto del que será primer disco de los madrileños Interfer
+• [2026-06-29] Kaleo traerá los conciertos del “Way Down We Go Tour” a Madrid y Barcelona
+  URL: https://mariskalrock.com/noticias-breves/kaleo-traera-los-conciertos-del-way-down-we-go-tour-a-madrid-y-barcelona/
+  Resumen: La celebración del décimo aniversario del lanzamiento del disco debut de los islandeses Kaleo, ‘A/B’, del que recientemente se ha publicado una edición deluxe conmemorativa, traerá
+• [2026-06-29] Dead Poet Society anuncia conciertos en Madrid y Barcelona en 2027
+  URL: https://mariskalrock.com/noticias-breves/dead-poet-society-anuncia-conciertos-en-madrid-y-barcelona-en-2027/
+  Resumen: Una de las bandas con más personalidad de la escena del rock alternativo actual, los estadounidenses Dead Poet Society, ha confirmado las fechas de su nueva gira europea, en la que
+• [2026-06-29] Rock In Rio Lisboa cierra la edición más grande de su historia y pone fecha a su regreso
+  URL: https://mariskalrock.com/actualidad/rock-in-rio-lisboa-cierra-la-edicion-mas-grande-de-su-historia-y-pone-fecha-a-su-regreso/
+  Resumen: La edición de 2026 del festival Rock In Rio Lisboa se cerró tras dos fines de semana llenos de música, con la jornada rockera liderada por Linkin Park y Sepultura y la de leyendas 
+• [2026-06-29] Dave Mustaine y la adaptación del “muy tímido” Teemu Mäntysaari en Megadeth: “Tu vida va a cambiar y vas a ser más feliz que nunca”
+  URL: https://mariskalrock.com/actualidad/dave-mustaine-y-la-adaptacion-del-muy-timido-teemu-mantysaari-en-megadeth-tu-vida-va-a-cambiar-y-vas-a-ser-mas-feliz-que-nunca/
+  Resumen: La larga y prestigiosa lista de miembros que han pasado por las filas de Megadeth tiene en la figura de Teemu Mäntysaari su más reciente incorporación, que probablemente sea defini
+• [2026-06-29] La Rueca de Moira estrena “Senderos”, el tercer adelanto de su primer EP: Un canto compartido, nostálgico y aventurero
+  URL: https://mariskalrock.com/actualidad/la-rueca-de-moira-estrena-senderos-el-tercer-adelanto-de-su-primer-ep-un-canto-compartido-nostalgico-y-aventurero/
+  Resumen: Paso a paso, La Rueca de Moira nos sigue abriendo las puertas al que será su primer EP. Tras los estrenos de “Egipto se prende” y “Veleros”, la banda fundada en Madrid en 2023 lanz
+• [2026-06-29] Crónica de BEAT en Noches del Botánico (Madrid): De lo humano a lo divino
+  URL: https://mariskalrock.com/actualidad/cronica-de-beat-en-noches-del-botanico-madrid-de-lo-humano-a-lo-divino/
+  Resumen: El ciclo madrileño Noches del Botánico ya nos anunciaba cuando acudimos a la presentación de su décima edición, el pasado mes de febrero en el Real Jardín Botánico Alfonso XIII, qu
+• [2026-06-29] This Is Ephemeral estrena “III – Broken” nuevo single que abre el camino hacia su próximo disco: Rock atmosférico con sensibilidad visual y evocadora
+  URL: https://mariskalrock.com/actualidad/this-is-ephemeral-estrena-iii-broken-nuevo-single-que-abre-el-camino-hacia-su-proximo-disco-rock-atmosferico-con-sensibilidad-visual-y-evocadora/
+  Resumen: El prometedor renacer de This Is Ephemeral con el EP ‘Destiny’ tras largos años de silencio tiene ya un esperado nuevo paso que consolida la propuesta de la banda antes conocida co
+• [2026-06-29] Muere Doug Goldstein, histórico mánager de Guns N’ Roses: “Slash, cállate; me gano la vida con esto y reconozco una televisión de 700 dólares cuando la veo”
+  URL: https://mariskalrock.com/actualidad/muere-doug-goldstein-historico-manager-de-guns-n-roses-slash-callate-me-gano-la-vida-con-esto-y-reconozco-una-television-de-700-dolares-cuando-la-veo/
+  Resumen: Una de las piezas importantes en la carrera de Guns N’ Roses, el mánager Doug Goldstein, que acompañó a la banda desde el momento de su gran erupción con el lanzamiento del disco ‘
+• [2026-06-29] Leyendas del Rock publica los horarios de su edición de 2026, con Helloween, Arch Enemy, In Flames, Slaughter to Prevail o Sepultura liderando el festival
+  URL: https://mariskalrock.com/actualidad/leyendas-del-rock-publica-los-horarios-oficiales-de-edicion-de-2026-con-helloween-arch-enemy-in-flames-slaughter-to-prevail-o-sepultura-liderando-el-festival/
+  Resumen: La celebración del XX Aniversario del gran festival Leyendas del Rock se encuentra ya a poco más de un mes de distancia, y la organización nos acaba de presentar los horarios que m
+
+============================================================
+RESPUESTA (6,223 chars):
+============================================================
+[
+  {
+    "title": "Envidia Kotxina al Antorcha Festival 2026",
+    "url": "https://www.thesoundoftheembryo.es/envidia-kotxina-al-antorcha-festival-2026/",
+    "date": "2026-06-30",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda de punk rock Envidia Kotxina se incorpora al cartel del Antorcha Festival 2026.",
+    "rel": 4,
+    "categoria": "Festival en España"
+  },
+  {
+    "title": "Lumpem publica su nuevo disco “Satura”",
+    "url": "https://www.thesoundoftheembryo.es/lumpem-publica-su-nuevo-disco-satura/",
+    "date": "2026-06-30",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La formación Lumpem presenta su nuevo trabajo discográfico titulado 'Satura'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Pycaya también actuará en Maldito Metal Fest 2026",
+    "url": "https://www.thesoundoftheembryo.es/pycaya-tambien-actuara-en-maldito-metal-fest-2026/",
+    "date": "2026-06-30",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda de metal Pycaya se suma a la programación del festival Maldito Metal Fest 2026.",
+    "rel": 3,
+    "categoria": "Festival en España"
+  },
+  {
+    "title": "Urgila estrena Lyric Video “Ahir, avui, demà”",
+    "url": "https://www.thesoundoftheembryo.es/urgila-estrena-lyric-video-ahir-avui-dema/",
+    "date": "2026-06-30",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La banda Urgila presenta el lyric video de su nuevo tema cantado en catalán 'Ahir, avui, demà'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "WarCry publica single “El Hombre en el Espejo”",
+    "url": "https://www.thesoundoftheembryo.es/warcry-publica-single-el-hombre-en-el-espejo/",
+    "date": "2026-06-30",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "La veterana banda asturiana de power metal WarCry estrena su nuevo single 'El Hombre en el Espejo'.",
+    "rel": 5,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Crónica de Starbenders en Madrid: Derroche de magnetismo glam que supo a poco",
+    "url": "https://mariskalrock.com/actualidad/cronica-de-starbenders-en-madrid-derroche-de-magnetismo-glam-que-supo-a-poco/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "Aprovechando su paso por el Azkena Rock Festival, el cuarteto norteamericano Starbenders visitó la capital madrileña el día siguiente para presentar su nuevo trabajo discográfico.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Interferencias presenta “Antes de cerrar el bar”, el festivo segundo single de adelanto de su primer disco",
+    "url": "https://mariskalrock.com/noticias-breves/interferencias-presenta-antes-de-cerrar-el-bar-el-festivo-segundo-single-de-adelanto-de-su-primer-disco/",
+    "date": "2026-06-29",
+    "medio": "Mariskalrock",
+    "excerpt": "Los hermanos Óscar, Luis, Pablo y César vuelven a la carga con el segundo adelanto del que será primer disco de los madrileños Interferencias.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Kaleo traerá los conciertos del “Way Down We Go Tour” a Madrid and Barcelona",
+    "url": "https://mariskalrock.com/noticias-breves/kaleo-traera-los-conciertos-del-way-down-we-go-tour-a-madrid-y-barcelona/",
+    "date": "2026-06-29",
+    "medio": "Mariskalrock",
+    "excerpt": "La celebración del décimo aniversario del lanzamiento del disco debut de los islandeses Kaleo traerá conciertos a Madrid y Barcelona.",
+    "rel": 2,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Dead Poet Society anuncia conciertos en Madrid y Barcelona en 2027",
+    "url": "https://mariskalrock.com/noticias-breves/dead-poet-society-anuncia-conciertos-en-madrid-y-barcelona-en-2027/",
+    "date": "2026-06-29",
+    "medio": "Mariskalrock",
+    "excerpt": "La banda estadounidense de rock alternativo Dead Poet Society ha confirmado las fechas de su nueva gira europea con paradas en Madrid y Barcelona.",
+    "rel": 2,
+    "categoria": "Gira"
+  },
+  {
+    "title": "La Rueca de Moira estrena “Senderos”, el tercer adelanto de su primer EP: Un canto compartido, nostálgico y aventurero",
+    "url": "https://mariskalrock.com/actualidad/la-rueca-de-moira-estrena-senderos-el-tercer-adelanto-de-su-primer-ep-un-canto-compartido-nostalgico-y-aventurero/",
+    "date": "2026-06-29",
+    "medio": "Mariskalrock",
+    "excerpt": "Tras los estrenos de “Egipto se prende” y “Veleros”, la banda fundada en Madrid en 2023 lanza su nuevo single.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Crónica de BEAT en Noches del Botánico (Madrid): De lo humano a lo divino",
+    "url": "https://mariskalrock.com/actualidad/cronica-de-beat-en-noches-del-botanico-madrid-de-lo-humano-a-lo-divino/",
+    "date": "2026-06-29",
+    "medio": "Mariskalrock",
+    "excerpt": "Crónica del concierto de BEAT en el ciclo madrileño Noches del Botánico en el Real Jardín Botánico Alfonso XIII.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "This Is Ephemeral estrena “III – Broken” nuevo single que abre el camino hacia su próximo disco: Rock atmosférico con sensibilidad visual y evocadora",
+    "url": "https://mariskalrock.com/actualidad/this-is-ephemeral-estrena-iii-broken-nuevo-single-que-abre-el-camino-hacia-su-proximo-disco-rock-atmosferico-con-sensibilidad-visual-y-evocadora/",
+    "date": "2026-06-29",
+    "medio": "Mariskalrock",
+    "excerpt": "El prometedor renacer de la banda nacional This Is Ephemeral con el EP ‘Destiny’ tras largos años de silencio tiene ya un esperado nuevo paso.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Leyendas del Rock publica los horarios de su edición de 2026, con Helloween, Arch Enemy, In Flames, Slaughter to Prevail o Sepultura liderando el festival",
+    "url": "https://mariskalrock.com/actualidad/leyendas-del-rock-publica-los-horarios-oficiales-de-edicion-de-2026-con-helloween-arch-enemy-in-flames-slaughter-to-prevail-o-sepultura-liderando-el-festival/",
+    "date": "2026-06-29",
+    "medio": "Mariskalrock",
+    "excerpt": "La organización del festival alicantino Leyendas del Rock presenta los horarios oficiales para la celebración de su XX Aniversario.",
+    "rel": 5,
+    "categoria": "Festival en España"
+  }
+]

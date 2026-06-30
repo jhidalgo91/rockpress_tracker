@@ -1,0 +1,328 @@
+=== ROCKPRESS DEBUG — 20260630_092222 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 4,499  output: 2,787
+
+============================================================
+PROMPT (13,465 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/2 (30 artículos).
+
+FECHA HOY: 30 de junio de 2026
+VENTANA: 27/06/2026 — 30 de junio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-06-30] Audioreview. SAVATAGE: Fight for the rock (40 aniversario).
+  URL: https://www.diariodeunmetalhead.com/2026/06/audioreview-savatage-fight-for-rock-40.html
+  Resumen: Audioreview dedicada al álbum Fight For the Rock de Savatage con motivo del 40 aniversario de su publicación. Incluye completas las canciones: "Fight for the Rock," "Whishing Well"
+• [2026-06-29] RESURRECTION FEST: Horarios.
+  URL: https://www.diariodeunmetalhead.com/2026/06/resurrection-fest-horarios.html
+  Resumen: El Resurrection Fest 2026 ya está aquí. Desde el miércoles 1 y hasta el sábado 4 de julio, Viveiro será la gran capital del metal español. Os traemos los horarios.Miércoles:Main St
+• [2026-06-29] WACKEN incorpora a DARK EMBRACE a su cartel y anuncia el concierto más especial.
+  URL: https://www.diariodeunmetalhead.com/2026/06/wacken-incorpora-dark-embrace-su-cartel.html
+  Resumen: Los gallegos Dark Embrace se incorporan al cartel de Wacken Open Air. La banda de Dark Heavy metal se suma a las otras tres bandas españolas ya anunciadas anteriormente: Alien Rock
+• [2026-06-29] WARCRY presenta su nuevo single "El hombre en el espejo".
+  URL: https://www.diariodeunmetalhead.com/2026/06/warcry-presenta-su-nuevo-single-el.html
+  Resumen: WarCry presenta "El hombre en el espejo", segundo single del que será su nuevo álbum, que como ya habíamos anunciado llevará el título de "Entre la niebla".La nueva canción ya está
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-06-30] Rockfemérides 30 junio
+  URL: https://diosesdelmetal.org/rockfemerides-30-junio/
+  Resumen: Hoy cumple años un Dios de la guitarra, odiado por unos, amado por otros: Yngwie Malmsteen; Philip Anselmo, famoso vocalista de Pantera; Savatage publica su tercer álbum «Fight for
+• [2026-06-29] Noticias: The L.I.F.E. Project + Romanthica + Lufeh
+  URL: https://diosesdelmetal.org/noticias-the-l-i-f-e-project-romanthica-lufeh/
+  Resumen: Estreno de The L.I.F.E. Project – Nuevo single de Romanthica -Novedad de Lufeh. Por Rockberto. El guitarrista Josh Rand (Stone Sour) y la vocalista Casandra Carson (Paralandra, Cas
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-29] HAMLET: Presenta las próximas fechas de su gira "Verano 2026"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/hamlet-presenta-las-proximas-fechas-de.html
+  Resumen: HAMLET presenta las nuevas fechas de su gira. Tras un inicio de temporada imparable, la banda se prepara para recorrer medio país con su gira "Verano 2026", una sucesión de festiva
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-06-30] Nuevos temas de Floor Jansen, Sinner, Hashtack, Fuet! y Censurados
+  URL: https://keeptheflame.es/noticias/videos/10338-floor-sinner-hashtack-fuet-censurados.html
+  Resumen: http://www.youtube.com/watch?v=dJUzNmVY19c Actualizamos la sección de estrenos con una intensa tanda de novedades en formato single y videoclip. En el plano internacional, Floor Ja
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-06-29] Noche de Rock 1564 – Wet Cactus – Smooth Beans
+  URL: https://www.nochederock.com/noche-de-rock-1564-wet-cactus-smooth-beans/
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-29] Crónica y Fotos del KABIEFEST 2026 – Sábado 13 de Junio, con FIREWIND + VHÄLDEMAR + JOLLY JOKER + EVILACT
+  URL: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-firewind-vhaldemar-jolly-joker-evilact/
+  Resumen: La entrada Crónica y Fotos del KABIEFEST 2026 – Sábado 13 de Junio, con FIREWIND + VHÄLDEMAR + JOLLY JOKER + EVILACT se publicó primero en WWW.RAFABASA.COM - Noticias en español so
+• [2026-06-29] Crónica y Fotos del KABIEFEST 2026 – Viernes 12, con CRIMSON GLORY + RISE TO FALL + MS. MISSERY + EVIL SEEDS
+  URL: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-crimson-glory-rise-to-fall-ms-missery-evil-seeds/
+  Resumen: La entrada Crónica y Fotos del KABIEFEST 2026 – Viernes 12, con CRIMSON GLORY + RISE TO FALL + MS. MISSERY + EVIL SEEDS se publicó primero en WWW.RAFABASA.COM - Noticias en español
+• [2026-06-29] Z! LIVE ROCK FEST amplian la preventa para 2027, agotados los primeros 500 abonos
+  URL: https://www.rafabasa.com/2026/06/29/z-live-rock-fest-amplian-la-preventa-para-2027-agotados-los-primeros-500-abonos/
+  Resumen: La entrada Z! LIVE ROCK FEST amplian la preventa para 2027, agotados los primeros 500 abonos se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y lo
+• [2026-06-29] Matthew Barlow – Jon Schaffer – I PREVAIL – EASY ACTION
+  URL: https://www.rafabasa.com/2026/06/29/matthew-barlow-jon-schaffer-i-prevail-easy-action/
+  Resumen: Matthew Barlow no descarta volver a trabajar con Jon Schaffer. Nuevo single de I PREVAIL. Regreso de EASY ACTION. La entrada Matthew Barlow – Jon Schaffer – I PREVAIL – EASY ACTION
+• [2026-06-29] Crónica y fotos de LINKIN PARK en Madrid del martes 23 de junio
+  URL: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-de-linkin-park-en-madrid/
+  Resumen: La entrada Crónica y fotos de LINKIN PARK en Madrid del martes 23 de junio se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos de METAL 
+• [2026-06-29] ROMANTHICA estrena “Réquiem” (Lyric Video)
+  URL: https://www.rafabasa.com/2026/06/29/romanthica-estrena-requiem-lyric-video/
+  Resumen: La entrada ROMANTHICA estrena “Réquiem” (Lyric Video) se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos de METAL y subgéneros..
+• [2026-06-29] ROTTING CHRIST- HAMLET – BARBARIAN
+  URL: https://www.rafabasa.com/2026/06/29/rotting-christ-hamlet-barbarian/
+  Resumen: Concierto de ROTTING CHRIST en Hellfest. Fechas de HAMLET. BARBARIAN anuncian conciertos. La entrada ROTTING CHRIST- HAMLET – BARBARIAN se publicó primero en WWW.RAFABASA.COM - Not
+• [2026-06-29] DOMINUM – Entrevista con Dr. Dead (Felix Heldt), sobre “Night Is Calling”.
+  URL: https://www.rafabasa.com/2026/06/29/dominum-entrevista-con-dr-dead-felix-heldt-sobre-night-is-calling/
+  Resumen: La entrada DOMINUM – Entrevista con Dr. Dead (Felix Heldt), sobre “Night Is Calling”. se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupo
+• [2026-06-29] MEGADETH – SAVATAGE – Jason Newsted- Skulls Of Metal.
+  URL: https://www.rafabasa.com/2026/06/29/megadeth-savatage-jason-newsted-skulls-of-metal/
+  Resumen: Vídeo en directo de MEGADETH. SAVATAGE filmarán su concierto en Pompeya. Jason Newsted prepara su autobiografía. Skulls Of Metal. La entrada MEGADETH – SAVATAGE – Jason Newsted- Sk
+• [2026-06-29] RAINBOW – BEHEMOTH – HYPOCRISY – SLAUGHTER.
+  URL: https://www.rafabasa.com/2026/06/29/rainbow-behemoth-hypocrisy-slaughter/
+  Resumen: Directo de RAINBOW. Parón de BEHEMOTH. Reedición de HYPOCRISY. Vídeo de los canadienses SLAUGHTER. La entrada RAINBOW – BEHEMOTH – HYPOCRISY – SLAUGHTER. se publicó primero en WWW.
+
+──────────────────────────────────────────────────
+MEDIO: Rock Circus
+──────────────────────────────────────────────────
+• [2026-06-29] Hamlet presenta las próximas fechas de su gira ‘Verano 2026’
+  URL: https://rockcircus.net/hamlet-presenta-las-proximas-fechas-de-su-gira-verano-2026/
+  Resumen: Hamlet presenta las próximas fechas de su gira «Verano 2026» Tras un inicio de temporada imparable, la banda se prepara para recorrer medio país con su gira «Verano 2026», una suce
+• [2026-06-29] El Drogas actuará el 31 de julio en las Ruinas de San Pedro de Viana
+  URL: https://rockcircus.net/el-drogas-actuara-el-31-de-julio-en-las-ruinas-de-san-pedro-de-viana/
+  Resumen: El Drogas actuará el próximo 31 de julio en las Ruinas de San Pedro de Viana. Las entradas ya están a la venta en https://entradas.eldrogas.com/. Las puertas se abrirán a las 20:00
+
+──────────────────────────────────────────────────
+MEDIO: Sevillametal
+──────────────────────────────────────────────────
+• [2026-06-29] CONDADO ROCK 2026: CARTEL + CAMPAÑA DE SOCIOS + ZONA AUTOCARAVANAS + VIAJE ORGANIZADO DESDE SEVILLA
+  URL: https://www.sevillametal.org/sevillametal/2873-condado-rock-2026-el-x-aniversario-apuesta-por-el-metal-y-la-solidaridad-en-rocianaa
+  Resumen: La maquinaria del Condado Rock ya no tiene freno. La organización acaba de presentar el cartel oficial para su edición de 2026, una cita que marca su X Aniversario y que promete co
+
+──────────────────────────────────────────────────
+MEDIO: The Sentinel
+──────────────────────────────────────────────────
+• [2026-06-30] Programa 506: 29-06-2026
+  URL: https://www.thesentinel.es/wpsentinel/?p=39824
+  Resumen: Playlist: ANTHRAX: “Friggin in the riggin” RATA BLANCA: “Volviendo a casa” NIGHT RANGER: “(You can still) Rock in America” GRAND: “Guilty pleasure” GENERATION RADIO: “Montana sky” 
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-30] THE L.I.F.E. PROJECT rinde homenaje a Suicidal Tendencies con una poderosa versión de "You Can't Bring Me Down"
+  URL: https://tntradiorock.com/the-l-i-f-e-project-rinde-homenaje-a-suicidal-tendencies-con-una-poderosa-version-de-you-cant-bring-me-down/
+  Resumen: The L.I.F.E. Project, la colaboración entre el guitarrista Josh Rand (Stone Sour) y la vocalista Casandra Carson (Paralandra y Casandra's Crossing), ha estrenado su nuevo […] Conte
+• [2026-06-30] VICE BUSINESS ONLY (V.B.O.) lleva "The Wild Boys" de Duran Duran a un nuevo terreno entre el metal y la electrónica
+  URL: https://tntradiorock.com/vice-business-only-v-b-o-lleva-the-wild-boys-de-duran-duran-a-un-nuevo-terreno-entre-el-metal-y-la-electronica/
+  Resumen: V.B.O. continúa mostrando su particular identidad musical con el lanzamiento de su versión de "The Wild Boys", el emblemático tema de Duran Duran. La reinterpretación […] Contenido
+• [2026-06-30] BOOK OF WYRMS acelera hacia una nueva etapa con el estreno del explosivo sencillo "Slime Fever"
+  URL: https://tntradiorock.com/book-of-wyrms-acelera-hacia-una-nueva-etapa-con-el-estreno-del-explosivo-sencillo-slime-fever/
+  Resumen: La banda estadounidense de heavy metal psicodélico Book of Wyrms ha estrenado su nuevo sencillo, "Slime Fever", primer adelanto de su próximo álbum de estudio, […] Contenido de TNT
+• [2026-06-29] VICTORIA K profundiza en su lado más oscuro con el estreno de “Take It All”
+  URL: https://tntradiorock.com/victoria-k-profundiza-en-su-lado-mas-oscuro-con-el-estreno-de-take-it-all/
+  Resumen: Victoria K continúa desvelando el universo de su próximo tercer álbum de estudio, "The Pleasure of Sorrow", con el lanzamiento de su nuevo sencillo “Take […] Contenido de TNT Radio
+• [2026-06-29] ILL TIDINGS amplían su universo sonoro con el anuncio de "Seeds of True Rebirth"
+  URL: https://tntradiorock.com/ill-tidings-amplian-su-universo-sonoro-con-el-anuncio-de-seeds-of-true-rebirth/
+  Resumen: La banda austriaca de black metal melódico Ill Tidings acaba de publicar su tercer álbum de estudio, "Seeds of True Rebirth", un trabajo que supone […] Contenido de TNT Radio Rock
+• [2026-06-29] MOURIR profundiza en su evolución con el estreno de "Aux inutiles", nuevo adelanto de su próximo álbum
+  URL: https://tntradiorock.com/mourir-profundiza-en-su-evolucion-con-el-estreno-de-aux-inutiles-nuevo-adelanto-de-su-proximo-album/
+  Resumen: La banda francesa de black metal Mourir ha publicado "Aux inutiles", el tercer sencillo de adelanto de su segundo álbum de estudio, "Nous, le venin", […] Contenido de TNT Radio Roc
+• [2026-06-29] SVINDEL anuncian “Drömfeber”, un viaje febril al proto‑psych más setentero
+  URL: https://tntradiorock.com/svindel-anuncian-dromfeber-un-viaje-febril-al-proto-psych-mas-setentero/
+  Resumen: La formación sueca Svindel anuncia su primer álbum “Drömfeber”, que será publicado el 24 de julio en LP, CD y digital a través de Ripple […] Contenido de TNT Radio Rock
+
+============================================================
+RESPUESTA (7,507 chars):
+============================================================
+[
+  {
+    "title": "RESURRECTION FEST: Horarios.",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/resurrection-fest-horarios.html",
+    "date": "2026-06-29",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "El Resurrection Fest 2026 ya está aquí. Desde el miércoles 1 y hasta el sábado 4 de julio, Viveiro será la gran capital del metal español. Os traemos los horarios.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "WACKEN incorpora a DARK EMBRACE a su cartel y anuncia el concierto más especial.",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/wacken-incorporas-dark-embrace-su-cartel.html",
+    "date": "2026-06-29",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Los gallegos Dark Embrace se incorporan al cartel de Wacken Open Air. La banda de Dark Heavy metal se suma a las otras tres bandas españolas ya anunciadas anteriormente.",
+    "rel": 4,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "WARCRY presenta su nuevo single \"El hombre en el espejo\".",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/warcry-presenta-su-nuevo-single-el.html",
+    "date": "2026-06-29",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "WarCry presenta \"El hombre en el espejo\", segundo single del que será su nuevo álbum, que como ya habíamos anunciado llevará el título de \"Entre la niebla\".",
+    "rel": 5,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Noticias: The L.I.F.E. Project + Romanthica + Lufeh",
+    "url": "https://diosesdelmetal.org/noticias-the-l-i-f-e-project-romanthica-lufeh/",
+    "date": "2026-06-29",
+    "medio": "Dioses del Metal",
+    "excerpt": "Estreno de The L.I.F.E. Project – Nuevo single de Romanthica -Novedad de Lufeh.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "HAMLET: Presenta las próximas fechas de su gira \"Verano 2026\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/hamlet-presenta-las-proximas-fechas-de.html",
+    "date": "2026-06-29",
+    "medio": "El Suavecito",
+    "excerpt": "HAMLET presenta las nuevas fechas de su gira. Tras un inicio de temporada imparable, la banda se prepara para recorrer medio país con su gira \"Verano 2026\".",
+    "rel": 4,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Nuevos temas de Floor Jansen, Sinner, Hashtack, Fuet! y Censurados",
+    "url": "https://keeptheflame.es/noticias/videos/10338-floor-sinner-hashtack-fuet-censurados.html",
+    "date": "2026-06-30",
+    "medio": "Keep The Flame",
+    "excerpt": "Actualizamos la sección de estrenos con una intensa tanda de novedades en formato single y videoclip, incluyendo a las bandas nacionales Fuet! y Censurados.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Noche de Rock 1564 – Wet Cactus – Smooth Beans",
+    "url": "https://www.nochederock.com/noche-de-rock-1564-wet-cactus-smooth-beans/",
+    "date": "2026-06-29",
+    "medio": "Noche de Rock",
+    "excerpt": "Nuevo programa dedicado a repasar la actualidad y música de bandas como Wet Cactus y Smooth Beans.",
+    "rel": 3,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Crónica y Fotos del KABIEFEST 2026 – Sábado 13 de Junio, con FIREWIND + VHÄLDEMAR + JOLLY JOKER + EVILACT",
+    "url": "https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-firewind-vhaldemar-jolly-joker-evilact/",
+    "date": "2026-06-29",
+    "medio": "Rafa Basa",
+    "excerpt": "Crónica y fotos de la jornada del sábado del festival Kabiefest, con la participación de bandas nacionales como Vhäldemar, Jolly Joker y Evilact.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Crónica y Fotos del KABIEFEST 2026 – Viernes 12, con CRIMSON GLORY + RISE TO FALL + MS. MISSERY + EVIL SEEDS",
+    "url": "https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-crimson-glory-rise-to-fall-ms-missery-evil-seeds/",
+    "date": "2026-06-29",
+    "medio": "Rafa Basa",
+    "excerpt": "Crónica y fotos de la jornada del viernes del festival Kabiefest, con actuaciones de Rise To Fall y Evil Seeds.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Z! LIVE ROCK FEST amplian la preventa para 2027, agotados los primeros 500 abonos",
+    "url": "https://www.rafabasa.com/2026/06/29/z-live-rock-fest-amplian-la-preventa-para-2027-agotados-los-primeros-500-abonos/",
+    "date": "2026-06-29",
+    "medio": "Rafa Basa",
+    "excerpt": "El festival zamorano Z! Live Rock Fest amplía su preventa de abonos para la edición de 2027 tras agotarse rápidamente los primeros 500.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Crónica y fotos de LINKIN PARK en Madrid del martes 23 de junio",
+    "url": "https://www.rafabasa.com/2026/06/29/cronica-y-fotos-de-linkin-park-en-madrid/",
+    "date": "2026-06-29",
+    "medio": "Rafa Basa",
+    "excerpt": "Crónica detallada y galería fotográfica del multitudinario concierto de Linkin Park en Madrid.",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "ROMANTHICA estrena “Réquiem” (Lyric Video)",
+    "url": "https://www.rafabasa.com/2026/06/29/romanthica-estrena-requiem-lyric-video/",
+    "date": "2026-06-29",
+    "medio": "Rafa Basa",
+    "excerpt": "La banda nacional Romanthica presenta su nuevo lyric video para el sencillo 'Réquiem'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "ROTTING CHRIST- HAMLET – BARBARIAN",
+    "url": "https://www.rafabasa.com/2026/06/29/rotting-christ-hamlet-barbarian/",
+    "date": "2026-06-29",
+    "medio": "Rafa Basa",
+    "excerpt": "Información sobre las nuevas fechas de concierto confirmadas para la banda madrileña Hamlet.",
+    "rel": 3,
+    "categoria": "Gira"
+  },
+  {
+    "title": "MEGADETH – SAVATAGE – Jason Newsted- Skulls Of Metal.",
+    "url": "https://www.rafabasa.com/2026/06/29/megadeth-savatage-jason-newsted-skulls-of-metal/",
+    "date": "2026-06-29",
+    "medio": "Rafa Basa",
+    "excerpt": "Novedades sobre el festival jiennense Skulls Of Metal entre otras noticias internacionales.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Hamlet presenta las próximas fechas de su gira ‘Verano 2026’",
+    "url": "https://rockcircus.net/hamlet-presenta-las-proximas-fechas-de-su-gira-verano-2026/",
+    "date": "2026-06-29",
+    "medio": "Rock Circus",
+    "excerpt": "La veterana banda de metal Hamlet anuncia las fechas de su tour estival por la geografía española.",
+    "rel": 4,
+    "categoria": "Gira"
+  },
+  {
+    "title": "El Drogas actuará el 31 de julio en las Ruinas de San Pedro de Viana",
+    "url": "https://rockcircus.net/el-drogas-actuara-el-31-de-julio-en-las-ruinas-de-san-pedro-de-viana/",
+    "date": "2026-06-29",
+    "medio": "Rock Circus",
+    "excerpt": "El Drogas confirma una actuación muy especial el próximo 31 de julio en el histórico recinto de las Ruinas de San Pedro de Viana.",
+    "rel": 5,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "CONDADO ROCK 2026: CARTEL + CAMPAÑA DE SOCIOS + ZONA AUTOCARAVANAS + VIAJE ORGANIZADO DESDE SEVILLA",
+    "url": "https://www.sevillametal.org/sevillametal/2873-condado-rock-2026-el-x-aniversario-apuesta-por-el-metal-y-la-solidaridad-en-rocianaa",
+    "date": "2026-06-29",
+    "medio": "Sevillametal",
+    "excerpt": "La organización del Condado Rock presenta el cartel oficial para su X Aniversario en Rociana del Condado, apostando por el metal y la solidaridad.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  }
+]

@@ -1,0 +1,451 @@
+=== ROCKPRESS DEBUG — 20260630_092754 — informe_final ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 16384
+finish_reason: 2
+Tokens → input: 4,907  output: 4,769
+
+============================================================
+PROMPT (14,041 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 30 de junio de 2026
+VENTANA: 27/06/2026 — 30 de junio de 2026
+
+Tienes 30 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 30 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 30
+- Articulos excluidos (ya reportados): 41
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, Sevillametal, The Sentinel, TNT Radio Rock, Red hard n heavy, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 30 de junio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 30 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Diario de un Metalhead, Dioses del Metal, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, Sevillametal, The Sentinel, TNT Radio Rock, Red hard n heavy, The Sound of The Embryo, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, El Clavijero Rock, Esquirlas de Metal, Hoy Rock, Iguana Rock, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Radio Domination, Rock Sesion, Rockeando, Sancocho, The Metal Dreamer, Trueno Metálico, Turbo Rock, Reino de Sueños
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-06-29] RESURRECTION FEST: Horarios.
+   Medio: Diario de un Metalhead | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://www.diariodeunmetalhead.com/2026/06/resurrection-fest-horarios.html
+   Resumen: El Resurrection Fest 2026 ya está aquí. Desde el miércoles 1 y hasta el sábado 4 de julio, Viveiro será la gran capital del metal español. Os traemos los horarios.
+
+2. [2026-06-29] WARCRY presenta su nuevo single "El hombre en el espejo".
+   Medio: Diario de un Metalhead | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://www.diariodeunmetalhead.com/2026/06/warcry-presenta-su-nuevo-single-el.html
+   Resumen: WarCry presenta "El hombre en el espejo", segundo single del que será su nuevo álbum, que como ya habíamos anunciado llevará el título de "Entre la niebla".
+
+3. [2026-06-29] El Drogas actuará el 31 de julio en las Ruinas de San Pedro de Viana
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Concierto
+   URL: https://rockcircus.net/el-drogas-actuara-el-31-de-julio-en-las-ruinas-de-san-pedro-de-viana/
+   Resumen: El Drogas confirma una actuación muy especial el próximo 31 de julio en el histórico recinto de las Ruinas de San Pedro de Viana.
+
+4. [2026-06-30] WarCry publica single “El Hombre en el Espejo”
+   Medio: The Sound of The Embryo | Relevancia: 5/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/warcry-publica-single-el-hombre-en-el-espejo/
+   Resumen: La veterana banda asturiana de power metal WarCry estrena su nuevo single 'El Hombre en el Espejo'.
+
+5. [2026-06-29] Leyendas del Rock publica los horarios de su edición de 2026, con Helloween, Arch Enemy, In Flames, Slaughter to Prevail o Sepultura liderando el festival
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Festival en España
+   URL: https://mariskalrock.com/actualidad/leyendas-del-rock-publica-los-horarios-oficiales-de-edicion-de-2026-con-helloween-arch-enemy-in-flames-slaughter-to-prevail-o-sepultura-liderando-el-festival/
+   Resumen: La organización del festival alicantino Leyendas del Rock presenta los horarios oficiales para la celebración de su XX Aniversario.
+
+6. [2026-06-29] WACKEN incorpora a DARK EMBRACE a su cartel y anuncia el concierto más especial.
+   Medio: Diario de un Metalhead | Relevancia: 4/5 | Cat: Bandas espanolas
+   URL: https://www.diariodeunmetalhead.com/2026/06/wacken-incorporas-dark-embrace-su-cartel.html
+   Resumen: Los gallegos Dark Embrace se incorporan al cartel de Wacken Open Air. La banda de Dark Heavy metal se suma a las otras tres bandas españolas ya anunciadas anteriormente.
+
+7. [2026-06-29] HAMLET: Presenta las próximas fechas de su gira "Verano 2026"
+   Medio: El Suavecito | Relevancia: 4/5 | Cat: Gira
+   URL: https://elsuavecitofn.blogspot.com/2026/06/hamlet-presenta-las-proximas-fechas-de.html
+   Resumen: HAMLET presenta las nuevas fechas de su gira. Tras un inicio de temporada imparable, la banda se prepara para recorrer medio país con su gira "Verano 2026".
+
+8. [2026-06-29] Crónica y Fotos del KABIEFEST 2026 – Sábado 13 de Junio, con FIREWIND + VHÄLDEMAR + JOLLY JOKER + EVILACT
+   Medio: Rafa Basa | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-firewind-vhaldemar-jolly-joker-evilact/
+   Resumen: Crónica y fotos de la jornada del sábado del festival Kabiefest, con la participación de bandas nacionales como Vhäldemar, Jolly Joker y Evilact.
+
+9. [2026-06-29] Crónica y Fotos del KABIEFEST 2026 – Viernes 12, con CRIMSON GLORY + RISE TO FALL + MS. MISSERY + EVIL SEEDS
+   Medio: Rafa Basa | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-crimson-glory-rise-to-fall-ms-missery-evil-seeds/
+   Resumen: Crónica y fotos de la jornada del viernes del festival Kabiefest, con actuaciones de Rise To Fall y Evil Seeds.
+
+10. [2026-06-29] Z! LIVE ROCK FEST amplian la preventa para 2027, agotados los primeros 500 abonos
+   Medio: Rafa Basa | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/29/z-live-rock-fest-amplian-la-preventa-para-2027-agotados-los-primeros-500-abonos/
+   Resumen: El festival zamorano Z! Live Rock Fest amplía su preventa de abonos para la edición de 2027 tras agotarse rápidamente los primeros 500.
+
+11. [2026-06-29] Crónica y fotos de LINKIN PARK en Madrid del martes 23 de junio
+   Medio: Rafa Basa | Relevancia: 4/5 | Cat: Concierto
+   URL: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-de-linkin-park-en-madrid/
+   Resumen: Crónica detallada y galería fotográfica del multitudinario concierto de Linkin Park en Madrid.
+
+12. [2026-06-29] Hamlet presenta las próximas fechas de su gira ‘Verano 2026’
+   Medio: Rock Circus | Relevancia: 4/5 | Cat: Gira
+   URL: https://rockcircus.net/hamlet-presenta-las-proximas-fechas-de-su-gira-verano-2026/
+   Resumen: La veterana banda de metal Hamlet anuncia las fechas de su tour estival por la geografía española.
+
+13. [2026-06-30] Envidia Kotxina al Antorcha Festival 2026
+   Medio: The Sound of The Embryo | Relevancia: 4/5 | Cat: Festival en España
+   URL: https://www.thesoundoftheembryo.es/envidia-kotxina-al-antorcha-festival-2026/
+   Resumen: La banda de punk rock Envidia Kotxina se incorpora al cartel del Antorcha Festival 2026.
+
+14. [2026-06-29] Noticias: The L.I.F.E. Project + Romanthica + Lufeh
+   Medio: Dioses del Metal | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://diosesdelmetal.org/noticias-the-l-i-f-e-project-romanthica-lufeh/
+   Resumen: Estreno de The L.I.F.E. Project – Nuevo single de Romanthica -Novedad de Lufeh.
+
+15. [2026-06-30] Nuevos temas de Floor Jansen, Sinner, Hashtack, Fuet! y Censurados
+   Medio: Keep The Flame | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://keeptheflame.es/noticias/videos/10338-floor-sinner-hashtack-fuet-censurados.html
+   Resumen: Actualizamos la sección de estrenos con una intensa tanda de novedades en formato single y videoclip, incluyendo a las bandas nacionales Fuet! y Censurados.
+
+16. [2026-06-29] Noche de Rock 1564 – Wet Cactus – Smooth Beans
+   Medio: Noche de Rock | Relevancia: 3/5 | Cat: Bandas espanolas
+   URL: https://www.nochederock.com/noche-de-rock-1564-wet-cactus-smooth-beans/
+   Resumen: Nuevo programa dedicado a repasar la actualidad y música de bandas como Wet Cactus y Smooth Beans.
+
+17. [2026-06-29] ROMANTHICA estrena “Réquiem” (Lyric Video)
+   Medio: Rafa Basa | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.rafabasa.com/2026/06/29/romanthica-estrena-requiem-lyric-video/
+   Resumen: La banda nacional Romanthica presenta su nuevo lyric video para el sencillo 'Réquiem'.
+
+18. [2026-06-29] ROTTING CHRIST- HAMLET – BARBARIAN
+   Medio: Rafa Basa | Relevancia: 3/5 | Cat: Gira
+   URL: https://www.rafabasa.com/2026/06/29/rotting-christ-hamlet-barbarian/
+   Resumen: Información sobre las nuevas fechas de concierto confirmadas para la banda madrileña Hamlet.
+
+19. [2026-06-29] MEGADETH – SAVATAGE – Jason Newsted- Skulls Of Metal.
+   Medio: Rafa Basa | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/29/megadeth-savatage-jason-newsted-skulls-of-metal/
+   Resumen: Novedades sobre el festival jiennense Skulls Of Metal entre otras noticias internacionales.
+
+20. [2026-06-29] CONDADO ROCK 2026: CARTEL + CAMPAÑA DE SOCIOS + ZONA AUTOCARAVANAS + VIAJE ORGANIZADO DESDE SEVILLA
+   Medio: Sevillametal | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://www.sevillametal.org/sevillametal/2873-condado-rock-2026-el-x-aniversario-apuesta-por-el-metal-y-la-solidaridad-en-rocianaa
+   Resumen: La organización del Condado Rock presenta el cartel oficial para su X Aniversario en Rociana del Condado, apostando por el metal y la solidaridad.
+
+21. [2026-06-30] Lumpem publica su nuevo disco “Satura”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/lumpem-publica-su-nuevo-disco-satura/
+   Resumen: La formación Lumpem presenta su nuevo trabajo discográfico titulado 'Satura'.
+
+22. [2026-06-30] Pycaya también actuará en Maldito Metal Fest 2026
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Festival en España
+   URL: https://www.thesoundoftheembryo.es/pycaya-tambien-actuara-en-maldito-metal-fest-2026/
+   Resumen: La banda de metal Pycaya se suma a la programación del festival Maldito Metal Fest 2026.
+
+23. [2026-06-30] Urgila estrena Lyric Video “Ahir, avui, demà”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/urgila-estrena-lyric-video-ahir-avui-dema/
+   Resumen: La banda Urgila presenta el lyric video de su nuevo tema cantado en catalán 'Ahir, avui, demà'.
+
+24. [2026-06-30] Crónica de Starbenders en Madrid: Derroche de magnetismo glam que supo a poco
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Concierto
+   URL: https://mariskalrock.com/actualidad/cronica-de-starbenders-en-madrid-derroche-de-magnetismo-glam-que-supo-a-poco/
+   Resumen: Aprovechando su paso por el Azkena Rock Festival, el cuarteto norteamericano Starbenders visitó la capital madrileña el día siguiente para presentar su nuevo trabajo discográfico.
+
+25. [2026-06-29] Interferencias presenta “Antes de cerrar el bar”, el festivo segundo single de adelanto de su primer disco
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/noticias-breves/interferencias-presenta-antes-de-cerrar-el-bar-el-festivo-segundo-single-de-adelanto-de-su-primer-disco/
+   Resumen: Los hermanos Óscar, Luis, Pablo y César vuelven a la carga con el segundo adelanto del que será primer disco de los madrileños Interferencias.
+
+26. [2026-06-29] La Rueca de Moira estrena “Senderos”, el tercer adelanto de su primer EP: Un canto compartido, nostálgico y aventurero
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/actualidad/la-rueca-de-moira-estrena-senderos-el-tercer-adelanto-de-su-primer-ep-un-canto-compartido-nostalgico-y-aventurero/
+   Resumen: Tras los estrenos de “Egipto se prende” y “Veleros”, la banda fundada en Madrid en 2023 lanza su nuevo single.
+
+27. [2026-06-29] Crónica de BEAT en Noches del Botánico (Madrid): De lo humano a lo divino
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Concierto
+   URL: https://mariskalrock.com/actualidad/cronica-de-beat-en-noches-del-botanico-madrid-de-lo-humano-a-lo-divino/
+   Resumen: Crónica del concierto de BEAT en el ciclo madrileño Noches del Botánico en el Real Jardín Botánico Alfonso XIII.
+
+28. [2026-06-29] This Is Ephemeral estrena “III – Broken” nuevo single que abre el camino hacia su próximo disco: Rock atmosférico con sensibilidad visual y evocadora
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/actualidad/this-is-ephemeral-estrena-iii-broken-nuevo-single-que-abre-el-camino-hacia-su-proximo-disco-rock-atmosferico-con-sensibilidad-visual-y-evocadora/
+   Resumen: El prometedor renacer de la banda nacional This Is Ephemeral con el EP ‘Destiny’ tras largos años de silencio tiene ya un esperado nuevo paso.
+
+29. [2026-06-29] Kaleo traerá los conciertos del “Way Down We Go Tour” a Madrid and Barcelona
+   Medio: Mariskalrock | Relevancia: 2/5 | Cat: Gira
+   URL: https://mariskalrock.com/noticias-breves/kaleo-traera-los-conciertos-del-way-down-we-go-tour-a-madrid-y-barcelona/
+   Resumen: La celebración del décimo aniversario del lanzamiento del disco debut de los islandeses Kaleo traerá conciertos a Madrid y Barcelona.
+
+30. [2026-06-29] Dead Poet Society anuncia conciertos en Madrid y Barcelona en 2027
+   Medio: Mariskalrock | Relevancia: 2/5 | Cat: Gira
+   URL: https://mariskalrock.com/noticias-breves/dead-poet-society-anuncia-conciertos-en-madrid-y-barcelona-en-2027/
+   Resumen: La banda estadounidense de rock alternativo Dead Poet Society ha confirmado las fechas de su nueva gira europea con paradas en Madrid y Barcelona.
+
+============================================================
+RESPUESTA (15,680 chars):
+============================================================
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 30 de junio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**1. RESURRECTION FEST: Horarios.** - Diario de un Metalhead
+Resumen: El Resurrection Fest 2026 ya está aquí. Desde el miércoles 1 y hasta el sábado 4 de julio, Viveiro será la gran capital del metal español. Os traemos los horarios.
+Enlace: https://www.diariodeunmetalhead.com/2026/06/resurrection-fest-horarios.html
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Publicación de los horarios oficiales de uno de los festivales de metal más importantes del país.
+
+**2. WARCRY presenta su nuevo single "El hombre en el espejo".** - Diario de un Metalhead
+Resumen: WarCry presenta "El hombre en el espejo", segundo single del que será su nuevo álbum, que como ya habíamos anunciado llevará el título de "Entre la niebla".
+Enlace: https://www.diariodeunmetalhead.com/2026/06/warcry-presenta-su-nuevo-single-el.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Lanzamiento de un nuevo single muy esperado de una de las bandas de heavy metal más grandes de España.
+
+**3. El Drogas actuará el 31 de julio en las Ruinas de San Pedro de Viana** - Rock Circus
+Resumen: El Drogas confirma una actuación muy especial el próximo 31 de julio en el histórico recinto de las Ruinas de San Pedro de Viana.
+Enlace: https://rockcircus.net/el-drogas-actuara-el-31-de-julio-en-las-ruinas-de-san-pedro-de-viana/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐⭐⭐ - Concierto exclusivo en un entorno histórico por parte de una figura legendaria del rock estatal.
+
+**4. WarCry publica single “El Hombre en el Espejo”** - The Sound of The Embryo
+Resumen: La veterana banda asturiana de power metal WarCry estrena su nuevo single 'El Hombre en el Espejo'.
+Enlace: https://www.thesoundoftheembryo.es/warcry-publica-single-el-hombre-en-el-espejo/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐⭐ - Gran repercusión mediática ante el nuevo adelanto discográfico de la mítica formación asturiana.
+
+**5. Leyendas del Rock publica los horarios de su edición de 2026, con Helloween, Arch Enemy, In Flames, Slaughter to Prevail o Sepultura liderando el festival** - Mariskalrock
+Resumen: La organización del festival alicantino Leyendas del Rock presenta los horarios oficiales para la celebración de su XX Aniversario.
+Enlace: https://mariskalrock.com/actualidad/leyendas-del-rock-publica-los-horarios-oficiales-de-edicion-de-2026-con-helloween-arch-enemy-in-flames-slaughter-to-prevail-o-sepultura-liderando-el-festival/
+Categoria: Festival en España
+Relevancia: ⭐⭐⭐⭐⭐ - Horarios oficiales para el vigésimo aniversario de uno de los festivales de rock y metal más consolidados de España.
+
+**6. WACKEN incorpora a DARK EMBRACE a su cartel y anuncia el concierto más especial.** - Diario de un Metalhead
+Resumen: Los gallegos Dark Embrace se incorporan al cartel de Wacken Open Air. La banda de Dark Heavy metal se suma a las otras tres bandas españolas ya anunciadas anteriormente.
+Enlace: https://www.diariodeunmetalhead.com/2026/06/wacken-incorporas-dark-embrace-su-cartel.html
+Categoria: Bandas espanolas
+Relevancia: ⭐⭐⭐⭐ - Hito internacional de gran relevancia para una banda nacional al sumarse al festival de metal más grande de Europa.
+
+**7. HAMLET: Presenta las próximas fechas de su gira "Verano 2026"** - El Suavecito
+Resumen: HAMLET presenta las nuevas fechas de su gira. Tras un inicio de temporada imparable, la banda se prepara para recorrer medio país con su gira "Verano 2026".
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/hamlet-presenta-las-proximas-fechas-de.html
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐ - Anuncio de las fechas estivales de una de las bandas de metal nacional más activas y respetadas.
+
+**8. Crónica y Fotos del KABIEFEST 2026 – Sábado 13 de Junio, con FIREWIND + VHÄLDEMAR + JOLLY JOKER + EVILACT** - Rafa Basa
+Resumen: Crónica y fotos de la jornada del sábado del festival Kabiefest, con la participación de bandas nacionales como Vhäldemar, Jolly Joker y Evilact.
+Enlace: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-firewind-vhaldemar-jolly-joker-evilact/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Cobertura detallada de un festival nacional con fuerte protagonismo de bandas de la escena local.
+
+**9. Crónica y Fotos del KABIEFEST 2026 – Viernes 12, con CRIMSON GLORY + RISE TO FALL + MS. MISSERY + EVIL SEEDS** - Rafa Basa
+Resumen: Crónica y fotos de la jornada del viernes del festival Kabiefest, con actuaciones de Rise To Fall y Evil Seeds.
+Enlace: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-del-kabiefest-2026-con-crimson-glory-rise-to-fall-ms-missery-evil-seeds/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Crónica de la jornada inaugural de un festival nacional destacado con bandas de metal estatales.
+
+**10. Z! LIVE ROCK FEST amplian la preventa para 2027, agotados los primeros 500 abonos** - Rafa Basa
+Resumen: El festival zamorano Z! Live Rock Fest amplía su preventa de abonos para la edición de 2027 tras agotarse rápidamente los primeros 500.
+Enlace: https://www.rafabasa.com/2026/06/29/z-live-rock-fest-amplian-la-preventa-para-2027-agotados-los-primeros-500-abonos/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Gran éxito de convocatoria a largo plazo para uno de los festivales nacionales en mayor expansión.
+
+**11. Crónica y fotos de LINKIN PARK en Madrid del martes 23 de junio** - Rafa Basa
+Resumen: Crónica detallada y galería fotográfica del multitudinario concierto de Linkin Park en Madrid.
+Enlace: https://www.rafabasa.com/2026/06/29/cronica-y-fotos-de-linkin-park-en-madrid/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐⭐ - Cobertura de un gran evento internacional de alta convocatoria en la capital española.
+
+**12. Hamlet presenta las próximas fechas de su gira ‘Verano 2026’** - Rock Circus
+Resumen: La veterana banda de metal Hamlet anuncia las fechas de su tour estival por la geografía española.
+Enlace: https://rockcircus.net/hamlet-presenta-las-proximas-fechas-de-su-gira-verano-2026/
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐ - Difusión de la gira de verano de una de las agrupaciones de metal más influyentes del país.
+
+**13. Envidia Kotxina al Antorcha Festival 2026** - The Sound of The Embryo
+Resumen: La banda de punk rock Envidia Kotxina se incorpora al cartel del Antorcha Festival 2026.
+Enlace: https://www.thesoundoftheembryo.es/envidia-kotxina-al-antorcha-festival-2026/
+Categoria: Festival en España
+Relevancia: ⭐⭐⭐⭐ - Confirmación de una banda mítica de la escena punk rock nacional en un festival de verano.
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+**14. Noticias: The L.I.F.E. Project + Romanthica + Lufeh** - Dioses del Metal
+Resumen: Estreno de The L.I.F.E. Project – Nuevo single de Romanthica -Novedad de Lufeh.
+Enlace: https://diosesdelmetal.org/noticias-the-l-i-f-e-project-romanthica-lufeh/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Novedades de lanzamientos discográficos que incluyen a la banda nacional Romanthica.
+
+**15. Nuevos temas de Floor Jansen, Sinner, Hashtack, Fuet! y Censurados** - Keep The Flame
+Resumen: Actualizamos la sección de estrenos con una intensa tanda de novedades en formato single y videoclip, incluyendo a las bandas nacionales Fuet! y Censurados.
+Enlace: https://keeptheflame.es/noticias/videos/10338-floor-sinner-hashtack-fuet-censurados.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Estrenos de nuevos sencillos y videoclips de bandas de la escena nacional de rock y metal.
+
+**16. Noche de Rock 1564 – Wet Cactus – Smooth Beans** - Noche de Rock
+Resumen: Nuevo programa dedicado a repasar la actualidad y música de bandas como Wet Cactus y Smooth Beans.
+Enlace: https://www.nochederock.com/noche-de-rock-1564-wet-cactus-smooth-beans/
+Categoria: Bandas espanolas
+Relevancia: ⭐⭐⭐ - Espacio radiofónico dedicado a la difusión y análisis de bandas de la escena rock nacional.
+
+**17. ROMANTHICA estrena “Réquiem” (Lyric Video)** - Rafa Basa
+Resumen: La banda nacional Romanthica presenta su nuevo lyric video para el sencillo 'Réquiem'.
+Enlace: https://www.rafabasa.com/2026/06/29/romanthica-estrena-requiem-lyric-video/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de un nuevo adelanto audiovisual por parte de una destacada banda nacional de metal gótico.
+
+**18. ROTTING CHRIST- HAMLET – BARBARIAN** - Rafa Basa
+Resumen: Información sobre las nuevas fechas de concierto confirmadas para la banda madrileña Hamlet.
+Enlace: https://www.rafabasa.com/2026/06/29/rotting-christ-hamlet-barbarian/
+Categoria: Gira
+Relevancia: ⭐⭐⭐ - Actualización de la agenda de conciertos de la veterana formación madrileña Hamlet.
+
+**19. MEGADETH – SAVATAGE – Jason Newsted- Skulls Of Metal.** - Rafa Basa
+Resumen: Novedades sobre el festival jiennense Skulls Of Metal entre otras noticias internacionales.
+Enlace: https://www.rafabasa.com/2026/06/29/megadeth-savatage-jason-newsted-skulls-of-metal/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Novedades organizativas sobre un festival nacional de heavy metal tradicional.
+
+**20. CONDADO ROCK 2026: CARTEL + CAMPAÑA DE SOCIOS + ZONA AUTOCARAVANAS + VIAJE ORGANIZADO DESDE SEVILLA** - Sevillametal
+Resumen: La organización del Condado Rock presenta el cartel oficial para su X Aniversario en Rociana del Condado, apostando por el metal y la solidaridad.
+Enlace: https://www.sevillametal.org/sevillametal/2873-condado-rock-2026-el-x-aniversario-apuesta-por-el-metal-y-la-solidaridad-en-rocianaa
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Presentación de los detalles organizativos y cartel de un festival andaluz de carácter solidario.
+
+**21. Lumpem publica su nuevo disco “Satura”** - The Sound of The Embryo
+Resumen: La formación Lumpem presenta su nuevo trabajo discográfico titulado 'Satura'.
+Enlace: https://www.thesoundoftheembryo.es/lumpem-publica-su-nuevo-disco-satura/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de un nuevo álbum de estudio dentro de la escena nacional.
+
+**22. Pycaya también actuará en Maldito Metal Fest 2026** - The Sound of The Embryo
+Resumen: La banda de metal Pycaya se suma a la programación del festival Maldito Metal Fest 2026.
+Enlace: https://www.thesoundoftheembryo.es/pycaya-tambien-actuara-en-maldito-metal-fest-2026/
+Categoria: Festival en España
+Relevancia: ⭐⭐⭐ - Confirmación de una banda nacional en el cartel de un festival de metal estatal.
+
+**23. Urgila estrena Lyric Video “Ahir, avui, demà”** - The Sound of The Embryo
+Resumen: La banda Urgila presenta el lyric video de su nuevo tema cantado en catalán 'Ahir, avui, demà'.
+Enlace: https://www.thesoundoftheembryo.es/urgila-estrena-lyric-video-ahir-avui-dema/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Estreno de un nuevo sencillo cantado en catalán por parte de una banda nacional.
+
+**24. Crónica de Starbenders en Madrid: Derroche de magnetismo glam que supo a poco** - Mariskalrock
+Resumen: Aprovechando su paso por el Azkena Rock Festival, el cuarteto norteamericano Starbenders visitó la capital madrileña el día siguiente para presentar su nuevo trabajo discográfico.
+Enlace: https://mariskalrock.com/actualidad/cronica-de-starbenders-en-madrid-derroche-de-magnetismo-glam-que-supo-a-poco/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Crónica de un concierto internacional en salas de la capital tras su paso por un gran festival nacional.
+
+**25. Interferencias presenta “Antes de cerrar el bar”, el festivo segundo single de adelanto de su primer disco** - Mariskalrock
+Resumen: Los hermanos Óscar, Luis, Pablo y César vuelven a la carga con el segundo adelanto del que será primer disco de los madrileños Interferencias.
+Enlace: https://mariskalrock.com/noticias-breves/interferencias-presenta-antes-de-cerrar-el-bar-el-festivo-segundo-single-de-adelanto-de-su-primer-disco/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de un nuevo single de adelanto de una banda de rock madrileña emergente.
+
+**26. La Rueca de Moira estrena “Senderos”, el tercer adelanto de su primer EP: Un canto compartido, nostálgico y aventurero** - Mariskalrock
+Resumen: Tras los estrenos de “Egipto se prende” y “Veleros”, la banda fundada en Madrid en 2023 lanza su nuevo single.
+Enlace: https://mariskalrock.com/actualidad/la-rueca-de-moira-estrena-senderos-el-tercer-adelanto-de-su-primer-ep-un-canto-compartido-nostalgico-y-aventurero/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Estreno de un nuevo adelanto del EP debut de una joven formación de rock nacional.
+
+**27. Crónica de BEAT en Noches del Botánico (Madrid): De lo humano a lo divino** - Mariskalrock
+Resumen: Crónica del concierto de BEAT en el ciclo madrileño Noches del Botánico en el Real Jardín Botánico Alfonso XIII.
+Enlace: https://mariskalrock.com/actualidad/cronica-de-beat-en-noches-del-botanico-madrid-de-lo-humano-a-lo-divino/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Cobertura de un concierto internacional dentro de un prestigioso ciclo de conciertos de verano en Madrid.
+
+**28. This Is Ephemeral estrena “III – Broken” nuevo single que abre el camino hacia su próximo disco: Rock atmosférico con sensibilidad visual y evocadora** - Mariskalrock
+Resumen: El prometedor renacer de la banda nacional This Is Ephemeral con el EP ‘Destiny’ tras largos años de silencio tiene ya un esperado nuevo paso.
+Enlace: https://mariskalrock.com/actualidad/this-is-ephemeral-estrena-iii-broken-nuevo-single-que-abre-el-camino-hacia-su-proximo-disco-rock-atmosferico-con-sensibilidad-visual-y-evocadora/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de un nuevo sencillo que marca el regreso de una banda nacional de rock atmosférico.
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+**29. Kaleo traerá los conciertos del “Way Down We Go Tour” a Madrid and Barcelona** - Mariskalrock
+Resumen: La celebración del décimo aniversario del lanzamiento del disco debut de los islandeses Kaleo traerá conciertos a Madrid y Barcelona.
+Enlace: https://mariskalrock.com/noticias-breves/kaleo-traera-los-conciertos-del-way-down-we-go-tour-a-madrid-y-barcelona/
+Categoria: Gira
+Relevancia: ⭐⭐ - Anuncio de conciertos en España de una banda internacional de rock alternativo.
+
+**30. Dead Poet Society anuncia conciertos en Madrid y Barcelona en 2027** - Mariskalrock
+Resumen: La banda estadounidense de rock alternativo Dead Poet Society ha confirmado las fechas de su nueva gira europea con paradas en Madrid y Barcelona.
+Enlace: https://mariskalrock.com/noticias-breves/dead-poet-society-anuncia-conciertos-en-madrid-y-barcelona-en-2027/
+Categoria: Gira
+Relevancia: ⭐⭐ - Confirmación de fechas de gira europea en salas españolas para el próximo año por parte de una banda internacional.
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 30
+- Articulos excluidos (ya reportados): 41
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, Sevillametal, The Sentinel, TNT Radio Rock, Red hard n heavy, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: La temporada estival marca una fuerte concentración de noticias sobre festivales nacionales, destacando la publicación de horarios para el Resurrection Fest y Leyendas del Rock. Asimismo, se observa una intensa actividad de lanzamientos de sencillos y videoclips de bandas consolidadas como WarCry y Hamlet, quienes preparan sus respectivas giras de verano. Por último, las crónicas de conciertos y festivales recientes evidencian una gran vitalidad en la escena en vivo de todo el país.
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+| Diario de un Metalhead | Activo | 3 |
+| Dioses del Metal | Activo | 1 |
+| El Suavecito | Activo | 1 |
+| Keep The Flame | Activo | 1 |
+| Noche de Rock | Activo | 1 |
+| Rafa Basa | Activo | 7 |
+| Rock Circus | Activo | 2 |
+| Sevillametal |
