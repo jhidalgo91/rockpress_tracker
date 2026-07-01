@@ -1,9 +1,6 @@
 name: 🎸 RockPress Tracker – Informe Diario
 
 on:
-  # Ejecución automática diaria a las 8:00 UTC (9h CET / 10h CEST)
-  schedule:
-    - cron: '0 8 * * *'
 
   # Lanzamiento manual desde la pestaña Actions de GitHub
   workflow_dispatch:
