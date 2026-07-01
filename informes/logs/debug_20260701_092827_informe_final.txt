@@ -1,0 +1,500 @@
+=== ROCKPRESS DEBUG — 20260701_092827 — informe_final ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 16384
+finish_reason: 1
+Tokens → input: 5,325  output: 5,688
+
+============================================================
+PROMPT (15,314 chars):
+============================================================
+Eres un periodista musical especializado en rock nacional espanol.
+
+FECHA: 1 de julio de 2026
+VENTANA: 28/06/2026 — 1 de julio de 2026
+
+Tienes 32 articulos ya clasificados como relevantes.
+Genera el INFORME DIARIO completo en Markdown con este formato exacto:
+
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 1 de julio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**N. TITULAR** - MEDIO
+Resumen: [2-3 frases en espanol]
+Enlace: [URL completa]
+Categoria: [categoria]
+Relevancia: [estrellas segun rel] - [justificacion breve]
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+[mismo formato]
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+[mismo formato]
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 32
+- Articulos excluidos (ya reportados): 52
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, Sevillametal, The Sentinel, TNT Radio Rock, Red hard n heavy, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: [2-3 frases]
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+[una fila por medio — indica si tiene noticias relevantes o no]
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 1 de julio de 2026*
+
+INSTRUCCIONES ADICIONALES:
+- Incluye TODOS los 32 articulos de la lista abajo.
+- Agrupa por nivel de relevancia segun el campo rel.
+- Escribe resumenes informativos en espanol.
+- En Fuentes, incluye los medios con actividad: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, Sevillametal, The Sentinel, TNT Radio Rock, Red hard n heavy, The Sound of The Embryo, Mariskalrock
+  Y estos sin noticias relevantes: Ballesterock, Canedorock, Esquirlas de Metal, Hoy Rock, Iguana Rock, La Frontera del Silencio, Metal Symphony, Metalcry, Metaltrip, Radio Domination, Rock Sesion, Rockeando, Sancocho, The Metal Dreamer, Trueno Metálico, Turbo Rock, Reino de Sueños
+- No inventes informacion: usa solo lo que aparece en los articulos.
+
+ARTICULOS CLASIFICADOS:
+1. [2026-07-01] Ginetarock 2026. Videoclip y gira de Whisky Caravan. Fechas de Hamlet
+   Medio: Keep The Flame | Relevancia: 5/5 | Cat: Gira
+   URL: https://keeptheflame.es/noticias/conciertos/10339-ginetarock-whisky-hamlet.html
+   Resumen: Actualización de la agenda con novedades del festival Ginetarock, la gira de Whisky Caravan y las fechas de verano de Hamlet.
+
+2. [2026-06-30] ROCK IMPERIUM FESTIVAL – Faltan 3 días. Horarios, detalles, etc
+   Medio: Rafa Basa | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://www.rafabasa.com/2026/06/30/rock-imperium-festival-faltan-3-dias-horarios-detalles-etc/
+   Resumen: Últimos detalles, horarios y preparativos para la celebración del Rock Imperium Festival en Cartagena.
+
+3. [2026-06-30] A la venta las entradas para la gira de Fito & Fitipaldis por teatros y auditorios
+   Medio: Rock Circus | Relevancia: 5/5 | Cat: Gira
+   URL: https://rockcircus.net/a-la-venta-las-entradas-para-la-gira-de-fito-fitipaldis-por-teatros-y-auditorios/
+   Resumen: Salen a la venta las entradas para la gira 'Aullidos Tour. Teatros y Auditorios 2026-2027' de Fito & Fitipaldis.
+
+4. [2026-06-30] Evaristo, M Clan, Def Con Dos, Alfredo Piedrafita, Ultraligera o Hermana Furia en el cartel de la XIII edición del Festival Arrecife en Vivo en Lanzarote
+   Medio: Mariskalrock | Relevancia: 5/5 | Cat: Festival en Espana
+   URL: https://mariskalrock.com/noticias-breves/evaristo-m-clan-ultraligera-o-hermana-furia-integran-el-cartel-de-la-xiii-edicion-del-festival-arrecife-en-vivo-en-lanzarote/
+   Resumen: El pasado viernes 26 de junio, La Casa de Canarias en Madrid acogió la presentación de la decimotercera edición del Festival Arrecife en Vivo, una cita musical que volverá a conver
+
+5. [2026-06-30] SYNLAKROSS pone música al dolor de su tierra en "The Mire Of The Forgotten".
+   Medio: Diario de un Metalhead | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://www.diariodeunmetalhead.com/2026/06/synlakross-pone-musica-al-dolor-de-su.html
+   Resumen: SynlakrosS regresa con "The Mire Of The Forgotten", un nuevo single cargado de oscuridad y emoción acompañado de su correspondiente videoclip.
+
+6. [2026-06-30] HARDEN en Músicos en la Naturaleza🌲🌳
+   Medio: El Suavecito | Relevancia: 4/5 | Cat: Concierto
+   URL: https://elsuavecitofn.blogspot.com/2026/06/harden-en-musicos-en-la-naturaleza.html
+   Resumen: La banda abulense Harden actuará el próximo 4 de julio en el festival Músicos en la Naturaleza presentando su trabajo 'Furia'.
+
+7. [2026-06-30] Quireboys o Los Coronas en el Rockin’ Fest 2026
+   Medio: Rock Circus | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://rockcircus.net/quireboys-o-los-coronas-en-el-rockin-fest-2026/
+   Resumen: El Centro Municipal La Pollina acogerá una nueva edición del Rockin’ Fest con actuaciones de Los Coronas y Quireboys.
+
+8. [2026-07-01] SYNLAKROSS presentan su nuevo single y videoclip “The Mire Of The Forgotten”, una obra de melodeath marcada por la tragedia y la memoria
+   Medio: TNT Radio Rock | Relevancia: 4/5 | Cat: Lanzamiento
+   URL: https://tntradiorock.com/synlakross-presentan-su-nuevo-single-y-videoclip-the-mire-of-the-forgotten-una-obra-de-melodeath-marcada-por-la-tragedia-y-la-memoria/
+   Resumen: La banda valenciana de death metal melódico SynlakrosS lanza su nuevo single y videoclip 'The Mire Of The Forgotten'.
+
+9. [2026-06-30] KILMARA estrena un explosivo vídeo en directo de "Liberticide" y confirma su asalto europeo junto a Induction y Tungsten
+   Medio: TNT Radio Rock | Relevancia: 4/5 | Cat: Gira
+   URL: https://tntradiorock.com/kilmara-estrena-un-explosivo-video-en-directo-de-liberticide-y-confirma-su-asalto-europeo-junto-a-induction-y-tungsten/
+   Resumen: KILMARA continúa reforzando su proyección internacional con el estreno de un nuevo videoclip en directo para "Liberticide", uno de los temas incluidos en su más...
+
+10. [2026-06-30] Ya llega el Zurbarán Rock Burgos 2026, con un cartel tremendo
+   Medio: Red hard n heavy | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://redhardnheavy.com/ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo/?utm_source=rss&utm_medium=rss&utm_campaign=ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo
+   Resumen: Zurbarán Rock Burgos ha hecho públicos los horarios de su novena edición, que se celebrará los días 10 y 11 de julio de 2026, con una jornada previa el jueves 9, en el Espacio El P
+
+11. [2026-06-30] Este guitarrista intentará batir el récord Guinness de tocar la guitarra durante más tiempo seguido en el Leyendas del Rock: ¿Locura o posibilidad real?
+   Medio: Mariskalrock | Relevancia: 4/5 | Cat: Festival en Espana
+   URL: https://mariskalrock.com/actualidad/este-guitarrista-intentara-batir-el-record-guinness-de-tocar-la-guitarra-durante-mas-tiempo-seguido-en-el-leyendas-del-rock-locura-o-posibilidad-real/
+   Resumen: El sueño de entrar en la historia con un récord Guinness es el que se ha planteado un guitarrista dentro de la celebración de la próxima edición de Leyendas del Rock.
+
+12. [2026-07-01] Sin frenos. BLACK BOMBER, Gijón, 20.06.2026. Crónica.
+   Medio: Diario de un Metalhead | Relevancia: 3/5 | Cat: Concierto
+   URL: https://www.diariodeunmetalhead.com/2026/06/sin-frenos-black-bomber-gijon-20062026.html
+   Resumen: Crónica de la actuación de Black Bomber en Gijón, tras su paso por la semifinal de la Metal Battle.
+
+13. [2026-06-30] BARCIA METAL FEST XX: el 1 de agosto en Torreperogil (Jaén). Falta un mes.
+   Medio: Diario de un Metalhead | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://www.diariodeunmetalhead.com/2026/07/barcia-metal-fest-xx-el-1-de-agosto-en.html
+   Resumen: Firewind, Praying Mantis, Mind Driller y Smoke Riders conforman el cartel de la XX edición del BARCIA METAL FEST a celebrar en Jaén.
+
+14. [2026-06-30] Noticias: The Dead Daisies + Kilmara + Jorn Lande
+   Medio: Dioses del Metal | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://diosesdelmetal.org/noticias-the-dead-daisies-kilmara-jorn-lande/
+   Resumen: Estreno de un nuevo tema en directo de la banda española Kilmara.
+
+15. [2026-07-01] Noir Fronterizo presentan "La justicia y los caramelos" como nuevo single
+   Medio: El Clavijero Rock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://el-clavijero-rock.blogspot.com/2026/07/noir-fronterizo-presentan-la-justicia-y.html
+   Resumen: La banda Noir Fronterizo presenta su nuevo single titulado 'La justicia y los caramelos'.
+
+16. [2026-06-30] Defi100T debuta con "Tragicomedia"
+   Medio: El Clavijero Rock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://el-clavijero-rock.blogspot.com/2026/06/defi100t-debuta-con-tragicomedia.html
+   Resumen: La banda Defi100T hace su debut oficial con el lanzamiento de 'Tragicomedia'.
+
+17. [2026-06-30] CONDADO ROCK 2026
+   Medio: El Suavecito | Relevancia: 3/5 | Cat: Festival en Espana
+   URL: https://elsuavecitofn.blogspot.com/2026/06/condado-rock-2026.html
+   Resumen: Novedades y confirmaciones sobre el festival Condado Rock 2026.
+
+18. [2026-06-30] NOIR FRONTERIZO: Lanza su nuevo single "La Justicia y Los Caramelos"
+   Medio: El Suavecito | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://elsuavecitofn.blogspot.com/2026/06/noir-fronterizo-lanza-su-nuevo-single.html
+   Resumen: NOIR FRONTERIZO presenta "La Justicia y Los Caramelos", un single sin artificios grabado en estudio con sonido directo.
+
+19. [2026-06-30] La banda vizcaína Ruta 8 presenta su primer LP "En extinción"
+   Medio: El Suavecito | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://elsuavecitofn.blogspot.com/2026/06/la-banda-vizcaina-ruta-8-presenta-su.html
+   Resumen: La banda vizcaína Ruta 8 estrena su primer LP 'En extinción', cargado de hard rock ochentero y compromiso social.
+
+20. [2026-06-30] Crónica y fotos de BLOODBATH + CANCER en Madrid
+   Medio: Rafa Basa | Relevancia: 3/5 | Cat: Concierto
+   URL: https://www.rafabasa.com/2026/06/30/cronica-y-fotos-de-bloodbath-cancer-en-madrid/
+   Resumen: Crónica detallada y galería fotográfica del concierto de las bandas internacionales Bloodbath y Cancer en Madrid.
+
+21. [2026-06-30] Agenda de conciertos de rock y metal en España – Julio 2026
+   Medio: Red hard n heavy | Relevancia: 3/5 | Cat: Concierto
+   URL: https://redhardnheavy.com/agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026/?utm_source=rss&utm_medium=rss&utm_campaign=agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026
+   Resumen: Tras la agenda de mayo y Junio, ya estamos 100% metidos en 2026 con la agenda de Julio y todos los conciertos de rock y metal previstos para este mes.
+
+22. [2026-07-01] Deaf Devils anuncia Summer Tour
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Gira
+   URL: https://www.thesoundoftheembryo.es/deaf-devils-anuncia-summer-tour/
+   Resumen: Deaf Devils anuncia Summer Tour
+
+23. [2026-07-01] Ruta 8 publica su nuevo disco “En Extinción”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/ruta-8-publica-su-nuevo-disco-en-extincion/
+   Resumen: Ruta 8 publica su nuevo disco “En Extinción”
+
+24. [2026-07-01] Perennial Isolation publica videoclip “Crimson Iconoclasm”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/perennial-isolation-publica-videoclip-crimson-iconoclasm/
+   Resumen: Perennial Isolation publica videoclip “Crimson Iconoclasm”
+
+25. [2026-07-01] Interferencias lanza single “Antes de Cerrar el Bar”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/interferencias-lanza-single-antes-de-cerrar-el-bar/
+   Resumen: Interferencias lanza single “Antes de Cerrar el Bar”
+
+26. [2026-07-01] Noir Fronterizo estrena single “La Justicia y Los Caramelos”
+   Medio: The Sound of The Embryo | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://www.thesoundoftheembryo.es/noir-fronterizo-estrena-single-la-justicia-y-los-caramelos/
+   Resumen: Noir Fronterizo estrena single “La Justicia y Los Caramelos”
+
+27. [2026-06-30] Álex Bernal estrena el vídeo de “Dash”, extraído del EP “Anything Goes”, dentro de su proyecto de rock instrumental cinematográfico
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Lanzamiento
+   URL: https://mariskalrock.com/actualidad/alex-bernal-estrena-el-video-de-dash-extraido-del-ep-anything-goes-dentro-de-su-proyecto-de-rock-instrumental-cinematografico/
+   Resumen: Contar una historia a través del rock instrumental es el objetivo del proyecto liderado por el virtuoso Álex Bernal, guitarrista del que, poco a poco, fuimos adentrándonos en su EP
+
+28. [2026-06-30] Khëlleden anuncia nuevos conciertos de su gira “Entre pitours y flautours”
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Gira
+   URL: https://mariskalrock.com/actualidad/khelleden-anuncia-nuevos-conciertos-de-su-gira-entre-pitours-y-flautours/
+   Resumen: El folk metal de los piratas alicantinos Khëlleden tiene desde este mes de junio que ya despedimos una nueva colección de canciones que responden al nombre de ‘Entre pitos y flauta
+
+29. [2026-06-30] Entrevista a Xabi Uribe-Etxebarria (“Vita”) y la mejor programación de rock y metal en nuestra radio
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Entrevista
+   URL: https://mariskalrock.com/actualidad/entrevista-a-xabi-uribe-etxebarria-vita-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/
+   Resumen: Seguimos avanzando en esta semana en la que recibimos al mes de julio con las pilas bien cargadas en la radio que nunca descansa, en compañía de otras 24 horas sin interrupción de
+
+30. [2026-06-30] Ekeko El Perro y su banda anuncian las iniciativas solidarias con Palestina de su próximo concierto en Gipuzkoa
+   Medio: Mariskalrock | Relevancia: 3/5 | Cat: Concierto
+   URL: https://mariskalrock.com/noticias-breves/ekeko-el-perro-y-su-banda-anuncian-las-iniciativas-solidarias-con-palestina-de-su-proximo-concierto-en-gipuzkoa/
+   Resumen: La presentación del disco ‘Camino D regreso’, sobre el que pudimos hablar con Ekeko El Perro en esta entrevista, será mucho más que un concierto, ya que la cita programada el próxi
+
+31. [2026-06-30] Lenny Kravitz aterriza este miércoles en Sevilla en su segunda actuación en Andalucía.
+   Medio: Sevillametal | Relevancia: 2/5 | Cat: Concierto
+   URL: https://www.sevillametal.org/sevillametal/3189-lenny-kravitz-aterriza-este-miercoles-en-sevilla-en-su-segunda-actuacion-en-anducia
+   Resumen: Lenny Kravitz actuará este miércoles en la Plaza de España de Sevilla dentro del Icónica Santalucía Sevilla Fest.
+
+32. [2026-06-30] Los 20 Duros del 29/06 al 05/07 en Spotify: Kiss, Muse, Yungblud, Sepultura, Yngwie Malmsteen, The Doors, The Adicts, Bad Wolves o Viva Belgrado en nuestra playlist de rock y metal
+   Medio: Mariskalrock | Relevancia: 1/5 | Cat: Bandas espanolas
+   URL: https://mariskalrock.com/actualidad/los-20-duros-del-29-06-al-05-07-en-spotify-kiss-muse-yungblud-sepultura-yngwie-malmsteen-the-doors-the-adicts-bad-wolves-o-viva-belgrado-en-nuestra-playlist-de-rock-y-metal/
+   Resumen: El mejor rock y el mejor metal en todas sus vertientes y subgéneros reluce cada semana en la playlist más completa de Spotify, la que actualiza el equipo de La Heavy y MariskalRock
+
+============================================================
+RESPUESTA (19,495 chars):
+============================================================
+# INFORME DIARIO - ROCK NACIONAL
+Fecha: 1 de julio de 2026
+
+---
+
+## Titulares Relevantes
+
+---
+
+### ALTA RELEVANCIA (rel 4-5)
+
+**1. Ginetarock 2026. Videoclip y gira de Whisky Caravan. Fechas de Hamlet** - Keep The Flame
+Resumen: Se presenta una actualización completa de la agenda de rock nacional con novedades sobre el festival Ginetarock. Asimismo, se detallan la nueva gira de la banda Whisky Caravan y las fechas de los conciertos de verano de Hamlet.
+Enlace: https://keeptheflame.es/noticias/conciertos/10339-ginetarock-whisky-hamlet.html
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐⭐ - Información de gran impacto sobre festivales y giras de bandas referentes del rock nacional.
+
+**2. ROCK IMPERIUM FESTIVAL – Faltan 3 días. Horarios, detalles, etc** - Rafa Basa
+Resumen: Se revelan los últimos detalles, horarios y preparativos organizativos para la inminente celebración del Rock Imperium Festival en Cartagena. El evento se encuentra a tan solo tres días de dar comienzo.
+Enlace: https://www.rafabasa.com/2026/06/30/rock-imperium-festival-faltan-3-dias-horarios-detalles-etc/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Cobertura de última hora de uno de los festivales de rock y metal más importantes del país.
+
+**3. A la venta las entradas para la gira de Fito & Fitipaldis por teatros y auditorios** - Rock Circus
+Resumen: Se ha anunciado la salida a la venta de las entradas para la esperada gira de Fito & Fitipaldis. Este tour, titulado 'Aullidos Tour. Teatros y Auditorios 2026-2027', recorrerá diversos espacios íntimos del país.
+Enlace: https://rockcircus.net/a-la-venta-las-entradas-para-la-gira-de-fito-fitipaldis-por-teatros-y-auditorios/
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐⭐ - Noticia de máximo interés comercial y cultural sobre una de las figuras más masivas del rock español.
+
+**4. Evaristo, M Clan, Def Con Dos, Alfredo Piedrafita, Ultraligera o Hermana Furia en el cartel de la XIII edición del Festival Arrecife en Vivo en Lanzarote** - Mariskalrock
+Resumen: La Casa de Canarias en Madrid acogió la presentación oficial de la decimotercera edición del Festival Arrecife en Vivo. El evento, que se celebrará en Lanzarote, contará con un cartel de lujo que incluye a artistas como Evaristo, M Clan y Def Con Dos.
+Enlace: https://mariskalrock.com/noticias-breves/evaristo-m-clan-ultraligera-o-hermana-furia-integran-el-cartel-de-la-xiii-edicion-del-festival-arrecife-en-vivo-en-lanzarote/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐⭐ - Presentación oficial de un festival de gran relevancia con un cartel repleto de leyendas del rock estatal.
+
+**5. SYNLAKROSS pone música al dolor de su tierra en "The Mire Of The Forgotten".** - Diario de un Metalhead
+Resumen: La agrupación SynlakrosS regresa a la escena musical con la presentación de su nuevo single titulado "The Mire Of The Forgotten". Este lanzamiento, cargado de oscuridad y emoción, viene acompañado de su correspondiente videoclip oficial.
+Enlace: https://www.diariodeunmetalhead.com/2026/06/synlakross-pone-musica-al-dolor-de-su.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Lanzamiento destacado de una banda nacional de metal con gran proyección.
+
+**6. HARDEN en Músicos en la Naturaleza🌲🌳** - El Suavecito
+Resumen: La banda abulense Harden ha confirmado su actuación para el próximo 4 de julio en el festival Músicos en la Naturaleza. En esta cita, la agrupación presentará en directo los temas de su trabajo discográfico titulado 'Furia'.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/harden-en-musicos-en-la-naturaleza.html
+Categoria: Concierto
+Relevancia: ⭐⭐⭐⭐ - Confirmación de una banda nacional en un festival de gran prestigio y tradición.
+
+**7. Quireboys o Los Coronas en el Rockin’ Fest 2026** - Rock Circus
+Resumen: El Centro Municipal La Pollina se prepara para acoger una nueva edición del festival Rockin’ Fest. El cartel de este año destaca por las actuaciones confirmadas de Los Coronas y la banda internacional Quireboys.
+Enlace: https://rockcircus.net/quireboys-o-los-coronas-en-el-rockin-fest-2026/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Anuncio de cartel para un festival nacional con bandas de renombre.
+
+**8. SYNLAKROSS presentan su nuevo single y videoclip “The Mire Of The Forgotten”, una obra de melodeath marcada por la tragedia y la memoria** - TNT Radio Rock
+Resumen: La banda valenciana de death metal melódico SynlakrosS ha estrenado de forma oficial su nuevo single y videoclip 'The Mire Of The Forgotten'. La obra destaca por su carga emocional y su enfoque en la tragedia y la memoria.
+Enlace: https://tntradiorock.com/synlakross-presentan-su-nuevo-single-y-videoclip-the-mire-of-the-forgotten-una-obra-de-melodeath-marcada-por-la-tragedia-y-la-memoria/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐⭐ - Cobertura detallada de un lanzamiento nacional relevante en el ámbito del metal extremo.
+
+**9. KILMARA estrena un explosivo vídeo en directo de "Liberticide" y confirma su asalto europeo junto a Induction y Tungsten** - TNT Radio Rock
+Resumen: La banda Kilmara continúa expandiendo su proyección internacional con el estreno de un videoclip en directo para su tema "Liberticide". Además, la formación ha confirmado una gira europea en la que compartirán escenario con Induction y Tungsten.
+Enlace: https://tntradiorock.com/kilmara-estrena-un-explosivo-video-en-directo-de-liberticide-y-confirma-su-asalto-europeo-junto-a-induction-y-tungsten/
+Categoria: Gira
+Relevancia: ⭐⭐⭐⭐ - Anuncio de gira internacional y estreno de material audiovisual por parte de una banda nacional.
+
+**10. Ya llega el Zurbarán Rock Burgos 2026, con un cartel tremendo** - Red hard n heavy
+Resumen: La organización del Zurbarán Rock Burgos ha desvelado los horarios oficiales de su novena edición, que tendrá lugar los días 10 y 11 de julio de 2026. El festival contará además con una jornada previa el jueves 9 de julio en el Espacio El Parral.
+Enlace: https://redhardnheavy.com/ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo/?utm_source=rss&utm_medium=rss&utm_campaign=ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Publicación de horarios de un festival nacional de asistencia masiva.
+
+**11. Este guitarrista intentará batir el récord Guinness de tocar la guitarra durante más tiempo seguido en el Leyendas del Rock: ¿Locura o posibilidad real?** - Mariskalrock
+Resumen: Un guitarrista se ha propuesto el ambicioso reto de entrar en el libro de los récords Guinness durante la próxima edición del festival Leyendas del Rock. El desafío consistirá en tocar la guitarra de manera ininterrumpida durante el mayor tiempo posible.
+Enlace: https://mariskalrock.com/actualidad/este-guitarrista-intentara-batir-el-record-guinness-de-tocar-la-guitarra-durante-mas-tiempo-seguido-en-el-leyendas-del-rock-locura-o-posibilidad-real/
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐⭐ - Curiosidad y evento especial de gran interés mediático dentro de un festival nacional de primer nivel.
+
+---
+
+### MEDIA-ALTA RELEVANCIA (rel 3)
+
+**12. Sin frenos. BLACK BOMBER, Gijón, 20.06.2026. Crónica.** - Diario de un Metalhead
+Resumen: Se publica la crónica del concierto ofrecido por Black Bomber en Gijón tras su participación en la semifinal de la Metal Battle. El texto analiza el directo de la banda asturiana.
+Enlace: https://www.diariodeunmetalhead.com/2026/06/sin-frenos-black-bomber-gijon-20062026.html
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Crónica de un concierto de la escena underground nacional.
+
+**13. BARCIA METAL FEST XX: el 1 de agosto en Torreperogil (Jaén). Falta un mes.** - Diario de un Metalhead
+Resumen: A falta de un mes para su celebración, se recuerdan los detalles de la vigésima edición del Barcia Metal Fest en Jaén. El cartel cuenta con bandas como Firewind, Praying Mantis, Mind Driller y Smoke Riders.
+Enlace: https://www.diariodeunmetalhead.com/2026/07/barcia-metal-fest-xx-el-1-de-agosto-en.html
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Recordatorio y promoción de un festival nacional de tamaño medio.
+
+**14. Noticias: The Dead Daisies + Kilmara + Jorn Lande** - Dioses del Metal
+Resumen: Espacio informativo que destaca, entre otras novedades, el estreno de un nuevo tema grabado en directo por la banda española Kilmara.
+Enlace: https://diosesdelmetal.org/noticias-the-dead-daisies-kilmara-jorn-lande/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Novedades discográficas que incluyen a una banda nacional relevante.
+
+**15. Noir Fronterizo presentan "La justicia y los caramelos" como nuevo single** - El Clavijero Rock
+Resumen: La banda Noir Fronterizo ha presentado de manera oficial su nuevo single titulado 'La justicia y los caramelos'. El tema marca el rumbo de sus próximos pasos musicales.
+Enlace: https://el-clavijero-rock.blogspot.com/2026/07/noir-fronterizo-presentan-la-justicia-y.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de single de una banda de la escena rock nacional.
+
+**16. Defi100T debuta con "Tragicomedia"** - El Clavijero Rock
+Resumen: La formación musical Defi100T ha realizado su debut oficial en la escena con el lanzamiento de su primer sencillo, titulado 'Tragicomedia'.
+Enlace: https://el-clavijero-rock.blogspot.com/2026/06/defi100t-debuta-con-tragicomedia.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Debut discográfico de una nueva propuesta nacional.
+
+**17. CONDADO ROCK 2026** - El Suavecito
+Resumen: Se dan a conocer las últimas novedades y confirmaciones de bandas para la edición de 2026 del festival Condado Rock.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/condado-rock-2026.html
+Categoria: Festival en Espana
+Relevancia: ⭐⭐⭐ - Actualización de cartel de un festival de rock nacional.
+
+**18. NOIR FRONTERIZO: Lanza su nuevo single "La Justicia y Los Caramelos"** - El Suavecito
+Resumen: Noir Fronterizo estrena "La Justicia y Los Caramelos", un sencillo directo y sin artificios que fue grabado en estudio buscando capturar la esencia de su sonido en vivo.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/noir-fronterizo-lanza-su-nuevo-single.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Cobertura de un nuevo lanzamiento de rock estatal.
+
+**19. La banda vizcaína Ruta 8 presenta su primer LP "En extinción"** - El Suavecito
+Resumen: La formación vizcaína Ruta 8 debuta en formato de larga duración con 'En extinción'. El álbum ofrece una propuesta de hard rock de corte ochentero con letras de fuerte compromiso social.
+Enlace: https://elsuavecitofn.blogspot.com/2026/06/la-banda-vizcaina-ruta-8-presenta-su.html
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de un álbum debut de hard rock nacional.
+
+**20. Crónica y fotos de BLOODBATH + CANCER en Madrid** - Rafa Basa
+Resumen: Crónica detallada acompañada de una galería fotográfica sobre el concierto que ofrecieron las bandas internacionales de metal extremo Bloodbath y Cancer en la ciudad de Madrid.
+Enlace: https://www.rafabasa.com/2026/06/30/cronica-y-fotos-de-bloodbath-cancer-en-madrid/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Crónica de un concierto internacional celebrado en territorio español.
+
+**21. Agenda de conciertos de rock y metal en España – Julio 2026** - Red hard n heavy
+Resumen: Se publica la agenda completa de conciertos de rock y metal programados en España para el mes de julio de 2026, facilitando la planificación de los aficionados para la temporada estival.
+Enlace: https://redhardnheavy.com/agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026/?utm_source=rss&utm_medium=rss&utm_campaign=agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Recopilación de eventos en vivo de utilidad para la escena nacional.
+
+**22. Deaf Devils anuncia Summer Tour** - The Sound of The Embryo
+Resumen: La banda Deaf Devils ha hecho públicas las fechas y destinos de su gira de verano, denominada "Summer Tour", para presentar su directo en los próximos meses.
+Enlace: https://www.thesoundoftheembryo.es/deaf-devils-anuncia-summer-tour/
+Categoria: Gira
+Relevancia: ⭐⭐⭐ - Anuncio de gira de verano de una banda nacional.
+
+**23. Ruta 8 publica su nuevo disco “En Extinción”** - The Sound of The Embryo
+Resumen: Se difunde el lanzamiento del nuevo trabajo discográfico de la banda Ruta 8, titulado “En Extinción”, consolidando su propuesta de hard rock.
+Enlace: https://www.thesoundoftheembryo.es/ruta-8-publica-su-nuevo-disco-en-extincion/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Difusión de un lanzamiento discográfico nacional.
+
+**24. Perennial Isolation publica videoclip “Crimson Iconoclasm”** - The Sound of The Embryo
+Resumen: La banda de metal extremo Perennial Isolation ha estrenado el videoclip oficial correspondiente a su tema “Crimson Iconoclasm”.
+Enlace: https://www.thesoundoftheembryo.es/perennial-isolation-publica-videoclip-crimson-iconoclasm/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Estreno de material audiovisual de una banda nacional de metal.
+
+**25. Interferencias lanza single “Antes de Cerrar el Bar”** - The Sound of The Embryo
+Resumen: El proyecto musical Interferencias ha lanzado al mercado su nuevo sencillo promocional bajo el título de “Antes de Cerrar el Bar”.
+Enlace: https://www.thesoundoftheembryo.es/interferencias-lanza-single-antes-de-cerrar-el-bar/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de un nuevo sencillo de rock nacional.
+
+**26. Noir Fronterizo estrena single “La Justicia y Los Caramelos”** - The Sound of The Embryo
+Resumen: Se reporta el estreno del single “La Justicia y Los Caramelos” por parte de Noir Fronterizo, ampliando la cobertura mediática de este lanzamiento.
+Enlace: https://www.thesoundoftheembryo.es/noir-fronterizo-estrena-single-la-justicia-y-los-caramelos/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Cobertura de lanzamiento de single de rock estatal.
+
+**27. Álex Bernal estrena el vídeo de “Dash”, extraído del EP “Anything Goes”, dentro de su proyecto de rock instrumental cinematográfico** - Mariskalrock
+Resumen: El virtuoso guitarrista Álex Bernal ha presentado el videoclip de su tema “Dash”, perteneciente a su EP “Anything Goes”. El proyecto destaca por su enfoque de rock instrumental con tintes cinematográficos.
+Enlace: https://mariskalrock.com/actualidad/alex-bernal-estrena-el-video-de-dash-extraido-del-ep-anything-goes-dentro-de-su-proyecto-de-rock-instrumental-cinematografico/
+Categoria: Lanzamiento
+Relevancia: ⭐⭐⭐ - Lanzamiento de videoclip instrumental de un guitarrista nacional destacado.
+
+**28. Khëlleden anuncia nuevos conciertos de su gira “Entre pitours y flautours”** - Mariskalrock
+Resumen: La banda alicantina de folk metal Khëlleden ha anunciado nuevas fechas de conciertos para su gira de presentación del disco ‘Entre pitos y flautas’, que comenzó este mes de junio.
+Enlace: https://mariskalrock.com/actualidad/khelleden-anuncia-nuevos-conciertos-de-su-gira-entre-pitours-y-flautours/
+Categoria: Gira
+Relevancia: ⭐⭐⭐ - Ampliación de fechas de gira para una banda nacional de folk metal.
+
+**29. Entrevista a Xabi Uribe-Etxebarria (“Vita”) y la mejor programación de rock y metal en nuestra radio** - Mariskalrock
+Resumen: Mariskalrock presenta una entrevista con Xabi Uribe-Etxebarria (“Vita”) en el marco de su programación habitual de radio de 24 horas ininterrumpidas de rock y metal.
+Enlace: https://mariskalrock.com/actualidad/entrevista-a-xabi-uribe-etxebarria-vita-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/
+Categoria: Entrevista
+Relevancia: ⭐⭐⭐ - Entrevista a un protagonista de la escena rock/metal nacional.
+
+**30. Ekeko El Perro y su banda anuncian las iniciativas solidarias con Palestina de su próximo concierto en Gipuzkoa** - Mariskalrock
+Resumen: Ekeko El Perro presentará su disco ‘Camino D regreso’ en un concierto en Gipuzkoa que contará con diversas iniciativas solidarias de apoyo a Palestina, convirtiendo la cita en un evento de carácter social.
+Enlace: https://mariskalrock.com/noticias-breves/ekeko-el-perro-y-su-banda-anuncian-las-iniciativas-solidarias-con-palestina-de-su-proximo-concierto-en-gipuzkoa/
+Categoria: Concierto
+Relevancia: ⭐⭐⭐ - Concierto de presentación de disco con un fuerte componente social y solidario.
+
+---
+
+### MEDIA RELEVANCIA (rel 1-2)
+
+**31. Lenny Kravitz aterriza este miércoles en Sevilla en su segunda actuación en Andalucía.** - Sevillametal
+Resumen: El artista internacional Lenny Kravitz ofrecerá un concierto este miércoles en la Plaza de España de Sevilla, como parte de la programación del Icónica Santalucía Sevilla Fest.
+Enlace: https://www.sevillametal.org/sevillametal/3189-lenny-kravitz-aterriza-este-miercoles-en-sevilla-en-su-segunda-actuacion-en-anducia
+Categoria: Concierto
+Relevancia: ⭐⭐ - Concierto de un artista internacional en territorio nacional, con menor enfoque en el rock estrictamente español.
+
+**32. Los 20 Duros del 29/06 al 05/07 en Spotify: Kiss, Muse, Yungblud, Sepultura, Yngwie Malmsteen, The Doors, The Adicts, Bad Wolves o Viva Belgrado en nuestra playlist de rock y metal** - Mariskalrock
+Resumen: Se presenta la actualización semanal de la playlist "Los 20 Duros" en Spotify, que recopila grandes éxitos del rock y metal internacional junto a bandas nacionales como Viva Belgrado.
+Enlace: https://mariskalrock.com/actualidad/los-20-duros-del-29-06-al-05-07-en-spotify-kiss-muse-yungblud-sepultura-yngwie-malmsteen-the-doors-the-adicts-bad-wolves-o-viva-belgrado-en-nuestra-playlist-de-rock-y-metal/
+Categoria: Bandas espanolas
+Relevancia: ⭐ - Recopilación de playlist semanal con enfoque mayoritariamente internacional.
+
+---
+
+## Resumen General
+
+- Total noticias rock nacional: 32
+- Articulos excluidos (ya reportados): 52
+- Medios con actividad nueva: Diario de un Metalhead, Dioses del Metal, El Clavijero Rock, El Suavecito, Keep The Flame, Noche de Rock, Rafa Basa, Rock Circus, Sevillametal, The Sentinel, TNT Radio Rock, Red hard n heavy, The Sound of The Embryo, Mariskalrock
+- Tendencias detectadas: La llegada del verano marca una intensa actividad en festivales nacionales como Rock Imperium, Zurbarán Rock y Arrecife en Vivo, que ultiman sus preparativos y horarios. Asimismo, se observa un flujo constante de lanzamientos de sencillos y álbumes debut por parte de bandas emergentes y consolidadas de la escena estatal, acompañados de anuncios de giras tanto nacionales como internacionales.
+
+---
+
+## Fuentes consultadas
+
+| Medio | Estado | Noticias nuevas |
+|---|---|---|
+| Diario de un Metalhead | Activo | Sí |
+| Dioses del Metal | Activo | Sí |
+| El Clavijero Rock | Activo | Sí |
+| El Suavecito | Activo | Sí |
+| Keep The Flame | Activo | Sí |
+| Noche de Rock | Activo | Sí |
+| Rafa Basa | Activo | Sí |
+| Rock Circus | Activo | Sí |
+| Sevillametal | Activo | Sí |
+| The Sentinel | Activo | Sí |
+| TNT Radio Rock | Activo | Sí |
+| Red hard n heavy | Activo | Sí |
+| The Sound of The Embryo | Activo | Sí |
+| Mariskalrock | Activo | Sí |
+| Ballesterock | Sin actividad | No |
+| Canedorock | Sin actividad | No |
+| Esquirlas de Metal | Sin actividad | No |
+| Hoy Rock | Sin actividad | No |
+| Iguana Rock | Sin actividad | No |
+| La Frontera del Silencio | Sin actividad | No |
+| Metal Symphony | Sin actividad | No |
+| Metalcry | Sin actividad | No |
+| Metaltrip | Sin actividad | No |
+| Radio Domination | Sin actividad | No |
+| Rock Sesion | Sin actividad | No |
+| Rockeando | Sin actividad | No |
+| Sancocho | Sin actividad | No |
+| The Metal Dreamer | Sin actividad | No |
+| Trueno Metálico | Sin actividad | No |
+| Turbo Rock | Sin actividad | No |
+| Reino de Sueños | Sin actividad | No |
+
+---
+
+*Informe generado automaticamente por RockPress Tracker · 1 de julio de 2026*

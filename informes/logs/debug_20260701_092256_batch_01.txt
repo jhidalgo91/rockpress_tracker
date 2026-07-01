@@ -1,0 +1,328 @@
+=== ROCKPRESS DEBUG — 20260701_092256 — batch_01 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 4,111  output: 2,682
+
+============================================================
+PROMPT (12,610 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 1/2 (30 artículos).
+
+FECHA HOY: 1 de julio de 2026
+VENTANA: 28/06/2026 — 1 de julio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: Diario de un Metalhead
+──────────────────────────────────────────────────
+• [2026-07-01] Sin frenos. BLACK BOMBER, Gijón, 20.06.2026. Crónica.
+  URL: https://www.diariodeunmetalhead.com/2026/06/sin-frenos-black-bomber-gijon-20062026.html
+  Resumen: 📝 📷 Jorge López Novales.No había sabido a poco la actuación de Black Bomber en el Casino de Puerto de Vega (Asturias), durante una semifinal de gran nivel de la Metal Battle de 202
+• [2026-06-30] BARCIA METAL FEST XX: el 1 de agosto en Torreperogil (Jaén). Falta un mes.
+  URL: https://www.diariodeunmetalhead.com/2026/07/barcia-metal-fest-xx-el-1-de-agosto-en.html
+  Resumen: Firewind, Praying Mantis, Mind Driller y Smoke Riders conforman el cartel de la XX edición del BARCIA METAL FEST a celebrar el 1 de agosto en Torreperogil (Jaén). Falta ya tan solo
+• [2026-06-30] SYNLAKROSS pone música al dolor de su tierra en "The Mire Of The Forgotten".
+  URL: https://www.diariodeunmetalhead.com/2026/06/synlakross-pone-musica-al-dolor-de-su.html
+  Resumen: SynlakrosS regresa con "The Mire Of The Forgotten", un nuevo single cargado de oscuridad y emoción y que nos llega acompañado de su correspondiente videoclip .Inspirada en las deva
+
+──────────────────────────────────────────────────
+MEDIO: Dioses del Metal
+──────────────────────────────────────────────────
+• [2026-07-01] Hirax – Hate, Fear and Power (reedición 2026)
+  URL: https://diosesdelmetal.org/hirax-hate-fear-and-power-reedicion-2026/
+  Resumen: “Plaga revisitada” Escrita por Christian Darchéz Los americanos oriundos de California y liderados por el cantante Katon W. De Pena, y me refiero a Hirax, están de vuelta tras su r
+• [2026-07-01] Rockfemérides 1 Julio
+  URL: https://diosesdelmetal.org/rockfemerides-1-julio/
+  Resumen: 01 de julio de 1983, Manowar publica «Into Glory Ride», Sonata Arctica publica su primer álbum en vivo «Songs of Silence», Arch Enemy publica «Anthems of Rebellion y se estrena se 
+• [2026-06-30] Noticias: The Dead Daisies + Kilmara + Jorn Lande
+  URL: https://diosesdelmetal.org/noticias-the-dead-daisies-kilmara-jorn-lande/
+  Resumen: The Dead Daisies publican concierto gratuito – Nuevo tema en directo de Kilmara – Estreno de Jorn Lande. Por Rockberto. The Dead Daisies han publicado un mini concierto en su canal
+• [2026-06-30] Cuerdas De Acero, lección CCXCIII: Domina el Legato, 6 ideas originales que funcionan
+  URL: https://diosesdelmetal.org/cuerdas-de-acero-leccion-ccxciii-domina-el-legato-6-ideas-originales-que-funcionan/
+  Resumen: Lección CCXCIII: Domina el Legato, 6 ideas originales que funcionan Te doy la bienvenida a Cuerdas De Acero, mi nombre es Sebastián Salinas y te traigo otra lección semanal. Estas 
+
+──────────────────────────────────────────────────
+MEDIO: El Clavijero Rock
+──────────────────────────────────────────────────
+• [2026-07-01] Noir Fronterizo presentan "La justicia y los caramelos" como nuevo single
+  URL: https://el-clavijero-rock.blogspot.com/2026/07/noir-fronterizo-presentan-la-justicia-y.html
+• [2026-06-30] Defi100T debuta con "Tragicomedia"
+  URL: https://el-clavijero-rock.blogspot.com/2026/06/defi100t-debuta-con-tragicomedia.html
+
+──────────────────────────────────────────────────
+MEDIO: El Suavecito
+──────────────────────────────────────────────────
+• [2026-06-30] CONDADO ROCK 2026
+  URL: https://elsuavecitofn.blogspot.com/2026/06/condado-rock-2026.html
+• [2026-06-30] NOIR FRONTERIZO: Lanza su nuevo single "La Justicia y Los Caramelos"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/noir-fronterizo-lanza-su-nuevo-single.html
+  Resumen: NOIR FRONTERIZO presenta "La Justicia y Los Caramelos", un single sin artificios, una banda tocando en el estudio igual que lo harían en un directo, guitarra, bajo, batería, voces 
+• [2026-06-30] HARDEN en Músicos en la Naturaleza🌲🌳
+  URL: https://elsuavecitofn.blogspot.com/2026/06/harden-en-musicos-en-la-naturaleza.html
+  Resumen: Harden presentará Furia en Músicos en la Naturaleza, el concierto más importante de su trayectoriaLa banda abulense Harden actuará el próximo 4 de julio a las 17:30 horas en el esc
+• [2026-06-30] Pronoias anuncia gira por Europa y homenaje a WarCry
+  URL: https://elsuavecitofn.blogspot.com/2026/06/pronoias-anuncia-gira-por-europa-y.html
+  Resumen: Pronoias anuncia gira por Europa y homenaje a WarCryUn tributo al grupo español y siete fechas en el Viejo Continente La banda chilena de power metal, Pronoias, acaba de estrenar ‘
+• [2026-06-30] La banda vizcaína Ruta 8 presenta su primer LP "En extinción"
+  URL: https://elsuavecitofn.blogspot.com/2026/06/la-banda-vizcaina-ruta-8-presenta-su.html
+  Resumen: La banda vizcaína Ruta 8 presenta su primer LP "En extinción": Hard rock ochentero y compromiso social desde la Margen IzquierdaSestao, junio de 2026 – La banda vizcaína Ruta 8 est
+
+──────────────────────────────────────────────────
+MEDIO: Keep The Flame
+──────────────────────────────────────────────────
+• [2026-07-01] Ginetarock 2026. Videoclip y gira de Whisky Caravan. Fechas de Hamlet
+  URL: https://keeptheflame.es/noticias/conciertos/10339-ginetarock-whisky-hamlet.html
+  Resumen: Ponemos al día la agenda musical con tres noticias imprescindibles. Hamlet no levanta el pie del acelerador y confirma los escenarios que asaltará con su gira durante este verano. 
+
+──────────────────────────────────────────────────
+MEDIO: Noche de Rock
+──────────────────────────────────────────────────
+• [2026-07-01] THE ANDREW SISTERS – Best of the Andrew Sisters
+  URL: https://www.nochederock.com/the-andrew-sisters/
+• [2026-06-30] SOEN al Disco de la Semana
+  URL: https://www.nochederock.com/soen-al-disco-de-la-semana-4/
+
+──────────────────────────────────────────────────
+MEDIO: Rafa Basa
+──────────────────────────────────────────────────
+• [2026-06-30] Crónica y fotos de BLOODBATH + CANCER en Madrid
+  URL: https://www.rafabasa.com/2026/06/30/cronica-y-fotos-de-bloodbath-cancer-en-madrid/
+  Resumen: La entrada Crónica y fotos de BLOODBATH + CANCER en Madrid se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos de METAL y subgéneros..
+• [2026-06-30] ROCK IMPERIUM FESTIVAL – Faltan 3 días. Horarios, detalles, etc
+  URL: https://www.rafabasa.com/2026/06/30/rock-imperium-festival-faltan-3-dias-horarios-detalles-etc/
+  Resumen: La entrada ROCK IMPERIUM FESTIVAL – Faltan 3 días. Horarios, detalles, etc se publicó primero en WWW.RAFABASA.COM - Noticias en español sobre la música METAL y los grupos de METAL 
+• [2026-06-30] LAST IN LINE – THE PRETTY RECKLESS – XENTRIX.
+  URL: https://www.rafabasa.com/2026/06/30/last-in-line-the-pretty-reckless-xentrix/
+  Resumen: LAST IN LINE están trabajando con un posible cantante. Vídeo de THE PRETTY RECKLESS. Próximo disco de XENTRIX. La entrada LAST IN LINE – THE PRETTY RECKLESS – XENTRIX. se publicó p
+• [2026-06-30] IRON MAIDEN – Jorn Lande – ELEINE.
+  URL: https://www.rafabasa.com/2026/06/30/iron-maiden-jorn-lande-eleine/
+  Resumen: Nuevo tráiler para el Eddfest de IRON MAIDEN. Jorn Lande estrena single. Adelanto de ELEINE. La entrada IRON MAIDEN – Jorn Lande – ELEINE. se publicó primero en WWW.RAFABASA.COM - 
+
+──────────────────────────────────────────────────
+MEDIO: Rock Circus
+──────────────────────────────────────────────────
+• [2026-06-30] Quireboys o Los Coronas en el Rockin’ Fest 2026
+  URL: https://rockcircus.net/quireboys-o-los-coronas-en-el-rockin-fest-2026/
+  Resumen: El Centro Municipal La Pollina acogerá los días 3 y 4 de julio una nueva edición del Rockin’ Fest, una cita imprescindible para los amantes de la música en directo. Un festival gra
+• [2026-06-30] A la venta las entradas para la gira de Fito & Fitipaldis por teatros y auditorios
+  URL: https://rockcircus.net/a-la-venta-las-entradas-para-la-gira-de-fito-fitipaldis-por-teatros-y-auditorios/
+  Resumen: Entradas ya a la venta para la gira “Aullidos Tour. Teatros y Auditorios 2026-2027” de Fito & Fitipaldis: PUERTOLLANO (16 y 17 OCT) 16 OCT → https://www.giglon.com/evento/fito–fiti
+
+──────────────────────────────────────────────────
+MEDIO: Sevillametal
+──────────────────────────────────────────────────
+• [2026-06-30] Lenny Kravitz aterriza este miércoles en Sevilla en su segunda actuación en Andalucía.
+  URL: https://www.sevillametal.org/sevillametal/3189-lenny-kravitz-aterriza-este-miercoles-en-sevilla-en-su-segunda-actuacion-en-andalucia
+  Resumen: La Plaza de España volverá a convertirse este miércoles 1 de julio en uno de los grandes templos de la música en directo con la llegada de Lenny Kravitz, que ofrecerá en Icónica Sa
+
+──────────────────────────────────────────────────
+MEDIO: The Sentinel
+──────────────────────────────────────────────────
+• [2026-07-01] Editorial Julio 2026 “Nuestras leyendas de la guitarra”
+  URL: https://www.thesentinel.es/wpsentinel/?p=39826
+  Resumen: Sevilla, 19 de octubre de 1991. Brian May, gran guitarrista conocido sobre todo por su pertenencia al grupo Queen, organizó un evento en el que participarían muchos de los mejores 
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-07-01] HORRESQUE anuncian el single “Behind the Door”, primer adelanto de su próximo álbum “Chasms Pt. III – The Dread, Unveiled”
+  URL: https://tntradiorock.com/horresque-anuncian-el-single-behind-the-door-primer-adelanto-de-su-proximo-album-chasms-pt-iii-the-dread-unveiled/
+  Resumen: La banda alemana de blackened death metal Horresque anuncia el lanzamiento de su nuevo single “Behind the Door”, disponible el 17 de julio de 2026 […] Contenido de TNT Radio Rock
+• [2026-07-01] SOLYSTALGIA publica su devastador álbum de debut y se presenta como una nueva fuerza del death-doom
+  URL: https://tntradiorock.com/solystalgia-publica-su-devastador-album-de-debut-y-se-presenta-como-una-nueva-fuerza-del-death-doom/
+  Resumen: La formación SOLYSTALGIA ha publicado oficialmente su álbum de debut, el trabajo homónimo "Solystalgia", ya disponible a través de Nameless Grave Records. Con una duración […] Cont
+• [2026-07-01] SYNLAKROSS presentan su nuevo single y videoclip “The Mire Of The Forgotten”, una obra de melodeath marcada por la tragedia y la memoria
+  URL: https://tntradiorock.com/synlakross-presentan-su-nuevo-single-y-videoclip-the-mire-of-the-forgotten-una-obra-de-melodeath-marcada-por-la-tragedia-y-la-memoria/
+  Resumen: La banda valenciana de melodic death metal SynlakrosS publica su nuevo single “The Mire Of The Forgotten”, acompañado de un videoclip oficial que refuerza su […] Contenido de TNT R
+• [2026-06-30] ASHES REIGN anuncian su independencia, el single “Awakening” y su primer álbum de larga duración
+  URL: https://tntradiorock.com/ashes-reign-anuncian-su-independencia-el-single-awakening-y-su-primer-album-de-larga-duracion/
+  Resumen: La banda estadounidense de metal melódico Ashes Reign inicia una nueva etapa al anunciar su salida de Affiant Records, dando paso a una fase completamente […] Contenido de TNT Radi
+• [2026-06-30] PLUSMINUSZERO publican el single “Wasted”, su primera carta de presentación en el hard rock y metal melódico finlandés
+  URL: https://tntradiorock.com/plusminuszero-publican-el-single-wasted-su-primera-carta-de-presentacion-en-el-hard-rock-y-metal-melodico-finlandes/
+  Resumen: La banda finlandesa de hard rock y metal melódico PlusMinusZero publica su nuevo single “Wasted”, disponible desde el 26 de junio de 2026 en formato […] Contenido de TNT Radio Rock
+
+============================================================
+RESPUESTA (7,219 chars):
+============================================================
+[
+  {
+    "title": "Sin frenos. BLACK BOMBER, Gijón, 20.06.2026. Crónica.",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/sin-frenos-black-bomber-gijon-20062026.html",
+    "date": "2026-07-01",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Crónica de la actuación de Black Bomber en Gijón, tras su paso por la semifinal de la Metal Battle.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "BARCIA METAL FEST XX: el 1 de agosto en Torreperogil (Jaén). Falta un mes.",
+    "url": "https://www.diariodeunmetalhead.com/2026/07/barcia-metal-fest-xx-el-1-de-agosto-en.html",
+    "date": "2026-06-30",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "Firewind, Praying Mantis, Mind Driller y Smoke Riders conforman el cartel de la XX edición del BARCIA METAL FEST a celebrar en Jaén.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "SYNLAKROSS pone música al dolor de su tierra en \"The Mire Of The Forgotten\".",
+    "url": "https://www.diariodeunmetalhead.com/2026/06/synlakross-pone-musica-al-dolor-de-su.html",
+    "date": "2026-06-30",
+    "medio": "Diario de un Metalhead",
+    "excerpt": "SynlakrosS regresa con \"The Mire Of The Forgotten\", un nuevo single cargado de oscuridad y emoción acompañado de su correspondiente videoclip.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Noticias: The Dead Daisies + Kilmara + Jorn Lande",
+    "url": "https://diosesdelmetal.org/noticias-the-dead-daisies-kilmara-jorn-lande/",
+    "date": "2026-06-30",
+    "medio": "Dioses del Metal",
+    "excerpt": "Estreno de un nuevo tema en directo de la banda española Kilmara.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Noir Fronterizo presentan \"La justicia y los caramelos\" como nuevo single",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/07/noir-fronterizo-presentan-la-justicia-y.html",
+    "date": "2026-07-01",
+    "medio": "El Clavijero Rock",
+    "excerpt": "La banda Noir Fronterizo presenta su nuevo single titulado 'La justicia y los caramelos'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Defi100T debuta con \"Tragicomedia\"",
+    "url": "https://el-clavijero-rock.blogspot.com/2026/06/defi100t-debuta-con-tragicomedia.html",
+    "date": "2026-06-30",
+    "medio": "El Clavijero Rock",
+    "excerpt": "La banda Defi100T hace su debut oficial con el lanzamiento de 'Tragicomedia'.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "CONDADO ROCK 2026",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/condado-rock-2026.html",
+    "date": "2026-06-30",
+    "medio": "El Suavecito",
+    "excerpt": "Novedades y confirmaciones sobre el festival Condado Rock 2026.",
+    "rel": 3,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "NOIR FRONTERIZO: Lanza su nuevo single \"La Justicia y Los Caramelos\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/noir-fronterizo-lanza-su-nuevo-single.html",
+    "date": "2026-06-30",
+    "medio": "El Suavecito",
+    "excerpt": "NOIR FRONTERIZO presenta \"La Justicia y Los Caramelos\", un single sin artificios grabado en estudio con sonido directo.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "HARDEN en Músicos en la Naturaleza🌲🌳",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/harden-en-musicos-en-la-naturaleza.html",
+    "date": "2026-06-30",
+    "medio": "El Suavecito",
+    "excerpt": "La banda abulense Harden actuará el próximo 4 de julio en el festival Músicos en la Naturaleza presentando su trabajo 'Furia'.",
+    "rel": 4,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "La banda vizcaína Ruta 8 presenta su primer LP \"En extinción\"",
+    "url": "https://elsuavecitofn.blogspot.com/2026/06/la-banda-vizcaina-ruta-8-presenta-su.html",
+    "date": "2026-06-30",
+    "medio": "El Suavecito",
+    "excerpt": "La banda vizcaína Ruta 8 estrena su primer LP 'En extinción', cargado de hard rock ochentero y compromiso social.",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Ginetarock 2026. Videoclip y gira de Whisky Caravan. Fechas de Hamlet",
+    "url": "https://keeptheflame.es/noticias/conciertos/10339-ginetarock-whisky-hamlet.html",
+    "date": "2026-07-01",
+    "medio": "Keep The Flame",
+    "excerpt": "Actualización de la agenda con novedades del festival Ginetarock, la gira de Whisky Caravan y las fechas de verano de Hamlet.",
+    "rel": 5,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Crónica y fotos de BLOODBATH + CANCER en Madrid",
+    "url": "https://www.rafabasa.com/2026/06/30/cronica-y-fotos-de-bloodbath-cancer-en-madrid/",
+    "date": "2026-06-30",
+    "medio": "Rafa Basa",
+    "excerpt": "Crónica detallada y galería fotográfica del concierto de las bandas internacionales Bloodbath y Cancer en Madrid.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "ROCK IMPERIUM FESTIVAL – Faltan 3 días. Horarios, detalles, etc",
+    "url": "https://www.rafabasa.com/2026/06/30/rock-imperium-festival-faltan-3-dias-horarios-detalles-etc/",
+    "date": "2026-06-30",
+    "medio": "Rafa Basa",
+    "excerpt": "Últimos detalles, horarios y preparativos para la celebración del Rock Imperium Festival en Cartagena.",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Quireboys o Los Coronas en el Rockin’ Fest 2026",
+    "url": "https://rockcircus.net/quireboys-o-los-coronas-en-el-rockin-fest-2026/",
+    "date": "2026-06-30",
+    "medio": "Rock Circus",
+    "excerpt": "El Centro Municipal La Pollina acogerá una nueva edición del Rockin’ Fest con actuaciones de Los Coronas y Quireboys.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "A la venta las entradas para la gira de Fito & Fitipaldis por teatros y auditorios",
+    "url": "https://rockcircus.net/a-la-venta-las-entradas-para-la-gira-de-fito-fitipaldis-por-teatros-y-auditorios/",
+    "date": "2026-06-30",
+    "medio": "Rock Circus",
+    "excerpt": "Salen a la venta las entradas para la gira 'Aullidos Tour. Teatros y Auditorios 2026-2027' de Fito & Fitipaldis.",
+    "rel": 5,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Lenny Kravitz aterriza este miércoles en Sevilla en su segunda actuación en Andalucía.",
+    "url": "https://www.sevillametal.org/sevillametal/3189-lenny-kravitz-aterriza-este-miercoles-en-sevilla-en-su-segunda-actuacion-en-anducia",
+    "date": "2026-06-30",
+    "medio": "Sevillametal",
+    "excerpt": "Lenny Kravitz actuará este miércoles en la Plaza de España de Sevilla dentro del Icónica Santalucía Sevilla Fest.",
+    "rel": 2,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "SYNLAKROSS presentan su nuevo single y videoclip “The Mire Of The Forgotten”, una obra de melodeath marcada por la tragedia y la memoria",
+    "url": "https://tntradiorock.com/synlakross-presentan-su-nuevo-single-y-videoclip-the-mire-of-the-forgotten-una-obra-de-melodeath-marcada-por-la-tragedia-y-la-memoria/",
+    "date": "2026-07-01",
+    "medio": "TNT Radio Rock",
+    "excerpt": "La banda valenciana de death metal melódico SynlakrosS lanza su nuevo single y videoclip 'The Mire Of The Forgotten'.",
+    "rel": 4,
+    "categoria": "Lanzamiento"
+  }
+]

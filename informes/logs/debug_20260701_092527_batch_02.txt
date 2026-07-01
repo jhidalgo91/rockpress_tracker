@@ -1,0 +1,264 @@
+=== ROCKPRESS DEBUG — 20260701_092527 — batch_02 ===
+Modelo: gemini-3.5-flash
+max_output_tokens: 8192
+finish_reason: 1
+Tokens → input: 3,836  output: 2,764
+
+============================================================
+PROMPT (11,753 chars):
+============================================================
+Eres un filtro de noticias de rock nacional español.
+Analiza el lote 2/2 (24 artículos).
+
+FECHA HOY: 1 de julio de 2026
+VENTANA: 28/06/2026 — 1 de julio de 2026
+
+CRITERIOS DE INCLUSION (al menos uno):
+- Bandas/artistas de rock o metal ESPANOLES
+- Festivales o conciertos EN ESPANA
+- Lanzamientos (disco/EP/single) de artistas ESPANOLES
+- Noticias de salas, promotoras o sellos ESPANOLES
+- Artistas internacionales con fecha confirmada en Espana
+
+CRITERIOS DE EXCLUSION:
+- Noticias internacionales sin conexion con Espana
+- Articulos fuera de la ventana de fechas
+
+TAREA: Devuelve SOLO los articulos relevantes como JSON puro.
+Sin markdown, sin explicaciones. Si ningun articulo es relevante: []
+
+ESCALA rel (1-5):
+5=banda espanola top / disco nuevo / festival 1 linea
+4=artista/evento espanol destacado / entrevista relevante
+3=festival regional / banda emergente / concierto en Espana
+2=internacional con fecha en Espana
+1=mencion menor
+
+FORMATO:
+[{"title":"...","url":"...","date":"YYYY-MM-DD","medio":"...","excerpt":"...","rel":5,"categoria":"Lanzamiento|Festival en Espana|Concierto|Entrevista|Gira|Bandas espanolas"}]
+
+ARTICULOS:
+
+──────────────────────────────────────────────────
+MEDIO: TNT Radio Rock
+──────────────────────────────────────────────────
+• [2026-06-30] DARK FUNERAL anuncia el lanzamiento del álbum en directo “A Beast To Praise” y estrena el vídeo de “The Arrival Of Satan's Empire”
+  URL: https://tntradiorock.com/dark-funeral-anuncia-el-lanzamiento-del-album-en-directo-a-beast-to-praise-y-estrena-el-video-de-the-arrival-of-satans-empire/
+  Resumen: Dark Funeral ha anunciado la publicación de su nuevo álbum en directo, “A Beast To Praise”, que verá la luz en todo el mundo el […] Contenido de TNT Radio Rock
+• [2026-06-30] STONECAST presentan el lyric video de “Walking Dead”, uno de los temas más destacados de su nuevo álbum “Expand Crimson Chaos”
+  URL: https://tntradiorock.com/stonecast-presentan-el-lyric-video-de-walking-dead-uno-de-los-temas-mas-destacados-de-su-nuevo-album-expand-crimson-chaos/
+  Resumen: La banda francesa de heavy metal Stonecast revela el lyric video de “Walking Dead”, uno de los cortes más potentes de su nuevo álbum “Expand […] Contenido de TNT Radio Rock
+• [2026-06-30] KILMARA estrena un explosivo vídeo en directo de "Liberticide" y confirma su asalto europeo junto a Induction y Tungsten
+  URL: https://tntradiorock.com/kilmara-estrena-un-explosivo-video-en-directo-de-liberticide-y-confirma-su-asalto-europeo-junto-a-induction-y-tungsten/
+  Resumen: KILMARA continúa reforzando su proyección internacional con el estreno de un nuevo videoclip en directo para "Liberticide", uno de los temas incluidos en su más […] Contenido de TN
+• [2026-06-30] ORPHEUS OMEGA cierran la era “Emberglow” con el videoclip de “Marionette”, un último acto cargado de emoción
+  URL: https://tntradiorock.com/orpheus-omega-cierran-la-era-emberglow-con-el-videoclip-de-marionette-un-ultimo-acto-cargado-de-emocion/
+  Resumen: La banda australiana de death metal melódico Orpheus Omega presenta el videoclip de “Marionette”, tema extraído de su último álbum “Emberglow”, publicado a través de […] Contenido 
+• [2026-06-30] STRYPER anuncia “Throne Of Thorns”, su 18º álbum de estudio, y estrena el tema que da título al álbum
+  URL: https://tntradiorock.com/stryper-anuncia-throne-of-thorns-su-18o-album-de-estudio-y-estrena-el-tema-que-da-titulo-al-album/
+  Resumen: Los veteranos del metal cristiano STRYPER han anunciado el lanzamiento de su decimoctavo álbum de estudio, “Throne Of Thorns”, que verá la luz el próximo […] Contenido de TNT Radio
+
+──────────────────────────────────────────────────
+MEDIO: Red hard n heavy
+──────────────────────────────────────────────────
+• [2026-06-30] Agenda de conciertos de rock y metal en España – Julio 2026
+  URL: https://redhardnheavy.com/agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026/?utm_source=rss&utm_medium=rss&utm_campaign=agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026
+  Resumen: Tras la agenda de mayo y Junio, ya estamos 100% metidos en 2026 con la agenda de Julio y todos los conciertos de rock y metal previstos para este mes. ¿Se te ha pasado alguno? Nos 
+• [2026-06-30] Ya llega el Zurbarán Rock Burgos 2026, con un cartel tremendo
+  URL: https://redhardnheavy.com/ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo/?utm_source=rss&utm_medium=rss&utm_campaign=ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo
+  Resumen: Zurbarán Rock Burgos ha hecho públicos los horarios de su novena edición, que se celebrará los días 10 y 11 de julio de 2026, con una jornada previa el jueves 9, en el Espacio El P
+
+──────────────────────────────────────────────────
+MEDIO: The Sound of The Embryo
+──────────────────────────────────────────────────
+• [2026-07-01] Deaf Devils anuncia Summer Tour
+  URL: https://www.thesoundoftheembryo.es/deaf-devils-anuncia-summer-tour/
+• [2026-07-01] Ruta 8 publica su nuevo disco “En Extinción”
+  URL: https://www.thesoundoftheembryo.es/ruta-8-publica-su-nuevo-disco-en-extincion/
+• [2026-07-01] Perennial Isolation publica videoclip “Crimson Iconoclasm”
+  URL: https://www.thesoundoftheembryo.es/perennial-isolation-publica-videoclip-crimson-iconoclasm/
+• [2026-07-01] Interferencias lanza single “Antes de Cerrar el Bar”
+  URL: https://www.thesoundoftheembryo.es/interferencias-lanza-single-antes-de-cerrar-el-bar/
+• [2026-07-01] Noir Fronterizo estrena single “La Justicia y Los Caramelos”
+  URL: https://www.thesoundoftheembryo.es/noir-fronterizo-estrena-single-la-justicia-y-los-caramelos/
+
+──────────────────────────────────────────────────
+MEDIO: Mariskalrock
+──────────────────────────────────────────────────
+• [2026-07-01] Stryper anuncia "Throne of Thorns", su nuevo disco, y estrena un nuevo adelanto mientras Michael Sweet sigue tratándose de un cáncer
+  URL: https://mariskalrock.com/actualidad/stryper-anuncia-throne-of-thorns-su-nuevo-disco-y-estrena-un-nuevo-adelanto-mientras-michael-sweet-sigue-tratandose-de-un-cancer/
+  Resumen: Un mes después de que la canción “I’m Alright (I'm Okay)” nos presentara una nueva etapa para Stryper, la banda más importante de la cristiandad metalera nos ofrece todos los datos
+• [2026-06-30] Nikki Sixx (Mötley Crüe) carga contra el exbatería de Godsmack tras señalarlo por usar voces pregrabadas: "Tal vez necesita echarse una siesta antes de hacer más entrevistas”
+  URL: https://mariskalrock.com/actualidad/nikki-sixx-motley-crue-carga-contra-el-exbateria-de-godsmack-tras-senalarlo-por-usar-voces-pregrabadas-tal-vez-necesita-echarse-una-siesta-antes-de-hacer-mas-entrevistas/
+  Resumen: Nikki Sixx, bajista y fundador de Mötley Crüe, no ha dudado en responder al comentario lanzado por el que fuera batería de Godsmack, Shannon Larkin, señalando el supuesto uso de vo
+• [2026-06-30] Evaristo, M Clan, Def Con Dos, Alfredo Piedrafita, Ultraligera o Hermana Furia en el cartel de la XIII edición del Festival Arrecife en Vivo en Lanzarote
+  URL: https://mariskalrock.com/noticias-breves/evaristo-m-clan-ultraligera-o-hermana-furia-integran-el-cartel-de-la-xiii-edicion-del-festival-arrecife-en-vivo-en-lanzarote/
+  Resumen: El pasado viernes 26 de junio, La Casa de Canarias en Madrid acogió la presentación de la decimotercera edición del Festival Arrecife en Vivo, una cita musical que volverá a conver
+• [2026-06-30] “Fight For The Rock” de Savatage cumple 40 años: La raíz de un árbol que iba a dar grandes frutos
+  URL: https://mariskalrock.com/actualidad/fight-for-the-rock-de-savatage-cumple-40-anos-la-raiz-de-un-arbol-que-iba-a-dar-grandes-frutos/
+  Resumen: El 30 de junio de 1986 veía la luz, 'Fight For the Rock', el cuarto disco de estudio de los estadounidenses Savatage, con Jon y Criss Oliva al frente, un disco con el que la banda 
+• [2026-06-30] Álex Bernal estrena el vídeo de “Dash”, extraído del EP “Anything Goes”, dentro de su proyecto de rock instrumental cinematográfico
+  URL: https://mariskalrock.com/actualidad/alex-bernal-estrena-el-video-de-dash-extraido-del-ep-anything-goes-dentro-de-su-proyecto-de-rock-instrumental-cinematografico/
+  Resumen: Contar una historia a través del rock instrumental es el objetivo del proyecto liderado por el virtuoso Álex Bernal, guitarrista del que, poco a poco, fuimos adentrándonos en su EP
+• [2026-06-30] Khëlleden anuncia nuevos conciertos de su gira “Entre pitours y flautours”
+  URL: https://mariskalrock.com/actualidad/khelleden-anuncia-nuevos-conciertos-de-su-gira-entre-pitours-y-flautours/
+  Resumen: El folk metal de los piratas alicantinos Khëlleden tiene desde este mes de junio que ya despedimos una nueva colección de canciones que responden al nombre de ‘Entre pitos y flauta
+• [2026-06-30] "Ronnie James Dio solo se introdujo en el heavy metal después de pasar tiempo girando con Deep Purple y empezar en Rainbow”
+  URL: https://mariskalrock.com/actualidad/ronnie-james-dio-solo-se-introdujo-en-el-heavy-metal-despues-de-pasar-tiempo-girando-con-deep-purple-y-empezar-en-rainbow/
+  Resumen: El mes de julio, en el que estamos a punto de entrar, fue el que en 1942 vio nacer el día 10 a una de las más importantes figuras de la historia del heavy metal. La particular visi
+• [2026-06-30] Los 20 Duros del 29/06 al 05/07 en Spotify: Kiss, Muse, Yungblud, Sepultura, Yngwie Malmsteen, The Doors, The Adicts, Bad Wolves o Viva Belgrado en nuestra playlist de rock y metal
+  URL: https://mariskalrock.com/actualidad/los-20-duros-del-29-06-al-05-07-en-spotify-kiss-muse-yungblud-sepultura-yngwie-malmsteen-the-doors-the-adicts-bad-wolves-o-viva-belgrado-en-nuestra-playlist-de-rock-y-metal/
+  Resumen: El mejor rock y el mejor metal en todas sus vertientes y subgéneros reluce cada semana en la playlist más completa de Spotify, la que actualiza el equipo de La Heavy y MariskalRock
+• [2026-06-30] Este guitarrista intentará batir el récord Guinness de tocar la guitarra durante más tiempo seguido en el Leyendas del Rock: ¿Locura o posibilidad real?
+  URL: https://mariskalrock.com/actualidad/este-guitarrista-intentara-batir-el-record-guinness-de-tocar-la-guitarra-durante-mas-tiempo-seguido-en-el-leyendas-del-rock-locura-o-posibilidad-real/
+  Resumen: El sueño de entrar en la historia con un récord Guinness es el que se ha planteado un guitarrista dentro de la celebración de la próxima edición de Leyendas del Rock. La marca actu
+• [2026-06-30] Bad Wolves sorprende al anunciar a Sara "Killboy" Skinner como nueva vocalista y estrena su nuevo single, "Paint It Red”
+  URL: https://mariskalrock.com/actualidad/bad-wolves-sorprende-al-anunciar-a-sara-killboy-skinner-como-nueva-vocalista-y-estrena-su-nuevo-single-paint-it-red/
+  Resumen: El metal alternativo de los californianos Bad Wolves aúlla a la luna llena del mes de junio con un estreno muy especial, ya que el single “Paint It Red” abre una nueva etapa para l
+• [2026-06-30] Entrevista a Xabi Uribe-Etxebarria (“Vita”) y la mejor programación de rock y metal en nuestra radio
+  URL: https://mariskalrock.com/actualidad/entrevista-a-xabi-uribe-etxebarria-vita-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/
+  Resumen: Seguimos avanzando en esta semana en la que recibimos al mes de julio con las pilas bien cargadas en la radio que nunca descansa, en compañía de otras 24 horas sin interrupción de 
+• [2026-06-30] Ekeko El Perro y su banda anuncian las iniciativas solidarias con Palestina de su próximo concierto en Gipuzkoa
+  URL: https://mariskalrock.com/noticias-breves/ekeko-el-perro-y-su-banda-anuncian-las-iniciativas-solidarias-con-palestina-de-su-proximo-concierto-en-gipuzkoa/
+  Resumen: La presentación del disco ‘Camino D regreso’, sobre el que pudimos hablar con Ekeko El Perro en esta entrevista, será mucho más que un concierto, ya que la cita programada el próxi
+
+============================================================
+RESPUESTA (7,895 chars):
+============================================================
+[
+  {
+    "title": "KILMARA estrena un explosivo vídeo en directo de \"Liberticide\" y confirma su asalto europeo junto a Induction y Tungsten",
+    "url": "https://tntradiorock.com/kilmara-estrena-un-explosivo-video-en-directo-de-liberticide-y-confirma-su-asalto-europeo-junto-a-induction-y-tungsten/",
+    "date": "2026-06-30",
+    "medio": "TNT Radio Rock",
+    "excerpt": "KILMARA continúa reforzando su proyección internacional con el estreno de un nuevo videoclip en directo para \"Liberticide\", uno de los temas incluidos en su más...",
+    "rel": 4,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Agenda de conciertos de rock y metal en España – Julio 2026",
+    "url": "https://redhardnheavy.com/agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026/?utm_source=rss&utm_medium=rss&utm_campaign=agenda-de-conciertos-de-rock-y-metal-en-espana-julio-2026",
+    "date": "2026-06-30",
+    "medio": "Red hard n heavy",
+    "excerpt": "Tras la agenda de mayo y Junio, ya estamos 100% metidos en 2026 con la agenda de Julio y todos los conciertos de rock y metal previstos para este mes.",
+    "rel": 3,
+    "categoria": "Concierto"
+  },
+  {
+    "title": "Ya llega el Zurbarán Rock Burgos 2026, con un cartel tremendo",
+    "url": "https://redhardnheavy.com/ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo/?utm_source=rss&utm_medium=rss&utm_campaign=ya-llega-el-zurbaran-rock-burgos-2026-con-un-cartel-tremendo",
+    "date": "2026-06-30",
+    "medio": "Red hard n heavy",
+    "excerpt": "Zurbarán Rock Burgos ha hecho públicos los horarios de su novena edición, que se celebrará los días 10 y 11 de julio de 2026, con una jornada previa el jueves 9, en el Espacio El P",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Deaf Devils anuncia Summer Tour",
+    "url": "https://www.thesoundoftheembryo.es/deaf-devils-anuncia-summer-tour/",
+    "date": "2026-07-01",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Deaf Devils anuncia Summer Tour",
+    "rel": 3,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Ruta 8 publica su nuevo disco “En Extinción”",
+    "url": "https://www.thesoundoftheembryo.es/ruta-8-publica-su-nuevo-disco-en-extincion/",
+    "date": "2026-07-01",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Ruta 8 publica su nuevo disco “En Extinción”",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Perennial Isolation publica videoclip “Crimson Iconoclasm”",
+    "url": "https://www.thesoundoftheembryo.es/perennial-isolation-publica-videoclip-crimson-iconoclasm/",
+    "date": "2026-07-01",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Perennial Isolation publica videoclip “Crimson Iconoclasm”",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Interferencias lanza single “Antes de Cerrar el Bar”",
+    "url": "https://www.thesoundoftheembryo.es/interferencias-lanza-single-antes-de-cerrar-el-bar/",
+    "date": "2026-07-01",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Interferencias lanza single “Antes de Cerrar el Bar”",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Noir Fronterizo estrena single “La Justicia y Los Caramelos”",
+    "url": "https://www.thesoundoftheembryo.es/noir-fronterizo-estrena-single-la-justicia-y-los-caramelos/",
+    "date": "2026-07-01",
+    "medio": "The Sound of The Embryo",
+    "excerpt": "Noir Fronterizo estrena single “La Justicia y Los Caramelos”",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Evaristo, M Clan, Def Con Dos, Alfredo Piedrafita, Ultraligera o Hermana Furia en el cartel de la XIII edición del Festival Arrecife en Vivo en Lanzarote",
+    "url": "https://mariskalrock.com/noticias-breves/evaristo-m-clan-ultraligera-o-hermana-furia-integran-el-cartel-de-la-xiii-edicion-del-festival-arrecife-en-vivo-en-lanzarote/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "El pasado viernes 26 de junio, La Casa de Canarias en Madrid acogió la presentación de la decimotercera edición del Festival Arrecife en Vivo, una cita musical que volverá a conver",
+    "rel": 5,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Álex Bernal estrena el vídeo de “Dash”, extraído del EP “Anything Goes”, dentro de su proyecto de rock instrumental cinematográfico",
+    "url": "https://mariskalrock.com/actualidad/alex-bernal-estrena-el-video-de-dash-extraido-del-ep-anything-goes-dentro-de-su-proyecto-de-rock-instrumental-cinematografico/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "Contar una historia a través del rock instrumental es el objetivo del proyecto liderado por el virtuoso Álex Bernal, guitarrista del que, poco a poco, fuimos adentrándonos en su EP",
+    "rel": 3,
+    "categoria": "Lanzamiento"
+  },
+  {
+    "title": "Khëlleden anuncia nuevos conciertos de su gira “Entre pitours y flautours”",
+    "url": "https://mariskalrock.com/actualidad/khelleden-anuncia-nuevos-conciertos-de-su-gira-entre-pitours-y-flautours/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "El folk metal de los piratas alicantinos Khëlleden tiene desde este mes de junio que ya despedimos una nueva colección de canciones que responden al nombre de ‘Entre pitos y flauta",
+    "rel": 3,
+    "categoria": "Gira"
+  },
+  {
+    "title": "Los 20 Duros del 29/06 al 05/07 en Spotify: Kiss, Muse, Yungblud, Sepultura, Yngwie Malmsteen, The Doors, The Adicts, Bad Wolves o Viva Belgrado en nuestra playlist de rock y metal",
+    "url": "https://mariskalrock.com/actualidad/los-20-duros-del-29-06-al-05-07-en-spotify-kiss-muse-yungblud-sepultura-yngwie-malmsteen-the-doors-the-adicts-bad-wolves-o-viva-belgrado-en-nuestra-playlist-de-rock-y-metal/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "El mejor rock y el mejor metal en todas sus vertientes y subgéneros reluce cada semana en la playlist más completa de Spotify, la que actualiza el equipo de La Heavy y MariskalRock",
+    "rel": 1,
+    "categoria": "Bandas espanolas"
+  },
+  {
+    "title": "Este guitarrista intentará batir el récord Guinness de tocar la guitarra durante más tiempo seguido en el Leyendas del Rock: ¿Locura o posibilidad real?",
+    "url": "https://mariskalrock.com/actualidad/este-guitarrista-intentara-batir-el-record-guinness-de-tocar-la-guitarra-durante-mas-tiempo-seguido-en-el-leyendas-del-rock-locura-o-posibilidad-real/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "El sueño de entrar en la historia con un récord Guinness es el que se ha planteado un guitarrista dentro de la celebración de la próxima edición de Leyendas del Rock.",
+    "rel": 4,
+    "categoria": "Festival en Espana"
+  },
+  {
+    "title": "Entrevista a Xabi Uribe-Etxebarria (“Vita”) y la mejor programación de rock y metal en nuestra radio",
+    "url": "https://mariskalrock.com/actualidad/entrevista-a-xabi-uribe-etxebarria-vita-y-la-mejor-programacion-de-rock-y-metal-en-nuestra-radio/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "Seguimos avanzando en esta semana en la que recibimos al mes de julio con las pilas bien cargadas en la radio que nunca descansa, en compañía de otras 24 horas sin interrupción de",
+    "rel": 3,
+    "categoria": "Entrevista"
+  },
+  {
+    "title": "Ekeko El Perro y su banda anuncian las iniciativas solidarias con Palestina de su próximo concierto en Gipuzkoa",
+    "url": "https://mariskalrock.com/noticias-breves/ekeko-el-perro-y-su-banda-anuncian-las-iniciativas-solidarias-con-palestina-de-su-proximo-concierto-en-gipuzkoa/",
+    "date": "2026-06-30",
+    "medio": "Mariskalrock",
+    "excerpt": "La presentación del disco ‘Camino D regreso’, sobre el que pudimos hablar con Ekeko El Perro en esta entrevista, será mucho más que un concierto, ya que la cita programada el próxi",
+    "rel": 3,
+    "categoria": "Concierto"
+  }
+]
